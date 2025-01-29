@@ -1,0 +1,1176 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: "Poppins", sans-serif;
+    cursor: url("./Assets/cursor.png"), auto;
+}
+
+small, h3 {
+    font-family: "IBM Plex Mono", serif;
+    cursor: url("./Assets/cursor.png"), auto;
+}
+
+body {
+    cursor: url("./Assets/cursor.png"), auto;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#asteroid1 {
+    position: absolute;
+    width: 10px;
+    height: 1px;
+    top: 0;
+    right: 0;
+    transform: rotate(-30deg);
+    animation: aster1 10s ease-in infinite;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+@keyframes aster1 {
+    0% {
+        top: 0;
+        right: 0;
+    }
+    100% {
+        top: 100%;
+        right: 200%;
+    }
+}
+
+#asteroid2 {
+    position: absolute;
+    width: 10px;
+    height: 1px;
+    top: 0;
+    right: 0;
+    transform: rotate(-30deg);
+    animation: aster2 10s 4s ease-in infinite;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+@keyframes aster2 {
+    0% {
+        top: 0%;
+        right: 60%;
+    }
+    100% {
+        top: 100%;
+        right: 200%;
+    }
+}
+
+#asteroid3 {
+    position: absolute;
+    width: 10px;
+    height: 1px;
+    top: 0;
+    right: 0;
+    transform: rotate(-30deg);
+    animation: aster3 10s 5s ease-in infinite;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+@keyframes aster3 {
+    0% {
+        top: 0%;
+        right: 75%;
+    }
+    100% {
+        top: 100%;
+        right: 200%;
+    }
+}
+
+#asteroid4 {
+    position: absolute;
+    width: 10px;
+    height: 1px;
+    top: 0;
+    right: 0;
+    transform: rotate(-30deg);
+    animation: aster4a 10s 1s ease-in infinite;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+@keyframes aster4a {
+    0% {
+        top: 0%;
+        right: 25%;
+    }
+    100% {
+        top: 100%;
+        right: 200%;
+    }
+}
+
+#asteroid5 {
+    position: absolute;
+    width: 10px;
+    height: 1px;
+    top: 0;
+    right: 0;
+    transform: rotate(-30deg);
+    animation: aster5a 10s 8s ease-in infinite;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+@keyframes aster5a {
+    0% {
+        top: 0%;
+        right: 15%;
+    }
+    100% {
+        top: 100%;
+        right: 200%;
+    }
+}
+
+#star1 {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    top: 10%;
+    right: 20%;
+    background-color: rgba(255, 255, 255, 0.623);
+    border-radius: 10px;
+}
+
+#star2 {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    top: 10%;
+    left: 7%;
+    background-color: rgba(255, 255, 255, 0.623);
+    border-radius: 10px;
+}
+
+#star1a {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    top: 3%;
+    right: 30%;
+    background-color: rgba(255, 255, 255, 0.623);
+    border-radius: 10px;
+}
+
+#star1b {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    top: 3%;
+    right: 30%;
+    background-color: rgba(255, 255, 255, 0.623);
+    border-radius: 10px;
+}
+
+#star2a {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    top: 6%;
+    left: 7%;
+    background-color: rgba(255, 255, 255, 0.623);
+    border-radius: 10px;
+}
+
+#star2b {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    top: 6%;
+    left: 7%;
+    background-color: rgba(255, 255, 255, 0.623);
+    border-radius: 10px;
+}
+
+#star3 {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    top: 26%;
+    right: 40%;
+    background-color: rgba(255, 255, 255, 0.623);
+    border-radius: 10px;
+}
+
+#star3a {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    top: 42%;
+    right: 40%;
+    background-color: rgba(255, 255, 255, 0.623);
+    border-radius: 10px;
+}
+
+#star3b {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    top: 42%;
+    right: 40%;
+    background-color: rgba(255, 255, 255, 0.623);
+    border-radius: 10px;
+}
+
+#star4 {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    top: 22%;
+    left: 40%;
+    background-color: rgba(255, 255, 255, 0.623);
+    border-radius: 10px;
+}
+
+#star4a {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    top: 12%;
+    left: 36%;
+    background-color: rgba(255, 255, 255, 0.623);
+    border-radius: 10px;
+}
+
+#star4b {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    top: 12%;
+    left: 36%;
+    background-color: rgba(255, 255, 255, 0.623);
+    border-radius: 10px;
+}
+
+#star5 {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    top: 45%;
+    left: 40%;
+    background-color: rgba(255, 255, 255, 0.623);
+    border-radius: 10px;
+}
+
+#star5a {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    top: 45%;
+    left: 20%;
+    background-color: rgba(255, 255, 255, 0.623);
+    border-radius: 10px;
+}
+
+#star5b {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    top: 45%;
+    left: 20%;
+    background-color: rgba(255, 255, 255, 0.623);
+    border-radius: 10px;
+}
+
+#star6a {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    bottom: 15%;
+    left: 40%;
+    background-color: rgba(255, 255, 255, 0.623);
+    border-radius: 10px;
+}
+
+#star6 {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    bottom: 15%;
+    left: 40%;
+    background-color: rgba(255, 255, 255, 0.623);
+    border-radius: 10px;
+}
+
+#star6b {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    bottom: 15%;
+    left: 40%;
+    background-color: rgba(255, 255, 255, 0.623);
+    border-radius: 10px;
+}
+
+#star7 {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    bottom: 12%;
+    right: 30%;
+    background-color: rgba(255, 255, 255, 0.623);
+    border-radius: 10px;
+}
+
+#star7a {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    bottom: 12%;
+    right: 30%;
+    background-color: rgba(255, 255, 255, 0.623);
+    border-radius: 10px;
+}
+
+#star7b {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    bottom: 12%;
+    right: 30%;
+    background-color: rgba(255, 255, 255, 0.623);
+    border-radius: 10px;
+}
+
+#squareDDD {
+    animation: aster6 20s ease infinite;
+}
+
+@keyframes aster6 {
+    0% {
+        top: -2%;
+    }
+    50% {
+        top: -1%;
+    }
+    100% {
+        top: -2%;
+    }
+}
+
+/* Asteroid Hero */
+
+#asteroid1a {
+    position: absolute;
+    width: 10px;
+    height: 1px;
+    top: 0;
+    right: 0;
+    transform: rotate(-30deg);
+    animation: aster1a 10s ease-in infinite;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+@keyframes aster1a {
+    0% {
+        top: -17%;
+        right: 0;
+    }
+    100% {
+        top: 200%;
+        right: 200%;
+    }
+}
+
+#asteroid1b {
+    position: absolute;
+    width: 10px;
+    height: 1px;
+    top: 0;
+    right: 0;
+    transform: rotate(-30deg);
+    animation: aster1b 10s ease-in infinite;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+@keyframes aster1b {
+    0% {
+        top: -17%;
+        right: 0;
+    }
+    100% {
+        top: 200%;
+        right: 200%;
+    }
+}
+
+#asteroid2a {
+    position: absolute;
+    width: 10px;
+    height: 1px;
+    top: 0;
+    right: 0;
+    transform: rotate(-35deg);
+    animation: aster2a 10s ease-in infinite;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+@keyframes aster2a {
+    0% {
+        top: -17%;
+        right: 45%;
+    }
+    100% {
+        top: 200%;
+        right: 150%;
+    }
+}
+
+#asteroid2b {
+    position: absolute;
+    width: 10px;
+    height: 1px;
+    top: 0;
+    right: 0;
+    transform: rotate(-35deg);
+    animation: aster2b 10s ease-in infinite;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+@keyframes aster2b {
+    0% {
+        top: -17%;
+        right: 45%;
+    }
+    100% {
+        top: 200%;
+        right: 150%;
+    }
+}
+
+#asteroid3a {
+    position: absolute;
+    width: 10px;
+    height: 1px;
+    top: 0;
+    right: 0;
+    transform: rotate(-30deg);
+    animation: aster3a 10s 5s ease-in infinite;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+@keyframes aster3a {
+    0% {
+        top: -17%;
+        right: 75%;
+    }
+    100% {
+        top: 200%;
+        right: 200%;
+    }
+}
+
+#asteroid3b {
+    position: absolute;
+    width: 10px;
+    height: 1px;
+    top: 0;
+    right: 0;
+    transform: rotate(-30deg);
+    animation: aster3b 10s 5s ease-in infinite;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+@keyframes aster3b {
+    0% {
+        top: -17%;
+        right: 75%;
+    }
+    100% {
+        top: 200%;
+        right: 200%;
+    }
+}
+
+#asteroid4a {
+    position: absolute;
+    width: 10px;
+    height: 1px;
+    top: 0;
+    right: 0;
+    transform: rotate(-30deg);
+    animation: aster4a 10s 5s ease-in infinite;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+@keyframes aster4a {
+    0% {
+        top: -17%;
+        right: 25%;
+    }
+    100% {
+        top: 200%;
+        right: 200%;
+    }
+}
+
+#asteroid4b {
+    position: absolute;
+    width: 10px;
+    height: 1px;
+    top: 0;
+    right: 0;
+    transform: rotate(-30deg);
+    animation: aster4b 10s 5s ease-in infinite;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+@keyframes aster4b {
+    0% {
+        top: -17%;
+        right: 25%;
+    }
+    100% {
+        top: 200%;
+        right: 200%;
+    }
+}
+
+#asteroid5a {
+    position: absolute;
+    width: 10px;
+    height: 1px;
+    top: 0;
+    right: 0;
+    transform: rotate(-30deg);
+    animation: aster5a 4s ease-in infinite;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+@keyframes aster5a {
+    0% {
+        top: -17%;
+        right: -10%;
+    }
+    100% {
+        top: 200%;
+        right: 100%;
+    }
+}
+
+#asteroid5b {
+    position: absolute;
+    width: 10px;
+    height: 1px;
+    top: 0;
+    right: 0;
+    transform: rotate(-30deg);
+    animation: aster5b 4s ease-in infinite;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+@keyframes aster5b {
+    0% {
+        top: -17%;
+        right: -10%;
+    }
+    100% {
+        top: 200%;
+        right: 100%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #asteroid1 {
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        top: 0;
+        right: 0;
+        transform: rotate(-30deg);
+        animation: aster1 10s ease-in infinite;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+    }
+
+    @keyframes aster1 {
+        0% {
+            top: 0;
+            right: 0;
+        }
+        100% {
+            top: 100%;
+            right: 200%;
+        }
+    }
+
+    #asteroid2 {
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        top: 0;
+        right: 0;
+        transform: rotate(-30deg);
+        animation: aster2 10s 4s ease-in infinite;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+    }
+
+    @keyframes aster2 {
+        0% {
+            top: 0%;
+            right: 60%;
+        }
+        100% {
+            top: 100%;
+            right: 200%;
+        }
+    }
+
+    #asteroid3 {
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        top: 0;
+        right: 0;
+        transform: rotate(-30deg);
+        animation: aster3 10s 5s ease-in infinite;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+    }
+
+    @keyframes aster3 {
+        0% {
+            top: 0%;
+            right: 75%;
+        }
+        100% {
+            top: 100%;
+            right: 200%;
+        }
+    }
+
+    #asteroid4 {
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        top: 0;
+        right: 0;
+        transform: rotate(-30deg);
+        animation: aster4a 10s 1s ease-in infinite;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+    }
+
+    @keyframes aster4a {
+        0% {
+            top: 0%;
+            right: 25%;
+        }
+        100% {
+            top: 100%;
+            right: 200%;
+        }
+    }
+
+    #asteroid5 {
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        top: 0;
+        right: 0;
+        transform: rotate(-30deg);
+        animation: aster5a 10s 8s ease-in infinite;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+    }
+
+    @keyframes aster5a {
+        0% {
+            top: 0%;
+            right: 15%;
+        }
+        100% {
+            top: 100%;
+            right: 200%;
+        }
+    }
+
+    #star1 {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        top: 10%;
+        right: 20%;
+        background-color: rgba(255, 255, 255, 0.623);
+        border-radius: 10px;
+    }
+
+    #star2 {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        top: 10%;
+        left: 7%;
+        background-color: rgba(255, 255, 255, 0.623);
+        border-radius: 10px;
+    }
+
+    #star1a {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        top: 3%;
+        right: 30%;
+        background-color: rgba(255, 255, 255, 0.623);
+        border-radius: 10px;
+    }
+
+    #star1b {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        top: 3%;
+        right: 30%;
+        background-color: rgba(255, 255, 255, 0.623);
+        border-radius: 10px;
+    }
+
+    #star2a {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        top: 6%;
+        left: 7%;
+        background-color: rgba(255, 255, 255, 0.623);
+        border-radius: 10px;
+    }
+
+    #star2b {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        top: 6%;
+        left: 7%;
+        background-color: rgba(255, 255, 255, 0.623);
+        border-radius: 10px;
+    }
+
+    #star3 {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        top: 26%;
+        right: 40%;
+        background-color: rgba(255, 255, 255, 0.623);
+        border-radius: 10px;
+    }
+
+    #star3a {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        top: 42%;
+        right: 40%;
+        background-color: rgba(255, 255, 255, 0.623);
+        border-radius: 10px;
+    }
+
+    #star3b {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        top: 42%;
+        right: 40%;
+        background-color: rgba(255, 255, 255, 0.623);
+        border-radius: 10px;
+    }
+
+    #star4 {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        top: 22%;
+        left: 40%;
+        background-color: rgba(255, 255, 255, 0.623);
+        border-radius: 10px;
+    }
+
+    #star4a {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        top: 12%;
+        left: 36%;
+        background-color: rgba(255, 255, 255, 0.623);
+        border-radius: 10px;
+    }
+
+    #star4b {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        top: 12%;
+        left: 36%;
+        background-color: rgba(255, 255, 255, 0.623);
+        border-radius: 10px;
+    }
+
+    #star5 {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        top: 45%;
+        left: 40%;
+        background-color: rgba(255, 255, 255, 0.623);
+        border-radius: 10px;
+    }
+
+    #star5a {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        top: 45%;
+        left: 20%;
+        background-color: rgba(255, 255, 255, 0.623);
+        border-radius: 10px;
+    }
+
+    #star5b {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        top: 45%;
+        left: 20%;
+        background-color: rgba(255, 255, 255, 0.623);
+        border-radius: 10px;
+    }
+
+    #star6a {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        bottom: 15%;
+        left: 40%;
+        background-color: rgba(255, 255, 255, 0.623);
+        border-radius: 10px;
+    }
+
+    #star6 {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        bottom: 15%;
+        left: 40%;
+        background-color: rgba(255, 255, 255, 0.623);
+        border-radius: 10px;
+    }
+
+    #star6b {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        bottom: 15%;
+        left: 40%;
+        background-color: rgba(255, 255, 255, 0.623);
+        border-radius: 10px;
+    }
+
+    #star7 {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        bottom: 12%;
+        right: 30%;
+        background-color: rgba(255, 255, 255, 0.623);
+        border-radius: 10px;
+    }
+
+    #star7a {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        bottom: 12%;
+        right: 30%;
+        background-color: rgba(255, 255, 255, 0.623);
+        border-radius: 10px;
+    }
+
+    #star7b {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        bottom: 12%;
+        right: 30%;
+        background-color: rgba(255, 255, 255, 0.623);
+        border-radius: 10px;
+    }
+
+    #squareDDD {
+        animation: aster6 20s ease infinite;
+    }
+
+    @keyframes aster6 {
+        0% {
+            top: -2%;
+        }
+        50% {
+            top: -1%;
+        }
+        100% {
+            top: -2%;
+        }
+    }
+
+    /* Asteroid Hero */
+
+    #asteroid1a {
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        top: 0;
+        right: 0;
+        transform: rotate(-30deg);
+        animation: aster1a 10s ease-in infinite;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+    }
+
+    @keyframes aster1a {
+        0% {
+            top: -17%;
+            right: 0;
+        }
+        100% {
+            top: 200%;
+            right: 200%;
+        }
+    }
+
+    #asteroid1b {
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        top: 0;
+        right: 0;
+        transform: rotate(-30deg);
+        animation: aster1b 10s ease-in infinite;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+    }
+
+    @keyframes aster1b {
+        0% {
+            top: -17%;
+            right: 0;
+        }
+        100% {
+            top: 200%;
+            right: 200%;
+        }
+    }
+
+    #asteroid2a {
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        top: 0;
+        right: 0;
+        transform: rotate(-35deg);
+        animation: aster2a 10s ease-in infinite;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+    }
+
+    @keyframes aster2a {
+        0% {
+            top: -17%;
+            right: 45%;
+        }
+        100% {
+            top: 200%;
+            right: 150%;
+        }
+    }
+
+    #asteroid2b {
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        top: 0;
+        right: 0;
+        transform: rotate(-35deg);
+        animation: aster2b 10s ease-in infinite;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+    }
+
+    @keyframes aster2b {
+        0% {
+            top: -17%;
+            right: 45%;
+        }
+        100% {
+            top: 200%;
+            right: 150%;
+        }
+    }
+
+    #asteroid3a {
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        top: 0;
+        right: 0;
+        transform: rotate(-30deg);
+        animation: aster3a 10s 5s ease-in infinite;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+    }
+
+    @keyframes aster3a {
+        0% {
+            top: -17%;
+            right: 75%;
+        }
+        100% {
+            top: 200%;
+            right: 200%;
+        }
+    }
+
+    #asteroid3b {
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        top: 0;
+        right: 0;
+        transform: rotate(-30deg);
+        animation: aster3b 10s 5s ease-in infinite;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+    }
+
+    @keyframes aster3b {
+        0% {
+            top: -17%;
+            right: 75%;
+        }
+        100% {
+            top: 200%;
+            right: 200%;
+        }
+    }
+
+    #asteroid4a {
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        top: 0;
+        right: 0;
+        transform: rotate(-30deg);
+        animation: aster4a 10s 5s ease-in infinite;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+    }
+
+    @keyframes aster4a {
+        0% {
+            top: -17%;
+            right: 25%;
+        }
+        100% {
+            top: 200%;
+            right: 200%;
+        }
+    }
+
+    #asteroid4b {
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        top: 0;
+        right: 0;
+        transform: rotate(-30deg);
+        animation: aster4b 10s 5s ease-in infinite;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+    }
+
+    @keyframes aster4b {
+        0% {
+            top: -17%;
+            right: 25%;
+        }
+        100% {
+            top: 200%;
+            right: 200%;
+        }
+    }
+
+    #asteroid5a {
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        top: 0;
+        right: 0;
+        transform: rotate(-30deg);
+        animation: aster5a 4s ease-in infinite;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+    }
+
+    @keyframes aster5a {
+        0% {
+            top: -17%;
+            right: -10%;
+        }
+        100% {
+            top: 200%;
+            right: 100%;
+        }
+    }
+
+    #asteroid5b {
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        top: 0;
+        right: 0;
+        transform: rotate(-30deg);
+        animation: aster5b 4s ease-in infinite;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+    }
+
+    @keyframes aster5b {
+        0% {
+            top: -17%;
+            right: -10%;
+        }
+        100% {
+            top: 200%;
+            right: 100%;
+        }
+    }
+}
