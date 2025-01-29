@@ -49,8 +49,12 @@ import Peserta from './winner.png'
 import Puitisy from './puitisy.png'
 import AuthFlow from './authFlow.png'
 import Pacticles2 from './pacticlesV.png'
+import Build from './build.jpg'
+import KonstruksiLogo from './konstruksidotai_logo.png'
 
 export {
+    KonstruksiLogo,
+    Build,
     Pacticles2,
     AuthFlow,
     Linkedin,

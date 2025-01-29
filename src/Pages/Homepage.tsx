@@ -1,9 +1,9 @@
 import { motion } from "framer-motion"
-import { Add01Icon, ArrowRight02Icon, BrowserIcon, Github01Icon, Link03Icon, MapPinIcon, PaintBrush04Icon } from 'hugeicons-react'
+import { Add01Icon, ArrowRight02Icon, BrowserIcon, Building01Icon, Github01Icon, Link03Icon, LinkSquare01Icon, MapPinIcon, PaintBrush04Icon } from 'hugeicons-react'
 import React, { useState } from 'react'
 import { FaArrowRight, FaTimes } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import { AuthFlow, Bali, Cirebon, Earth, FlowTrush, Geospasial, Git1, Git2, Git3, Git4, JWD, Jakarta, Laravel, Majalengka, Node, Pacticles2, PakYos, Peserta, Reacts, Redux, TS, TW, Winner } from '../Assets'
+import { AuthFlow, Bali, Build, Cirebon, Earth, FlowTrush, Geospasial, Git1, Git2, Git3, Git4, JWD, Jakarta, KonstruksiLogo, Laravel, Majalengka, Node, Pacticles2, PakYos, Peserta, Reacts, Redux, TS, TW, Winner } from '../Assets'
 import ModalCertification from '../Components/ModalCertification'
 import '../index.css'
 
@@ -14,6 +14,7 @@ const Homepage: React.FC = () => {
   const [sidebar, setSidebar] = useState<boolean>(false);
   const [text, setText] = useState<string>('');
   const [selectType, setSelectType] = useState<string>('dev');
+  const [selectTypeGit, setSelectTypeGit] = useState<string>('git3');
   const [selectAccordion, setSelectAccordion] = useState<number>(1);
 
   return (
@@ -583,127 +584,88 @@ const Homepage: React.FC = () => {
           </div> */}
         </div>
 
-      <div className='relative w-full lg:mt-0 mt-[50px] flex flex-col z-[4444] lg:px-0 border-box lg:ml-[48px] h-max lg:border-l-[1px] border-slate-100'>
-          
-          <img src={Earth} alt="earth" className='absolute right-[-700px] opacity-[0.2] top-[-200px]' />
+        <div id='linkedin' className='px-14 relative lg:flex flex-col hidden z-[444] pb-[30px] lg:pb-[80px] lg:pt-4 w-[94%] h-max lg:border-l-[1px] lg:ml-12 border-slate-100'>
+          <small className='relative text-[#00B4F5] text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-gray-950/5 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-gray-950/5 dark:after:bg-white/10 after:-left-[100vw]'>Experience in industry</small>
+          <h2 className='relative text-[40px] text-white mt-4 mb-10 font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-gray-950/5 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-gray-950/5 dark:after:bg-white/10 after:-left-[100vw]'>Experience - Internship</h2>
+          <p className='relative text-base text-slate-400 w-[70%] tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-gray-950/5 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-gray-950/5 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
 
-          <div className='relative z-[4444] pb-[0px] px-4 lg:px-16 w-[100%] mt-[0px] lg:mt-20 lg:mb-20 h-max ml-[0px]'>
-            <div className='w-max mb-3 border border-slate-100 text-white flex lg:ml-0 items-center text-center px-5 py-1'>
-              Experiences
+          <div className='relative w-full grid grid-cols-2 mt-14 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-gray-950/5 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-gray-950/5 dark:after:bg-white/10 after:-left-[100vw]'>
+            <div className='flex items-center justify-center cursor-pointer border-x border-gray-800'>
+              <img src={Build} alt="wisma-bumiputera" className='w-full grayscale-[100%]' />
             </div>
-            <h3 className='text-[40px] lg:text-[70px] text-blue-400 font-[500]'>My Intern</h3>
-            <h2 className='text-[30px] text-white w-max hidden lg:flex items-center'>Part-time & full-time in my <span className='text-blue-400 ml-3 flex items-center'>Jobs.</span></h2>
-          </div>
+            <div className='w-full px-6'>
+                <a href="https://konstruksi.ai/" target="__blank">
+                  <div className='relative flex gap-4 mb-6 items-center cursor-pointer px-6 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-gray-950/5 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-gray-950/5 dark:after:bg-white/10 after:-left-[100vw]'>
+                    <img src={KonstruksiLogo} alt="logo-konstruksi.ai" className="w-9" />
+                    <div className='flex-1'>
+                      <h2 className='text-white text-[28px] relative font-medium'>Konstruksi.AI</h2>
+                    </div>
+                  </div>
+                </a>
+                <div className="max-w-full mx-auto p-6 text-slate-400">
+                  <section>
+                      <div className="relative mb-6 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-gray-950/5 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-gray-950/5 dark:after:bg-white/10 after:-left-[100vw]">
+                          <p className="relative text-base mb-6 font-semibold text-white before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-gray-950/5 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-gray-950/5 dark:after:bg-white/10 after:-left-[100vw]">Web Application Development</p>
+                          <p className='text-sm text-justify w-full mb-2 leading-loose tracking-tighter'>Build and develop a web application using <strong>React</strong>, <strong>Vite</strong>, and <strong>Tailwind CSS</strong> to create responsive and efficient user interfaces and Integrate and display architectural project data.</p>
+                      </div>
 
-          {/* one */}
-          <div id='experience' className='relative flex items-center h-max lg:h-[400px] lg:mt-0 mt-10 w-[90vw] ml-5 lg:ml-0 lg:w-full'>
-            <div className='w-[150px] relative lg:flex hidden'>
-              <img loading='lazy' src='https://github.githubassets.com/assets/git-branch-security-2-f6a799957581.svg' alt="line" />
-            </div>
-            <div className='w-full relative left-[-1px] lg:left-[-100px] mt-8'>
-              <div className='lg:ml-[120px] mt-[0px] w-max mb-5 border border-slate-100 bg-white text-black flex items-center text-center px-5 py-1 shadow-[20px]'>
-                Frontend Developer
+                      <div className="relative mb-6 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-gray-950/5 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-gray-950/5 dark:after:bg-white/10 after:-left-[100vw]">
+                          <p className="relative text-base mb-6 font-semibold text-white before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-gray-950/5 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-gray-950/5 dark:after:bg-white/10 after:-left-[100vw]">Web Features Testing and Debugging</p>
+                          <p className='text-sm text-justify w-full mb-2 leading-loose tracking-tighter'>Identify and analyze technical issues, and collaborate with the development team to find effective solutions.</p>
+                      </div>
+
+                      <div className="relative mb-6 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-gray-950/5 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-gray-950/5 dark:after:bg-white/10 after:-left-[100vw]">
+                          <p className="relative text-base mb-6 font-semibold text-white before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-gray-950/5 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-gray-950/5 dark:after:bg-white/10 after:-left-[100vw]">Team Collaboration</p>
+                          <p className='text-sm text-justify w-full mb-2 leading-loose tracking-tighter'>Collaborate with backend developers, UI/UX designers, and project managers to ensure the web application development aligns with project specifications and business goals.</p>
+                      </div>
+                  </section>
               </div>
-              <h2 className='text-[24px] lg:text-[48px] lg:ml-[120px] relative top-[5px] bg-gradient-to-r from-white to-slate-500 text-transparent w-[94vw] lg:w-[70vw] text-left bg-clip-text'>PT. Konstruksi.AI </h2>
-              <p className='lg:text-white lg:ml-[120px] mt-5 w-full lg:text-[16px] text-[14px] text-slate-300 text-left lg:w-[75%] leading-loose'>February 2024 - April 2024, Frontend Developer use React Vite + TailwindCSS, Create Structure Project Best Practive My Version and Use Redux (State Management) + TypeScript (Type Data Managment)</p>
-              <Link to={'https://konstruksi.ai/'}>
-                <h3 className='cursor-pointer underline ml-1 lg:ml-[120px] mt-[30px] mb-10 hover:brightness-[90%] active:scale-[0.99] text-blue-300 text-[20px] flex items-center w-max'>Company Profile<FaArrowRight className='ml-4 relative top-[0.8]' /> </h3>
-              </Link>
-            </div>
-          </div>
-          {/* two */}
-          <div className='relative flex items-center h-max lg:h-[400px] w-[90vw] ml-5 lg:ml-0 lg:w-full'>
-            <div className='w-[150px] relative lg:flex hidden'>
-              <img loading='lazy' src='https://github.githubassets.com/assets/git-branch-security-2-f6a799957581.svg' alt="line" />
-            </div>
-            <div className='w-full relative left-0 lg:left-[-100px] mt-8'>
-              <div className='lg:ml-[120px] mt-[0px] w-max mb-5 border border-slate-100 bg-white text-black flex items-center text-center px-5 py-1 shadow-[20px]'>
-                Web Developer & Data Analysist
-              </div>
-              <h2 className='text-[24px] lg:text-[48px] lg:ml-[120px] relative top-[5px] bg-gradient-to-r from-white to-slate-500 text-transparent w-[94vw] lg:w-[70vw] text-left bg-clip-text'>Diskominfo Cirebon </h2>
-              <p className='lg:text-white lg:ml-[120px] mt-5 w-full lg:text-[16px] text-[14px] text-slate-300 text-left lg:w-[75%] leading-loose'>February 2024 - April 2024, Frontend Developer use React Vite + TailwindCSS, Create Structure Project Best Practive My Version and Use Redux (State Management) + TypeScript (Type Data Managment)</p>
-              <Link to={'https://diskominfo.cirebonkab.go.id/'}>
-                <h3 className='cursor-pointer underline ml-1 lg:ml-[120px] mt-[30px] mb-10 hover:brightness-[90%] active:scale-[0.99] text-blue-300 text-[20px] flex items-center w-max'>Company Profile<FaArrowRight className='ml-4 relative top-[0.8]' /> </h3>
-              </Link>
             </div>
           </div>
 
-          <div id='github' className='relative w-[100vw] lg:w-[92vw] text-left p-4 lg:p-10 z-40 overflow-hidden left-0 lg:left-[-35px] flex flex-col bg-white mt-8 lg:mb-0 mb-14 mr-8 lg:rounded-[12px] border border-slate-200 min-h-[284px] lg:min-h-[500px]'>
-            <h3 className='text-white text-[15px] lg:text-[18px] w-[94%] text-left lg:w-[90%] leading-loose'>Your GitHub profile highlights your coding projects, contributions to open-source communities, and technical skills, offering a comprehensive view of your expertise in software development and collaboration within the tech community.</h3>
-            
-            <div className='w-full my-8 lg:flex justify-between items-center'>
-              <div className='w-full lg:mb-0 mb-5 lg:w-[24%] min-h-[300px] p-3 border border-slate-300 rounded-[20px]'>
-                <div className='w-full h-[130px] bg-blue-200 flex justify-center items-center'>
-                  <img src={Git1} alt="pull-shark" className='w-[30%]' />
-                </div>
-                <div className='w-full p-4'>
-                  <div className='w-[30px] h-[30px] ml-auto flex items-center justify-center cursor-pointer p-1'>
-                    <FaArrowRight className='relative text-blue-500 scale-[1.1] rotate-[-35deg]' />
-                  </div>
-                  <h2>Pull Shark - 2x</h2>
-                  <p className='mt-2 text-slate-500 text-[14px] leading-loose'>@khoirulhudaa opened pull requests that have been merged.</p>
-                </div>
-              </div>
-              <div className='w-full lg:mb-0 mb-5 lg:w-[24%] min-h-[300px] p-3 border border-slate-300 rounded-[20px]'>
-                <div className='w-full h-[130px] bg-orange-200 flex justify-center items-center'>
-                  <img src={Git2} alt="pull-shark" className='w-[30%]' />
-                </div>
-                <div className='w-full p-4'>
-                  <div className='w-[30px] h-[30px] ml-auto flex items-center justify-center cursor-pointer p-1'>
-                    <FaArrowRight className='relative text-blue-500 scale-[1.1] rotate-[-35deg]' />
-                  </div>
-                  <h2>Quickdraw</h2>
-                  <p className='mt-2 text-slate-500 text-[14px] leading-loose'>Closing issues or pull requests within 5 minutes after they are opened.</p>
-                </div>
-              </div>
-              <div className='w-full lg:mb-0 mb-5 lg:w-[24%] min-h-[300px] p-3 border border-slate-300 rounded-[20px]'>
-                <div className='w-full h-[130px] bg-yellow-200 flex justify-center items-center'>
-                  <img src={Git3} alt="pull-shark" className='w-[30%]' />
-                </div>
-                <div className='w-full p-4'>
-                  <div className='w-[30px] h-[30px] ml-auto flex items-center justify-center cursor-pointer p-1'>
-                    <FaArrowRight className='relative text-blue-500 scale-[1.1] rotate-[-35deg]' />
-                  </div>
-                  <h2>Yolo</h2>
-                  <p className='mt-2 text-slate-500 text-[14px] leading-loose'>Achievement when you merge a PR without review.</p>
-                </div>
-              </div>
-              <div className='w-full lg:mb-0 mb-5 lg:w-[24%] min-h-[300px] p-3 border border-slate-300 rounded-[20px]'>
-                <div className='w-full h-[130px] bg-purple-300 flex justify-center items-center'>
-                  <img src={Git4} alt="pull-shark" className='w-[30%]' />
-                </div>
-                <div className='w-full p-4'>
-                  <div className='w-[30px] h-[30px] ml-auto flex items-center justify-center cursor-pointer p-1'>
-                    <FaArrowRight classsetSelectAccordionName='relative text-blue-500 scale-[1.1] rotate-[-35deg]' />
-                  </div>
-                  <h2>Starstruck</h2>
-                  <p className='mt-2 text-slate-500 text-[14px] leading-loose'>Starstruck: Having a repository with high popularity / a large number of stars.</p>
-                </div>
-              </div>
-            </div>
-
-            <Link to={'https://github.com/khoirulhudaa'}>
-              <div className='w-max h-max text-white hover:brightness-[90%] active:scale-[0.98] mt-[-22px] lg:mt-5 bg-slate-800 flex items-center justify-center cursor-pointer px-6 lg:text-[16px] text-[12px] lg:px-8 py-3'>
-                Look at github <FaArrowRight className='ml-3' />
-              </div>
-            </Link>
-          </div>
 
         </div>
+        
+        <div id='github' className='px-14 relative lg:flex flex-col hidden z-[444] pb-[30px] lg:pb-[80px] lg:pt-4 w-[94%] h-max lg:border-l-[1px] lg:ml-12 border-slate-100'>
+          <small className='relative text-[#00B4F5] text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-gray-950/5 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-gray-950/5 dark:after:bg-white/10 after:-left-[100vw]'>All repositories github</small>
+          <h2 className='relative text-[40px] text-white mt-4 mb-10 font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-gray-950/5 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-gray-950/5 dark:after:bg-white/10 after:-left-[100vw]'>
+            <a href='https://github.com/khorulhudaa' className='flex items-center gap-4'>
+              Github account <LinkSquare01Icon className='text-[#00B4F5]' /> 
+            </a>
+          </h2>
+          <p className='relative text-base text-slate-400 w-[70%] tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-gray-950/5 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-gray-950/5 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
 
-        <div className='relative lg:w-[90vw] flex flex-col z-[4444] pt-7 lg:pt-8 pb-5 lg:pb-36 lg:ml-[48px] h-max lg:border-l-[1px] border-slate-100'>
-
-          <img src={Earth} alt="earth" className='absolute right-[-700px] scale-[2] opacity-[0.2] top-[25%]' />
-
-          <div className='relative z-[4444] pb-[0px] px-0 lg:px-16 w-[100%] mt-[0px] lg:mt-20 lg:mb-20 h-max ml-[16px] lg:ml-[-17px]'>
-            <div className='w-max mb-3 border border-slate-100 text-white flex lg:ml-0 items-center text-center px-5 py-1'>
-              Certificates
+          <div className='relative w-full grid grid-cols-3 mt-14 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-gray-950/5 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-gray-950/5 dark:after:bg-white/10 after:-left-[100vw]'>
+            <div onClick={() => setSelectTypeGit('git1')} className={`flex gap-6 ${selectTypeGit === 'git1' ? 'bg-[#ff69df11]' : ''} items-center cursor-pointer p-6`}>
+              <img src={Git1} alt="git" className="w-12" />
+              <div className='flex-1'>
+                <h3 className={`${selectTypeGit === 'git1' ? 'text-[#f85c98]' : 'text-white'} font-medium`}>Pull Shark - 2x</h3>
+                <p className='text-[14px] mt-2 text-slate-400 leading-loose tracking-tighter'>@khoirulhudaa opened pull requests that have been merged.</p>
+              </div>
             </div>
-            <h3 className='text-[40px] lg:text-[70px] text-blue-400 font-[500]'>My Awards</h3>
-            <h2 className='text-[30px] text-white w-max hidden lg:flex items-center'>Results from competitions & training.</h2>
+            <div onClick={() => setSelectTypeGit('git2')} className={`flex gap-6 ${selectTypeGit === 'git2' ? 'bg-[#9e69ff11]' : ''} items-center cursor-pointer p-6 border-x border-gray-800`}>
+              <img src={Git2} alt="git" className="w-12" />
+              <div className='flex-1'>
+                <h3 className={`${selectTypeGit === 'git2' ? 'text-[#5E5CF8]' : 'text-white'} font-medium`}>Quickdraw</h3>
+                <p className='text-[14px] mt-2 text-slate-400 leading-loose tracking-tighter'>Closing issues or pull requests within 5 minutes after they are opened.</p>
+              </div>
+            </div>
+            <div onClick={() => setSelectTypeGit('git3')} className={`flex gap-6 ${selectTypeGit === 'git3' ? 'bg-[#69dcff11]' : ''} items-center cursor-pointer p-6`}>
+              <img src={Git3} alt="git" className="w-12" />
+              <div className='flex-1'>
+                <h3 className={`${selectType === 'git3' ? 'text-[#5cc7f8]' : 'text-white'} font-medium`}>Starstruck</h3>
+                <p className='text-[14px] mt-2 text-slate-400 leading-loose tracking-tighter'>Starstruck: Having a repository with high popularity, starts.</p>
+              </div>
+            </div>
           </div>
+        </div>
 
-          <div className='w-full flex lg:px-0 px-5 lg:ml-12 flex-wrap'>
+        <div id='certifications' className='px-14 relative lg:flex flex-col hidden z-[444] pb-[30px] lg:pb-[80px] lg:pt-4 w-[94%] h-max lg:border-l-[1px] lg:ml-12 border-slate-100'>
+          <small className='relative text-[#00B4F5] text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-gray-950/5 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-gray-950/5 dark:after:bg-white/10 after:-left-[100vw]'>My various achievements</small>
+          <h2 className='relative text-[40px] text-white mt-4 mb-10 font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-gray-950/5 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-gray-950/5 dark:after:bg-white/10 after:-left-[100vw]'>Web competition awards</h2>
+          <p className='relative text-base text-slate-400 w-[70%] tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-gray-950/5 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-gray-950/5 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
+
+          <div className='w-full mt-16 flex flex-wrap'>
             <div id='certifications' className='relative flex items-center h-max lg:h-[320px] lg:mt-0 mt-10 w-full lg:w-[45%] mb-8 lg:mb-14 lg:mr-8 p-6 border border-slate-100 rounded-[20px]'>
               <div className='w-full relative left-[-1px] lg:left-[-100px] mt-6 lg:mt-8'>
                 <div className='lg:ml-[120px] mt-[0px] mb-5 flex items-center'>
