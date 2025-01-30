@@ -13,7 +13,7 @@ export default function FadeTransition() {
 					initial={{ opacity: 1 }}
 					animate={{
 						opacity: 0,
-						transition: { delay: 2, duration: 9, ease: "easeInOut" },
+						transition: { delay: 1, duration: 1, ease: "easeInOut" },
 					}}
 				/>
 			</div>
