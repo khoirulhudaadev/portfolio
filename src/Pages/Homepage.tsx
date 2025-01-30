@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { Add01Icon, ArrowRight02Icon, BrowserIcon, Github01Icon, Link03Icon, LinkSquare01Icon, MapPinIcon, PaintBrush04Icon } from 'hugeicons-react'
+import { Add01Icon, ArrowRight02Icon, BrowserIcon, Github01Icon, Link03Icon, Linkedin01Icon, LinkSquare01Icon, MapPinIcon, PaintBrush04Icon } from 'hugeicons-react'
 import React, { useState } from 'react'
 import { FaArrowRight, FaTimes } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
@@ -123,14 +123,14 @@ const Homepage: React.FC = () => {
               <div id='asteroid5a'></div>
             </div>
 
-            {/* Side zigzag */}
-            <div className="fixed w-[3vw] h-screen z-[33333333] col-start-1 top-0 left-0 row-span-full row-start-1 hidden border-x border-x-[#6B7280] bg-[image:repeating-linear-gradient(315deg,#6B7280_0,#6B7280_1px,transparent_0,transparent_50%)] bg-[size:10px_10px] bg-fixed md:block dark:bg-[image:repeating-linear-gradient(315deg,#D1D5DB_0,#D1D5DB_1px,transparent_0,transparent_50%)]">
+            {/* Side zigzag ==================================== */}
+            <div className="fixed w-[3vw] h-screen z-[33333333] col-start-1 top-0 left-0 row-span-full row-start-1 hidden border-x border-x-[rgba(107,114,128,0.3)] bg-[image:repeating-linear-gradient(315deg,rgba(107,114,128,0.3)_0,rgba(107,114,128,0.3)_1px,transparent_0,transparent_50%)] bg-[size:10px_10px] bg-fixed md:block dark:bg-[image:repeating-linear-gradient(315deg,rgba(209,213,219,0.3)_0,rgba(209,213,219,0.3)_1px,transparent_0,transparent_50%)]">
             </div>
-            <div className="fixed w-[3vw] h-screen z-[33333333] col-start-1 top-0 right-0 row-span-full row-start-1 hidden border-x border-x-[#6B7280] bg-[image:repeating-linear-gradient(315deg,#6B7280_0,#6B7280_1px,transparent_0,transparent_50%)] bg-[size:10px_10px] bg-fixed md:block dark:bg-[image:repeating-linear-gradient(315deg,#D1D5DB_0,#D1D5DB_1px,transparent_0,transparent_50%)]">
+            <div className="fixed w-[3vw] h-screen z-[33333333] col-start-1 top-0 right-0 row-span-full row-start-1 hidden border-x border-x-[rgba(107,114,128,0.3)] bg-[image:repeating-linear-gradient(315deg,rgba(107,114,128,0.3)_0,rgba(107,114,128,0.3)_1px,transparent_0,transparent_50%)] bg-[size:10px_10px] bg-fixed md:block dark:bg-[image:repeating-linear-gradient(315deg,rgba(209,213,219,0.3)_0,rgba(209,213,219,0.3)_1px,transparent_0,transparent_50%)]">
             </div>
 
             <div className='relative mb-6 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
-              <p className='text-center px-5 py-2 w-max text-white flex items-center'>Fullstack Developer - <span className="text-gray-500">MERN&Laravel</span></p>
+              <p className='text-center px-5 py-2 w-max text-white flex items-center'>Fullstack Developer - <span className="text-gray-500 ml-1">MERN&Laravel</span></p>
             </div>
 
             <div className='relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
@@ -138,11 +138,11 @@ const Homepage: React.FC = () => {
             </div>
 
             <div className='relative mt-6 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
-              <p className='w-max text-slate-400 px-3 text-lg tracking-tighter text-balance max-lg:font-medium max-sm:px-4'>"Welcome to my homebase—where ideas, creativity, and experience come together in a digital portfolio."</p>
+              <p className='w-max text-slate-300 px-3 text-lg tracking-tighter text-balance max-lg:font-medium max-sm:px-4'>"Welcome to my homebase—where ideas, creativity, and experience come together in a digital portfolio."</p>
             </div>
 
             <div className='relative my-7 py-2 flex items-baseline before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
-              <button className='outline-0 ml-4 mr-6 rounded-[12px] bg-white p-3 w-max lg h-max text-center font-[600] text-[14px] text-black'>Download Resume</button>
+              <button className='outline-0 ml-4 mr-6 rounded-[12px] bg-white p-3 w-max lg h-max text-center text-[14px] font-normal text-black'>Download Resume</button>
               <p className='text-md text-white tracking-tighter text-balance'>Chat via Whatsapp</p>
             </div>
 
@@ -150,12 +150,20 @@ const Homepage: React.FC = () => {
           
           <div id='languages' className='px-14 relative lg:flex flex-col hidden z-[444] pb-[30px] lg:pb-[80px] lg:pt-4 w-full h-max border-slate-100'>
           
-          <div className="absolute left-[20%] w-[60%] h-[40px] py-[30%] transform -translate-y-[75%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[240px]"></div>
-          <div className="absolute left-[25%] w-[30%] h-[40px] py-[30%] transform -translate-y-[51%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[240px]"></div>
+            <div className="absolute left-[20%] w-[60%] h-[40px] py-[30%] transform -translate-y-[75%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[240px]"></div>
+            <div className="absolute left-[25%] w-[30%] h-[40px] py-[30%] transform -translate-y-[51%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[240px]"></div>
 
             <small className='relative text-[#00B4F5] mb-4 text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Frontend + Backend.</small>
-            <h2 className='relative text-[40px] text-white mb-10 font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Skill and languages</h2>
-            <p className='relative text-base text-slate-400 w-[70%] tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
+            <div className='w-full mt-4 mb-10 flex justify-between items-center '>
+              <h2 className='relative text-[40px] text-white font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Experience - Internship</h2>
+              <div className='flex w-max'>
+                <div className="relative flex items-center gap-6 p-6 text-transparent before:absolute before:left-0 before:w-px before:h-[200vh] before:bg-slate-900/80 dark:before:bg-white/10 before:-top-[100vh] after:absolute after:right-0 after:w-px after:h-[200vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[100vh]">
+                  <p>konstruksi web</p>
+                  <Link03Icon className='w-6 h-6' />
+                </div>
+              </div>
+            </div>
+            <p className='relative text-base text-slate-300 w-[70%] tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
           
             <div className='w-full rounded-[24px] bg-white/20 backdrop-blur-2xl p-4 z-40 flex items-center lg:flex-no-wrap flex-wrap justify-between mt-12'>
               <div className='w-full h-full rounded-[20px] bg-[#030712] p-10 border border-black flex items-center justify-between bg-[image:radial-gradient(circle,#D9D9D9_10%,transparent_20%)] bg-[size:10px_10px] bg-fixed dark:bg-[image:radial-gradient(circle,#D9D9D9_1%,transparent_20%)]'>
@@ -177,7 +185,7 @@ const Homepage: React.FC = () => {
 
             <small className='relative text-[#00B4F5] mb-4 text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Frontend + Backend.</small>
             <h2 className='relative text-[40px] text-white mb-10 font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Skill and languages</h2>
-            <p className='relative text-base text-slate-400 w-[70%] tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
+            <p className='relative text-base text-slate-300 w-[70%] tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
             
               <div className='w-full rounded-[24px] bg-white/20 backdrop-blur-2xl p-4 z-40 items-center justify-between mt-12'>
                   <div className='w-full h-full rounded-[20px] bg-[#030712] p-6'>
@@ -199,7 +207,7 @@ const Homepage: React.FC = () => {
                           </div>
                         </div>
                       </div>
-                      <h3 className='text-[14px] lg:w-[80%] mt-6 mb-10 text-slate-400'>Sigeo is an abbreviation for Geographic Information System (GIS), a technology used to gather, store, manipulate, analyze, and visualize location-based or geographic data in Cirebon Regency.</h3>
+                      <h3 className='text-[14px] lg:w-[80%] mt-6 mb-10 text-slate-300'>Sigeo is an abbreviation for Geographic Information System (GIS), a technology used to gather, store, manipulate, analyze, and visualize location-based or geographic data in Cirebon Regency.</h3>
                     </div>
                     
                     <div className='w-full relative h-full border border-gray-700 p-6 bg-[image:radial-gradient(circle,#D9D9D9_10%,transparent_20%)] bg-[size:10px_10px] bg-fixed dark:bg-[image:radial-gradient(circle,#D9D9D9_1%,transparent_20%)]'>
@@ -213,28 +221,28 @@ const Homepage: React.FC = () => {
               <div className='mt-12 lg:mt-20'>
                 <small className='relative text-[#00B4F5] text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Web development and landing page.</small>
                 <h2 className='relative text-[40px] text-white mt-4 mb-10 font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Our web products</h2>
-                <p className='relative text-base text-slate-400 w-[70%] tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
+                <p className='relative text-base text-slate-300 w-[70%] tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
               
                 <div className='relative z-[99999999] w-full grid grid-cols-3 mt-14 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
                   <div onClick={() => setSelectType('dev')} className={`flex gap-6 ${selectType === 'dev' ? 'bg-[#ff69df11]' : ''} items-center cursor-pointer p-6`}>
                     <BrowserIcon size={50} className={`${selectType === 'dev' ? 'text-[#f85c98]' : 'text-white'}`} />
                     <div className='flex-1'>
                       <h3 className={`${selectType === 'dev' ? 'text-[#f85c98]' : 'text-white'} font-medium`}>Web apps</h3>
-                      <p className='text-[14px] mt-2 text-slate-400 leading-loose tracking-tighter'>Building web apps that simplify tasks and boost productivity.</p>
+                      <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>Building web apps that simplify tasks and boost productivity.</p>
                     </div>
                   </div>
                   <div onClick={() => setSelectType('api')} className={`flex gap-6 ${selectType === 'api' ? 'bg-[#9e69ff11]' : ''} items-center cursor-pointer p-6 border-x border-gray-800`}>
                     <Link03Icon size={50} className={`${selectType === 'api' ? 'text-[#5E5CF8]' : 'text-white'}`} />
                     <div className='flex-1'>
                       <h3 className={`${selectType === 'api' ? 'text-[#5E5CF8]' : 'text-white'} font-medium`}>Integrate API</h3>
-                      <p className='text-[14px] mt-2 text-slate-400 leading-loose tracking-tighter'>Integrating APIs to ensure fast and seamless functionality.</p>
+                      <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>Integrating APIs to ensure fast and seamless functionality.</p>
                     </div>
                   </div>
                   <div onClick={() => setSelectType('slicing')} className={`flex gap-6 ${selectType === 'slicing' ? 'bg-[#69dcff11]' : ''} items-center cursor-pointer p-6`}>
                     <PaintBrush04Icon size={50} className={`${selectType === 'slicing' ? 'text-[#5cc7f8]' : 'text-white'}`} />
                     <div className='flex-1'>
                       <h3 className={`${selectType === 'slicing' ? 'text-[#5cc7f8]' : 'text-white'} font-medium`}>Slicing</h3>
-                      <p className='text-[14px] mt-2 text-slate-400 leading-loose tracking-tighter'>Transforming designs into clean, and efficient interfaces.</p>
+                      <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>Transforming designs into clean, and efficient interfaces.</p>
                     </div>
                   </div>
                 </div>
@@ -242,7 +250,7 @@ const Homepage: React.FC = () => {
                 <div className='w-full flex z-40 py-8 relative left-[0px] mt-[40px] lg:mt-[60px] h-max before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
                     <div className='relative w-[50%] z-[99999] py-6 min-h-[400px] after:absolute after:top-0 after:right-0 after:w-px after:h-full after:bg-slate-900/80 dark:after:bg-white/10'>
                       <h2 className='text-[24px] font-medium text-white mb-2'>1. Flowtrush web</h2>
-                      <p className='text-slate-400 w-[85%] leading-loose tracking-tighter'>Flowtrush is created similar to Trello, to manage and organize task lists in a structured manner.</p>
+                      <p className='text-slate-300 w-[85%] leading-loose tracking-tighter'>Flowtrush is created similar to Trello, to manage and organize task lists in a structured manner.</p>
                       
                       <Link to={'https://flowtrush.vercel.app/auth'}>
                         <p className='cursor-pointer mt-6 hover:brightness-[90%] active:scale-[0.99] text-[#00B4F5] relative flex items-center text-base'>FlowTrush in here <FaArrowRight className='ml-4 relative top-[0.8]' /> </p>
@@ -250,7 +258,7 @@ const Homepage: React.FC = () => {
 
                       <div onClick={(() => setSelectAccordion(1))} className={`relative h-max mt-6 w-[85%] ${selectAccordion === 1 ? 'h-[140px]' : 'h-[80px]'} active:scale-[0.99] duration-200 ease-in-out py-3 border-y border-slate-700 overflow-hidden`}>
                         <div className='cursor-pointer w-full flex items-baseline justify-between py-3'>
-                          <p className={`text-lg font-medium duration-200 ease-in ${selectAccordion === 1 ? 'text-white' : 'text-slate-400'}`}>Authentication system</p>
+                          <p className={`text-lg font-medium duration-200 ease-in ${selectAccordion === 1 ? 'text-white' : 'text-slate-300'}`}>Authentication system</p>
                           {
                             selectAccordion === 1 ? (
                               <></>
@@ -259,11 +267,11 @@ const Homepage: React.FC = () => {
                           }
                         </div>
 
-                        <p className={`w-full ${selectAccordion === 1 ? '' : 'hidden'} duratation-200 leading-loose tracking-tighter text-slate-400 text-sm`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, laborum.</p>
+                        <p className={`w-full ${selectAccordion === 1 ? '' : 'hidden'} duratation-200 leading-loose tracking-tighter text-slate-300 text-sm`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, laborum.</p>
                       </div>
                       <div onClick={() => setSelectAccordion(2)} className={`relative h-max mt-6 w-[85%] ${selectAccordion === 2 ? 'h-[140px]' : 'h-[80px]'} active:scale-[0.99] duration-200 ease-in-out py-3 border-y border-slate-700 overflow-hidden`}>
                         <div className='cursor-pointer w-full flex items-baseline justify-between py-3'>
-                          <p className={`text-lg font-medium duration-200 ease-in ${selectAccordion === 2 ? 'text-white' : 'text-slate-400'}`}>About the website</p>
+                          <p className={`text-lg font-medium duration-200 ease-in ${selectAccordion === 2 ? 'text-white' : 'text-slate-300'}`}>About the website</p>
                           {
                             selectAccordion === 2 ? (
                               <></>
@@ -271,7 +279,7 @@ const Homepage: React.FC = () => {
                               <Add01Icon className='text-indigo-700 cursor-pointer' />
                           }
                         </div>
-                        <p className={`w-full ${selectAccordion === 2 ? '' : 'hidden'} duratation-200 leading-loose tracking-tighter text-slate-400 text-sm`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, laborum.</p>
+                        <p className={`w-full ${selectAccordion === 2 ? '' : 'hidden'} duratation-200 leading-loose tracking-tighter text-slate-300 text-sm`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, laborum.</p>
                       </div>
                     </div>
                     <div className='relative w-[50%] min-h-[400px] rounded-[24px] flex justify-center items-center p-10 bg-white/20 backdrop-blur-2xl'>
@@ -513,8 +521,16 @@ const Homepage: React.FC = () => {
 
           <div id='linkedin' className='px-14 relative lg:flex flex-col hidden z-[444] pb-[30px] lg:pb-[80px] lg:pt-4 w-full h-max border-slate-100'>
             <small className='relative text-[#00B4F5] text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Web development and landing page.</small>
-            <h2 className='relative text-[40px] text-white mt-4 mb-10 font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Profile - linkedin</h2>
-            <p className='relative text-base text-slate-400 w-[70%] tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
+            <div className='w-full mt-4 mb-10 flex justify-between items-center '>
+              <h2 className='relative text-[40px] text-white font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Profile - linkedin</h2>
+              <div className='flex w-max'>
+                <div className="relative flex items-center gap-6 p-6 text-white before:absolute before:left-0 before:w-px before:h-[200vh] before:bg-slate-900/80 dark:before:bg-white/10 before:-top-[100vh] after:absolute after:right-0 after:w-px after:h-[200vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[100vh]">
+                  <p>Go to my linkedin</p>
+                  <Linkedin01Icon className='w-8 h-8' />
+                </div>
+              </div>
+            </div>
+            <p className='relative text-base text-slate-300 w-[70%] tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
 
             <div className="absolute left-[20%] w-[60%] h-[40px] py-[30%] transform -translate-y-[45%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[140px]"></div>
             <div className="absolute left-[15%] w-[100%] h-[40px] py-[30%] transform -translate-y-[71%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[25px]"></div>
@@ -534,7 +550,7 @@ const Homepage: React.FC = () => {
                     </div>
                   </Link>
 
-                  <p className='text-base leading-loose tracking-tighter mt-6 mb-10 text-slate-400'>
+                  <p className='text-base leading-loose tracking-tighter mt-6 mb-10 text-slate-300'>
                   To whom it may concern:
 
                   Huda worked with us at Konstruksi.AI developing the core main product as a Frontend developer. Although he was an intern, Huda contributed greatly to the team. Huda has an excellent skill related to Frontend development and always completed his tasks in timely manner. He can perform both individually and within a team as well. I recommend him as a Frontend developer and I believe he will be a great asset to any company.
@@ -563,7 +579,7 @@ const Homepage: React.FC = () => {
                       <div className='w-[40px] h-[40px] lg:mb-0 mb-4 overflow-hidden mr-3'>
                         <img src={PakYos} alt="foto" />
                       </div>
-                      <p>Pak. Yoshua Gombo - <br className='flex lg:hidden' /> <span className='text-slate-400 text-[12px] lg:text-[14px]'>Co-Founder at Konstruksi.AI | Robotics & AI</span></p>
+                      <p>Pak. Yoshua Gombo - <br className='flex lg:hidden' /> <span className='text-slate-300 text-[12px] lg:text-[14px]'>Co-Founder at Konstruksi.AI | Robotics & AI</span></p>
                     </div>
                     <p className='bg-blue-500 text-white text-[14px]  px-3 w-max mt-4 py-[6px]'>Konstruksi.AI</p>
                   </div>
@@ -587,39 +603,53 @@ const Homepage: React.FC = () => {
 
           <div id='experience' className='px-14 h-max experience relative lg:flex flex-col hidden z-[335] pb-[30px] lg:pb-[80px] lg:pt-4 w-full border-slate-100'>
             <small className='relative text-[#00B4F5] text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Experience in industry</small>
-            <h2 className='relative text-[40px] text-white mt-4 mb-10 font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Experience - Internship</h2>
-            <p className='relative text-base text-slate-400 w-[70%] tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
-
-            <div className='relative py-2 w-full h-max md:h-[550px] grid grid-cols-2 mt-14 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
-              <div className='flex items-center h-fyll overflow-hidden justify-center cursor-pointer border-x z-[8888] border-gray-800'>
-                <img src={Build} alt="wisma-bumiputera" className='w-full h-auto grayscale-[100%] rounded-[20px]' />
+            <div className='w-full mt-4 mb-10 flex justify-between items-center '>
+              <h2 className='relative text-[40px] text-white font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Experience - Internship</h2>
+              <div className='flex w-max'>
+                <div className="relative flex items-center gap-6 p-6 text-white before:absolute before:left-0 before:w-px before:h-[200vh] before:bg-slate-900/80 dark:before:bg-white/10 before:-top-[100vh] after:absolute after:right-0 after:w-px after:h-[200vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[100vh]">
+                  <p>konstruksi web</p>
+                  <Link03Icon className='w-6 h-6' />
+                </div>
               </div>
-              <div className='w-full px-6 h-max'>
+            </div>
+            <p className='relative text-base text-slate-300 w-[70%] tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
+
+            <div className='relative py-2 w-full h-max md:h-[600px] flex mt-14 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
+              <div className='w-[55%] h-max'>
                   <a href="https://konstruksi.ai/" target="__blank">
-                    <div className='relative flex gap-4 mb-6 items-center cursor-pointer px-6 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
+                    <div className='relative flex gap-4 mb-6 items-center cursor-pointer before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
                       <img src={KonstruksiLogo} alt="logo-konstruksi.ai" className="w-9" />
                       <div className='flex-1'>
                         <h2 className='text-white text-[28px] relative font-medium'>Konstruksi.AI</h2>
                       </div>
                     </div>
                   </a>
-                  <div className="max-w-full h-full mx-auto px-6 text-slate-400">
-                    <section>
+                  <div className="max-w-full h-full mx-auto text-slate-300">
+                    <section className='mt-12'>
                         <div className="relative mb-8 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]">
                             <p className="relative text-base mb-6 font-semibold text-white before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]">Web Application Development</p>
-                            <p className='text-sm text-justify w-full mb-2 leading-loose tracking-tighter'>Build and develop a web application using <strong>React</strong>, <strong>Vite</strong>, and <strong>Tailwind CSS</strong> to create responsive and efficient user interfaces and Integrate and display architectural project data.</p>
+                            <p className='text-sm text-justify w-[80%] mb-2 leading-loose tracking-tighter'>Build and develop a web application using <strong>React</strong>, <strong>Vite</strong>, and <strong>Tailwind CSS</strong> to create responsive and efficient user interfaces and Integrate and display architectural project data.</p>
                         </div>
 
                         <div className="relative mb-8 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]">
                             <p className="relative text-base mb-6 font-semibold text-white before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]">Web Features Testing and Debugging</p>
-                            <p className='text-sm text-justify w-full mb-2 leading-loose tracking-tighter'>Identify and analyze technical issues, and collaborate with the development team to find effective solutions.</p>
+                            <p className='text-sm text-justify w-[80%] mb-2 leading-loose tracking-tighter'>Identify and analyze technical issues, and collaborate with the development team to find effective solutions.</p>
                         </div>
 
                         <div className="relative mb-8 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]">
                             <p className="relative text-base mb-6 font-semibold text-white before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]">Team Collaboration</p>
-                            <p className='text-sm text-justify w-full mb-2 leading-loose tracking-tighter'>Collaborate with backend developers, UI/UX designers, and project managers to ensure the web application development aligns with project specifications and business goals.</p>
+                            <p className='text-sm text-justify w-[80%] mb-2 leading-loose tracking-tighter'>Collaborate with backend developers, UI/UX designers, and project managers to ensure the web application development aligns with project specifications and business goals.</p>
                         </div>
                     </section>
+                </div>
+              </div>
+
+              <div className="absolute right-[25%] w-[60%] h-[40px] py-[30%] transform -translate-y-[10%] -rotate-45 bg-[radial-gradient(circle_at_right_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[250px]"></div>
+              <img src={Pacticles2} alt='particles' className='absolute left-[30%] top-[-18%] w-[50%]' />
+
+              <div className='relative w-[45%] rounded-[24px] flex bg-white/20 backdrop-blur-2xl p-6 border border-slate-300 items-center h-full overflow-hidden justify-center cursor-pointer border-x z-[8888]'>
+                <div className='w-full h-full overflow-hidden rounded-[20px]'>
+                  <img src={Build} alt="wisma-bumiputera" className='w-full h-auto grayscale-[100%] rounded-[20px]' />
                 </div>
               </div>
             </div>
@@ -632,28 +662,28 @@ const Homepage: React.FC = () => {
                 Github account <LinkSquare01Icon className='text-[#00B4F5]' /> 
               </a>
             </h2>
-            <p className='relative text-base text-slate-400 w-[70%] tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
+            <p className='relative text-base text-slate-300 w-[70%] tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
 
             <div className='relative w-full grid grid-cols-3 mt-14 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
               <div onClick={() => setSelectTypeGit('git1')} className={`flex gap-6 ${selectTypeGit === 'git1' ? 'bg-[#ff69df11]' : ''} items-center cursor-pointer p-6`}>
                 <img src={Git1} alt="git" className="w-12" />
                 <div className='flex-1'>
                   <h3 className={`${selectTypeGit === 'git1' ? 'text-[#f85c98]' : 'text-white'} font-medium`}>Pull Shark - 2x</h3>
-                  <p className='text-[14px] mt-2 text-slate-400 leading-loose tracking-tighter'>@khoirulhudaa opened pull requests that have been merged.</p>
+                  <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>@khoirulhudaa opened pull requests that have been merged.</p>
                 </div>
               </div>
               <div onClick={() => setSelectTypeGit('git2')} className={`flex gap-6 ${selectTypeGit === 'git2' ? 'bg-[#9e69ff11]' : ''} items-center cursor-pointer p-6 border-x border-gray-800`}>
                 <img src={Git2} alt="git" className="w-12" />
                 <div className='flex-1'>
                   <h3 className={`${selectTypeGit === 'git2' ? 'text-[#5E5CF8]' : 'text-white'} font-medium`}>Quickdraw</h3>
-                  <p className='text-[14px] mt-2 text-slate-400 leading-loose tracking-tighter'>Closing issues or pull requests within 5 minutes after they are opened.</p>
+                  <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>Closing issues or pull requests within 5 minutes after they are opened.</p>
                 </div>
               </div>
               <div onClick={() => setSelectTypeGit('git3')} className={`flex gap-6 ${selectTypeGit === 'git3' ? 'bg-[#69dcff11]' : ''} items-center cursor-pointer p-6`}>
                 <img src={Git3} alt="git" className="w-12" />
                 <div className='flex-1'>
                   <h3 className={`${selectType === 'git3' ? 'text-[#5cc7f8]' : 'text-white'} font-medium`}>Starstruck</h3>
-                  <p className='text-[14px] mt-2 text-slate-400 leading-loose tracking-tighter'>Starstruck: Having a repository with high popularity, starts.</p>
+                  <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>Starstruck: Having a repository with high popularity, starts.</p>
                 </div>
               </div>
             </div>
@@ -662,7 +692,7 @@ const Homepage: React.FC = () => {
           <div id='certifications' className='relative px-14 lg:flex flex-col hidden z-[233] pb-[30px] lg:pb-[80px] lg:pt-4 w-full h-max border-slate-100'>
             <small className='relative text-[#00B4F5] text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>My various achievements</small>
             <h2 className='relative text-[40px] text-white mt-4 mb-10 font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Web competition awards</h2>
-            <p className='relative text-base text-slate-400 w-[70%] tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
+            <p className='relative text-base text-slate-300 w-[70%] tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
 
             <div className="absolute left-[20%] w-[60%] h-[40px] py-[30%] transform -translate-y-[50%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[140px]"></div>
             <div className="absolute left-[15%] w-[100%] h-[40px] py-[30%] transform -translate-y-[78%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[25px]"></div>
@@ -821,7 +851,7 @@ const Homepage: React.FC = () => {
 
           <footer className='relative w-full lg:pb-16 lg:px-16 z-[222] lg:before:absolute lg:before:left-[22px] lg:before:w-[54px] lg:before:h-[54px] lg:before:bg-white before:rounded-[14px] lg:before:shadow-md lg:before:shadow-black lg:before:content-["<>"] lg:before:flex lg:before:justify-center lg:before:items-center lg:before:text-indigo-700 lg:before:font-bold lg:before:text-[24px]'>
             <div className='lg:ml-12'>
-              <p className='w-full text-[12px] text-slate-400 lg:flex hidden lg:w-[80%] leading-loose'>Website yang menjadi basecamp untuk semua karya dan pencapaian saya dalam dunia pemrogramman selama ini. Hasil kerja keras dan keyakinan untuk tetap berdedikasi dalam kompetensi tersebut.</p>
+              <p className='w-full text-[12px] text-slate-300 lg:flex hidden lg:w-[80%] leading-loose'>Website yang menjadi basecamp untuk semua karya dan pencapaian saya dalam dunia pemrogramman selama ini. Hasil kerja keras dan keyakinan untuk tetap berdedikasi dalam kompetensi tersebut.</p>
             </div>
           </footer>
 
