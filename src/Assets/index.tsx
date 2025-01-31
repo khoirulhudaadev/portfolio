@@ -51,8 +51,14 @@ import AuthFlow from './authFlow.png'
 import Pacticles2 from './pacticlesV.png'
 import Build from './build.jpg'
 import KonstruksiLogo from './konstruksidotai_logo.png'
+import Logo1 from './logo1.png'
+import Logo2 from './logo2.png'
+import Logo3 from './logo3.png'
 
 export {
+    Logo1,
+    Logo2, 
+    Logo3,
     KonstruksiLogo,
     Build,
     Pacticles2,
