@@ -5,6 +5,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 * {
     font-family: "Poppins", sans-serif;
     cursor: url("./Assets/cursor.png"), auto;
@@ -35,7 +36,7 @@ html {
     top: 0;
     right: 0;
     transform: rotate(-30deg);
-    animation: aster1 10s ease-in infinite;
+    animation: aster1 3s ease-in infinite;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
 }
@@ -58,7 +59,7 @@ html {
     top: 0;
     right: 0;
     transform: rotate(-30deg);
-    animation: aster2 10s 4s ease-in infinite;
+    animation: aster2 3s 3s ease-in infinite;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
 }
@@ -81,7 +82,7 @@ html {
     top: 0;
     right: 0;
     transform: rotate(-30deg);
-    animation: aster3 10s 5s ease-in infinite;
+    animation: aster3 3s 7s ease-in infinite;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
 }
@@ -104,7 +105,7 @@ html {
     top: 0;
     right: 0;
     transform: rotate(-30deg);
-    animation: aster4a 10s 1s ease-in infinite;
+    animation: aster4a 3s 1s ease-in infinite;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
 }
@@ -127,7 +128,7 @@ html {
     top: 0;
     right: 0;
     transform: rotate(-30deg);
-    animation: aster5a 10s 8s ease-in infinite;
+    animation: aster5a 3s 8s ease-in infinite;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
 }
@@ -168,7 +169,7 @@ html {
     top: 0;
     right: 0;
     transform: rotate(-30deg);
-    animation: aster1a 10s ease-in infinite;
+    animation: aster1a 3s ease-in infinite;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
 }
@@ -191,7 +192,7 @@ html {
     top: 0;
     right: 0;
     transform: rotate(-30deg);
-    animation: aster1b 10s ease-in infinite;
+    animation: aster1b 3s ease-in infinite;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
 }
@@ -214,7 +215,7 @@ html {
     top: 0;
     right: 0;
     transform: rotate(-35deg);
-    animation: aster2a 10s ease-in infinite;
+    animation: aster2a 3s ease-in infinite;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
 }
@@ -237,7 +238,7 @@ html {
     top: 0;
     right: 0;
     transform: rotate(-35deg);
-    animation: aster2b 10s ease-in infinite;
+    animation: aster2b 3s ease-in infinite;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
 }
@@ -260,7 +261,7 @@ html {
     top: 0;
     right: 0;
     transform: rotate(-30deg);
-    animation: aster3a 10s 5s ease-in infinite;
+    animation: aster3a 3s 5s ease-in infinite;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
 }
@@ -283,7 +284,7 @@ html {
     top: 0;
     right: 0;
     transform: rotate(-30deg);
-    animation: aster3b 10s 5s ease-in infinite;
+    animation: aster3b 3s 5s ease-in infinite;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
 }
@@ -306,7 +307,7 @@ html {
     top: 0;
     right: 0;
     transform: rotate(-30deg);
-    animation: aster4a 10s 5s ease-in infinite;
+    animation: aster4a 3s 5s ease-in infinite;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
 }
@@ -329,7 +330,7 @@ html {
     top: 0;
     right: 0;
     transform: rotate(-30deg);
-    animation: aster4b 10s 5s ease-in infinite;
+    animation: aster4b 3s 5s ease-in infinite;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
 }
@@ -399,7 +400,7 @@ html {
         top: 0;
         right: 0;
         transform: rotate(-30deg);
-        animation: aster1 10s ease-in infinite;
+        animation: aster1 3s ease-in infinite;
         background-color: rgb(255, 255, 255);
         border-radius: 10px;
     }
@@ -422,7 +423,7 @@ html {
         top: 0;
         right: 0;
         transform: rotate(-30deg);
-        animation: aster2 10s 4s ease-in infinite;
+        animation: aster2 3s 4s ease-in infinite;
         background-color: rgb(255, 255, 255);
         border-radius: 10px;
     }
@@ -445,7 +446,7 @@ html {
         top: 0;
         right: 0;
         transform: rotate(-30deg);
-        animation: aster3 10s 5s ease-in infinite;
+        animation: aster3 3s 5s ease-in infinite;
         background-color: rgb(255, 255, 255);
         border-radius: 10px;
     }
@@ -468,7 +469,7 @@ html {
         top: 0;
         right: 0;
         transform: rotate(-30deg);
-        animation: aster4a 10s 1s ease-in infinite;
+        animation: aster4a 3s 1s ease-in infinite;
         background-color: rgb(255, 255, 255);
         border-radius: 10px;
     }
@@ -491,7 +492,7 @@ html {
         top: 0;
         right: 0;
         transform: rotate(-30deg);
-        animation: aster5a 10s 8s ease-in infinite;
+        animation: aster5a 3s 8s ease-in infinite;
         background-color: rgb(255, 255, 255);
         border-radius: 10px;
     }
@@ -553,7 +554,7 @@ html {
         top: 0;
         right: 0;
         transform: rotate(-30deg);
-        animation: aster1a 10s ease-in infinite;
+        animation: aster1a 3s ease-in infinite;
         background-color: rgb(255, 255, 255);
         border-radius: 10px;
     }
@@ -576,7 +577,7 @@ html {
         top: 0;
         right: 0;
         transform: rotate(-30deg);
-        animation: aster1b 10s ease-in infinite;
+        animation: aster1b 3s ease-in infinite;
         background-color: rgb(255, 255, 255);
         border-radius: 10px;
     }
@@ -599,7 +600,7 @@ html {
         top: 0;
         right: 0;
         transform: rotate(-35deg);
-        animation: aster2a 10s ease-in infinite;
+        animation: aster2a 3s ease-in infinite;
         background-color: rgb(255, 255, 255);
         border-radius: 10px;
     }
@@ -622,7 +623,7 @@ html {
         top: 0;
         right: 0;
         transform: rotate(-35deg);
-        animation: aster2b 10s ease-in infinite;
+        animation: aster2b 3s ease-in infinite;
         background-color: rgb(255, 255, 255);
         border-radius: 10px;
     }
@@ -645,7 +646,7 @@ html {
         top: 0;
         right: 0;
         transform: rotate(-30deg);
-        animation: aster3a 10s 5s ease-in infinite;
+        animation: aster3a 3s 5s ease-in infinite;
         background-color: rgb(255, 255, 255);
         border-radius: 10px;
     }
@@ -668,7 +669,7 @@ html {
         top: 0;
         right: 0;
         transform: rotate(-30deg);
-        animation: aster3b 10s 5s ease-in infinite;
+        animation: aster3b 3s 5s ease-in infinite;
         background-color: rgb(255, 255, 255);
         border-radius: 10px;
     }
@@ -691,7 +692,7 @@ html {
         top: 0;
         right: 0;
         transform: rotate(-30deg);
-        animation: aster4a 10s 5s ease-in infinite;
+        animation: aster4a 3s 5s ease-in infinite;
         background-color: rgb(255, 255, 255);
         border-radius: 10px;
     }
@@ -714,7 +715,7 @@ html {
         top: 0;
         right: 0;
         transform: rotate(-30deg);
-        animation: aster4b 10s 5s ease-in infinite;
+        animation: aster4b 3s 5s ease-in infinite;
         background-color: rgb(255, 255, 255);
         border-radius: 10px;
     }
