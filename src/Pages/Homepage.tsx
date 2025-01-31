@@ -3,7 +3,7 @@ import { Add01Icon, ArrowRight02Icon, BrowserIcon, Github01Icon, Link03Icon, Lin
 import React, { useState } from 'react'
 import { FaArrowRight, FaTimes } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import { AuthFlow, Build, FlowTrush, Geospasial, Git1, Git2, Git3, KonstruksiLogo, Laravel, Node, Pacticles2, PakYos, Reacts, Redux, TS, TW } from '../Assets'
+import { AuthFlow, Build, FlowTrush, Geospasial, Git1, Git2, Git3, KonstruksiLogo, Laravel, Node, Pacticles2, PakYos, Reacts, Redux, TS } from '../Assets'
 // import ModalCertification from '../Components/ModalCertification'
 import FadeTransition from "../Components/PageTransition"
 import '../index.css'
@@ -42,13 +42,26 @@ const Homepage: React.FC = () => {
           <nav className={`relative items-center left-0 top-0 px-12 z-[999999999] justify-between py-3 w-full flex gap-10 h-max after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]`}>
             
             <div className="flex items-center w-max text-white gap-10">
-              <div className="w-9 h-9 bg-white rounded-md">
-              </div>
+              {/* <a href="/"> */}
+                {/* <div className="relative w-9 h-9"> */}
+                    {/* <div className="absolute border border-[#ff69df94] p-1 w-full h-full bg-[#ff69df11] rounded-md animate-fadeInOut1">
+                      <img src={Logo2} alt="Logo 2" />
+                    </div> */}
+                    {/* Indigo */}
+                    {/* <div className="absolute border border-[#b9ff6971] p-1 w-full h-full bg-[#daff691e] rounded-md">
+                      <img src={Logo1} alt="Logo" />
+                    </div> */}
+                    {/* Green */}
+                    {/* <div className="absolute border border-[#69dcffa3] p-1 w-full h-full bg-[#69dcff11] rounded-md animate-fadeInOut3">
+                      <img src={Logo3} alt="Logo 3" />
+                    </div> */}
+                {/* </div> */}
+               {/* </a> */}
 
               <p className="md:hidden flex">8.21.4.1</p>
 
-              {/* Default new */}
-              <div className='lg:flex hidden w-max text-slate-300 py-5 h-[60px]'>
+              {/* Default view */}
+              <div className='lg:flex hidden w-max text-slate-300 py-5 h-max'>
                 <ul className='w-[80%] flex items-center justify-between'>
                   <a href="#languages">
                     <li className='mr-10'>Languages</li>
@@ -101,21 +114,25 @@ const Homepage: React.FC = () => {
               </ul>
             </div>
             
-            <div className="w-max h-max text-white">
-              <a href="https://github.com/khoirulhudaadev" className="ml-auto">
-                <Github01Icon size={30} />
-              </a>
+            <div className="w-max gap-4 flex items-center">
+              
+              <div className="w-max h-max text-white">
+                <a href="https://github.com/khoirulhudaadev" className="ml-auto">
+                  <Github01Icon size={30} />
+                </a>
+              </div>
             </div>
 
           </nav>
           {/* Akhir navbar */}
 
       
-          <div id='home' className='relative z-[444] lg:px-10 px-6 pb-10 w-[94vw] lg:w-[100%] h-max pt-16 border-slate-100'>
+          <div id='home' className='select-none relative z-[444] lg:px-10 px-6 pb-10 w-[94vw] lg:w-[100%] h-max pt-16 border-slate-100'>
+            <div className="absolute left-[25%] top-0 w-[20%] h-[40px] py-[30%] transform -translate-y-[90%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_20%,_#5049c2_23%,_rgba(87,78,255,0)_0%)] blur-[250px]"></div>
             
             <img src={Pacticles2} alt='particles' className='absolute right-[10%] top-[30%] w-[60%]' />
             
-            <div className='fixed top-0 right-0 overflow-hidden bg-transparent w-[100vw] h-[80vh]'>
+            <div className='fixed top-20 right-0 overflow-hidden bg-transparent w-[100vw] h-[80vh]'>
               <div id='asteroid1a'></div>
               <div id='asteroid2a'></div>
               <div id='asteroid3a'></div>
@@ -130,7 +147,7 @@ const Homepage: React.FC = () => {
             </div>
 
             <div className='relative mb-6 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
-              <p className='text-center px-5 py-2 w-max text-white flex items-center'>Fullstack Developer - <span className="text-gray-500 ml-1">MERN&Laravel</span></p>
+              <p className='text-center px-3 py-2 w-max text-white flex items-center'>Fullstack Developer - <span className="text-gray-500 ml-1">MERN&Laravel</span></p>
             </div>
 
             <div className='relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
@@ -141,21 +158,36 @@ const Homepage: React.FC = () => {
               <p className='w-max text-slate-300 px-3 text-lg tracking-tighter text-balance max-lg:font-medium max-sm:px-4'>"Welcome to my homebase—where ideas, creativity, and experience come together in a digital portfolio."</p>
             </div>
 
-            <div className='relative my-7 py-2 flex items-baseline before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
-              <button className='outline-0 ml-4 mr-6 rounded-[12px] bg-white p-3 w-max lg h-max text-center text-[14px] font-normal text-black'>Download Resume</button>
-              <p className='text-md text-white tracking-tighter text-balance'>Chat via Whatsapp</p>
+            <div className='relative my-7 py-2 flex items-center before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
+              <button className='outline-0 ml-4 mr-6 rounded-full bg-white px-4 py-3 w-max lg h-max text-center text-[14px] font-normal text-black'>Download Resume</button>
+              <button type="button" className="outline-0 grid w-[100px] bg-white grid-cols-[auto_1fr_auto] items-center gap-1 rounded-full px-4 py-3 text-left text-sm/6 text-gray-950/50 sm:w-80 dark:bg-white/5 dark:text-white/50">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" className="-ml-0.5 size-4 fill-gray-600 dark:fill-gray-500">
+                  <path fill-rule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clip-rule="evenodd">
+                  </path>
+                </svg>
+                  Quick search
+                <kbd className="font-sans text-xs/4 text-gray-500 dark:text-gray-400 [.os-macos_&amp;]:block">
+                  <span className="opacity-60 mr-1">⌘</span>
+                  K
+                </kbd>
+                <kbd className="hidden font-sans text-xs/4 text-gray-500 not-[.os-macos_&amp;]:block dark:text-gray-400">
+                  <span className="opacity-60">Ctrl
+                  </span>
+                  &nbsp;K
+                </kbd>
+              </button>
             </div>
 
           </div>
           
-          <div id='languages' className='px-14 relative lg:flex flex-col hidden z-[444] pb-[30px] lg:pb-[80px] lg:pt-4 w-full h-max border-slate-100'>
+          <div id='languages' className='select-none px-14 relative lg:flex flex-col hidden z-[444] pb-[30px] lg:pb-[80px] lg:pt-4 w-full h-max border-slate-100'>
           
             <div className="absolute left-[20%] w-[60%] h-[40px] py-[30%] transform -translate-y-[75%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[240px]"></div>
             <div className="absolute left-[25%] w-[30%] h-[40px] py-[30%] transform -translate-y-[51%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[240px]"></div>
 
-            <small className='relative text-[#00B4F5] mb-4 text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Frontend + Backend.</small>
+            <small className='relative text-[#00B4F5] mb-4 text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>React - Laravel - Express.</small>
             <div className='w-full mt-4 mb-10 flex justify-between items-center '>
-              <h2 className='relative text-[40px] text-white font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Experience - Internship</h2>
+              <h2 className='relative text-[40px] text-white font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Skill in languages</h2>
               <div className='flex w-max'>
                 <div className="relative flex items-center gap-6 p-6 text-transparent before:absolute before:left-0 before:w-px before:h-[300vh] before:bg-slate-900/80 dark:before:bg-white/10 before:-top-[100vh] after:absolute after:right-0 after:w-px after:h-[300vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[100vh]">
                   <p>konstruksi web</p>
@@ -165,65 +197,73 @@ const Homepage: React.FC = () => {
             </div>
             <p className='relative text-base text-slate-300 w-[70%] tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
           
-            <div className='w-full rounded-[24px] bg-white/20 backdrop-blur-2xl p-4 z-40 flex items-center lg:flex-no-wrap flex-wrap justify-between mt-12'>
-              <div className='w-full h-full rounded-[20px] bg-[#030712] p-10 border border-black flex items-center justify-between bg-[image:radial-gradient(circle,#D9D9D9_10%,transparent_20%)] bg-[size:10px_10px] bg-fixed dark:bg-[image:radial-gradient(circle,#D9D9D9_1%,transparent_20%)]'>
+            <div 
+              className='w-full rounded-[24px] bg-white/20 backdrop-blur-2xl p-4 z-40 flex items-center lg:flex-no-wrap flex-wrap justify-between mt-12'>
+              <div className='w-full h-full rounded-[20px] bg-white p-10 border border-black flex items-center justify-between  '>
                 <img loading='lazy' src={Reacts} alt='iconLanguage' className='w-[34px] lg:w-[80px] lg:mb-0 mb-5 lg:mr-14 z-[99999999999] cursor-pointer grayscale-[100%]' />
                 <img loading='lazy' src={Node} alt='iconLanguage' className='w-[34px] lg:w-[80px] lg:mb-0 mb-5 lg:mr-14 z-[99999999999] cursor-pointer grayscale-[100%]' />
                 <img loading='lazy' src={Redux} alt='iconLanguage' className='w-[34px] lg:w-[80px] lg:mb-0 mb-5 lg:mr-14 z-[99999999999] cursor-pointer grayscale-[100%]' />
                 <img loading='lazy' src={TS} alt='iconLanguage' className='w-[34px] lg:w-[80px] lg:mb-0 mb-5 lg:mr-14 z-[99999999999] cursor-pointer grayscale-[100%]' />
-                <img loading='lazy' src={TW} alt='iconLanguage' className='w-[34px] lg:w-[80px] lg:mb-0 mb-5 lg:mr-14 z-[99999999999] cursor-pointer grayscale-[100%]' />
                 <img loading='lazy' src={Laravel} alt='iconLanguage' className='w-[34px] lg:w-[80px] lg:mb-0 mb-5 lg:mr-14 z-[99999999999] cursor-pointer grayscale-[100%]' />
+                {/* <img loading='lazy' src={TW} alt='iconLanguage' className='w-[34px] lg:w-[80px] lg:mb-0 mb-5 lg:mr-14 z-[99999999999] cursor-pointer grayscale-[100%]' /> */}
               </div>
             </div>
           </div>
 
-          <div id='products' className='px-14 relative lg:flex flex-col hidden z-[4444] pb-[30px] lg:pb-[80px] lg:pt-4 w-full h-max border-slate-100'>
+          <div id='products' className='select-none px-14 relative lg:flex flex-col hidden z-[4444] pb-[30px] lg:pb-[80px] lg:pt-4 w-full h-max border-slate-100'>
             
-            <div className="absolute left-[20%] w-[60%] h-[40px] py-[30%] transform -translate-y-[55%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[140px]"></div>
-            <div className="absolute left-[15%] w-[100%] h-[40px] py-[30%] transform -translate-y-[78%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[25px]"></div>
-            <img src={Pacticles2} alt='particles' className='absolute left-[30%] top-[-10%] w-[30%]' />
+            <div className="absolute left-[20%] w-[60%] h-[40px] py-[30%] transform -translate-y-[45%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[140px]"></div>
+            <div className="absolute left-[15%] w-[100%] h-[40px] py-[30%] transform -translate-y-[51%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[70px]"></div>
+            <img src={Pacticles2} alt='particles' className='absolute left-[25%] top-[-10%] w-[60%]' />
 
             <small className='relative text-[#00B4F5] mb-4 text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Frontend + Backend.</small>
             <div className='w-full mt-4 mb-10 flex justify-between items-center '>
-              <h2 className='relative text-[40px] text-white font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Skill and languages</h2>
+              <h2 className='relative text-[40px] text-white font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>SIGEO - web app</h2>
               <div className='flex w-max'>
                 <div className="relative flex items-center gap-6 p-6 text-transparent">
                   <p>konstruksi web</p>
                   <Link03Icon className='w-6 h-6' />
                 </div>
             </div>
-            </div><p className='relative text-base text-slate-300 w-[70%] tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
+            </div>
+            <p className='relative text-base text-slate-300 w-[70%] tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
             
-              <div className='w-full rounded-[24px] bg-white/20 backdrop-blur-2xl p-4 z-40 items-center justify-between mt-12'>
-                  <div className='w-full h-full rounded-[20px] bg-[#030712] p-6'>
-                    <div className='w-full h-full relative flex-col lg:flex justify-between text-[20px] leading-loose text-white'>
-                      <div className='w-full flex items-baseline'>
-                        <div className='w-full lg:flex items-baseline justify-start gap-6'>
-                          <MapPinIcon size={30} />
-                          <h2 className='text-white font-medium text-[26px] lg:text-[28px]'>SI GEO</h2>
+            <div className="relative mb-10 flex items-center justify-center">
+              <div
+                  className="relative opacity-100 w-[100%] mx-auto rounded-[24px] bg-white/20 backdrop-blur-2xl p-4 z-40 items-center justify-between mt-12"
+                  // style={{ transform: "perspective(500px) rotateX(10deg)" }}
+                >
+                    <div className='w-full h-full rounded-[20px] bg-white p-6'>
+                      <div className='w-full h-full relative flex-col lg:flex justify-between text-[20px] leading-loose text-white'>
+                        <div className='w-full flex items-baseline'>
+                          <div className='w-full lg:flex items-basceline justify-start gap-6'>
+                            <MapPinIcon size={30} className="text-black" />
+                            <h2 className='text-black font-medium text-[26px] lg:text-[28px]'>SI GEO</h2>
+                          </div>
+                          <div className='w-max text-[14px] lg:text-[16px] flex items-center'>
+                            <div className='w-max text-black flex items-center mr-3 lg:mr-4'>
+                              <p>React</p>
+                            </div>
+                            <div className='w-max text-black flex items-center mr-3 lg:mr-4'>
+                              <p>Node</p>
+                            </div>
+                            <div className='w-max text-black flex items-center'>
+                              <p>MongoDB</p>
+                            </div>
+                          </div>
                         </div>
-                        <div className='w-max text-[14px] lg:text-[16px] flex items-center'>
-                          <div className='w-max text-white flex items-center mr-3 lg:mr-4'>
-                            <p>React</p>
-                          </div>
-                          <div className='w-max text-white flex items-center mr-3 lg:mr-4'>
-                            <p>Node</p>
-                          </div>
-                          <div className='w-max text-white flex items-center'>
-                            <p>MongoDB</p>
-                          </div>
+                        <p className='text-[14px] lg:w-[80%] mt-6 mb-10 text-slate-800'>Sigeo is an abbreviation for Geographic Information System (GIS), a technology used to gather, store, manipulate, analyze, and visualize location-based or geographic data in Cirebon Regency.</p>
+                      </div>
+                      
+                      <div className='w-full relative h-full rounded-[24px] border border-gray-700 p-6'>
+                        <div className='relative left-0 w-full h-[100%] rounded-[20px] overflow-hidden border border-slate-800 lg mt-6 lg:mt-0'>
+                          <img src={Geospasial} alt="geospasial-project" />
                         </div>
                       </div>
-                      <h3 className='text-[14px] lg:w-[80%] mt-6 mb-10 text-slate-300'>Sigeo is an abbreviation for Geographic Information System (GIS), a technology used to gather, store, manipulate, analyze, and visualize location-based or geographic data in Cirebon Regency.</h3>
                     </div>
-                    
-                    <div className='w-full relative h-full border border-gray-700 p-6 bg-[image:radial-gradient(circle,#D9D9D9_10%,transparent_20%)] bg-[size:10px_10px] bg-fixed dark:bg-[image:radial-gradient(circle,#D9D9D9_1%,transparent_20%)]'>
-                      <div className='relative left-0 w-full h-[100%] overflow-hidden border border-slate-800 rounded-[10px] lg mt-6 lg:mt-0'>
-                        <img src={Geospasial} alt="geospasial-project" />
-                      </div>
-                    </div>
-                  </div>
               </div>
+           
+            </div>
               
               <div className='mt-12 lg:mt-20'>
                 <small className='relative text-[#00B4F5] text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Web development and landing page.</small>
@@ -263,7 +303,7 @@ const Homepage: React.FC = () => {
                 </div>
 
                 <div className='w-full flex z-40 py-8 relative left-[0px] mt-[40px] lg:mt-[60px] h-max before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
-                    <div className='relative w-[50%] z-[99999] py-6 min-h-[400px] after:absolute after:top-0 after:right-0 after:w-px after:h-full after:bg-slate-900/80 dark:after:bg-white/10'>
+                    <div className='relative w-[50%] z-[99999] py-6 min-h-[400px]'>
                       <h2 className='text-[24px] font-medium text-white mb-2'>1. Flowtrush web</h2>
                       <p className='text-slate-300 w-[85%] leading-loose tracking-tighter'>Flowtrush is created similar to Trello, to manage and organize task lists in a structured manner.</p>
                       
@@ -297,7 +337,9 @@ const Homepage: React.FC = () => {
                         <p className={`w-full ${selectAccordion === 2 ? '' : 'hidden'} duratation-200 leading-loose tracking-tighter text-slate-300 text-sm`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, laborum.</p>
                       </div>
                     </div>
-                    <div className='relative w-[50%] min-h-[400px] rounded-[24px] flex justify-center items-center p-10 bg-white/20 backdrop-blur-2xl'>
+                    <div 
+                      className='relative w-[50%] min-h-[400px] rounded-[24px] z-[8888888888888] flex justify-center items-center p-10 bg-white/20 backdrop-blur-2xl'
+                    >
 
                       <div className="absolute z-[-1] right-0 w-[100%] py-[30%] transform -translate-y-[70%] -rotate-45 
                           bg-[radial-gradient(circle_at_left_bottom,#e6b7fe_10%,#5049c2_10%,rgba(87,78,255,0)_60%)] 
@@ -306,7 +348,127 @@ const Homepage: React.FC = () => {
 
                       <motion.div
                             key={selectAccordion} // Animasi berjalan setiap kali konten berubah
-                            className='relative flex justify-center items-center rounded-[24px] overflow-hidden bg-white/20 backdrop-blur-2xl p-2 w-full h-max mt-6'
+                            className='relative flex shadow-[0_35px_30px_rgba(0,0,30,0.4)] justify-center items-center rounded-[24px] overflow-hidden bg-white/20 backdrop-blur-2xl p-2 w-full h-max mt-6'
+                            initial={{ opacity: 0, y: 40 }} // Muncul dari bawah
+                            animate={{ opacity: 1, y: 0 }} // Naik ke posisi normal
+                            exit={{ opacity: 0, y: -20 }} // Keluar ke atas (opsional)
+                            transition={{ duration: 0.5, ease: "easeOut" }} // Durasi & easing smooth
+                        >
+                            <img
+                                src={selectAccordion === 1 ? AuthFlow : FlowTrush}
+                                alt="FlowTrush-project"
+                                className='h-full w-auto object-cover rounded-[20px]'
+                            />
+                        </motion.div>
+
+                    </div>
+                    {/* <div className='w-full lg:w-[45%] bg-white lg:mb-0 mb-8 h-max mr-8 pb-6 px-4 pt-6 lg:px-8 lg:pb-12 lg:pt-8 border border-slate-700 rounded-[14px] lg:rounded-[20px]'>
+                      <div className='w-full h-max relative flex flex-col justify-between text-[20px] leading-loose text-white'>
+                        <div className='w-full'>
+                          <div className='w-full pb-3 lg:flex items-center justify-between border-b mb-4 border-b-slate-300'>
+                            <h2 className='text-white font-bold text-[26px] lg:text-[28px]'>Unipay</h2>
+                            <div className='w-max text-[14px] lg:text-[16px] flex items-center'>
+                            <div className='w-max text-white flex items-center mr-3 lg:mr-4'>
+                              <img src={Reacts} alt="react-icon" className='w-[24px] lg:w-[26px] mr-2 lg:mr-3' />
+                              <p>React</p>
+                            </div>
+                            <div className='w-max text-white flex items-center mr-3 lg:mr-4'>
+                              <img src={Node} alt="react-icon" className='w-[22px] lg:w-[24px] mr-2 lg:mr-3' />
+                              <p>Node</p>
+                            </div>
+                            <div className='w-max text-white flex items-center'>
+                              <img src={Mongodb} alt="react-icon" className='w-[22px] lg:w-[24px] mr-2 lg:mr-3' />
+                              <p>MongoDB</p>
+                            </div>
+                          </div>
+                          </div>
+                          <h3 className='text-[13px] lg:text-[16px] text-white'>Unipay facilitates students and faculty members to digitally process ordering and payment of fees.</h3>
+                        </div>
+                        <Link to={'https://unipay-ikmi.vercel.app/auth'}>
+                          <h3 className='cursor-pointer mt-6 hover:brightness-[90%] active:scale-[0.99] text-blue-700 relative top-[-6px] flex items-center lg:text-[15px] text-[14px]'>Unipay in here <FaArrowRight className='ml-4 relative top-[0.8]' /> </h3>
+                        </Link>
+                      </div>
+                      <div className='w-[100%] h-max overflow-hidden rounded-[10px] mt-[20px] lg:mt-[40px] border p-2 border-slate-800'>
+                        <img src={Unipay} alt="unipay-project" className=' hover:grayscale-[100%] h-nax duration-300' />
+                      </div>
+                    </div>
+                    <div className='w-full lg:w-[45%] bg-white lg:mb-0 mb-8 h-max mr-8 pb-6 px-4 pt-6 lg:px-8 lg:pb-12 lg:pt-8 border border-slate-700 rounded-[14px] lg:rounded-[20px]'>
+                    <div className='w-full h-max relative flex flex-col justify-between text-[20px] leading-loose text-white'>
+                      <div className='w-full'>
+                        <div className='w-full pb-3 lg:flex items-center justify-between border-b mb-4 border-b-slate-300'>
+                          <h2 className='text-white font-bold text-[26px] lg:text-[28px]'>Swiftvel</h2>
+                          <div className='w-max text-[14px] lg:text-[16px] flex items-center'>
+                          <div className='w-max text-white flex items-center mr-3 lg:mr-4'>
+                            <img src={Reacts} alt="react-icon" className='w-[24px] lg:w-[26px] mr-2 lg:mr-3' />
+                            <p>React</p>
+                          </div>
+                          <div className='w-max text-white flex items-center mr-3 lg:mr-4'>
+                            <img src={Node} alt="react-icon" className='w-[22px] lg:w-[24px] mr-2 lg:mr-3' />
+                            <p>Node</p>
+                          </div>
+                          <div className='w-max text-white flex items-center'>
+                            <img src={Mongodb} alt="react-icon" className='w-[22px] lg:w-[24px] mr-2 lg:mr-3' />
+                            <p>Mongodb</p>
+                          </div>
+                        </div>
+                        </div>
+                          <h3 className='text-[13px] lg:text-[16px] text-white'>Swiftvel is a platform for building websites by easily assembling various components (click and add).</h3>
+                        </div>
+                        <h3 className='cursor-pointer mt-6 hover:brightness-[90%] active:scale-[0.99] text-blue-700 relative top-[-6px] flex items-center lg:text-[15px] text-[14px]'>Swiftvel in here <FaArrowRight className='ml-4 relative top-[0.8]' /> </h3>
+                      </div>
+                      <div className='w-[100%] h-max overflow-hidden rounded-[10px] mt-[20px] lg:mt-[40px] border p-2 border-slate-800'>
+                        <img src={Swiftvel} alt="Swiftvel-project" className=' hover:grayscale-[100%] h-nax duration-300' />
+                      </div>
+                    </div> */}
+                </div>
+              
+                <div className='w-full flex z-40 py-8 relative left-[0px] mt-[40px] lg:mt-[60px] h-max before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
+                    <div className='relative w-[50%] z-[99999] py-6 min-h-[400px]'>
+                      <h2 className='text-[24px] font-medium text-white mb-2'>1. Flowtrush web</h2>
+                      <p className='text-slate-300 w-[85%] leading-loose tracking-tighter'>Flowtrush is created similar to Trello, to manage and organize task lists in a structured manner.</p>
+                      
+                      <Link to={'https://flowtrush.vercel.app/auth'}>
+                        <p className='cursor-pointer mt-6 hover:brightness-[90%] active:scale-[0.99] text-[#00B4F5] relative flex items-center text-base'>FlowTrush in here <FaArrowRight className='ml-4 relative top-[0.8]' /> </p>
+                      </Link>
+
+                      <div onClick={(() => setSelectAccordion(1))} className={`relative h-max mt-6 w-[85%] ${selectAccordion === 1 ? 'h-[140px]' : 'h-[80px]'} active:scale-[0.99] duration-200 ease-in-out py-3 border-y border-slate-700 overflow-hidden`}>
+                        <div className='cursor-pointer w-full flex items-baseline justify-between py-3'>
+                          <p className={`text-lg font-medium duration-200 ease-in ${selectAccordion === 1 ? 'text-white' : 'text-slate-300'}`}>Authentication system</p>
+                          {
+                            selectAccordion === 1 ? (
+                              <></>
+                            ):
+                              <Add01Icon className='text-indigo-700 cursor-pointer' />
+                          }
+                        </div>
+
+                        <p className={`w-full ${selectAccordion === 1 ? '' : 'hidden'} duratation-200 leading-loose tracking-tighter text-slate-300 text-sm`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, laborum.</p>
+                      </div>
+                      <div onClick={() => setSelectAccordion(2)} className={`relative h-max mt-6 w-[85%] ${selectAccordion === 2 ? 'h-[140px]' : 'h-[80px]'} active:scale-[0.99] duration-200 ease-in-out py-3 border-y border-slate-700 overflow-hidden`}>
+                        <div className='cursor-pointer w-full flex items-baseline justify-between py-3'>
+                          <p className={`text-lg font-medium duration-200 ease-in ${selectAccordion === 2 ? 'text-white' : 'text-slate-300'}`}>About the website</p>
+                          {
+                            selectAccordion === 2 ? (
+                              <></>
+                            ):
+                              <Add01Icon className='text-indigo-700 cursor-pointer' />
+                          }
+                        </div>
+                        <p className={`w-full ${selectAccordion === 2 ? '' : 'hidden'} duratation-200 leading-loose tracking-tighter text-slate-300 text-sm`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, laborum.</p>
+                      </div>
+                    </div>
+                    <div 
+                      className='relative w-[50%] min-h-[400px] rounded-[24px] z-[8888888888888] flex justify-center items-center p-10 bg-white/20 backdrop-blur-2xl'
+                    >
+
+                      <div className="absolute z-[-1] right-0 w-[100%] py-[30%] transform -translate-y-[70%] -rotate-45 
+                          bg-[radial-gradient(circle_at_left_bottom,#e6b7fe_10%,#5049c2_10%,rgba(87,78,255,0)_60%)] 
+                          blur-[40px]">
+                      </div>
+
+                      <motion.div
+                            key={selectAccordion} // Animasi berjalan setiap kali konten berubah
+                            className='relative flex shadow-[0_35px_30px_rgba(0,0,30,0.4)] justify-center items-center rounded-[24px] overflow-hidden bg-white/20 backdrop-blur-2xl p-2 w-full h-max mt-6'
                             initial={{ opacity: 0, y: 40 }} // Muncul dari bawah
                             animate={{ opacity: 1, y: 0 }} // Naik ke posisi normal
                             exit={{ opacity: 0, y: -20 }} // Keluar ke atas (opsional)
@@ -534,12 +696,12 @@ const Homepage: React.FC = () => {
               </div> */}
           </div>
 
-          <div id='linkedin' className='px-14 relative lg:flex flex-col hidden z-[444] pb-[30px] lg:pb-[80px] lg:pt-4 w-full h-max border-slate-100'>
+          <div id='linkedin' className='select-none px-14 relative lg:flex flex-col hidden z-[444] pb-[30px] lg:pb-[80px] lg:pt-4 w-full h-max border-slate-100'>
             <small className='relative text-[#00B4F5] text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Web development and landing page.</small>
             <div className='w-full mt-4 mb-10 flex justify-between items-center '>
               <h2 className='relative text-[40px] text-white font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Profile - linkedin</h2>
               <div className='flex w-max'>
-                <div className="relative flex items-center gap-6 p-6 text-white before:absolute before:left-0 before:w-px before:h-[180px] before:bg-slate-900/80 dark:before:bg-white/10 before:-top-[110px] after:absolute after:right-0 after:w-px after:h-[180px] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[110px]">
+                <div className="relative flex items-center gap-6 p-6 text-white before:absolute before:left-0 before:w-px before:h-full before:bg-slate-900/80 dark:before:bg-white/10 before:-top-[110px] after:absolute after:right-0 after:w-px after:h-full after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[110px]">
                   <p>Go to linkedin</p>
                   <Linkedin01Icon className='w-8 h-8' />
                 </div>
@@ -549,23 +711,23 @@ const Homepage: React.FC = () => {
 
             <div className="absolute left-[20%] w-[60%] h-[40px] py-[30%] transform -translate-y-[45%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[140px]"></div>
             <div className="absolute left-[15%] w-[100%] h-[40px] py-[30%] transform -translate-y-[71%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[25px]"></div>
-            <img src={Pacticles2} alt='particles' className='absolute left-[30%] top-[-18%] w-[50%]' />
+            <img src={Pacticles2} alt='particles' className='absolute left-[28%] top-[-28%] w-[60%]' />
 
             <div className='relative w-full bg-white/20 backdrop-blur-sm rounded-[28px] border border-slate-300 p-4 z-40 items-center justify-between mt-24'>
-              <div className='w-full h-full bg-[#030712] p-10 rounded-[24px]'>
+              <div className='w-full h-full bg-[#ffffff] p-10 rounded-[24px]'>
                 <div className='w-full'>
                   <Link to={'https://www.linkedin.com/in/yoshua-gombo/'}>
-                    <div className='w-full ;g:flex items-center justify-between mb-4'>
-                      <div className='lg:flex items-center text-white'>
-                        <div className='w-[40px] h-[40px] lg:mb-0 mb-4 overflow-hidden mr-3'>
+                    <div className='w-full lg:flex items-center justify-between mb-4'>
+                      <div className='lg:flex items-center text-black'>
+                        <div className='w-[40px] h-[40px] border border-slate-600 rounded-[20px] lg:mb-0 mb-4 overflow-hidden mr-3'>
                           <img src={PakYos} alt="foto" />
                         </div>
-                        <p className='ml-4'>Pak. Yoshua Gombo - <br className='flex lg:hidden' /> <span className='text-[12px] lg:text-[14px]'>Co-Founder at Konstruksi.AI | Robotics & AI</span></p>
+                        <h3 className='ml-4 text-base'>Pak. Yoshua Gombo - <br className='flex lg:hidden' /> <span className='text-[12px] lg:text-[14px]'>Co-Founder at Konstruksi.AI | Robotics & AI</span></h3>
                       </div>
                     </div>
                   </Link>
 
-                  <p className='text-base leading-loose tracking-tighter mt-6 mb-10 text-slate-300'>
+                  <p className='text-[14px] w-[94%] text-justify leading-loose tracking-tighter mt-6 mb-10 text-slate-600'>
                   To whom it may concern:
 
                   Huda worked with us at Konstruksi.AI developing the core main product as a Frontend developer. Although he was an intern, Huda contributed greatly to the team. Huda has an excellent skill related to Frontend development and always completed his tasks in timely manner. He can perform both individually and within a team as well. I recommend him as a Frontend developer and I believe he will be a great asset to any company.
@@ -616,7 +778,7 @@ const Homepage: React.FC = () => {
             </div> */}
           </div>
 
-          <div id='experience' className='px-14 h-max experience relative lg:flex flex-col hidden z-[335] pb-[30px] lg:pb-[80px] lg:pt-4 w-full border-slate-100'>
+          <div id='experience' className='select-none px-14 h-max experience relative lg:flex flex-col hidden z-[335] pb-[30px] lg:pb-[80px] lg:pt-4 w-full border-slate-100'>
             <small className='relative text-[#00B4F5] text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Experience in industry</small>
             <div className='w-full mt-4 mb-10 flex justify-between items-center '>
               <h2 className='relative text-[40px] text-white font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Experience - Internship</h2>
@@ -670,7 +832,7 @@ const Homepage: React.FC = () => {
             </div>
           </div>
           
-          <div id='github' className='px-14 relative lg:flex flex-col hidden z-[3333] pb-[30px] lg:pb-[80px] lg:pt-4 w-full h-max border-slate-100'>
+          <div id='github' className='select-none px-14 relative lg:flex flex-col hidden z-[3333] pb-[30px] lg:pb-[80px] lg:pt-4 w-full h-max border-slate-100'>
             <small className='relative text-[#00B4F5] text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>All repositories github</small>
             <div className='w-full mt-4 mb-10 flex justify-between items-center '>
               <h2 className='relative text-[40px] text-white mt-4 mb-10 font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
@@ -712,7 +874,7 @@ const Homepage: React.FC = () => {
             </div>
           </div>
 
-          <div id='certifications' className='relative px-14 lg:flex flex-col hidden z-[233] pb-[30px] lg:pb-[80px] lg:pt-4 w-full h-max border-slate-100'>
+          <div id='certifications' className='select-none relative px-14 lg:flex flex-col hidden z-[233] pb-[30px] lg:pb-[80px] lg:pt-4 w-full h-max border-slate-100'>
             <small className='relative text-[#00B4F5] text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>My various achievements</small>
             <div className='w-full mt-4 mb-10 flex justify-between items-center '>
               <h2 className='relative text-[40px] text-white mt-4 mb-10 font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Web competition awards</h2>
@@ -726,8 +888,8 @@ const Homepage: React.FC = () => {
             <p className='relative text-base text-slate-300 w-[70%] tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
 
             <div className="absolute left-[20%] w-[60%] h-[40px] py-[30%] transform -translate-y-[50%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[140px]"></div>
-            <div className="absolute left-[15%] w-[100%] h-[40px] py-[30%] transform -translate-y-[78%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[25px]"></div>
-            <img src={Pacticles2} alt='particles' className='absolute left-[30%] top-[-18%] w-[50%]' />
+            <div className="absolute left-[15%] w-[100%] h-[40px] py-[30%] transform -translate-y-[72%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[25px]"></div>
+            <img src={Pacticles2} alt='particles' className='absolute left-[28%] top-[-22%] w-[60%]' />
 
             <div className="w-full bg-white/20 backdrop-blur-2xl p-4 mt-12 rounded-[20px]">
             
@@ -880,9 +1042,36 @@ const Homepage: React.FC = () => {
 
           </div>
 
-          <footer className='relative w-full py-12 px-6 z-[222] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
-            <div className='lg:ml-12'>
-              <p className='w-full text-[12px] text-slate-300 lg:flex hidden lg:w-[80%] leading-loose'>I have noted that you have a website that serves as a basecamp for all your works and achievements in the world of programming—a result of hard work and dedication to mastering your skills. That's awesome! What have you added there to showcase your accomplishments and experience?</p>
+          <footer className='relative w-full overflow-hidden px-6 mt-10 z-[8888] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
+            
+            <img src={Pacticles2} alt='particles' className='absolute z-[-2] right-[0%] top-[-25%] w-[50%]' />
+            
+            <div className="relative w-full ml-8 grid grid-cols-4 z-[999]">
+              <div className="relative w-full min-h-[340px] py-10 px-6">
+                <ul className="list-none h-full ml-4 flex flex-col justify-between text-white text-[14px] font-normal before:absolute before:left-0 before:w-px before:h-full before:bg-slate-900/80 dark:before:bg-white/10 before:-top-[0px]">
+                  <li className="hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw] py-6">Github account 1</li>
+                  <li className='hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw] py-6'>Homepage</li>
+                  <li className="hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw] py-6">My linkedin</li>
+                </ul>
+              </div>
+              <div className="relative w-full min-h-[340px] py-10 px-6">
+                <div className="absolute top-0 left-0 w-[10%] h-full before:absolute before:left-0 before:w-px before:h-full before:bg-slate-900/80 dark:before:bg-white/10 before:-top-[0px]">
+                </div>
+                <ul className="list-none h-full ml-[10%] flex flex-col justify-between text-white text-[14px] font-normal">
+                  <li className='hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw] py-6'>Coresponden</li>
+                  <li className='hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw] py-6'>Experience</li>
+                  <li className='hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw] py-6'>Skill & languages</li>
+                </ul>
+              </div>
+              <div className="relative w-full min-h-[340px] py-10 px-6">
+                <div className="absolute top-0 left-0 w-[10%] h-full before:absolute before:left-0 before:w-px before:h-full before:bg-slate-900/80 dark:before:bg-white/10 before:-top-[0px]">
+                </div>
+                <ul className="list-none h-full ml-[10%] flex flex-col justify-between text-white text-[14px] font-normal">
+                  <li className="hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw] py-6">Github Account 2</li>
+                  <li className="hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw] py-6">Whatsapp</li>
+                  <li className='hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw] py-6'>Certifications</li>
+                </ul>
+              </div>
             </div>
           </footer>
 
