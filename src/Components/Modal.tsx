@@ -78,8 +78,8 @@ const internship = [
 
   return (
     <div className="w-screen h-screen fixed z-[99999999999999] bg-black/80 flex justify-center items-center">
-        <div className="w-[60vw] h-[80vh] bg-white/20 backdrop-blur-2xl p-4 rounded-[24px]">
-            <div className="w-[60vw] h-[80vh] bg-white p-6 rounded-[20px]">
+        <div className="relative left-[-16px] w-[60vw] h-[80vh] bg-white/20 backdrop-blur-2xl p-4 rounded-[24px]">
+            <div className="relative w-[60vw] h-[80vh] overflow-hidden bg-white p-6 rounded-[20px]">
                 <div className='w-full flex items-center justify-between border-b border-b-slate-300 pb-3'>
                     <div className="flex items-center gap-2">
                         <Search01Icon className="w-5 h-5" />
@@ -93,7 +93,7 @@ const internship = [
                     </div>
                 </div>
 
-                <div className="w-full h-[75%] pr-6 overflow-y-auto mt-6">
+                <div className="w-full h-[76%] pr-6 overflow-y-auto mt-6">
                     <div className="border-b border-slate-300">
                         <h2 className="text-base font-medium ml-1 my-4 flex items-center gap-2">
                             <CircleIcon className="w-4 h-4" />
@@ -158,7 +158,7 @@ const internship = [
                     }
                 </div>
 
-                <div className='absolute border-t border-slate-300 left-0 bottom-0 w-full pt-4 text-[12px] text-slate-500 flex items-center justify-end'>
+                <div className='absolute border-t border-slate-300 left-0 bottom-0 w-full px-8 py-4 text-[12px] text-slate-500 flex items-center justify-end'>
                     <p>Powered by developer</p>
                 </div>
             </div>

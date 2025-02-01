@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { Add01Icon, ArrowRight02Icon, BrowserIcon, Cancel01Icon, Github01Icon, Link03Icon, Linkedin01Icon, LinkSquare01Icon, MapPinIcon, PaintBrush04Icon, Search01Icon } from 'hugeicons-react'
+import { Add01Icon, ArrowRight02Icon, ArrowUp01Icon, BrowserIcon, Cancel01Icon, Github01Icon, Link03Icon, Linkedin01Icon, LinkSquare01Icon, MapPinIcon, PaintBrush04Icon, Search01Icon } from 'hugeicons-react'
 import React, { useEffect, useState } from 'react'
 import { FaArrowRight, FaTimes } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
@@ -13,13 +13,15 @@ const Homepage: React.FC = () => {
 
   // const [isModal, setIsModal] = useState<boolean>(false);
   // const [selectimage, setSelectImage] = useState<string>('');
-  const [sidebar, setSidebar] = useState<boolean>(false);
   // const [text, setText] = useState<string>('');
+  const [sidebar, setSidebar] = useState<boolean>(false);
   const [selectType, setSelectType] = useState<string>('dev');
   const [selectTypeGit, setSelectTypeGit] = useState<string>('git3');
   const [selectAccordion, setSelectAccordion] = useState<number>(1);
   const [activeModalSearch, setActiveModalSearch] = useState<boolean>(false);
   const [activeSearch, setActiveSearch] = useState<boolean>(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isBackToTop, setIsBackToTop] = useState(false);
 
   // Menambahkan event listener untuk ESC key
   useEffect(() => {
@@ -43,6 +45,36 @@ const Homepage: React.FC = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const handleScrollBack = () => {
+      if (window.scrollY > 5200) {
+        setIsBackToTop(true);
+      } else {
+        setIsBackToTop(false);
+      }
+    };
+
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+  
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScrollBack);
+  
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleScrollBack);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <>
       <FadeTransition />
@@ -54,7 +86,7 @@ const Homepage: React.FC = () => {
         <></>
       }
 
-      <div className='relative w-[94vw] mx-auto min-h-screen overflow-x-hidden bg-[#030712]'>
+      <div className='relative w-[94vw] mx-auto min-h-screen overflow-x-hidden bg-[#000000]'>
           
           {/* Modal */}
           {/* {
@@ -72,31 +104,30 @@ const Homepage: React.FC = () => {
           </div>
 
           {/* Nabar */}
-          <nav className={`relative items-center left-0 top-0 px-12 z-[999999999] justify-between py-3 w-full flex gap-10 h-max after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]`}>
-            
+          <nav className={`fixed duration-300 top-0 left-0 w-full z-[999999999] flex items-center justify-between gap-10 h-max ${isScrolled ? 'bg-white/10 backdrop-blur-xl py-0 px-[44px]' : 'bg-transparent py-1 px-[90px]'}`}>            
             <div className="flex items-center w-max text-white gap-10">
               <p className="md:hidden flex">8.21.4.1</p>
 
               {/* Default view */}
               <div className='lg:flex hidden w-max text-slate-300 py-5 h-max'>
-                <ul className='w-[80%] flex items-center justify-between'>
+                <ul className={`w-[80%] flex items-center justify-between ${isScrolled ? 'text-[14px]' : ''}`}>
                   <a href="#languages">
-                    <li className='mr-10'>Languages</li>
+                    <li className='mr-10 hover:text-white border-b hover:border-slate-400 border-transparent'>Languages</li>
                   </a>
                   <a href="#products">
-                    <li className='mr-10'>Products</li>
+                    <li className='mr-10 hover:text-white border-b hover:border-slate-400 border-transparent'>Products</li>
                   </a>
                   <a href="#linkedin">
-                    <li className='mr-10'>Linkedin</li>
+                    <li className='mr-10 hover:text-white border-b hover:border-slate-400 border-transparent'>Linkedin</li>
                   </a>
                   <a href="#experience">
-                    <li className='mr-10'>Experiences</li>
+                    <li className='mr-10 hover:text-white border-b hover:border-slate-400 border-transparent'>Experiences</li>
                   </a>
                   <a href="#github">
-                    <li className='mr-10'>Github</li>
+                    <li className='mr-10 hover:text-white border-b hover:border-slate-400 border-transparent'>Github</li>
                   </a>
                   <a href="#certifications">
-                    <li className='mr-10'>Certifications</li>
+                    <li className='mr-10 hover:text-white border-b hover:border-slate-400 border-transparent'>Certifications</li>
                   </a>
                 </ul>
               </div>
@@ -171,16 +202,22 @@ const Homepage: React.FC = () => {
           {/* Akhir navbar */}
 
       
-          <div id='home' className='select-none relative z-[4449] lg:px-10 px-6 pb-10 w-[94vw] lg:w-[100%] h-max pt-16 border-slate-100'>
+          <div id='home' className='select-none relative z-[4449] lg:px-10 px-6 pb-10 mt-[90px] w-[94vw] lg:w-[100%] h-max pt-16 border-slate-100'>
             <div className="absolute left-[25%] top-0 w-[20%] h-[40px] py-[30%] transform -translate-y-[90%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_20%,_#5049c2_23%,_rgba(87,78,255,0)_0%)] blur-[250px]"></div>
             
             <img src={Pacticles2} alt='particles' className='absolute right-[10%] top-[30%] w-[60%]' />
+           
+            {/* Btn menu right */}
+            <div onClick={() => scrollToTop()} className={`fixed active:scale-[0.97] hover:brightness-[92%] duration-200 bottom-6 left-[0.5vw] z-[333333333] bg-white p-1 w-[2vw] h-8 flex items-center justify-center ${isBackToTop ? 'opacity-1' : 'opacity-0'}`}>
+              <ArrowUp01Icon />
+            </div>
             
             {/* Side zigzag ==================================== */}
             <div className="fixed w-[3vw] h-screen z-[33333333] col-start-1 top-0 left-0 row-span-full row-start-1 hidden border-x border-x-[rgba(107,114,128,0.3)] bg-[image:repeating-linear-gradient(315deg,rgba(107,114,128,0.3)_0,rgba(107,114,128,0.3)_1px,transparent_0,transparent_50%)] bg-[size:10px_10px] bg-fixed md:block dark:bg-[image:repeating-linear-gradient(315deg,rgba(209,213,219,0.3)_0,rgba(209,213,219,0.3)_1px,transparent_0,transparent_50%)]">
             </div>
             <div className="fixed w-[3vw] h-screen z-[33333333] col-start-1 top-0 right-0 row-span-full row-start-1 hidden border-x border-x-[rgba(107,114,128,0.3)] bg-[image:repeating-linear-gradient(315deg,rgba(107,114,128,0.3)_0,rgba(107,114,128,0.3)_1px,transparent_0,transparent_50%)] bg-[size:10px_10px] bg-fixed md:block dark:bg-[image:repeating-linear-gradient(315deg,rgba(209,213,219,0.3)_0,rgba(209,213,219,0.3)_1px,transparent_0,transparent_50%)]">
             </div>
+
 
             <div className='relative mb-6 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
               <p className='text-center px-3 py-2 w-max text-white flex items-center'>Fullstack Developer - <span className="text-gray-500 ml-1">MERN&Laravel</span></p>
@@ -191,12 +228,12 @@ const Homepage: React.FC = () => {
             </div>
 
             <div className='relative mt-6 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
-              <p className='w-max text-slate-300 px-3 text-lg tracking-tighter text-balance max-lg:font-medium max-sm:px-4'>"Welcome to my homebase—where ideas, creativity, and experience come together in a digital portfolio."</p>
+              <p className='w-max text-slate-300 px-3 text-lg tracking-tighter text-balance max-lg:font-medium max-sm:px-4'>Welcome to my homebase—where ideas, creativity, and experience come together in a digital portfolio</p>
             </div>
 
             <div className='relative z-[99999] my-7 py-2 flex items-center before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
               <button className='relative active:scale-[0.99] hover:brightness-[90%] z-[99999] outline-0 ml-4 mr-6 rounded-full bg-white px-4 py-3 w-max lg h-max text-center text-[14px] font-normal text-black'>Download Resume</button>
-              <div onClick={() => setActiveModalSearch(true)} className="active:scale-[0.99] outline-0 grid w-[100px] grid-cols-[auto_1fr_auto] items-center gap-1 rounded-full px-4 py-3 text-left text-sm/6 text-gray-950/50 sm:w-80 bg-white/5 text-white/50">
+              <div onClick={() => setActiveModalSearch(true)} className="active:scale-[0.99] outline-0 grid w-[100px] grid-cols-[auto_1fr_auto] items-center gap-1 rounded-full px-4 py-3 text-left text-sm/6 sm:w-80 bg-white/5 text-white/50">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" className="-ml-0.5 size-4 fill-gray-600 dark:fill-gray-500">
                   <path fill-rule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clip-rule="evenodd">
                   </path>
@@ -231,7 +268,7 @@ const Homepage: React.FC = () => {
                 </div>
               </div>
             </div>
-            <p className='relative text-base text-slate-300 w-[70%] tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
+            <p className='relative text-base text-slate-300 w-[66%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
           
             <div 
               className='w-full rounded-[24px] bg-white/20 backdrop-blur-2xl p-4 z-40 flex items-center lg:flex-no-wrap flex-wrap justify-between mt-12'>
@@ -241,7 +278,6 @@ const Homepage: React.FC = () => {
                 <img loading='lazy' src={Redux} alt='iconLanguage' className='w-[34px] lg:w-[80px] lg:mb-0 mb-5 lg:mr-14 z-[99999999999] cursor-pointer grayscale-[100%]' />
                 <img loading='lazy' src={TS} alt='iconLanguage' className='w-[34px] lg:w-[80px] lg:mb-0 mb-5 lg:mr-14 z-[99999999999] cursor-pointer grayscale-[100%]' />
                 <img loading='lazy' src={Laravel} alt='iconLanguage' className='w-[34px] lg:w-[80px] lg:mb-0 mb-5 lg:mr-14 z-[99999999999] cursor-pointer grayscale-[100%]' />
-                {/* <img loading='lazy' src={TW} alt='iconLanguage' className='w-[34px] lg:w-[80px] lg:mb-0 mb-5 lg:mr-14 z-[99999999999] cursor-pointer grayscale-[100%]' /> */}
               </div>
             </div>
           </div>
@@ -262,7 +298,7 @@ const Homepage: React.FC = () => {
                 </div>
               </div>
             </div>
-            <p className='relative text-base text-slate-300 w-[70%] tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
+            <p className='relative text-base text-slate-300 w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
             
             <div className="relative mb-10 flex items-center justify-center">
               <div
@@ -312,7 +348,7 @@ const Homepage: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                <p className='relative text-base text-slate-300 w-[70%] tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
+                <p className='relative text-base text-slate-300 w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
               
                 <div className='relative z-[99999999] w-full grid grid-cols-3 mt-14 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
                   <div onClick={() => setSelectType('dev')} className={`flex gap-6 ${selectType === 'dev' ? 'bg-[#ff69df11]' : ''} items-center cursor-pointer p-6`}>
@@ -743,7 +779,7 @@ const Homepage: React.FC = () => {
                 </div>
               </div>
             </div>
-            <p className='relative text-base text-slate-300 w-[70%] tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
+            <p className='relative text-base text-slate-300 w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
 
             <div className="absolute left-[20%] w-[60%] h-[40px] py-[30%] transform -translate-y-[45%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[140px]"></div>
             <div className="absolute left-[15%] w-[100%] h-[40px] py-[30%] transform -translate-y-[71%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[25px]"></div>
@@ -825,7 +861,7 @@ const Homepage: React.FC = () => {
                 </div>
               </div>
             </div>
-            <p className='relative text-base text-slate-300 w-[70%] tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
+            <p className='relative text-base text-slate-300 w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
 
             <div className='relative py-2 w-full h-max md:h-[600px] flex mt-14 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
               <div className='w-[55%] h-max'>
@@ -883,7 +919,7 @@ const Homepage: React.FC = () => {
                 </div>
               </div>
             </div>
-            <p className='relative text-base text-slate-300 w-[70%] tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
+            <p className='relative text-base text-slate-300 w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
 
             <div className='relative w-full grid grid-cols-3 mt-14 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
               <a href='https://github.com/khoirulhudaa?achievement=pull-shark&tab=achievements' target='__blank'>
@@ -927,7 +963,7 @@ const Homepage: React.FC = () => {
                 </div>
               </div>
             </div>
-            <p className='relative text-base text-slate-300 w-[70%] tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
+            <p className='relative text-base text-slate-300 w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
 
             <div className="absolute left-[20%] w-[60%] h-[40px] py-[30%] transform -translate-y-[50%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[140px]"></div>
             <div className="absolute left-[15%] w-[100%] h-[40px] py-[30%] transform -translate-y-[72%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[25px]"></div>
@@ -1093,16 +1129,16 @@ const Homepage: React.FC = () => {
                 <ul className="list-none h-full ml-4 flex flex-col justify-between text-white text-[14px] font-normal before:absolute before:left-0 before:w-px before:h-full before:bg-slate-200/80 dark:before:bg-slate-100/10 before:-top-[0px]">
                   <li className="hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6">Github account 1</li>
                   <li className='hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6'>Homepage</li>
-                  <li className="hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6">My linkedin</li>
+                  <li className="hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6">Linkedin</li>
                 </ul>
               </div>
               <div className="relative w-full min-h-[340px] py-10 px-6">
                 <div className="absolute top-0 left-0 w-[10%] h-full before:absolute before:left-0 before:w-px before:h-full before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-top-[0px]">
                 </div>
                 <ul className="list-none h-full ml-[10%] flex flex-col justify-between text-white text-[14px] font-normal">
+                  <li className='hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6'>Skill & languages</li>
                   <li className='hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6'>Coresponden</li>
                   <li className='hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6'>Experience</li>
-                  <li className='hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6'>Skill & languages</li>
                 </ul>
               </div>
               <div className="relative w-full min-h-[340px] py-10 px-6">
@@ -1110,8 +1146,8 @@ const Homepage: React.FC = () => {
                 </div>
                 <ul className="list-none h-full ml-[10%] flex flex-col justify-between text-white text-[14px] font-normal">
                   <li className="hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6">Github Account 2</li>
-                  <li className="hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6">Whatsapp</li>
                   <li className='hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6'>Certifications</li>
+                  <li className="hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6">Whatsapp</li>
                 </ul>
               </div>
               <div className="relative w-full min-h-[340px] py-10 px-6">
@@ -1119,12 +1155,12 @@ const Homepage: React.FC = () => {
                 </div>
                 <ul className="list-none h-full ml-[10%] flex flex-col justify-between text-white text-[14px] font-normal">
                   <li className="hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6">STMIK IKMI Cirebon</li>
+                  <li className='hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6'>SMKN 1 Cirebon</li>
                   <li className="hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6">Search feature</li>
-                  <li className='hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6'>SMKN 01 Cirebon</li>
                 </ul>
               </div>
             </div>
-          </footer>
+        </footer>
 
       </div>
     </>
