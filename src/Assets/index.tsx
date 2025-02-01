@@ -54,8 +54,12 @@ import KonstruksiLogo from './konstruksidotai_logo.png'
 import Logo1 from './logo1.png'
 import Logo2 from './logo2.png'
 import Logo3 from './logo3.png'
+import Team from './team.jpg'
+import Team2 from './team2.jpg'
 
 export {
+    Team,
+    Team2,
     Logo1,
     Logo2, 
     Logo3,
