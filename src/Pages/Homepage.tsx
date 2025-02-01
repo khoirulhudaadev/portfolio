@@ -1,10 +1,11 @@
 import { motion } from "framer-motion"
-import { Add01Icon, ArrowRight02Icon, BrowserIcon, Github01Icon, Link03Icon, Linkedin01Icon, LinkSquare01Icon, MapPinIcon, PaintBrush04Icon } from 'hugeicons-react'
-import React, { useState } from 'react'
+import { Add01Icon, ArrowRight02Icon, BrowserIcon, Cancel01Icon, Github01Icon, Link03Icon, Linkedin01Icon, LinkSquare01Icon, MapPinIcon, PaintBrush04Icon, Search01Icon } from 'hugeicons-react'
+import React, { useEffect, useState } from 'react'
 import { FaArrowRight, FaTimes } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import { AuthFlow, Build, FlowTrush, Geospasial, Git1, Git2, Git3, KonstruksiLogo, Laravel, Node, Pacticles2, PakYos, Reacts, Redux, TS } from '../Assets'
 // import ModalCertification from '../Components/ModalCertification'
+import ModalSearch from "../Components/Modal"
 import FadeTransition from "../Components/PageTransition"
 import '../index.css'
 
@@ -17,10 +18,38 @@ const Homepage: React.FC = () => {
   const [selectType, setSelectType] = useState<string>('dev');
   const [selectTypeGit, setSelectTypeGit] = useState<string>('git3');
   const [selectAccordion, setSelectAccordion] = useState<number>(1);
+  const [activeModalSearch, setActiveModalSearch] = useState<boolean>(false);
+  const [activeSearch, setActiveSearch] = useState<boolean>(false);
+
+  // Menambahkan event listener untuk ESC key
+  useEffect(() => {
+    const handleEscPress = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setActiveModalSearch(false); // Menutup modal ketika ESC ditekan
+        setActiveSearch(false); // Menutup modal ketika ESC ditekan
+      }
+    };
+
+    // Menambahkan listener saat komponen dipasang
+    document.addEventListener('keydown', handleEscPress);
+
+    // Membersihkan listener saat komponen dilepas
+    return () => {
+      document.removeEventListener('keydown', handleEscPress);
+    };
+  }, []);
 
   return (
     <>
       <FadeTransition />
+
+      {
+        activeModalSearch ? (
+          <ModalSearch onClose={() => {setActiveModalSearch(false); setActiveSearch(false)}} />
+        ):
+        <></>
+      }
+
       <div className='relative w-[94vw] mx-auto min-h-screen overflow-x-hidden bg-[#030712]'>
           
           {/* Modal */}
@@ -42,22 +71,6 @@ const Homepage: React.FC = () => {
           <nav className={`relative items-center left-0 top-0 px-12 z-[999999999] justify-between py-3 w-full flex gap-10 h-max after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]`}>
             
             <div className="flex items-center w-max text-white gap-10">
-              {/* <a href="/"> */}
-                {/* <div className="relative w-9 h-9"> */}
-                    {/* <div className="absolute border border-[#ff69df94] p-1 w-full h-full bg-[#ff69df11] rounded-md animate-fadeInOut1">
-                      <img src={Logo2} alt="Logo 2" />
-                    </div> */}
-                    {/* Indigo */}
-                    {/* <div className="absolute border border-[#b9ff6971] p-1 w-full h-full bg-[#daff691e] rounded-md">
-                      <img src={Logo1} alt="Logo" />
-                    </div> */}
-                    {/* Green */}
-                    {/* <div className="absolute border border-[#69dcffa3] p-1 w-full h-full bg-[#69dcff11] rounded-md animate-fadeInOut3">
-                      <img src={Logo3} alt="Logo 3" />
-                    </div> */}
-                {/* </div> */}
-               {/* </a> */}
-
               <p className="md:hidden flex">8.21.4.1</p>
 
               {/* Default view */}
@@ -114,9 +127,21 @@ const Homepage: React.FC = () => {
               </ul>
             </div>
             
-            <div className="w-max gap-4 flex items-center">
-              
-              <div className="w-max h-max text-white">
+            <div className="text-white flex-1 justify-end gap-6 flex overflow-hidden items-center">
+              <div className={`overflow-hidden active:scale-[0.99] flex items-center outline-0 justify-between gap-1 duration-200 ease-in rounded-full ${activeSearch ? 'px-4 w-[100%]' : 'px-2 w-[7.5%]'} py-2 text-left text-sm/6 bg-white/5 text-white/50`}>
+                <div onClick={() => setActiveModalSearch(true)} className={`w-max duration-200 delay-100 items-center gap-2 ${activeSearch ? 'flex opacity-1' : 'hidden opacity-0'}`}>
+                  <p className='w-max mr-20'>
+                    Quick search
+                  </p>
+                </div>
+                {
+                  activeSearch ? (
+                    <Cancel01Icon onClick={() => setActiveSearch(!activeSearch)} className="w-5 h-5" />
+                  ):
+                    <Search01Icon onClick={() => setActiveSearch(!activeSearch)} className="w-4 h-4" />
+                }
+              </div>
+              <div className="w-max h-max">
                 <a href="https://github.com/khoirulhudaadev" className="ml-auto">
                   <Github01Icon size={30} />
                 </a>
@@ -127,19 +152,11 @@ const Homepage: React.FC = () => {
           {/* Akhir navbar */}
 
       
-          <div id='home' className='select-none relative z-[444] lg:px-10 px-6 pb-10 w-[94vw] lg:w-[100%] h-max pt-16 border-slate-100'>
+          <div id='home' className='select-none relative z-[4449] lg:px-10 px-6 pb-10 w-[94vw] lg:w-[100%] h-max pt-16 border-slate-100'>
             <div className="absolute left-[25%] top-0 w-[20%] h-[40px] py-[30%] transform -translate-y-[90%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_20%,_#5049c2_23%,_rgba(87,78,255,0)_0%)] blur-[250px]"></div>
             
             <img src={Pacticles2} alt='particles' className='absolute right-[10%] top-[30%] w-[60%]' />
             
-            {/* <div className='fixed top-0 right-0 overflow-hidden bg-transparent w-[100vw] h-[80vh]'>
-              <div id='asteroid1a'></div>
-              <div id='asteroid2a'></div>
-              <div id='asteroid3a'></div>
-              <div id='asteroid4a'></div>
-              <div id='asteroid5a'></div>
-            </div> */}
-
             {/* Side zigzag ==================================== */}
             <div className="fixed w-[3vw] h-screen z-[33333333] col-start-1 top-0 left-0 row-span-full row-start-1 hidden border-x border-x-[rgba(107,114,128,0.3)] bg-[image:repeating-linear-gradient(315deg,rgba(107,114,128,0.3)_0,rgba(107,114,128,0.3)_1px,transparent_0,transparent_50%)] bg-[size:10px_10px] bg-fixed md:block dark:bg-[image:repeating-linear-gradient(315deg,rgba(209,213,219,0.3)_0,rgba(209,213,219,0.3)_1px,transparent_0,transparent_50%)]">
             </div>
@@ -158,15 +175,15 @@ const Homepage: React.FC = () => {
               <p className='w-max text-slate-300 px-3 text-lg tracking-tighter text-balance max-lg:font-medium max-sm:px-4'>"Welcome to my homebase—where ideas, creativity, and experience come together in a digital portfolio."</p>
             </div>
 
-            <div className='relative my-7 py-2 flex items-center before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
-              <button className='outline-0 ml-4 mr-6 rounded-full bg-white px-4 py-3 w-max lg h-max text-center text-[14px] font-normal text-black'>Download Resume</button>
-              <button type="button" className="outline-0 grid w-[100px] grid-cols-[auto_1fr_auto] items-center gap-1 rounded-full px-4 py-3 text-left text-sm/6 text-gray-950/50 sm:w-80 bg-white/5 text-white/50">
+            <div className='relative z-[99999] my-7 py-2 flex items-center before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
+              <button className='relative active:scale-[0.99] hover:brightness-[90%] z-[99999] outline-0 ml-4 mr-6 rounded-full bg-white px-4 py-3 w-max lg h-max text-center text-[14px] font-normal text-black'>Download Resume</button>
+              <div onClick={() => setActiveModalSearch(true)} className="active:scale-[0.99] outline-0 grid w-[100px] grid-cols-[auto_1fr_auto] items-center gap-1 rounded-full px-4 py-3 text-left text-sm/6 text-gray-950/50 sm:w-80 bg-white/5 text-white/50">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" className="-ml-0.5 size-4 fill-gray-600 dark:fill-gray-500">
                   <path fill-rule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clip-rule="evenodd">
                   </path>
                 </svg>
                   Quick search
-                <kbd className="font-sans text-xs/4 text-gray-500 dark:text-gray-400 [.os-macos_&amp;]:block">
+                <kbd className="font-sans text-[14px] text-gray-500 dark:text-gray-400 [.os-macos_&amp;]:block">
                   <span className="opacity-60 mr-1">⌘</span>
                   K
                 </kbd>
@@ -175,15 +192,15 @@ const Homepage: React.FC = () => {
                   </span>
                   &nbsp;K
                 </kbd>
-              </button>
+              </div>
             </div>
 
           </div>
           
           <div id='languages' className='select-none px-14 relative lg:flex flex-col hidden z-[444] pb-[30px] lg:pb-[80px] lg:pt-4 w-full h-max border-slate-100'>
           
-            <div className="absolute left-[20%] w-[60%] h-[40px] py-[30%] transform -translate-y-[75%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[240px]"></div>
-            <div className="absolute left-[25%] w-[30%] h-[40px] py-[30%] transform -translate-y-[51%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[240px]"></div>
+            <div className="absolute left-[20%] z-[-1] w-[60%] h-[40px] py-[30%] transform -translate-y-[75%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[240px]"></div>
+            <div className="absolute left-[25%] z-[-1] w-[30%] h-[40px] py-[30%] transform -translate-y-[51%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[240px]"></div>
 
             <small className='relative text-[#00B4F5] mb-4 text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>React - Laravel - Express.</small>
             <div className='w-full mt-4 mb-10 flex justify-between items-center '>
@@ -220,11 +237,11 @@ const Homepage: React.FC = () => {
             <div className='w-full mt-4 mb-10 flex justify-between items-center '>
               <h2 className='relative text-[40px] text-white font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>SIGEO - web app</h2>
               <div className='flex w-max'>
-                <div className="relative flex items-center gap-6 p-6 text-transparent">
-                  <p>konstruksi web</p>
-                  <Link03Icon className='w-6 h-6' />
+                <div className="relative flex items-center gap-6 p-6 text-white">
+                  <p>Go to website</p>
+                  <BrowserIcon className='w-6 h-6' />
                 </div>
-            </div>
+              </div>
             </div>
             <p className='relative text-base text-slate-300 w-[70%] tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
             
@@ -235,9 +252,9 @@ const Homepage: React.FC = () => {
                 >
                     <div className='w-full h-full rounded-[20px] bg-white p-6'>
                       <div className='w-full h-full relative flex-col lg:flex justify-between text-[20px] leading-loose text-white'>
-                        <div className='w-full flex items-baseline'>
-                          <div className='w-full lg:flex items-basceline justify-start gap-6'>
-                            <MapPinIcon size={30} className="text-black" />
+                        <div className='w-full flex items-center'>
+                          <div className='w-full lg:flex items-center justify-start gap-6'>
+                            <MapPinIcon size={30} className="text-black relative top-[-3px]" />
                             <h2 className='text-black font-medium text-[26px] lg:text-[28px]'>SI GEO</h2>
                           </div>
                           <div className='w-max text-[14px] lg:text-[16px] flex items-center'>
@@ -727,10 +744,10 @@ const Homepage: React.FC = () => {
                     </div>
                   </Link>
 
-                  <p className='text-[14px] w-[94%] text-justify leading-loose tracking-tighter mt-6 mb-10 text-slate-600'>
-                  To whom it may concern:
+                  <p className='text-[15px] w-[94%] text-justify leading-loose tracking-tighter mt-6 mb-10 text-slate-600'>
+                    To whom it may concern:
 
-                  Huda worked with us at Konstruksi.AI developing the core main product as a Frontend developer. Although he was an intern, Huda contributed greatly to the team. Huda has an excellent skill related to Frontend development and always completed his tasks in timely manner. He can perform both individually and within a team as well. I recommend him as a Frontend developer and I believe he will be a great asset to any company.
+                    Huda worked with us at Konstruksi.AI developing the core main product as a Frontend developer. Although he was an intern, Huda contributed greatly to the team. Huda has an excellent skill related to Frontend development and always completed his tasks in timely manner. He can perform both individually and within a team as well. I recommend him as a Frontend developer and I believe he will be a great asset to any company.
                   </p>
 
                   <div className='w-max flex gap-2 items-center text-[#00B4F5]'>
@@ -835,42 +852,48 @@ const Homepage: React.FC = () => {
           <div id='github' className='select-none px-14 relative lg:flex flex-col hidden z-[3333] pb-[30px] lg:pb-[80px] lg:pt-4 w-full h-max border-slate-100'>
             <small className='relative text-[#00B4F5] text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>All repositories github</small>
             <div className='w-full mt-4 mb-10 flex justify-between items-center '>
-              <h2 className='relative text-[40px] text-white mt-4 mb-10 font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
+              <h2 className='relative text-[40px] text-white font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
                 <a href='https://github.com/khorulhudaa' className='flex items-center gap-4'>
                   Github account <LinkSquare01Icon className='text-[#00B4F5]' /> 
                 </a>
               </h2>
               <div className='flex w-max'>
-                <div className="relative text-transparent flex items-center gap-6 p-6 before:absolute before:left-0 before:w-px before:h-[100vh] before:bg-slate-900/80 dark:before:bg-white/10 before:-top-[50vh] after:absolute after:right-0 after:w-px after:h-[100vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[50vh]">
-                  <p>konstruksi web</p>
-                  <Link03Icon className='w-6 h-6' />
+                <div className="relative text-white flex items-center gap-6 p-6 before:absolute before:left-0 before:w-px before:h-[100vh] before:bg-slate-900/80 dark:before:bg-white/10 before:-top-[50vh] after:absolute after:right-0 after:w-px after:h-[100vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[50vh]">
+                  <p>Go to account</p>
+                  <Github01Icon className='w-6 h-6' />
                 </div>
               </div>
             </div>
             <p className='relative text-base text-slate-300 w-[70%] tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
 
             <div className='relative w-full grid grid-cols-3 mt-14 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
-              <div onClick={() => setSelectTypeGit('git1')} className={`flex gap-6 ${selectTypeGit === 'git1' ? 'bg-[#ff69df11]' : ''} items-center cursor-pointer p-6`}>
-                <img src={Git1} alt="git" className="w-12" />
-                <div className='flex-1'>
-                  <h3 className={`${selectTypeGit === 'git1' ? 'text-[#f85c98]' : 'text-white'} font-medium`}>Pull Shark - 2x</h3>
-                  <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>@khoirulhudaa opened pull requests that have been merged.</p>
+              <a href='https://github.com/khoirulhudaa?achievement=pull-shark&tab=achievements' target='__blank'>
+                <div onClick={() => setSelectTypeGit('git1')} className={`flex gap-6 ${selectTypeGit === 'git1' ? 'bg-[#ff69df11]' : ''} items-center cursor-pointer p-6`}>
+                  <img src={Git1} alt="git" className="w-12" />
+                  <div className='flex-1'>
+                    <h3 className={`${selectTypeGit === 'git1' ? 'text-[#f85c98]' : 'text-white'} font-medium`}>Pull Shark - 2x</h3>
+                    <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>@khoirulhudaa opened pull requests that have been merged.</p>
+                  </div>
                 </div>
-              </div>
-              <div onClick={() => setSelectTypeGit('git2')} className={`flex gap-6 ${selectTypeGit === 'git2' ? 'bg-[#9e69ff11]' : ''} items-center cursor-pointer p-6 border-x border-gray-800`}>
-                <img src={Git2} alt="git" className="w-12" />
-                <div className='flex-1'>
-                  <h3 className={`${selectTypeGit === 'git2' ? 'text-[#5E5CF8]' : 'text-white'} font-medium`}>Quickdraw</h3>
-                  <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>Closing issues or pull requests within 5 minutes after they are opened.</p>
+              </a>
+              <a href='https://github.com/khoirulhudaa?tab=achievements&achievement=quickdraw' target='__blank'>
+                <div onClick={() => setSelectTypeGit('git2')} className={`flex gap-6 ${selectTypeGit === 'git2' ? 'bg-[#9e69ff11]' : ''} items-center cursor-pointer p-6 border-x border-gray-800`}>
+                  <img src={Git2} alt="git" className="w-12" />
+                  <div className='flex-1'>
+                    <h3 className={`${selectTypeGit === 'git2' ? 'text-[#5E5CF8]' : 'text-white'} font-medium`}>Quickdraw</h3>
+                    <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>Closing issues or pull requests within 5 minutes after they are opened.</p>
+                  </div>
                 </div>
-              </div>
-              <div onClick={() => setSelectTypeGit('git3')} className={`flex gap-6 ${selectTypeGit === 'git3' ? 'bg-[#69dcff11]' : ''} items-center cursor-pointer p-6`}>
-                <img src={Git3} alt="git" className="w-12" />
-                <div className='flex-1'>
-                  <h3 className={`${selectType === 'git3' ? 'text-[#5cc7f8]' : 'text-white'} font-medium`}>Starstruck</h3>
-                  <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>Starstruck: Having a repository with high popularity, starts.</p>
+              </a>
+              <a href='https://github.com/khoirulhudaa?tab=achievements&achievement=starstruck' target='__blank'>
+                <div onClick={() => setSelectTypeGit('git3')} className={`flex gap-6 ${selectTypeGit === 'git3' ? 'bg-[#69dcff11]' : ''} items-center cursor-pointer p-6`}>
+                  <img src={Git3} alt="git" className="w-12" />
+                  <div className='flex-1'>
+                    <h3 className={`${selectType === 'git3' ? 'text-[#5cc7f8]' : 'text-white'} font-medium`}>Starstruck</h3>
+                    <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>Starstruck: Having a repository with high popularity, starts.</p>
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
 
@@ -894,14 +917,14 @@ const Homepage: React.FC = () => {
             <div className="w-full bg-white/20 backdrop-blur-2xl p-4 mt-12 rounded-[20px]">
             
               <div className='relative w-full bg-white rounded-tl-[16px] rounded-tr-[16px] grid grid-cols-2'>
-                <div onClick={() => setSelectTypeGit('git1')} className={`flex gap-6 ${selectTypeGit === 'git1' ? 'bg-[#ff69df11]' : ''} items-center cursor-pointer p-6`}>
+                <div onClick={() => setSelectTypeGit('git1')} className={`flex gap-6 ${selectTypeGit === 'git1' ? 'bg-[#ff69df11]' : ''} items-center cursor-pointer px-6 py-16`}>
                   <img src={Git1} alt="git" className="w-12" />
                   <div className='flex-1'>
                     <h3 className={`${selectTypeGit === 'git1' ? 'text-[#f85c98]' : 'text-black'} font-medium`}>Pull Shark - 2x</h3>
                     <p className='text-[12px] mt-2 text-slate-500 leading-loose tracking-tighter'>@khoirulhudaa opened pull requests that have been merged.</p>
                   </div>
                 </div>
-                <div onClick={() => setSelectTypeGit('git2')} className={`flex gap-6 ${selectTypeGit === 'git2' ? 'bg-[#9e69ff11]' : ''} items-center cursor-pointer p-6 border-l border-gray-800`}>
+                <div onClick={() => setSelectTypeGit('git2')} className={`flex gap-6 ${selectTypeGit === 'git2' ? 'bg-[#9e69ff11]' : ''} items-center cursor-pointer px-6 py-16 border-l border-gray-800`}>
                   <img src={Git2} alt="git" className="w-12" />
                   <div className='flex-1'>
                     <h3 className={`${selectTypeGit === 'git2' ? 'text-[#5E5CF8]' : 'text-black'} font-medium`}>Quickdraw</h3>
@@ -911,7 +934,7 @@ const Homepage: React.FC = () => {
               </div>
 
               <div className='relative w-full bg-white grid grid-cols-1'>
-                <div onClick={() => setSelectTypeGit('git3')} className={`flex gap-6 ${selectTypeGit === 'git3' ? 'bg-[#69dcff11]' : ''} items-center cursor-pointer px-6 py-12 border-t border-gray-800 w-full`}>
+                <div onClick={() => setSelectTypeGit('git3')} className={`flex gap-6 ${selectTypeGit === 'git3' ? 'bg-[#69dcff11]' : ''} items-center cursor-pointer px-6 py-16 border-t border-gray-800 w-full`}>
                   <img src={Git3} alt="git" className="w-12" />
                   <div className='flex-1'>
                     <h3 className={`${selectType === 'git3' ? 'text-[#5cc7f8]' : 'text-black'} font-medium`}>Starstruck</h3>
@@ -921,14 +944,14 @@ const Homepage: React.FC = () => {
               </div>
 
               <div className='relative w-full bg-white rounded-bl-[16px] rounded-br-[16px] grid grid-cols-2 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
-                <div onClick={() => setSelectTypeGit('git1')} className={`flex gap-6 ${selectTypeGit === 'git1' ? 'bg-[#ff69df11]' : ''} items-center cursor-pointer p-6 border-t border-gray-800 w-full`}>
+                <div onClick={() => setSelectTypeGit('git1')} className={`flex gap-6 ${selectTypeGit === 'git1' ? 'bg-[#ff69df11]' : ''} items-center cursor-pointer px-6 py-16 border-t border-gray-800 w-full`}>
                   <img src={Git1} alt="git" className="w-12" />
                   <div className='flex-1'>
                     <h3 className={`${selectTypeGit === 'git1' ? 'text-[#f85c98]' : 'text-black'} font-medium`}>Pull Shark - 2x</h3>
                     <p className='text-[12px] mt-2 text-slate-500 leading-loose tracking-tighter'>@khoirulhudaa opened pull requests that have been merged.</p>
                   </div>
                 </div>
-                <div onClick={() => setSelectTypeGit('git2')} className={`flex gap-6 ${selectTypeGit === 'git2' ? 'bg-[#9e69ff11]' : ''} items-center cursor-pointer p-6 border-t border-x border-gray-800`}>
+                <div onClick={() => setSelectTypeGit('git2')} className={`flex gap-6 ${selectTypeGit === 'git2' ? 'bg-[#9e69ff11]' : ''} items-center cursor-pointer px-6 py-16 border-t border-x border-gray-800`}>
                   <img src={Git2} alt="git" className="w-12" />
                   <div className='flex-1'>
                     <h3 className={`${selectTypeGit === 'git2' ? 'text-[#5E5CF8]' : 'text-black'} font-medium`}>Quickdraw</h3>
