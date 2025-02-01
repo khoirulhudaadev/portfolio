@@ -28,6 +28,10 @@ const Homepage: React.FC = () => {
         setActiveModalSearch(false); // Menutup modal ketika ESC ditekan
         setActiveSearch(false); // Menutup modal ketika ESC ditekan
       }
+      if (event.ctrlKey && event.key.toLowerCase() === 'k') {
+        event.preventDefault(); // Mencegah aksi default browser
+        setActiveSearch(true);
+      }
     };
 
     // Menambahkan listener saat komponen dipasang
@@ -128,18 +132,33 @@ const Homepage: React.FC = () => {
             </div>
             
             <div className="text-white flex-1 justify-end gap-6 flex overflow-hidden items-center">
-              <div className={`overflow-hidden active:scale-[0.99] flex items-center outline-0 justify-between gap-1 duration-200 ease-in rounded-full ${activeSearch ? 'px-4 w-[100%]' : 'px-2 w-[7.5%]'} py-2 text-left text-sm/6 bg-white/5 text-white/50`}>
+              <div className={`overflow-hidden active:scale-[0.99] flex items-center outline-0 justify-between gap-1 duration-200 ease-in rounded-full ${activeSearch ? 'px-4 w-[100%]' : 'px-4 w-max'} py-2 text-left text-sm/6 bg-white/5 text-white/50`}>
                 <div onClick={() => setActiveModalSearch(true)} className={`w-max duration-200 delay-100 items-center gap-2 ${activeSearch ? 'flex opacity-1' : 'hidden opacity-0'}`}>
                   <p className='w-max mr-20'>
                     Quick search
                   </p>
                 </div>
-                {
-                  activeSearch ? (
-                    <Cancel01Icon onClick={() => setActiveSearch(!activeSearch)} className="w-5 h-5" />
-                  ):
-                    <Search01Icon onClick={() => setActiveSearch(!activeSearch)} className="w-4 h-4" />
-                }
+                <div className="w-max gap-2 font-sans flex items-center text-[13px] text-gray-500 dark:text-gray-400 [.os-macos_&amp;]:block">
+                  {
+                    activeSearch ? (
+                      <p onClick={() => setActiveSearch(false)}>
+                        esc
+                      </p>
+                    ):
+                      <p onClick={() => setActiveSearch(true)}>
+                        Ctrl + k
+                      </p>
+                  }
+                  <div>
+                    <p>/</p>
+                  </div>
+                  {
+                    activeSearch ? (
+                      <Cancel01Icon onClick={() => setActiveSearch(!activeSearch)} className="w-5 h-5" />
+                    ):
+                      <Search01Icon onClick={() => setActiveSearch(!activeSearch)} className="w-4 h-4" />
+                  }
+                </div>
               </div>
               <div className="w-max h-max">
                 <a href="https://github.com/khoirulhudaadev" className="ml-auto">
@@ -1071,28 +1090,37 @@ const Homepage: React.FC = () => {
             
             <div className="relative w-full ml-8 grid grid-cols-4 z-[999]">
               <div className="relative w-full min-h-[340px] py-10 px-6">
-                <ul className="list-none h-full ml-4 flex flex-col justify-between text-white text-[14px] font-normal before:absolute before:left-0 before:w-px before:h-full before:bg-slate-900/80 dark:before:bg-white/10 before:-top-[0px]">
-                  <li className="hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw] py-6">Github account 1</li>
-                  <li className='hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw] py-6'>Homepage</li>
-                  <li className="hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw] py-6">My linkedin</li>
+                <ul className="list-none h-full ml-4 flex flex-col justify-between text-white text-[14px] font-normal before:absolute before:left-0 before:w-px before:h-full before:bg-slate-200/80 dark:before:bg-slate-100/10 before:-top-[0px]">
+                  <li className="hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6">Github account 1</li>
+                  <li className='hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6'>Homepage</li>
+                  <li className="hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6">My linkedin</li>
                 </ul>
               </div>
               <div className="relative w-full min-h-[340px] py-10 px-6">
-                <div className="absolute top-0 left-0 w-[10%] h-full before:absolute before:left-0 before:w-px before:h-full before:bg-slate-900/80 dark:before:bg-white/10 before:-top-[0px]">
+                <div className="absolute top-0 left-0 w-[10%] h-full before:absolute before:left-0 before:w-px before:h-full before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-top-[0px]">
                 </div>
                 <ul className="list-none h-full ml-[10%] flex flex-col justify-between text-white text-[14px] font-normal">
-                  <li className='hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw] py-6'>Coresponden</li>
-                  <li className='hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw] py-6'>Experience</li>
-                  <li className='hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw] py-6'>Skill & languages</li>
+                  <li className='hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6'>Coresponden</li>
+                  <li className='hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6'>Experience</li>
+                  <li className='hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6'>Skill & languages</li>
                 </ul>
               </div>
               <div className="relative w-full min-h-[340px] py-10 px-6">
-                <div className="absolute top-0 left-0 w-[10%] h-full before:absolute before:left-0 before:w-px before:h-full before:bg-slate-900/80 dark:before:bg-white/10 before:-top-[0px]">
+                <div className="absolute top-0 left-0 w-[10%] h-full before:absolute before:left-0 before:w-px before:h-full before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-top-[0px]">
                 </div>
                 <ul className="list-none h-full ml-[10%] flex flex-col justify-between text-white text-[14px] font-normal">
-                  <li className="hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw] py-6">Github Account 2</li>
-                  <li className="hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw] py-6">Whatsapp</li>
-                  <li className='hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw] py-6'>Certifications</li>
+                  <li className="hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6">Github Account 2</li>
+                  <li className="hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6">Whatsapp</li>
+                  <li className='hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6'>Certifications</li>
+                </ul>
+              </div>
+              <div className="relative w-full min-h-[340px] py-10 px-6">
+                <div className="absolute top-0 left-0 w-[10%] h-full before:absolute before:left-0 before:w-px before:h-full before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-top-[0px]">
+                </div>
+                <ul className="list-none h-full ml-[10%] flex flex-col justify-between text-white text-[14px] font-normal">
+                  <li className="hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6">STMIK IKMI Cirebon</li>
+                  <li className="hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6">Search feature</li>
+                  <li className='hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6'>SMKN 01 Cirebon</li>
                 </ul>
               </div>
             </div>

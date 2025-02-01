@@ -85,8 +85,11 @@ const internship = [
                         <Search01Icon className="w-5 h-5" />
                         <input type="text" className="text-[13px] outline-0 border-0 p-2" placeholder="Search information" />
                     </div>
-                    <div onClick={() => onClose()} className="border border-slate-400 rounded-[6px] px-3 py-1 text-slate-600 font-normal text-[10px]">
-                        <p>esc</p>
+                    <div className="w-max flex items-center gap-2">
+                        <p className="text-[12px] text-slate-400">for close</p>
+                        <div onClick={() => onClose()} className="border border-slate-400 rounded-[6px] px-3 py-1 text-slate-600 font-normal text-[10px]">
+                            <p>esc</p>
+                        </div>
                     </div>
                 </div>
 
