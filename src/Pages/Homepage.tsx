@@ -132,13 +132,13 @@ const Homepage: React.FC = () => {
             
             <img src={Pacticles2} alt='particles' className='absolute right-[10%] top-[30%] w-[60%]' />
             
-            <div className='fixed top-20 right-0 overflow-hidden bg-transparent w-[100vw] h-[80vh]'>
+            {/* <div className='fixed top-0 right-0 overflow-hidden bg-transparent w-[100vw] h-[80vh]'>
               <div id='asteroid1a'></div>
               <div id='asteroid2a'></div>
               <div id='asteroid3a'></div>
               <div id='asteroid4a'></div>
               <div id='asteroid5a'></div>
-            </div>
+            </div> */}
 
             {/* Side zigzag ==================================== */}
             <div className="fixed w-[3vw] h-screen z-[33333333] col-start-1 top-0 left-0 row-span-full row-start-1 hidden border-x border-x-[rgba(107,114,128,0.3)] bg-[image:repeating-linear-gradient(315deg,rgba(107,114,128,0.3)_0,rgba(107,114,128,0.3)_1px,transparent_0,transparent_50%)] bg-[size:10px_10px] bg-fixed md:block dark:bg-[image:repeating-linear-gradient(315deg,rgba(209,213,219,0.3)_0,rgba(209,213,219,0.3)_1px,transparent_0,transparent_50%)]">
@@ -160,7 +160,7 @@ const Homepage: React.FC = () => {
 
             <div className='relative my-7 py-2 flex items-center before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
               <button className='outline-0 ml-4 mr-6 rounded-full bg-white px-4 py-3 w-max lg h-max text-center text-[14px] font-normal text-black'>Download Resume</button>
-              <button type="button" className="outline-0 grid w-[100px] bg-white grid-cols-[auto_1fr_auto] items-center gap-1 rounded-full px-4 py-3 text-left text-sm/6 text-gray-950/50 sm:w-80 dark:bg-white/5 dark:text-white/50">
+              <button type="button" className="outline-0 grid w-[100px] grid-cols-[auto_1fr_auto] items-center gap-1 rounded-full px-4 py-3 text-left text-sm/6 text-gray-950/50 sm:w-80 bg-white/5 text-white/50">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" className="-ml-0.5 size-4 fill-gray-600 dark:fill-gray-500">
                   <path fill-rule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clip-rule="evenodd">
                   </path>
