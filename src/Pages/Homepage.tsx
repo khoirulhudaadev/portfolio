@@ -1,9 +1,9 @@
 import { motion } from "framer-motion"
-import { Add01Icon, ArrowRight02Icon, ArrowUp01Icon, BrowserIcon, Cancel01Icon, Github01Icon, Link03Icon, Linkedin01Icon, LinkSquare01Icon, MapPinIcon, PaintBrush04Icon, Search01Icon } from 'hugeicons-react'
+import { Add01Icon, ArrowRight02Icon, ArrowUp01Icon, BrowserIcon, Building02Icon, Calendar04Icon, Cancel01Icon, Github01Icon, InformationDiamondIcon, Link03Icon, Linkedin01Icon, LinkSquare01Icon, MapPinIcon, Mortarboard02Icon, PaintBrush04Icon, Search01Icon } from 'hugeicons-react'
 import React, { useEffect, useState } from 'react'
 import { FaArrowRight, FaTimes } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import { AuthFlow, Build, FlowTrush, Geospasial, Git1, Git2, Git3, KonstruksiLogo, Laravel, Node, Pacticles2, PakYos, Reacts, Redux, TS } from '../Assets'
+import { AuthFlow, Build, FlowTrush, Geospasial, Git1, Git2, Git3, KonstruksiLogo, Laravel, Node, Pacticles2, PakYos, Reacts, Redux, Team, Team2, TS } from '../Assets'
 // import ModalCertification from '../Components/ModalCertification'
 import ModalSearch from "../Components/Modal"
 import FadeTransition from "../Components/PageTransition"
@@ -164,7 +164,7 @@ const Homepage: React.FC = () => {
             
             <div className="text-white flex-1 justify-end gap-6 flex overflow-hidden items-center">
               <div className={`overflow-hidden active:scale-[0.99] flex items-center outline-0 justify-between gap-1 duration-200 ease-in rounded-full ${activeSearch ? 'px-4 w-[100%]' : 'px-4 w-max'} py-2 text-left text-sm/6 bg-white/5 text-white/50`}>
-                <div onClick={() => setActiveModalSearch(true)} className={`w-max duration-200 delay-100 items-center gap-2 ${activeSearch ? 'flex opacity-1' : 'hidden opacity-0'}`}>
+                <div onClick={() => setActiveModalSearch(true)} className={`flex-1 duration-200 delay-100 items-center gap-2 ${activeSearch ? 'flex opacity-1' : 'hidden opacity-0'}`}>
                   <p className='w-max mr-20'>
                     Quick search
                   </p>
@@ -255,14 +255,14 @@ const Homepage: React.FC = () => {
           
           <div id='languages' className='select-none px-14 relative lg:flex flex-col hidden z-[444] pb-[30px] lg:pb-[80px] lg:pt-4 w-full h-max border-slate-100'>
           
-            <div className="absolute left-[20%] z-[-1] w-[60%] h-[40px] py-[30%] transform -translate-y-[75%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[240px]"></div>
-            <div className="absolute left-[25%] z-[-1] w-[30%] h-[40px] py-[30%] transform -translate-y-[51%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[240px]"></div>
+            <div className="absolute z-[33] left-[20%] w-[60%] h-[40px] py-[30%] transform -translate-y-[75%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[240px]"></div>
+            <div className="absolute z-[33] left-[25%] w-[30%] h-[40px] py-[30%] transform -translate-y-[51%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[240px]"></div>
 
             <small className='relative text-[#00B4F5] mb-4 text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>React - Laravel - Express.</small>
             <div className='w-full mt-4 mb-10 flex justify-between items-center '>
               <h2 className='relative text-[40px] text-white font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Skill in languages</h2>
               <div className='flex w-max'>
-                <div className="relative flex items-center gap-6 p-6 text-transparent before:absolute before:left-0 before:w-px before:h-[300vh] before:bg-slate-900/80 dark:before:bg-white/10 before:-top-[100vh] after:absolute after:right-0 after:w-px after:h-[300vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[100vh]">
+                <div className="relative flex items-center gap-6 p-6 text-transparent after:absolute after:right-0 after:w-px after:h-[300vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[100vh]">
                   <p>konstruksi web</p>
                   <Link03Icon className='w-6 h-6' />
                 </div>
@@ -284,9 +284,9 @@ const Homepage: React.FC = () => {
 
           <div id='products' className='select-none px-14 relative lg:flex flex-col hidden z-[4444] pb-[30px] lg:pb-[80px] lg:pt-4 w-full h-max border-slate-100'>
             
-            <div className="absolute left-[20%] w-[60%] h-[40px] py-[30%] transform -translate-y-[45%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[140px]"></div>
-            <div className="absolute left-[15%] w-[100%] h-[40px] py-[30%] transform -translate-y-[51%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[70px]"></div>
-            <img src={Pacticles2} alt='particles' className='absolute left-[25%] top-[-10%] w-[60%]' />
+            <div className="absolute z-[33] left-[20%] w-[60%] h-[40px] py-[30%] transform -translate-y-[45%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[140px]"></div>
+            <div className="absolute z-[33] left-[15%] w-[100%] h-[40px] py-[30%] transform -translate-y-[51%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[70px]"></div>
+            <img src={Pacticles2} alt='particles' className='absolute z-[33] left-[25%] top-[-10%] w-[60%]' />
 
             <small className='relative text-[#00B4F5] mb-4 text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Frontend + Backend.</small>
             <div className='w-full mt-4 mb-10 flex justify-between items-center '>
@@ -342,7 +342,7 @@ const Homepage: React.FC = () => {
                 <div className='w-full mt-4 mb-10 flex justify-between items-center '>
                   <h2 className='relative text-[40px] text-white font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Our web products</h2>
                   <div className='flex w-max'>
-                    <div className="relative text-transparent flex items-center gap-6 p-6 before:absolute before:left-0 before:w-px before:h-[200vh] before:bg-slate-900/80 dark:before:bg-white/10 before:-top-[100vh] after:absolute after:right-0 after:w-px after:h-[200vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[100vh]">
+                    <div className="relative text-transparent flex items-center gap-6 p-6 after:absolute after:right-0 after:w-px after:h-[200vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[100vh]">
                       <p>konstruksi web</p>
                       <Link03Icon className='w-6 h-6' />
                     </div>
@@ -773,7 +773,7 @@ const Homepage: React.FC = () => {
             <div className='w-full mt-4 mb-10 flex justify-between items-center '>
               <h2 className='relative text-[40px] text-white font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Profile - linkedin</h2>
               <div className='flex w-max'>
-                <div className="relative flex items-center gap-6 p-6 text-white before:absolute before:left-0 before:w-px before:h-full before:bg-slate-900/80 dark:before:bg-white/10 before:-top-[110px] after:absolute after:right-0 after:w-px after:h-full after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[110px]">
+                <div className="relative flex items-center gap-6 p-6 text-white after:absolute after:right-0 after:w-px after:h-[30vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[120px]">
                   <p>Go to linkedin</p>
                   <Linkedin01Icon className='w-8 h-8' />
                 </div>
@@ -782,7 +782,7 @@ const Homepage: React.FC = () => {
             <p className='relative text-base text-slate-300 w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
 
             <div className="absolute left-[20%] w-[60%] h-[40px] py-[30%] transform -translate-y-[45%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[140px]"></div>
-            <div className="absolute left-[15%] w-[100%] h-[40px] py-[30%] transform -translate-y-[71%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[25px]"></div>
+            <div className="absolute left-[15%] w-[100%] h-[40px] py-[30%] transform -translate-y-[63%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[25px]"></div>
             <img src={Pacticles2} alt='particles' className='absolute left-[28%] top-[-28%] w-[60%]' />
 
             <div className='relative w-full bg-white/20 backdrop-blur-sm rounded-[28px] border border-slate-300 p-4 z-40 items-center justify-between mt-24'>
@@ -855,7 +855,7 @@ const Homepage: React.FC = () => {
             <div className='w-full mt-4 mb-10 flex justify-between items-center '>
               <h2 className='relative text-[40px] text-white font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Experience - Internship</h2>
               <div className='flex w-max'>
-                <div className="relative flex items-center gap-6 p-6 text-white before:absolute before:left-0 before:w-px before:h-[200vh] before:bg-slate-900/80 dark:before:bg-white/10 before:-top-[100vh] after:absolute after:right-0 after:w-px after:h-[200vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[100vh]">
+                <div className="relative flex items-center gap-6 p-6 text-white after:absolute after:right-0 after:w-px after:h-[200vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[100vh]">
                   <p>konstruksi web</p>
                   <Link03Icon className='w-6 h-6' />
                 </div>
@@ -896,12 +896,99 @@ const Homepage: React.FC = () => {
               <div className="absolute right-[25%] w-[60%] h-[40px] py-[30%] transform -translate-y-[10%] -rotate-45 bg-[radial-gradient(circle_at_right_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[250px]"></div>
               <img src={Pacticles2} alt='particles' className='absolute left-[30%] top-[-18%] w-[50%]' />
 
-              <div className='relative w-[45%] rounded-[24px] flex bg-white/20 backdrop-blur-2xl p-6 border border-slate-300 items-center h-full overflow-hidden justify-center cursor-pointer border-x z-[8888]'>
+              <div className='relative w-[45%] rounded-[24px] flex bg-white/20 backdrop-blur-2xl p-4 border border-slate-300 items-center h-full overflow-hidden justify-center cursor-pointer border-x z-[8888]'>
                 <div className='w-full h-full overflow-hidden rounded-[20px]'>
                   <img src={Build} alt="wisma-bumiputera" className='w-full h-auto grayscale-[100%] rounded-[20px]' />
                 </div>
               </div>
             </div>
+          </div>
+
+          <div id='education' className='select-none px-14 relative lg:flex flex-col hidden z-[33333] pb-[30px] lg:pb-[80px] lg:pt-4 w-full h-max border-slate-100'>
+            
+            <small className='relative text-[#00B4F5] text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Computer science</small>
+            <div className='w-full mt-4 mb-10 flex justify-between items-center '>
+              <h2 className='relative text-[40px] text-white font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
+                <a href='https://github.com/khorulhudaa' className='flex items-center gap-4'>
+                  Last education <LinkSquare01Icon className='text-[#00B4F5]' /> 
+                </a>
+              </h2>
+              <div className='flex w-max'>
+                <div className="relative text-white flex items-center gap-6 p-6  after:absolute after:right-0 after:w-px after:h-[100vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[50vh]">
+                  <p>Go to campus</p>
+                  <Building02Icon className='w-6 h-6' />
+                </div>
+              </div>
+            </div>
+            <p className='relative text-base text-slate-300 w-[68%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>I pursued a four-year bachelor's degree in Informatics Engineering at a private university in Cirebon, STMIK IKMI Cirebon, located in Majasem.</p>
+
+            <div className='relative z-[99999999] w-full grid grid-cols-2 mt-14 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
+              <div className={`flex-1 flex gap-6 items-center cursor-pointer px-6 py-10`}>
+                <Mortarboard02Icon size={50} className={`text-[#5E5CF8]`} />
+                <div className='flex-1'>
+                  <h3 className={`text-white font-medium`}>B.Sc. in Computer Science</h3>
+                  <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>Programming, and problem-solving skills.</p>
+                </div>
+              </div>
+              <div className="flex-1">
+                <div className={`flex gap-6 items-center cursor-pointer px-8 py-10 border-l border-gray-800`}>
+                  <Calendar04Icon size={50} className={`${selectType === 'api' ? 'text-[#5E5CF8]' : 'text-white'}`} />
+                  <div className='flex-1'>
+                    <h3 className={`${selectType === 'api' ? 'text-[#5E5CF8]' : 'text-white'} font-medium`}>Graduation year</h3>
+                    <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>I received a graduation certificate in May.</p>
+                  </div>
+                </div>
+                <div className={`flex gap-6 items-center cursor-pointer px-8 py-10 border-l border-t border-gray-800`}>
+                  <InformationDiamondIcon size={50} className={`${selectType === 'slicing' ? 'text-[#5cc7f8]' : 'text-white'}`} />
+                  <div className='flex-1'>
+                    <h3 className={`${selectType === 'slicing' ? 'text-[#5cc7f8]' : 'text-white'} font-medium`}>GPA / IPK</h3>
+                    <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>I achieved a GPA of 3.30 at the end of my studies.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div id='teamwork' className='select-none px-14 relative lg:flex flex-col hidden z-[3333] pb-[30px] lg:pb-[80px] lg:pt-4 w-full h-max border-slate-100'>
+            
+            <div className="absolute z-40 left-[20%] w-[60%] h-[40px] py-[30%] transform -translate-y-[45%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[140px]"></div>
+            <div className="absolute z-40 left-[15%] w-[100%] h-[40px] py-[30%] transform -translate-y-[65%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[25px]"></div>
+            <img src={Pacticles2} alt='particles' className='absolute z-40 left-[28%] top-[-18%] w-[60%]' />
+
+            <small className='relative text-[#00B4F5] text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Top-left corner (me)</small>
+            <div className='w-full mt-4 mb-10 flex justify-between items-center '>
+              <h2 className='relative text-[40px] text-white font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
+                <a href='https://github.com/khorulhudaa' className='flex items-center gap-4'>
+                  Worked in a team <LinkSquare01Icon className='text-[#00B4F5]' /> 
+                </a>
+              </h2>
+              <div className='flex w-max'>
+                <div className="relative text-transparent flex items-center gap-6 p-6 after:absolute after:right-0 after:w-px after:h-[100vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[50vh]">
+                  <p>Go to campus</p>
+                  <Building02Icon className='w-6 h-6' />
+                </div>
+              </div>
+            </div>
+            <p className='relative text-base text-slate-300 w-[68%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>I pursued a four-year bachelor's degree in Informatics Engineering at a private university in Cirebon, STMIK IKMI Cirebon, located in Majasem.</p>
+
+            <div className="relative z-[999999999] flex items-center justify-center mt-12">
+              <div
+                  className="relative opacity-100 w-[100%] mx-auto rounded-[24px] h-[500px] bg-white/20 backdrop-blur-2xl p-4 z-40 items-center justify-between mt-12"
+                >
+                    <div className='w-full h-full rounded-[20px] bg-white'>
+                      <div className='w-full relative flex h-full rounded-[16px] overflow-hidden border border-gray-700'>
+                        <div className='relative w-1/2 h-full overflow-hidden lg mt-6 lg:mt-0'>
+                          <img src={Team} alt="geospasial-project" className="h-full object-cover w-auto bg-bottom" />
+                        </div>
+                        <div className='relative w-1/2 h-full overflow-hidden lg mt-6 lg:mt-0'>
+                          <img src={Team2} alt="geospasial-project" className="h-full object-cover w-full bg-bottom" />
+                        </div>
+                      </div>
+                    </div>
+              </div>
+            </div>
+
           </div>
           
           <div id='github' className='select-none px-14 relative lg:flex flex-col hidden z-[3333] pb-[30px] lg:pb-[80px] lg:pt-4 w-full h-max border-slate-100'>
@@ -913,7 +1000,7 @@ const Homepage: React.FC = () => {
                 </a>
               </h2>
               <div className='flex w-max'>
-                <div className="relative text-white flex items-center gap-6 p-6 before:absolute before:left-0 before:w-px before:h-[100vh] before:bg-slate-900/80 dark:before:bg-white/10 before:-top-[50vh] after:absolute after:right-0 after:w-px after:h-[100vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[50vh]">
+                <div className="relative text-white flex items-center gap-6 p-6 after:absolute after:right-0 after:w-px after:h-[100vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[50vh]">
                   <p>Go to account</p>
                   <Github01Icon className='w-6 h-6' />
                 </div>
@@ -957,7 +1044,7 @@ const Homepage: React.FC = () => {
             <div className='w-full mt-4 mb-10 flex justify-between items-center '>
               <h2 className='relative text-[40px] text-white mt-4 mb-10 font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Web competition awards</h2>
               <div className='flex w-max'>
-                <div className="relative text-transparent flex items-center gap-6 p-6 before:absolute before:left-0 before:w-px before:h-[100vh] before:bg-slate-900/80 dark:before:bg-white/10 before:-top-[50vh] after:absolute after:right-0 after:w-px after:h-[100vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[50vh]">
+                <div className="relative text-transparent flex items-center gap-6 p-6 after:absolute after:right-0 after:w-px after:h-[100vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[50vh]">
                   <p>konstruksi web</p>
                   <Link03Icon className='w-6 h-6' />
                 </div>
@@ -1126,37 +1213,37 @@ const Homepage: React.FC = () => {
             
             <div className="relative w-full ml-8 grid grid-cols-4 z-[999]">
               <div className="relative w-full min-h-[340px] py-10 px-6">
-                <ul className="list-none h-full ml-4 flex flex-col justify-between text-white text-[14px] font-normal before:absolute before:left-0 before:w-px before:h-full before:bg-slate-200/80 dark:before:bg-slate-100/10 before:-top-[0px]">
-                  <li className="hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6">Github account 1</li>
-                  <li className='hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6'>Homepage</li>
-                  <li className="hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6">Linkedin</li>
+                <ul className="list-none h-full ml-4 flex flex-col justify-between text-white text-[14px] font-normal before:absolute before:left-0 before:w-px before:h-full before:bg-slate-900/80 dark:before:bg-slate-100/10 before:-top-[0px]">
+                  <li className="overflow-hidden hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6">Github account 1</li>
+                  <li className='overflow-hidden hover:text-indigo-500 mb-4 relative py-6'>Homepage</li>
+                  <li className="overflow-hidden hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6">Linkedin</li>
                 </ul>
               </div>
               <div className="relative w-full min-h-[340px] py-10 px-6">
-                <div className="absolute top-0 left-0 w-[10%] h-full before:absolute before:left-0 before:w-px before:h-full before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-top-[0px]">
+                <div className="absolute top-0 left-0 w-[10%] h-full before:absolute before:left-0 before:w-px before:h-full before:bg-slate-900/80 dark:before:bg-slate-100/5 before:-top-[0px]">
                 </div>
                 <ul className="list-none h-full ml-[10%] flex flex-col justify-between text-white text-[14px] font-normal">
-                  <li className='hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6'>Skill & languages</li>
-                  <li className='hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6'>Coresponden</li>
-                  <li className='hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6'>Experience</li>
+                  <li className='overflow-hidden hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6'>Skill & languages</li>
+                  <li className='overflow-hidden hover:text-indigo-500 mb-4 relative py-6'>Coresponden</li>
+                  <li className='overflow-hidden hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6'>Experience</li>
                 </ul>
               </div>
               <div className="relative w-full min-h-[340px] py-10 px-6">
-                <div className="absolute top-0 left-0 w-[10%] h-full before:absolute before:left-0 before:w-px before:h-full before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-top-[0px]">
+                <div className="absolute top-0 left-0 w-[10%] h-full before:absolute before:left-0 before:w-px before:h-full before:bg-slate-900/80 dark:before:bg-slate-100/5 before:-top-[0px]">
                 </div>
                 <ul className="list-none h-full ml-[10%] flex flex-col justify-between text-white text-[14px] font-normal">
-                  <li className="hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6">Github Account 2</li>
-                  <li className='hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6'>Certifications</li>
-                  <li className="hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6">Whatsapp</li>
+                  <li className="overflow-hidden hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6">Github Account 2</li>
+                  <li className='overflow-hidden hover:text-indigo-500 mb-4 relative py-6'>Certifications</li>
+                  <li className="overflow-hidden hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6">Whatsapp</li>
                 </ul>
               </div>
               <div className="relative w-full min-h-[340px] py-10 px-6">
-                <div className="absolute top-0 left-0 w-[10%] h-full before:absolute before:left-0 before:w-px before:h-full before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-top-[0px]">
+                <div className="absolute top-0 left-0 w-[10%] h-full before:absolute before:left-0 before:w-px before:h-full before:bg-slate-900/80 dark:before:bg-slate-100/5 before:-top-[0px]">
                 </div>
                 <ul className="list-none h-full ml-[10%] flex flex-col justify-between text-white text-[14px] font-normal">
-                  <li className="hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6">STMIK IKMI Cirebon</li>
-                  <li className='hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6'>SMKN 1 Cirebon</li>
-                  <li className="hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-200/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-200/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6">Search feature</li>
+                  <li className="overflow-hidden hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6">STMIK IKMI Cirebon</li>
+                  <li className='overflow-hidden hover:text-indigo-500 mb-4 relative py-6'>SMKN 1 Cirebon</li>
+                  <li className="overflow-hidden hover:text-indigo-500 mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6">Search feature</li>
                 </ul>
               </div>
             </div>
