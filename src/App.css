@@ -5,7 +5,7 @@
 
 * {
     font-family: "Plus Jakarta Sans", sans-serif;
-    cursor: url('./src/Assets/cursor.png'), auto;
+    cursor: url("./src/Assets/cursor.png"), auto;
 }
 
 ::-webkit-scrollbar {

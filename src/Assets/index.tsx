@@ -56,8 +56,10 @@ import Logo2 from './logo2.png'
 import Logo3 from './logo3.png'
 import Team from './team.jpg'
 import Team2 from './team2.jpg'
+import Inovasi from './inovasi.jpg'
 
 export {
+    Inovasi,
     Team,
     Team2,
     Logo1,

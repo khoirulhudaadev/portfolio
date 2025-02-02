@@ -1,19 +1,18 @@
 import { motion } from "framer-motion"
-import { Add01Icon, ArrowRight02Icon, ArrowUp01Icon, BrowserIcon, Building02Icon, Calendar04Icon, Cancel01Icon, Github01Icon, InformationDiamondIcon, Link03Icon, Linkedin01Icon, LinkSquare01Icon, MapPinIcon, Mortarboard02Icon, PaintBrush04Icon, Search01Icon } from 'hugeicons-react'
+import { Add01Icon, ArrowRight02Icon, ArrowUp01Icon, BrowserIcon, Building02Icon, Calendar04Icon, Cancel01Icon, Github01Icon, InformationDiamondIcon, Link03Icon, Linkedin01Icon, LinkSquare01Icon, MapPinIcon, Mortarboard02Icon, PaintBrush04Icon, Search01Icon, ViewIcon } from 'hugeicons-react'
 import React, { useEffect, useState } from 'react'
 import { FaArrowRight, FaTimes } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import { AuthFlow, Build, FlowTrush, Geospasial, Git1, Git2, Git3, KonstruksiLogo, Laravel, Node, Pacticles2, PakYos, Reacts, Redux, Team, Team2, TS } from '../Assets'
-// import ModalCertification from '../Components/ModalCertification'
+import { AuthFlow, Build, Cirebon, FlowTrush, Geospasial, Git1, Git2, Git3, Inovasi, Jakarta, JWD, KonstruksiLogo, Laravel, Majalengka, Node, Pacticles2, PakYos, Reacts, Redux, Team, TS, Winner } from '../Assets'
 import ModalSearch from "../Components/Modal"
+import ModalCertification from '../Components/ModalCertification'
 import FadeTransition from "../Components/PageTransition"
 import '../index.css'
 
 const Homepage: React.FC = () => {
 
-  // const [isModal, setIsModal] = useState<boolean>(false);
-  // const [selectimage, setSelectImage] = useState<string>('');
-  // const [text, setText] = useState<string>('');
+  const [selectimage, setSelectImage] = useState<string>('');
+  const [isModal, setIsModal] = useState<boolean>(false);
   const [sidebar, setSidebar] = useState<boolean>(false);
   const [selectType, setSelectType] = useState<string>('dev');
   const [selectTypeGit, setSelectTypeGit] = useState<string>('git3');
@@ -88,13 +87,13 @@ const Homepage: React.FC = () => {
 
       <div className='relative w-[94vw] mx-auto min-h-screen overflow-x-hidden bg-[#000000]'>
           
-          {/* Modal */}
-          {/* {
+          {/* Modal certification */}
+          {
             isModal ? (
-              <ModalCertification close={() => setIsModal(false)} title={'I/O Festival 2024 - Web Development'} image={selectimage} text={text} />
+              <ModalCertification onClose={() => setIsModal(false)} image={selectimage} />
             ):
               null
-          } */}
+          }
 
           {/* Humberger */}
           <div onClick={() => setSidebar(true)} className='absolute z-[99999] top-6 right-7 lg:hidden shadow-md w-[38px] h-[38px]  cursor-pointer active:scale-[0.98] hover:brightness-[90%] duration-100 flex flex-col items-center justify-center border border-slate-300'>
@@ -112,22 +111,22 @@ const Homepage: React.FC = () => {
               <div className='lg:flex hidden w-max text-slate-300 py-5 h-max'>
                 <ul className={`w-[80%] flex items-center justify-between ${isScrolled ? 'text-[14px]' : ''}`}>
                   <a href="#languages">
-                    <li className='mr-10 hover:text-white border-b hover:border-slate-400 border-transparent'>Languages</li>
+                    <li className='mr-10 animate-fadeIn delay-[1000ms] hover:text-white border-b hover:border-slate-400 border-transparent'>Languages</li>
                   </a>
                   <a href="#products">
-                    <li className='mr-10 hover:text-white border-b hover:border-slate-400 border-transparent'>Products</li>
+                    <li className='mr-10 animate-fadeIn delay-[1000ms] hover:text-white border-b hover:border-slate-400 border-transparent'>Products</li>
                   </a>
                   <a href="#linkedin">
-                    <li className='mr-10 hover:text-white border-b hover:border-slate-400 border-transparent'>Linkedin</li>
+                    <li className='mr-10 animate-fadeIn delay-[1000ms] hover:text-white border-b hover:border-slate-400 border-transparent'>Linkedin</li>
                   </a>
                   <a href="#experience">
-                    <li className='mr-10 hover:text-white border-b hover:border-slate-400 border-transparent'>Experiences</li>
+                    <li className='mr-10 animate-fadeIn delay-[1000ms] hover:text-white border-b hover:border-slate-400 border-transparent'>Experiences</li>
                   </a>
                   <a href="#github">
-                    <li className='mr-10 hover:text-white border-b hover:border-slate-400 border-transparent'>Github</li>
+                    <li className='mr-10 animate-fadeIn delay-[1000ms] hover:text-white border-b hover:border-slate-400 border-transparent'>Github</li>
                   </a>
                   <a href="#certifications">
-                    <li className='mr-10 hover:text-white border-b hover:border-slate-400 border-transparent'>Certifications</li>
+                    <li className='mr-10 animate-fadeIn delay-[1000ms] hover:text-white border-b hover:border-slate-400 border-transparent'>Certifications</li>
                   </a>
                 </ul>
               </div>
@@ -163,7 +162,7 @@ const Homepage: React.FC = () => {
             </div>
             
             <div className="text-white flex-1 justify-end gap-6 flex overflow-hidden items-center">
-              <div className={`overflow-hidden active:scale-[0.99] flex items-center outline-0 justify-between gap-1 duration-200 ease-in rounded-full ${activeSearch ? 'px-4 w-[100%]' : 'px-4 w-max'} py-2 text-left text-sm/6 bg-white/5 text-white/50`}>
+              <div className={`animate-fadeIn delay-[1000ms] overflow-hidden active:scale-[0.99] flex items-center outline-0 justify-between gap-1 duration-200 ease-in rounded-full ${activeSearch ? 'px-4 w-[100%]' : 'px-4 w-max'} py-2 text-left text-sm/6 bg-white/5 text-white/50`}>
                 <div onClick={() => setActiveModalSearch(true)} className={`flex-1 duration-200 delay-100 items-center gap-2 ${activeSearch ? 'flex opacity-1' : 'hidden opacity-0'}`}>
                   <p className='w-max mr-20'>
                     Quick search
@@ -193,7 +192,7 @@ const Homepage: React.FC = () => {
               </div>
               <div className="w-max h-max">
                 <a href="https://github.com/khoirulhudaadev" className="ml-auto">
-                  <Github01Icon size={30} />
+                  <Github01Icon size={30} className="animate-fadeIn delay-[1000ms]" />
                 </a>
               </div>
             </div>
@@ -220,20 +219,20 @@ const Homepage: React.FC = () => {
 
 
             <div className='relative mb-6 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
-              <p className='text-center px-3 py-2 w-max text-white flex items-center'>Fullstack Developer - <span className="text-gray-500 ml-1">MERN&Laravel</span></p>
+              <p className='text-center px-3 py-2 w-max text-white flex items-center animate-fadeIn delay-[1000ms]'>Fullstack Developer - <span className="text-gray-500 ml-1">MERN&Laravel</span></p>
             </div>
 
             <div className='relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
-              <h1 className='relative text-white z-40 px-2 text-4xl tracking-tighter max-lg:font-medium max-sm:px-4 sm:text-5xl lg:text-6xl xl:text-8xl'>Fullstack Developer, Building <span className="text-gray-500">MERN & Laravel</span></h1>
+              <h1 className='relative text-white z-40 px-2 text-4xl tracking-tighter max-lg:font-medium max-sm:px-4 sm:text-5xl lg:text-6xl xl:text-8xl animate-fadeIn delay-[1000ms]'>Fullstack Developer, Building <span className="text-gray-500">MERN & Laravel</span></h1>
             </div>
 
             <div className='relative mt-6 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
-              <p className='w-max text-slate-300 px-3 text-lg tracking-tighter text-balance max-lg:font-medium max-sm:px-4'>Welcome to my homebase—where ideas, creativity, and experience come together in a digital portfolio</p>
+              <p className='w-max text-slate-300 px-3 text-lg tracking-tighter text-balance max-lg:font-medium max-sm:px-4 animate-fadeIn delay-[1000ms]'>Welcome to my homebase—where ideas, creativity, and experience come together in a digital portfolio</p>
             </div>
 
             <div className='relative z-[99999] my-7 py-2 flex items-center before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
-              <button className='relative active:scale-[0.99] hover:brightness-[90%] z-[99999] outline-0 ml-4 mr-6 rounded-full bg-white px-4 py-3 w-max lg h-max text-center text-[14px] font-normal text-black'>Download Resume</button>
-              <div onClick={() => setActiveModalSearch(true)} className="active:scale-[0.99] outline-0 grid w-[100px] grid-cols-[auto_1fr_auto] items-center gap-1 rounded-full px-4 py-3 text-left text-sm/6 sm:w-80 bg-white/5 text-white/50">
+              <button className='relative active:scale-[0.99] hover:brightness-[90%] z-[99999] outline-0 ml-4 mr-6 rounded-full bg-white px-4 py-3 w-max lg h-max text-center text-[14px] font-normal text-black animate-fadeIn delay-[1000ms]'>Download Resume</button>
+              <div onClick={() => setActiveModalSearch(true)} className="active:scale-[0.99] outline-0 grid w-[100px] grid-cols-[auto_1fr_auto] items-center gap-1 rounded-full px-4 py-3 text-left text-sm/6 sm:w-80 bg-white/5 text-white/50 animate-fadeIn delay-[1000ms]">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" className="-ml-0.5 size-4 fill-gray-600 dark:fill-gray-500">
                   <path fill-rule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clip-rule="evenodd">
                   </path>
@@ -260,7 +259,15 @@ const Homepage: React.FC = () => {
 
             <small className='relative text-[#00B4F5] mb-4 text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>React - Laravel - Express.</small>
             <div className='w-full mt-4 mb-10 flex justify-between items-center '>
-              <h2 className='relative text-[40px] text-white font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Skill in languages</h2>
+            <motion.h2
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+              className='relative text-[40px] text-white font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'
+            >  
+              Skill in languages
+            </motion.h2>
               <div className='flex w-max'>
                 <div className="relative flex items-center gap-6 p-6 text-transparent after:absolute after:right-0 after:w-px after:h-[300vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[100vh]">
                   <p>konstruksi web</p>
@@ -268,9 +275,21 @@ const Homepage: React.FC = () => {
                 </div>
               </div>
             </div>
-            <p className='relative text-base text-slate-300 w-[66%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
+            <motion.p 
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+              className='relative text-base text-slate-300 w-[66%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'
+            >
+              As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.
+            </motion.p>
           
-            <div 
+            <motion.div 
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
               className='w-full rounded-[24px] bg-white/20 backdrop-blur-2xl p-4 z-40 flex items-center lg:flex-no-wrap flex-wrap justify-between mt-12'>
               <div className='w-full h-full rounded-[20px] bg-white p-10 border border-black flex items-center justify-between  '>
                 <img loading='lazy' src={Reacts} alt='iconLanguage' className='w-[34px] lg:w-[80px] lg:mb-0 mb-5 lg:mr-14 z-[99999999999] cursor-pointer grayscale-[100%]' />
@@ -279,7 +298,7 @@ const Homepage: React.FC = () => {
                 <img loading='lazy' src={TS} alt='iconLanguage' className='w-[34px] lg:w-[80px] lg:mb-0 mb-5 lg:mr-14 z-[99999999999] cursor-pointer grayscale-[100%]' />
                 <img loading='lazy' src={Laravel} alt='iconLanguage' className='w-[34px] lg:w-[80px] lg:mb-0 mb-5 lg:mr-14 z-[99999999999] cursor-pointer grayscale-[100%]' />
               </div>
-            </div>
+            </motion.div>
           </div>
 
           <div id='products' className='select-none px-14 relative lg:flex flex-col hidden z-[4444] pb-[30px] lg:pb-[80px] lg:pt-4 w-full h-max border-slate-100'>
@@ -289,7 +308,12 @@ const Homepage: React.FC = () => {
             <img src={Pacticles2} alt='particles' className='absolute z-[33] left-[25%] top-[-10%] w-[60%]' />
 
             <small className='relative text-[#00B4F5] mb-4 text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Frontend + Backend.</small>
-            <div className='w-full mt-4 mb-10 flex justify-between items-center '>
+            <motion.div 
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+              className='w-full mt-4 mb-10 flex justify-between items-center '>
               <h2 className='relative text-[40px] text-white font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>SIGEO - web app</h2>
               <div className='flex w-max'>
                 <div className="relative flex items-center gap-6 p-6 text-white">
@@ -297,11 +321,22 @@ const Homepage: React.FC = () => {
                   <BrowserIcon className='w-6 h-6' />
                 </div>
               </div>
-            </div>
-            <p className='relative text-base text-slate-300 w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
+            </motion.div>
+            <motion.p 
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+              className='relative text-base text-slate-300 w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
+                As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.
+              </motion.p>
             
             <div className="relative mb-10 flex items-center justify-center">
-              <div
+              <motion.div
+                  initial={{ opacity: 0, filter: 'blur(10px)' }}
+                  whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+                  transition={{ duration: 0.5, ease: 'easeOut' }}
+                  viewport={{ once: true, amount: 0.2 }}
                   className="relative opacity-100 w-[100%] mx-auto rounded-[24px] bg-white/20 backdrop-blur-2xl p-4 z-40 items-center justify-between mt-12"
                   // style={{ transform: "perspective(500px) rotateX(10deg)" }}
                 >
@@ -333,13 +368,23 @@ const Homepage: React.FC = () => {
                         </div>
                       </div>
                     </div>
-              </div>
+              </motion.div>
            
             </div>
               
               <div className='mt-12 lg:mt-20'>
-                <small className='relative text-[#00B4F5] text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Web development and landing page.</small>
-                <div className='w-full mt-4 mb-10 flex justify-between items-center '>
+                <motion.small 
+                  initial={{ opacity: 0, filter: 'blur(10px)' }}
+                  whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+                  transition={{ duration: 0.5, ease: 'easeOut' }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  className='relative text-[#00B4F5] text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Web development and landing page.</motion.small>
+                <motion.div 
+                  initial={{ opacity: 0, filter: 'blur(10px)' }}
+                  whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+                  transition={{ duration: 0.5, ease: 'easeOut' }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  className='w-full mt-4 mb-10 flex justify-between items-center '>
                   <h2 className='relative text-[40px] text-white font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Our web products</h2>
                   <div className='flex w-max'>
                     <div className="relative text-transparent flex items-center gap-6 p-6 after:absolute after:right-0 after:w-px after:h-[200vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[100vh]">
@@ -347,10 +392,15 @@ const Homepage: React.FC = () => {
                       <Link03Icon className='w-6 h-6' />
                     </div>
                   </div>
-                </div>
+                </motion.div>
                 <p className='relative text-base text-slate-300 w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
               
-                <div className='relative z-[99999999] w-full grid grid-cols-3 mt-14 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
+                <motion.div
+                  initial={{ opacity: 0, filter: 'blur(10px)' }}
+                  whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+                  transition={{ duration: 0.5, ease: 'easeOut' }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  className='relative z-[99999999] w-full grid grid-cols-3 mt-14 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
                   <div onClick={() => setSelectType('dev')} className={`flex gap-6 ${selectType === 'dev' ? 'bg-[#ff69df11]' : ''} items-center cursor-pointer p-6`}>
                     <BrowserIcon size={50} className={`${selectType === 'dev' ? 'text-[#f85c98]' : 'text-white'}`} />
                     <div className='flex-1'>
@@ -358,7 +408,7 @@ const Homepage: React.FC = () => {
                       <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>Building web apps that simplify tasks and boost productivity.</p>
                     </div>
                   </div>
-                  <div onClick={() => setSelectType('api')} className={`flex gap-6 ${selectType === 'api' ? 'bg-[#9e69ff11]' : ''} items-center cursor-pointer p-6 border-x border-gray-800`}>
+                  <div onClick={() => setSelectType('api')} className={`flex gap-6 ${selectType === 'api' ? 'bg-[#9e69ff11]' : ''} items-center cursor-pointer p-6 border-x-[0.5px] border-gray-700`}>
                     <Link03Icon size={50} className={`${selectType === 'api' ? 'text-[#5E5CF8]' : 'text-white'}`} />
                     <div className='flex-1'>
                       <h3 className={`${selectType === 'api' ? 'text-[#5E5CF8]' : 'text-white'} font-medium`}>Integrate API</h3>
@@ -372,7 +422,7 @@ const Homepage: React.FC = () => {
                       <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>Transforming designs into clean, and efficient interfaces.</p>
                     </div>
                   </div>
-                </div>
+                </motion.div>
 
                 <div className='w-full flex z-40 py-8 relative left-[0px] mt-[40px] lg:mt-[60px] h-max before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
                     <div className='relative w-[50%] z-[99999] py-6 min-h-[400px]'>
@@ -769,8 +819,18 @@ const Homepage: React.FC = () => {
           </div>
 
           <div id='linkedin' className='select-none px-14 relative lg:flex flex-col hidden z-[444] pb-[30px] lg:pb-[80px] lg:pt-4 w-full h-max border-slate-100'>
-            <small className='relative text-[#00B4F5] text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Web development and landing page.</small>
-            <div className='w-full mt-4 mb-10 flex justify-between items-center '>
+            <motion.small 
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+              className='relative text-[#00B4F5] text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Web development and landing page.</motion.small>
+            <motion.div 
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+              className='w-full mt-4 mb-10 flex justify-between items-center '>
               <h2 className='relative text-[40px] text-white font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Profile - linkedin</h2>
               <div className='flex w-max'>
                 <div className="relative flex items-center gap-6 p-6 text-white after:absolute after:right-0 after:w-px after:h-[30vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[120px]">
@@ -778,14 +838,24 @@ const Homepage: React.FC = () => {
                   <Linkedin01Icon className='w-8 h-8' />
                 </div>
               </div>
-            </div>
-            <p className='relative text-base text-slate-300 w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
+            </motion.div>
+            <motion.p 
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+              className='relative text-base text-slate-300 w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</motion.p>
 
             <div className="absolute left-[20%] w-[60%] h-[40px] py-[30%] transform -translate-y-[45%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[140px]"></div>
             <div className="absolute left-[15%] w-[100%] h-[40px] py-[30%] transform -translate-y-[63%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[25px]"></div>
             <img src={Pacticles2} alt='particles' className='absolute left-[28%] top-[-28%] w-[60%]' />
 
-            <div className='relative w-full bg-white/20 backdrop-blur-sm rounded-[28px] border border-slate-300 p-4 z-40 items-center justify-between mt-24'>
+            <motion.div 
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+              className='relative w-full bg-white/20 backdrop-blur-sm rounded-[28px] border border-slate-300 p-4 z-40 items-center justify-between mt-24'>
               <div className='w-full h-full bg-[#ffffff] p-10 rounded-[24px]'>
                 <div className='w-full'>
                   <Link to={'https://www.linkedin.com/in/yoshua-gombo/'}>
@@ -813,7 +883,7 @@ const Homepage: React.FC = () => {
               </div>
               {/* <div className='w-full h-full bg-white/20 backdrop-blur-sm p-2 rounded-[20px] overflow-hidden'>
               </div> */}
-            </div>
+            </motion.div>
 
             {/* <div className='relative w-[100vw] lg:w-[92vw] mx-auto lg:mx-0 text-left p-4 lg:p-10 z-40 overflow-hidden lg:left-[-35px] flex flex-col bg-white mt-8 lg:mt-14 lg:rounded-[12px] border border-slate-200 h-max'>
               <h3 className='text-white text-[15px] lg:text-[18px] lg:mb-4 w-full lg:w-[90%] leading-loose'>Your LinkedIn profile section showcases your professional background, skills, education, and achievements, providing a comprehensive view of your career and allowing you to connect with other professionals in your field.</h3>
@@ -851,8 +921,18 @@ const Homepage: React.FC = () => {
           </div>
 
           <div id='experience' className='select-none px-14 h-max experience relative lg:flex flex-col hidden z-[335] pb-[30px] lg:pb-[80px] lg:pt-4 w-full border-slate-100'>
-            <small className='relative text-[#00B4F5] text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Experience in industry</small>
-            <div className='w-full mt-4 mb-10 flex justify-between items-center '>
+            <motion.small 
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+              className='relative text-[#00B4F5] text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Experience in industry</motion.small>
+            <motion.div 
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+              className='w-full mt-4 mb-10 flex justify-between items-center '>
               <h2 className='relative text-[40px] text-white font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Experience - Internship</h2>
               <div className='flex w-max'>
                 <div className="relative flex items-center gap-6 p-6 text-white after:absolute after:right-0 after:w-px after:h-[200vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[100vh]">
@@ -860,10 +940,20 @@ const Homepage: React.FC = () => {
                   <Link03Icon className='w-6 h-6' />
                 </div>
               </div>
-            </div>
-            <p className='relative text-base text-slate-300 w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
+            </motion.div>
+            <motion.p 
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+              className='relative text-base text-slate-300 w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</motion.p>
 
-            <div className='relative py-2 w-full h-max md:h-[600px] flex mt-14 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
+            <motion.div 
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+              className='relative py-2 w-full h-max md:h-[600px] flex mt-14 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
               <div className='w-[55%] h-max'>
                   <a href="https://konstruksi.ai/" target="__blank">
                     <div className='relative flex gap-4 mb-6 items-center cursor-pointer before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
@@ -901,13 +991,25 @@ const Homepage: React.FC = () => {
                   <img src={Build} alt="wisma-bumiputera" className='w-full h-auto grayscale-[100%] rounded-[20px]' />
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
 
           <div id='education' className='select-none px-14 relative lg:flex flex-col hidden z-[33333] pb-[30px] lg:pb-[80px] lg:pt-4 w-full h-max border-slate-100'>
             
-            <small className='relative text-[#00B4F5] text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Computer science</small>
-            <div className='w-full mt-4 mb-10 flex justify-between items-center '>
+            <img src={Pacticles2} alt='particles' className='absolute left-[10%] top-[-20%] w-[60%] rotate-[-30deg]' />
+
+            <motion.small 
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+              className='relative text-[#00B4F5] text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Computer science</motion.small>
+            <motion.div 
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+              className='w-full mt-4 mb-10 flex justify-between items-center '>
               <h2 className='relative text-[40px] text-white font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
                 <a href='https://github.com/khorulhudaa' className='flex items-center gap-4'>
                   Last education <LinkSquare01Icon className='text-[#00B4F5]' /> 
@@ -919,34 +1021,46 @@ const Homepage: React.FC = () => {
                   <Building02Icon className='w-6 h-6' />
                 </div>
               </div>
-            </div>
-            <p className='relative text-base text-slate-300 w-[68%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>I pursued a four-year bachelor's degree in Informatics Engineering at a private university in Cirebon, STMIK IKMI Cirebon, located in Majasem.</p>
+            </motion.div>
+            <motion.p 
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+              className='relative text-base text-slate-300 w-[68%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>I pursued a four-year bachelor's degree in Informatics Engineering at a private university in Cirebon, STMIK IKMI Cirebon, located in Majasem.</motion.p>
 
-            <div className='relative z-[99999999] w-full grid grid-cols-2 mt-14 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
-              <div className={`flex-1 flex gap-6 items-center cursor-pointer px-6 py-10`}>
-                <Mortarboard02Icon size={50} className={`text-[#5E5CF8]`} />
+            <motion.div 
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+              className='relative z-[99999999] w-full py-4 grid grid-cols-2 mt-14 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
+              <div className={`flex-1 flex gap-6 items-center cursor-pointer py-10`}>
+                <Mortarboard02Icon size={50} className={`text-white`} />
                 <div className='flex-1'>
                   <h3 className={`text-white font-medium`}>B.Sc. in Computer Science</h3>
                   <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>Programming, and problem-solving skills.</p>
                 </div>
               </div>
-              <div className="flex-1">
-                <div className={`flex gap-6 items-center cursor-pointer px-8 py-10 border-l border-gray-800`}>
-                  <Calendar04Icon size={50} className={`${selectType === 'api' ? 'text-[#5E5CF8]' : 'text-white'}`} />
-                  <div className='flex-1'>
-                    <h3 className={`${selectType === 'api' ? 'text-[#5E5CF8]' : 'text-white'} font-medium`}>Graduation year</h3>
-                    <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>I received a graduation certificate in May.</p>
+              <div className="relative flex-1 h-full rounded-[24px] bg-white/20 backdrop-blur-2xl p-4 ">
+                <div className='w-full h-full bg-white rounded-[20px]'>
+                  <div className={`flex gap-6 items-center cursor-pointer px-8 py-10 `}>
+                    <Calendar04Icon size={50} className={`text-black`} />
+                    <div className='flex-1'>
+                      <h3 className={`text-black font-medium`}>Graduation year</h3>
+                      <p className='text-[14px] mt-2 text-slate-600 leading-loose tracking-tighter'>I received a graduation certificate in May.</p>
+                    </div>
                   </div>
-                </div>
-                <div className={`flex gap-6 items-center cursor-pointer px-8 py-10 border-l border-t border-gray-800`}>
-                  <InformationDiamondIcon size={50} className={`${selectType === 'slicing' ? 'text-[#5cc7f8]' : 'text-white'}`} />
-                  <div className='flex-1'>
-                    <h3 className={`${selectType === 'slicing' ? 'text-[#5cc7f8]' : 'text-white'} font-medium`}>GPA / IPK</h3>
-                    <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>I achieved a GPA of 3.30 at the end of my studies.</p>
+                  <div className={`relative flex gap-6 items-center cursor-pointer px-8 py-10 before:absolute before:top-0 before:h-px before:w-full before:bg-slate-900/20 dark:before:bg-slate-900/30 before:-left-[0px]`}>
+                    <InformationDiamondIcon size={50} className={`${selectType === 'slicing' ? 'text-[#5cc7f8]' : 'text-black'}`} />
+                    <div className='flex-1'>
+                      <h3 className={`${selectType === 'slicing' ? 'text-[#5cc7f8]' : 'text-black'} font-medium`}>GPA / IPK</h3>
+                      <p className='text-[14px] mt-2 text-slate-600 leading-loose tracking-tighter'>I achieved a GPA of 3.30 at the end of my studies.</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
           </div>
 
@@ -956,44 +1070,73 @@ const Homepage: React.FC = () => {
             <div className="absolute z-40 left-[15%] w-[100%] h-[40px] py-[30%] transform -translate-y-[65%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[25px]"></div>
             <img src={Pacticles2} alt='particles' className='absolute z-40 left-[28%] top-[-18%] w-[60%]' />
 
-            <small className='relative text-[#00B4F5] text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Top-left corner (me)</small>
-            <div className='w-full mt-4 mb-10 flex justify-between items-center '>
+            <motion.small 
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+              className='relative text-[#00B4F5] text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Top-left corner (me)</motion.small>
+            <motion.div 
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+              className='w-full mt-4 mb-10 flex justify-between items-center '>
               <h2 className='relative text-[40px] text-white font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
                 <a href='https://github.com/khorulhudaa' className='flex items-center gap-4'>
                   Worked in a team <LinkSquare01Icon className='text-[#00B4F5]' /> 
                 </a>
               </h2>
               <div className='flex w-max'>
-                <div className="relative text-transparent flex items-center gap-6 p-6 after:absolute after:right-0 after:w-px after:h-[100vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[50vh]">
-                  <p>Go to campus</p>
+                <div className="relative text-white flex items-center gap-6 p-6 after:absolute after:right-0 after:w-px after:h-[100vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[50vh]">
+                  <p>konstruksi.AI Devs</p>
                   <Building02Icon className='w-6 h-6' />
                 </div>
               </div>
-            </div>
-            <p className='relative text-base text-slate-300 w-[68%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>I pursued a four-year bachelor's degree in Informatics Engineering at a private university in Cirebon, STMIK IKMI Cirebon, located in Majasem.</p>
+            </motion.div>
+            <motion.p 
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+              className='relative text-base text-slate-300 w-[68%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>I pursued a four-year bachelor's degree in Informatics Engineering at a private university in Cirebon, STMIK IKMI Cirebon, located in Majasem.</motion.p>
 
             <div className="relative z-[999999999] flex items-center justify-center mt-12">
-              <div
-                  className="relative opacity-100 w-[100%] mx-auto rounded-[24px] h-[500px] bg-white/20 backdrop-blur-2xl p-4 z-40 items-center justify-between mt-12"
+              <motion.div
+                  initial={{ opacity: 0, filter: 'blur(10px)' }}
+                  whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+                  transition={{ duration: 0.5, ease: 'easeOut' }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  className="relative opacity-100 w-[100%] mx-auto rounded-[24px] h-[600px] bg-white/20 backdrop-blur-2xl p-4 z-40 items-center justify-between mt-12"
                 >
                     <div className='w-full h-full rounded-[20px] bg-white'>
                       <div className='w-full relative flex h-full rounded-[16px] overflow-hidden border border-gray-700'>
-                        <div className='relative w-1/2 h-full overflow-hidden lg mt-6 lg:mt-0'>
-                          <img src={Team} alt="geospasial-project" className="h-full object-cover w-auto bg-bottom" />
+                        <div className='relative w-full h-full overflow-hidden lg mt-6 lg:mt-0'>
+                          <img src={Team} alt="geospasial-project" className="h-auto object-cover w-full relative bottom-[65%] grayscale-[100%]" />
                         </div>
-                        <div className='relative w-1/2 h-full overflow-hidden lg mt-6 lg:mt-0'>
+                        {/* <div className='relative w-1/2 h-full overflow-hidden lg mt-6 lg:mt-0'>
                           <img src={Team2} alt="geospasial-project" className="h-full object-cover w-full bg-bottom" />
-                        </div>
+                        </div> */}
                       </div>
                     </div>
-              </div>
+              </motion.div>
             </div>
 
           </div>
           
           <div id='github' className='select-none px-14 relative lg:flex flex-col hidden z-[3333] pb-[30px] lg:pb-[80px] lg:pt-4 w-full h-max border-slate-100'>
-            <small className='relative text-[#00B4F5] text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>All repositories github</small>
-            <div className='w-full mt-4 mb-10 flex justify-between items-center '>
+            <motion.small 
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+              className='relative text-[#00B4F5] text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>All repositories github</motion.small>
+            <motion.div 
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+              className='w-full mt-4 mb-10 flex justify-between items-center '>
               <h2 className='relative text-[40px] text-white font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
                 <a href='https://github.com/khorulhudaa' className='flex items-center gap-4'>
                   Github account <LinkSquare01Icon className='text-[#00B4F5]' /> 
@@ -1005,10 +1148,20 @@ const Homepage: React.FC = () => {
                   <Github01Icon className='w-6 h-6' />
                 </div>
               </div>
-            </div>
-            <p className='relative text-base text-slate-300 w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
+            </motion.div>
+            <motion.p 
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+              className='relative text-base text-slate-300 w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</motion.p>
 
-            <div className='relative w-full grid grid-cols-3 mt-14 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
+            <motion.div 
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+              className='relative w-full grid grid-cols-3 mt-14 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
               <a href='https://github.com/khoirulhudaa?achievement=pull-shark&tab=achievements' target='__blank'>
                 <div onClick={() => setSelectTypeGit('git1')} className={`flex gap-6 ${selectTypeGit === 'git1' ? 'bg-[#ff69df11]' : ''} items-center cursor-pointer p-6`}>
                   <img src={Git1} alt="git" className="w-12" />
@@ -1019,7 +1172,7 @@ const Homepage: React.FC = () => {
                 </div>
               </a>
               <a href='https://github.com/khoirulhudaa?tab=achievements&achievement=quickdraw' target='__blank'>
-                <div onClick={() => setSelectTypeGit('git2')} className={`flex gap-6 ${selectTypeGit === 'git2' ? 'bg-[#9e69ff11]' : ''} items-center cursor-pointer p-6 border-x border-gray-800`}>
+                <div onClick={() => setSelectTypeGit('git2')} className={`flex gap-6 ${selectTypeGit === 'git2' ? 'bg-[#9e69ff11]' : ''} items-center cursor-pointer p-6 border-x-[0.5px] border-gray-700`}>
                   <img src={Git2} alt="git" className="w-12" />
                   <div className='flex-1'>
                     <h3 className={`${selectTypeGit === 'git2' ? 'text-[#5E5CF8]' : 'text-white'} font-medium`}>Quickdraw</h3>
@@ -1036,12 +1189,22 @@ const Homepage: React.FC = () => {
                   </div>
                 </div>
               </a>
-            </div>
+            </motion.div>
           </div>
 
           <div id='certifications' className='select-none relative px-14 lg:flex flex-col hidden z-[233] pb-[30px] lg:pb-[80px] lg:pt-4 w-full h-max border-slate-100'>
-            <small className='relative text-[#00B4F5] text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>My various achievements</small>
-            <div className='w-full mt-4 mb-10 flex justify-between items-center '>
+            <motion.small 
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+              className='relative text-[#00B4F5] text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>My various achievements</motion.small>
+            <motion.div 
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+              className='w-full mt-4 mb-10 flex justify-between items-center '>
               <h2 className='relative text-[40px] text-white mt-4 mb-10 font-medium text-balance tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Web competition awards</h2>
               <div className='flex w-max'>
                 <div className="relative text-transparent flex items-center gap-6 p-6 after:absolute after:right-0 after:w-px after:h-[100vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[50vh]">
@@ -1049,162 +1212,99 @@ const Homepage: React.FC = () => {
                   <Link03Icon className='w-6 h-6' />
                 </div>
               </div>
-            </div>
-            <p className='relative text-base text-slate-300 w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
+            </motion.div>
+            <motion.p 
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+              className='relative text-base text-slate-300 w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</motion.p>
 
             <div className="absolute left-[20%] w-[60%] h-[40px] py-[30%] transform -translate-y-[50%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[140px]"></div>
             <div className="absolute left-[15%] w-[100%] h-[40px] py-[30%] transform -translate-y-[72%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[25px]"></div>
             <img src={Pacticles2} alt='particles' className='absolute left-[28%] top-[-22%] w-[60%]' />
 
-            <div className="w-full bg-white/20 backdrop-blur-2xl p-4 mt-12 rounded-[20px]">
+            <motion.div 
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+              className="w-full bg-white/20 backdrop-blur-2xl p-4 mt-12 rounded-[20px]">
             
               <div className='relative w-full bg-white rounded-tl-[16px] rounded-tr-[16px] grid grid-cols-2'>
-                <div onClick={() => setSelectTypeGit('git1')} className={`flex gap-6 ${selectTypeGit === 'git1' ? 'bg-[#ff69df11]' : ''} items-center cursor-pointer px-6 py-16`}>
-                  <img src={Git1} alt="git" className="w-12" />
+                <div className={`relative flex gap-6 items-center cursor-pointer px-6 py-16`}>
+                  <img src={Winner} alt="git" className="w-12" />
                   <div className='flex-1'>
-                    <h3 className={`${selectTypeGit === 'git1' ? 'text-[#f85c98]' : 'text-black'} font-medium`}>Pull Shark - 2x</h3>
-                    <p className='text-[12px] mt-2 text-slate-500 leading-loose tracking-tighter'>@khoirulhudaa opened pull requests that have been merged.</p>
+                    <div className='w-max flex items-center gap-2' onClick={() => {
+                      setIsModal(true)
+                      setSelectImage(Jakarta)
+                    }}>
+                      <h3 className={`$text-black font-medium`}>2nd - national</h3>
+                      <ViewIcon className='z-[9999] text-slate-600 active:scale-[0.98] cursor-pointer' />
+                    </div>
+                    <p className='text-[14px] mt-2 text-slate-500 leading-loose tracking-tighter'>National-level Web Development Competition,</p>
                   </div>
                 </div>
-                <div onClick={() => setSelectTypeGit('git2')} className={`flex gap-6 ${selectTypeGit === 'git2' ? 'bg-[#9e69ff11]' : ''} items-center cursor-pointer px-6 py-16 border-l border-gray-800`}>
-                  <img src={Git2} alt="git" className="w-12" />
+                <div className={`relative flex gap-6 items-center cursor-pointer px-6 py-16 border-l border-slate-300`}>
+                  <img src={Winner} alt="git" className="w-12" />
                   <div className='flex-1'>
-                    <h3 className={`${selectTypeGit === 'git2' ? 'text-[#5E5CF8]' : 'text-black'} font-medium`}>Quickdraw</h3>
-                    <p className='text-[12px] mt-2 text-slate-500 leading-loose tracking-tighter'>Closing issues or pull requests within 5 minutes after they are opened.</p>
+                    <div className='w-max flex items-center gap-2' onClick={() => {
+                      setIsModal(true)
+                      setSelectImage(Majalengka)
+                    }}>
+                      <h3 className={`text-black font-medium`}>2nd - Public</h3>
+                      <ViewIcon className='z-[9999] text-slate-600 active:scale-[0.98] cursor-pointer' />
+                    </div>
+                    <p className='text-[14px] mt-2 text-slate-500 leading-loose tracking-tighter'>National-level Web Design Competition for Students.</p>
                   </div>
                 </div>
               </div>
 
               <div className='relative w-full bg-white grid grid-cols-1'>
-                <div onClick={() => setSelectTypeGit('git3')} className={`flex gap-6 ${selectTypeGit === 'git3' ? 'bg-[#69dcff11]' : ''} items-center cursor-pointer px-6 py-16 border-t border-gray-800 w-full`}>
-                  <img src={Git3} alt="git" className="w-12" />
+                <div className={`flex gap-6 ${selectTypeGit === 'git3' ? 'bg-[#69dcff11]' : ''} items-center cursor-pointer px-6 py-16 border-t border-slate-300 w-full`}>
+                  <img src={Winner} alt="git" className="w-12" />
                   <div className='flex-1'>
-                    <h3 className={`${selectType === 'git3' ? 'text-[#5cc7f8]' : 'text-black'} font-medium`}>Starstruck</h3>
-                    <p className='text-[12px] mt-2 text-slate-500 leading-loose tracking-tighter'>Starstruck: Having a repository with high popularity, starts.</p>
+                    <div className='w-max flex items-center gap-2' onClick={() => {
+                        setIsModal(true)
+                        setSelectImage(Inovasi)
+                      }}>
+                        <h3 className={`${selectTypeGit === 'git1' ? 'text-[#f85c98]' : 'text-black'} font-medium`}>1st - district</h3>
+                        <ViewIcon className='z-[9999] text-slate-600 active:scale-[0.98] cursor-pointer' />
+                      </div>
+                      <p className='text-[14px] mt-2 text-slate-500 leading-loose tracking-tighter'>Innovation competition in the technology category at the district level organized by the Bappelitbangda Office in 2024.</p>
                   </div>
                 </div>
               </div>
 
               <div className='relative w-full bg-white rounded-bl-[16px] rounded-br-[16px] grid grid-cols-2 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
-                <div onClick={() => setSelectTypeGit('git1')} className={`flex gap-6 ${selectTypeGit === 'git1' ? 'bg-[#ff69df11]' : ''} items-center cursor-pointer px-6 py-16 border-t border-gray-800 w-full`}>
-                  <img src={Git1} alt="git" className="w-12" />
+                <div className={`relative flex gap-6 items-center cursor-pointer px-6 py-16 border-t border-slate-300 w-full`}>
+                  <img src={Winner} alt="git" className="w-12" />
                   <div className='flex-1'>
-                    <h3 className={`${selectTypeGit === 'git1' ? 'text-[#f85c98]' : 'text-black'} font-medium`}>Pull Shark - 2x</h3>
-                    <p className='text-[12px] mt-2 text-slate-500 leading-loose tracking-tighter'>@khoirulhudaa opened pull requests that have been merged.</p>
+                    <div className='w-max flex items-center gap-2' onClick={() => {
+                      setIsModal(true)
+                      setSelectImage(Cirebon)
+                    }}>
+                      <h3 className={`${selectTypeGit === 'git1' ? 'text-[#f85c98]' : 'text-black'} font-medium`}>1st - intramural</h3>
+                      <ViewIcon className='z-[9999] text-slate-600 active:scale-[0.98] cursor-pointer' />
+                    </div>
+                    <p className='text-[14px] mt-2 text-slate-500 leading-loose tracking-tighter'>Inter-College Landing Page Web Competition exclusively.</p>
                   </div>
                 </div>
-                <div onClick={() => setSelectTypeGit('git2')} className={`flex gap-6 ${selectTypeGit === 'git2' ? 'bg-[#9e69ff11]' : ''} items-center cursor-pointer px-6 py-16 border-t border-x border-gray-800`}>
-                  <img src={Git2} alt="git" className="w-12" />
+                <div className={`relative flex gap-6 items-center cursor-pointer px-6 py-16 border-t border-x border-slate-300`}>
+                  <img src={Winner} alt="git" className="w-12" />
                   <div className='flex-1'>
-                    <h3 className={`${selectTypeGit === 'git2' ? 'text-[#5E5CF8]' : 'text-black'} font-medium`}>Quickdraw</h3>
-                    <p className='text-[12px] mt-2 text-slate-500 leading-loose tracking-tighter'>Closing issues or pull requests within 5 minutes after they are opened.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* <div className='w-full mt-16 flex flex-wrap'>
-              <div id='certifications' className='relative flex items-center h-max lg:h-[320px] lg:mt-0 mt-10 w-full lg:w-[45%] mb-8 lg:mb-14 lg:mr-8 p-6 border border-slate-100 rounded-[20px]'>
-                <div className='w-full relative left-[-1px] lg:left-[-100px] mt-6 lg:mt-8'>
-                  <div className='lg:ml-[120px] mt-[0px] mb-5 flex items-center'>
-                    <img src={Winner} alt="winner-icon" className='w-[30px]' />
-                    <div className='ml-5 mt-[0px] w-max border border-slate-100 bg-white text-black flex items-center text-center px-5 py-1 shadow-[20px]'>        
-                      Web Dev - UNTAR
+                    <div className='w-max flex items-center gap-2' onClick={() => {
+                      setIsModal(true)
+                      setSelectImage(JWD)
+                    }}>
+                      <h3 className={`text-black font-medium`}>BNSP - JWD</h3>
+                      <ViewIcon className='z-[9999] text-slate-600 active:scale-[0.98] cursor-pointer' />
                     </div>
+                    <p className='text-[14px] mt-2 text-slate-500 leading-loose tracking-tighter'>It's a certifications training program for Junior Web Developers.</p>
                   </div>
-                  <h2 className='text-[24px] lg:text-[40px] lg:ml-[110px] relative top-[5px] bg-gradient-to-r from-white to-slate-500 text-transparent w-[94vw] lg:w-[70vw] text-left bg-clip-text'>2nd Place - National</h2>
-                  <div onClick={() => {
-                    setIsModal(true)
-                    setSelectImage(Jakarta)
-                    setText('National-level team-based Web Development Competition with a maximum of three members per team in the I/O Festival 2024 at Tarumanegara University, Jakarta.')
-                  }} className='cursor-pointer ml-1 lg:ml-[115px] mt-[30px] text-[20px] mb-6 lg:mb-10 hover:brightness-[90%] active:scale-[0.99] text-white flex items-center w-max border border-slate-100 py-2 px-3'>Show Certificate<FaArrowRight className='ml-4 relative top-[0.8]' /> </div>
                 </div>
               </div>
-            
-              <div className='relative flex items-center h-max lg:h-[320px] w-full lg:w-[45%] mb-8 lg:mb-14 lg:mr-8 p-6 border border-slate-100 rounded-[20px]'>
-                <div className='w-full relative left-[-1px] lg:left-[-100px] mt-6 lg:mt-8'>
-                <div className='lg:ml-[120px] mt-[0px] mb-5 flex items-center'>
-                    <img src={Winner} alt="winner-icon" className='w-[30px]' />
-                    <div className='ml-5 mt-[0px] w-max border border-slate-100 bg-white text-black flex items-center text-center px-5 py-1 shadow-[20px]'>        
-                      WDC - UNMA
-                    </div>
-                  </div>
-                  <h2 className='text-[24px] lg:text-[40px] lg:ml-[110px] relative top-[5px] bg-gradient-to-r from-white to-slate-500 text-transparent w-[94vw] lg:w-[70vw] text-left bg-clip-text'>2nd Place - Public</h2>
-                  <div onClick={() => {
-                    setIsModal(true)
-                    setSelectImage(Majalengka)
-                    setText('National-level Web Design Competition for Students at the Dies Natalis HMIF event at Majalengka University, Majalengka on May 20, 2024.')}}
-                  className='cursor-pointer ml-1 lg:ml-[115px] mt-[30px] text-[20px] mb-6 lg:mb-10 hover:brightness-[90%] active:scale-[0.99] text-white flex items-center w-max border border-slate-100 py-2 px-3'>Show Certificate <FaArrowRight className='ml-4 relative top-[0.8]' /> </div>
-                </div>
-              </div>
-
-              <div className='relative flex items-center h-max lg:h-[320px] w-full lg:w-[45%] mb-8 lg:mb-14 lg:mr-8 p-6 border border-slate-100 rounded-[20px]'>
-                <div className='w-full relative left-[-1px] lg:left-[-100px] mt-6 lg:mt-8'>
-                <div className='lg:ml-[120px] mt-[0px] mb-5 flex items-center'>
-                    <img src={Winner} alt="winner-icon" className='w-[30px]' />
-                    <div className='ml-5 mt-[0px] w-max border border-slate-100 bg-white text-black flex items-center text-center px-5 py-1 shadow-[20px]'>        
-                      WDC - IKMI CIREBON
-                    </div>
-                  </div>
-                  <h2 className='text-[24px] lg:text-[40px] lg:ml-[110px] relative top-[5px] bg-gradient-to-r from-white to-slate-500 text-transparent w-[94vw] lg:w-[70vw] text-left bg-clip-text'>1nd Place - Public</h2>
-                  <div onClick={() => {
-                    setIsModal(true)
-                    setSelectImage(Majalengka)
-                    setText('National-level Web Design Competition for Students at the Dies Natalis HMIF event at Majalengka University, Majalengka on May 20, 2024.')}}
-                  className='cursor-pointer ml-1 lg:ml-[115px] mt-[30px] text-[20px] mb-6 lg:mb-10 hover:brightness-[90%] active:scale-[0.99] text-white flex items-center w-max border border-slate-100 py-2 px-3'>Show Certificate <FaArrowRight className='ml-4 relative top-[0.8]' /> </div>
-                </div>
-              </div>
-
-              <div className='relative flex items-center h-max lg:h-[320px] w-full lg:w-[45%] mb-8 lg:mb-14 lg:mr-8 p-6 border border-slate-100 rounded-[20px]'>
-                <div className='w-full relative left-[-1px] lg:left-[-100px] mt-6 lg:mt-8'>
-                  <div className='lg:ml-[120px] mt-[0px] mb-5 flex items-center'>
-                    <img src={Winner} alt="winner-icon" className='w-[30px]' />
-                    <div className='ml-5 mt-[0px] w-max border border-slate-100 bg-white text-black flex items-center text-center px-5 py-1 shadow-[20px]'>        
-                      WDC - IKMI Cirebon
-                    </div>
-                  </div>
-                  <h2 className='text-[24px] lg:text-[40px] lg:ml-[110px] relative top-[5px] bg-gradient-to-r from-white to-slate-500 text-transparent w-[94vw] lg:w-[70vw] text-left bg-clip-text'>1st Place - Intramural </h2>
-                  <div onClick={() => {
-                    setIsModal(true)
-                    setSelectImage(Cirebon)
-                    setText('Inter-College Landing Page Web Competition exclusively for STMIK IKMI CIREBON students at the IKMIMATCHCHAMPIONSHIP event from August 18 to 26, 2023.')}}
-                  className='cursor-pointer ml-1 lg:ml-[115px] mt-[30px] text-[20px] mb-6 lg:mb-10 hover:brightness-[90%] active:scale-[0.99] text-white flex items-center w-max border border-slate-100 py-2 px-3'>Show Certificate <FaArrowRight className='ml-4 relative top-[0.8]' /> </div>
-                </div>
-              </div>
-            
-              <div className='relative flex items-center h-max lg:h-[320px] w-full lg:w-[45%] mb-8 lg:mb-14 lg:mr-8 p-6 border border-slate-100 rounded-[20px]'>
-                <div className='w-full relative left-[-1px] lg:left-[-100px] mt-6 lg:mt-8'>
-                  <div className='lg:ml-[120px] mt-[0px] mb-5 flex items-center'>
-                    <img src={Peserta} alt="winner-icon" className='w-[30px]' />
-                    <div className='ml-5 mt-[0px] w-max border border-slate-100 bg-white text-black flex items-center text-center px-5 py-1 shadow-[20px]'>        
-                      WDC - PNB
-                    </div>
-                  </div>
-                  <h2 className='text-[24px] lg:text-[40px] lg:ml-[110px] relative top-[5px] bg-gradient-to-r from-white to-slate-500 text-transparent w-[94vw] lg:w-[70vw] text-left bg-clip-text'>Participation </h2>
-                  <div onClick={() => {
-                    setIsModal(true)
-                    setSelectImage(Bali)
-                    setText('National-level Web Design Competition for High School Students (SMA/SMK) at INTECHFEST 2020 with the theme "Information and Technology can Support Future Life".')}} className='cursor-pointer ml-1 lg:ml-[115px] mt-[30px] text-[20px] mb-6 lg:mb-10 hover:brightness-[90%] active:scale-[0.99] text-white flex items-center w-max border border-slate-100 py-2 px-3'>Show Certificate <FaArrowRight className='ml-4 relative top-[0.8]' /> </div>
-                </div>
-              </div>
-          
-              <div className='relative flex items-center h-max lg:h-[320px] w-full lg:w-[45%] mb-8 lg:mb-14 lg:mr-8 p-6 border border-slate-100 rounded-[20px]'>
-                <div className='w-full relative left-[-1px] lg:left-[-100px] mt-6 lg:mt-8'>
-                  <div className='lg:ml-[120px] mt-[0px] mb-5 flex items-center'>
-                    <img src={Peserta} alt="winner-icon" className='w-[30px]' />
-                    <div className='ml-5 mt-[0px] w-max border border-slate-100 bg-white text-black flex items-center text-center px-5 py-1 shadow-[20px]'>        
-                      Junior Web Dev
-                    </div>
-                  </div>
-                  <h2 className='text-[24px] lg:text-[40px] lg:ml-[110px] relative top-[5px] bg-gradient-to-r from-white to-slate-500 text-transparent w-[94vw] lg:w-[70vw] text-left bg-clip-text'>VSGA - JWD</h2>
-                  <div onClick={() => {
-                    setIsModal(true)
-                    setSelectImage(JWD)
-                    setText(`It's a certifications training program for Junior Web Developers based on national competencies and one of the eight academies under the Digital Talent Scholarship (DTS) in 2022.`)}} className='cursor-pointer ml-1 lg:ml-[115px] mt-[30px] text-[20px] mb-6 lg:mb-10 hover:brightness-[90%] active:scale-[0.99] text-white flex items-center w-max border border-slate-100 py-2 px-3'>Show Certificate <FaArrowRight className='ml-4 relative top-[0.8]' /> </div>
-                </div>
-              </div>
-            </div> */}
-
+            </motion.div>
           </div>
 
           <footer className='relative w-full overflow-hidden px-6 mt-10 z-[8888] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>

@@ -1,23 +1,45 @@
+import { useEffect } from "react";
 
-const ModalCertification = ({ image, text, close, title }:{ image?: any; text?: string;close?: any; title?: any }) => {
+const ModalCertification = ({ image, onClose }:{ image?: string; onClose: () => void }) => {
+
+  // Menambahkan event listener untuk ESC key
+  useEffect(() => {
+    const handleEscPress = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        onClose()
+      }
+    };
+
+    // Menambahkan listener saat komponen dipasang
+    document.addEventListener('keydown', handleEscPress);
+
+    // Membersihkan listener saat komponen dilepas
+    return () => {
+      document.removeEventListener('keydown', handleEscPress);
+    };
+  }, []);
 
   return (
     <section className='w-screen h-screen fixed left-0 bottom-0 bg-slate-900 bg-opacity-[0.7] lg:flex items-center justify-center z-[999999999999]'>
-      <div className="relative w-full lg:w-[75%] h-screen lg:h-max overflow-y-auto bg-white lg:rounded-[14px] pt-10 pb-6 px-6 shadow-lg z-[999999999999]">
-        <div className="lg:relative lg:flex w-full h-full">
-            <div className="w-full lg:w-1/2 max-h-1/2 lg:h-full flex">
-                <div className="w-full h-max lg:max-h-[330px] mb-4 overflow-hidden border border-slate-400 rounded-lg">
-                    <img src={image} alt="image" className="w-full h-full object-hover lg:object-contain" />
+      <div className="relative left-[-16px] w-[70vw] h-[80vh] bg-white/20 backdrop-blur-2xl p-4 rounded-[24px]">
+        <div className="relative w-full h-full bg-white rounded-[20px] shadow-lg z-[999999999999]">
+          
+          <div onClick={() => onClose()} className='absolute right-0 top-0 p-4 cursor-pointer active:scale-[0.98]'>
+            <div className="w-max flex items-center gap-2">
+                <p className="text-[12px] text-slate-400">for close</p>
+                <div onClick={() => onClose()} className="border border-slate-400 bg-white text-slate-600 rounded-[6px] px-3 py-1 font-normal text-[10px]">
+                    <p>click / esc</p>
                 </div>
             </div>
-            <div className="lg:relative h-1/2 lg:h-full w-full lg:w-1/2 lg:pl-8 pt-8">
-                <h2 className="relative font-bold">{title ?? ''}</h2>
-                <p className="text-slate-500 text-[12px] my-3">2024</p>
-                <p className="w-[96%] mt-4 text-[15px] leading-loose text-slate-600">{text}</p>
-                <div onClick={() => close()} className="relative lg:border border-[1.6px] border-red-600 text-red-600 font-normal w-full h-max lg:py-3 py-4 mt-6 rounded-md flex items-center justify-center cursor-pointer active:scale-[0.98] hover:brightness-[90%]">
-                  Close Now
-                </div>
-            </div>
+          </div>
+          
+          <div className="w-full h-full mb-4 p-4">
+              <img src={image} alt="image" className={`w-auto h-full rounded-[16px] object-contain`} />
+          </div>
+
+          <div className='absolute right-0 bottom-0 w-full p-4 text-[12px] text-slate-500 flex items-center justify-end'>
+              <p>Powered by developer</p>
+          </div>
         </div>
       </div>
     </section>
