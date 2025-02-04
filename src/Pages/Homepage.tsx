@@ -76,6 +76,44 @@ const Homepage: React.FC = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  // const dataProducts = [
+  //   {
+  //     title: "ElectShop",
+  //     desc: "ElectShop is an ecommerce website integrated with the Xednit payment gateway, built using React, Express, and MongoDB as its database.",
+  //     image1: "",
+  //     image2: "",
+  //     url: ""
+  //   },
+  //   {
+  //     title: "Swiftvel",
+  //     desc: "This project trains API integration skills by displaying the weather conditions of a specific area, sourced from the OpenWeatherMap API endpoint.",
+  //     image1: "",
+  //     image2: "",
+  //     url: ""
+  //   },
+  //   {
+  //     title: "OMDB API",
+  //     desc: "This is a popular movie listing website sourced from the OMDB API endpoint, designed to improve API integration skills and data filtering systems based on movie title searches.",
+  //     image1: "",
+  //     image2: "",
+  //     url: ""
+  //   },
+  //   {
+  //     title: "WeatherApp",
+  //     desc: "This project trains API integration skills by displaying the weather conditions of a specific area, sourced from the OpenWeatherMap API endpoint.",
+  //     image1: "",
+  //     image2: "",
+  //     url: ""
+  //   },
+  //   {
+  //     title: "Crappo",
+  //     desc: "Crappo is a modern and elegant web project built using the latest web technologies. Created from my slicing, this site features a unique design with a clean and responsive layout.",
+  //     image1: "",
+  //     image2: "",
+  //     url: ""
+  //   },
+  // ]
+
   return (
     <>
       <FadeTransition />
@@ -105,7 +143,7 @@ const Homepage: React.FC = () => {
           </div>
 
           {/* Nabar */}
-          <nav className={`fixed duration-300 top-0 left-0 w-full z-[999999999] flex items-center justify-between gap-10 h-max ${isScrolled ? 'bg-white/10 backdrop-blur-xl py-1 px-[44px]' : 'bg-transparent py-1 px-[90px]'}`}>            
+          <nav className={`fixed duration-300 top-0 left-0 w-full z-[999999999] flex items-center justify-between gap-10 h-max ${isScrolled ? 'bg-white/10 backdrop-blur-xl py-1 px-[44px]' : 'bg-transparent py-4 px-[90px]'}`}>            
             <div className="flex items-center w-max text-white gap-10">
               <p className="md:hidden flex">8.21.4.1</p>
 
@@ -164,7 +202,7 @@ const Homepage: React.FC = () => {
             </div>
             
             <div className="text-white flex-1 justify-end gap-6 flex overflow-hidden items-center">
-              <div className={`animate-fadeIn overflow-hidden active:scale-[0.99] flex items-center outline-0 justify-between gap-1 duration-300 ease-in-out rounded-full ${activeSearch ? 'px-4 w-[300px]' : 'px-4 w-[100px]'} py-2 text-left text-sm/6 bg-white/5 text-white/50`}>
+              <div className={`animate-fadeIn overflow-hidden active:scale-[0.99] flex items-center outline-0 justify-between gap-1 duration-300 ease-in-out rounded-full ${activeSearch ? 'px-4 w-[320px]' : 'px-4 w-[115.5px]'} py-2 text-left text-sm/6 bg-white/5 text-white/50`}>
                 <div onClick={() => setActiveModalSearch(true)} className={`flex-1 duration-200 delay-100 items-center gap-2 ${activeSearch ? 'flex opacity-1' : 'hidden opacity-0'}`}>
                   <p className='w-max mr-20'>
                     Quick search
@@ -223,7 +261,7 @@ const Homepage: React.FC = () => {
             </div>
 
             <div className='relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
-              <h1 className='relative text-white z-40 px-2 text-4xl tracking-tighter max-lg:font-medium max-sm:px-4 sm:text-5xl lg:text-6xl xl:text-8xl animate-fadeIn delay-[1000ms]'>Fullstack Developer, Building <span className="text-gray-500">MERN & Laravel</span></h1>
+              <h1 className='relative text-white z-40 px-2 text-4xl tracking-tighter max-lg:font-medium max-sm:px-4 sm:text-5xl lg:text-6xl xl:text-8xl animate-fadeIn delay-[1000ms]'>Fullstack Developer, <br /> Building <span className="text-gray-500">MERN & Laravel</span></h1>
             </div>
 
             <div className='relative mt-6 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
