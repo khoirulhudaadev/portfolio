@@ -31,7 +31,7 @@ const Homepage: React.FC = () => {
       }
       if (event.ctrlKey && event.key.toLowerCase() === 'k') {
         event.preventDefault(); // Mencegah aksi default browser
-        setActiveSearch(true);
+        setActiveModalSearch(true)
       }
     };
 
@@ -56,8 +56,10 @@ const Homepage: React.FC = () => {
     const handleScroll = () => {
       if (window.scrollY > 20) {
         setIsScrolled(true);
+        setActiveSearch(true)
       } else {
         setIsScrolled(false);
+        setActiveSearch(false)
       }
     };
   
@@ -103,7 +105,7 @@ const Homepage: React.FC = () => {
           </div>
 
           {/* Nabar */}
-          <nav className={`fixed duration-300 top-0 left-0 w-full z-[999999999] flex items-center justify-between gap-10 h-max ${isScrolled ? 'bg-white/10 backdrop-blur-xl py-0 px-[44px]' : 'bg-transparent py-1 px-[90px]'}`}>            
+          <nav className={`fixed duration-300 top-0 left-0 w-full z-[999999999] flex items-center justify-between gap-10 h-max ${isScrolled ? 'bg-white/10 backdrop-blur-xl py-1 px-[44px]' : 'bg-transparent py-1 px-[90px]'}`}>            
             <div className="flex items-center w-max text-white gap-10">
               <p className="md:hidden flex">8.21.4.1</p>
 
@@ -162,7 +164,7 @@ const Homepage: React.FC = () => {
             </div>
             
             <div className="text-white flex-1 justify-end gap-6 flex overflow-hidden items-center">
-              <div className={`animate-fadeIn delay-[1000ms] overflow-hidden active:scale-[0.99] flex items-center outline-0 justify-between gap-1 duration-200 ease-in rounded-full ${activeSearch ? 'px-4 w-[100%]' : 'px-4 w-max'} py-2 text-left text-sm/6 bg-white/5 text-white/50`}>
+              <div className={`animate-fadeIn overflow-hidden active:scale-[0.99] flex items-center outline-0 justify-between gap-1 duration-300 ease-in-out rounded-full ${activeSearch ? 'px-4 w-[300px]' : 'px-4 w-[100px]'} py-2 text-left text-sm/6 bg-white/5 text-white/50`}>
                 <div onClick={() => setActiveModalSearch(true)} className={`flex-1 duration-200 delay-100 items-center gap-2 ${activeSearch ? 'flex opacity-1' : 'hidden opacity-0'}`}>
                   <p className='w-max mr-20'>
                     Quick search
@@ -171,17 +173,15 @@ const Homepage: React.FC = () => {
                 <div className="w-max gap-2 font-sans flex items-center text-[13px] text-gray-500 dark:text-gray-400 [.os-macos_&amp;]:block">
                   {
                     activeSearch ? (
-                      <p onClick={() => setActiveSearch(false)}>
-                        esc
-                      </p>
+                      <></>
                     ):
-                      <p onClick={() => setActiveSearch(true)}>
-                        Ctrl + k
-                      </p>
+                      <div className='flex items-center w-max gap-2'>
+                        <p onClick={() => setActiveSearch(true)}>
+                          Ctrl + k
+                        </p>
+                        <p>/</p>
+                      </div>
                   }
-                  <div>
-                    <p>/</p>
-                  </div>
                   {
                     activeSearch ? (
                       <Cancel01Icon onClick={() => setActiveSearch(!activeSearch)} className="w-5 h-5" />
@@ -290,13 +290,13 @@ const Homepage: React.FC = () => {
               whileInView={{ opacity: 1, filter: 'blur(0px)' }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
               viewport={{ once: true, amount: 0.2 }}
-              className='w-full rounded-[24px] bg-white/20 backdrop-blur-2xl p-4 z-40 flex items-center lg:flex-no-wrap flex-wrap justify-between mt-12'>
-              <div className='w-full h-full rounded-[20px] bg-white p-10 border border-black flex items-center justify-between  '>
-                <img loading='lazy' src={Reacts} alt='iconLanguage' className='w-[34px] lg:w-[80px] lg:mb-0 mb-5 lg:mr-14 z-[99999999999] cursor-pointer grayscale-[100%]' />
-                <img loading='lazy' src={Node} alt='iconLanguage' className='w-[34px] lg:w-[80px] lg:mb-0 mb-5 lg:mr-14 z-[99999999999] cursor-pointer grayscale-[100%]' />
-                <img loading='lazy' src={Redux} alt='iconLanguage' className='w-[34px] lg:w-[80px] lg:mb-0 mb-5 lg:mr-14 z-[99999999999] cursor-pointer grayscale-[100%]' />
-                <img loading='lazy' src={TS} alt='iconLanguage' className='w-[34px] lg:w-[80px] lg:mb-0 mb-5 lg:mr-14 z-[99999999999] cursor-pointer grayscale-[100%]' />
-                <img loading='lazy' src={Laravel} alt='iconLanguage' className='w-[34px] lg:w-[80px] lg:mb-0 mb-5 lg:mr-14 z-[99999999999] cursor-pointer grayscale-[100%]' />
+              className='relative w-full rounded-[24px] bg-white/20 backdrop-blur-2xl p-4 flex items-center lg:flex-no-wrap flex-wrap justify-between z-[999] mt-12'>
+              <div className='relative z-[999] w-full h-full rounded-[20px] bg-white p-10 border border-black flex items-center justify-between  '>
+                <img loading='lazy' src={Reacts} alt='iconLanguage' className='w-[34px] lg:w-[80px] lg:mb-0 mb-5 lg:mr-14 z-[99999999999] grayscale-[100%]' />
+                <img loading='lazy' src={Node} alt='iconLanguage' className='w-[34px] lg:w-[80px] lg:mb-0 mb-5 lg:mr-14 z-[99999999999] grayscale-[100%]' />
+                <img loading='lazy' src={Redux} alt='iconLanguage' className='w-[34px] lg:w-[80px] lg:mb-0 mb-5 lg:mr-14 z-[99999999999] grayscale-[100%]' />
+                <img loading='lazy' src={TS} alt='iconLanguage' className='w-[34px] lg:w-[80px] lg:mb-0 mb-5 lg:mr-14 z-[99999999999] grayscale-[100%]' />
+                <img loading='lazy' src={Laravel} alt='iconLanguage' className='w-[34px] lg:w-[80px] lg:mb-0 mb-5 lg:mr-14 z-[99999999999] grayscale-[100%]' />
               </div>
             </motion.div>
           </div>
@@ -996,7 +996,7 @@ const Homepage: React.FC = () => {
 
           <div id='education' className='select-none px-14 relative lg:flex flex-col hidden z-[33333] pb-[30px] lg:pb-[80px] lg:pt-4 w-full h-max border-slate-100'>
             
-            <img src={Pacticles2} alt='particles' className='absolute left-[10%] top-[-20%] w-[60%] rotate-[-30deg]' />
+            <img src={Pacticles2} alt='particles' className='absolute left-[10%] top-[-20%] w-[60%] rotate-[-30deg] opacity-[70%]' />
 
             <motion.small 
               initial={{ opacity: 0, filter: 'blur(10px)' }}
@@ -1252,7 +1252,7 @@ const Homepage: React.FC = () => {
                       setIsModal(true)
                       setSelectImage(Majalengka)
                     }}>
-                      <h3 className={`text-black font-medium`}>2nd - Public</h3>
+                      <h3 className={`text-black font-medium`}>2nd - public</h3>
                       <ViewIcon className='z-[9999] text-slate-600 active:scale-[0.98] cursor-pointer' />
                     </div>
                     <p className='text-[14px] mt-2 text-slate-500 leading-loose tracking-tighter'>National-level Web Design Competition for Students.</p>
