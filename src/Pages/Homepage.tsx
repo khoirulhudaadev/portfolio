@@ -3,7 +3,7 @@ import { Add01Icon, ArrowRight02Icon, ArrowUp01Icon, BrowserIcon, Building02Icon
 import React, { useEffect, useState } from 'react'
 import { FaArrowRight, FaTimes } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import { AuthFlow, Build, Cirebon, FlowTrush, Geospasial, Git1, Git2, Git3, Inovasi, Jakarta, JWD, KonstruksiLogo, Laravel, Majalengka, Node, Pacticles2, PakYos, Reacts, Redux, Team, TS, Winner } from '../Assets'
+import { Build, Cirebon, Electshop1, Electshop2, Geospasial, Git1, Git2, Git3, Inovasi, Jakarta, JWD, KonstruksiLogo, Laravel, Luvlywed, Majalengka, Node, OMDB, Pacticles2, PakYos, Reacts, Redux, Swiftvel, Swiftvel2, Team, TS, Weather, Winner } from '../Assets'
 import ModalSearch from "../Components/Modal"
 import ModalCertification from '../Components/ModalCertification'
 import FadeTransition from "../Components/PageTransition"
@@ -14,7 +14,7 @@ const Homepage: React.FC = () => {
   const [selectimage, setSelectImage] = useState<string>('');
   const [isModal, setIsModal] = useState<boolean>(false);
   const [sidebar, setSidebar] = useState<boolean>(false);
-  const [selectType, setSelectType] = useState<string>('dev');
+  const [selectType, setSelectType] = useState<string>('apps');
   const [selectTypeGit, setSelectTypeGit] = useState<string>('git3');
   const [selectAccordion, setSelectAccordion] = useState<number>(1);
   const [activeModalSearch, setActiveModalSearch] = useState<boolean>(false);
@@ -76,47 +76,54 @@ const Homepage: React.FC = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  // const dataProducts = [
-  //   {
-  //     title: "ElectShop",
-  //     desc: "ElectShop is an ecommerce website integrated with the Xednit payment gateway, built using React, Express, and MongoDB as its database.",
-  //     image1: "",
-  //     image2: "",
-  //     url: ""
-  //   },
-  //   {
-  //     title: "Swiftvel",
-  //     desc: "This project trains API integration skills by displaying the weather conditions of a specific area, sourced from the OpenWeatherMap API endpoint.",
-  //     image1: "",
-  //     image2: "",
-  //     url: ""
-  //   },
-  //   {
-  //     title: "OMDB API",
-  //     desc: "This is a popular movie listing website sourced from the OMDB API endpoint, designed to improve API integration skills and data filtering systems based on movie title searches.",
-  //     image1: "",
-  //     image2: "",
-  //     url: ""
-  //   },
-  //   {
-  //     title: "WeatherApp",
-  //     desc: "This project trains API integration skills by displaying the weather conditions of a specific area, sourced from the OpenWeatherMap API endpoint.",
-  //     image1: "",
-  //     image2: "",
-  //     url: ""
-  //   },
-  //   {
-  //     title: "Crappo",
-  //     desc: "Crappo is a modern and elegant web project built using the latest web technologies. Created from my slicing, this site features a unique design with a clean and responsive layout.",
-  //     image1: "",
-  //     image2: "",
-  //     url: ""
-  //   },
-  // ]
+  const dataProducts = [
+    {
+      title: "ElectShop",
+      desc: "ElectShop is an ecommerce website integrated with the Xednit payment gateway, built using React and Express.",
+      image1: Electshop1,
+      image2: Electshop2,
+      url: "https://elect-shop.vercel.app",
+      category: "apps"
+    },
+    {
+      title: "Swiftvel",
+      desc: "This project trains API integration skills by displaying the weather conditions of a specific area.",
+      image1: Swiftvel,
+      image2: Swiftvel2,
+      url: "https://swiftvel.vercel.app",
+      category: "apps"
+    },
+    {
+      title: "OMDB API",
+      desc: "This is a popular movie listing website sourced from the OMDB API endpoint.",
+      image1: OMDB,
+      image2: "",
+      url: "",
+      category: "API"
+    },
+    {
+      title: "WeatherApp",
+      desc: "This project trains API integration skills by displaying the weather conditions of a specific area.",
+      image1: Weather,
+      image2: "",
+      url: "",
+      category: "API"
+    },
+    {
+      title: "Luvlywed",
+      desc: "A website portal providing various services for organizing elegant wedding events.",
+      image1: Luvlywed,
+      image2: "",
+      url: "https://luvlywed.vercel.app/",
+      category: "slicing"
+    },
+  ]
 
   return (
     <>
       <FadeTransition />
+
+      <video className="fixed z-[-1] top-0 left-0 w-full h-auto select-none" disablePictureInPicture disableRemotePlayback autoPlay loop muted playsInline src="https://l4wlsi8vxy8hre4v.public.blob.vercel-storage.com/video/glass-animation-5-f0gPcjmKFIV3ot5MGOdNy2r4QHBoXt.mp4"></video>
 
       {
         activeModalSearch ? (
@@ -125,7 +132,7 @@ const Homepage: React.FC = () => {
         <></>
       }
 
-      <div className='relative w-[94vw] mx-auto min-h-screen overflow-x-hidden bg-[#000000]'>
+      <div className='relative w-[94vw] mx-auto min-h-screen overflow-x-hidden bg-black bg-opacity-[90%]'>
           
           {/* Modal certification */}
           {
@@ -151,22 +158,22 @@ const Homepage: React.FC = () => {
               <div className='lg:flex hidden w-max text-slate-300 py-5 h-max'>
                 <ul className={`w-[80%] flex items-center justify-between ${isScrolled ? 'text-[14px]' : ''}`}>
                   <a href="#languages">
-                    <li className='mr-10 animate-fadeIn delay-[1000ms] hover:text-white border-b hover:border-slate-400 border-transparent'>Languages</li>
+                    <li className='mr-10 animate-fadeIn hover:text-white border-b hover:border-slate-400 border-transparent'>Languages</li>
                   </a>
                   <a href="#products">
-                    <li className='mr-10 animate-fadeIn delay-[1000ms] hover:text-white border-b hover:border-slate-400 border-transparent'>Products</li>
+                    <li className='mr-10 animate-fadeIn hover:text-white border-b hover:border-slate-400 border-transparent'>Products</li>
                   </a>
                   <a href="#linkedin">
-                    <li className='mr-10 animate-fadeIn delay-[1000ms] hover:text-white border-b hover:border-slate-400 border-transparent'>Linkedin</li>
+                    <li className='mr-10 animate-fadeIn hover:text-white border-b hover:border-slate-400 border-transparent'>Linkedin</li>
                   </a>
                   <a href="#experience">
-                    <li className='mr-10 animate-fadeIn delay-[1000ms] hover:text-white border-b hover:border-slate-400 border-transparent'>Experiences</li>
+                    <li className='mr-10 animate-fadeIn hover:text-white border-b hover:border-slate-400 border-transparent'>Experiences</li>
                   </a>
                   <a href="#github">
-                    <li className='mr-10 animate-fadeIn delay-[1000ms] hover:text-white border-b hover:border-slate-400 border-transparent'>Github</li>
+                    <li className='mr-10 animate-fadeIn hover:text-white border-b hover:border-slate-400 border-transparent'>Github</li>
                   </a>
                   <a href="#certifications">
-                    <li className='mr-10 animate-fadeIn delay-[1000ms] hover:text-white border-b hover:border-slate-400 border-transparent'>Certifications</li>
+                    <li className='mr-10 animate-fadeIn hover:text-white border-b hover:border-slate-400 border-transparent'>Certifications</li>
                   </a>
                 </ul>
               </div>
@@ -439,21 +446,21 @@ const Homepage: React.FC = () => {
                   transition={{ duration: 0.5, ease: 'easeOut' }}
                   viewport={{ once: true, amount: 0.2 }}
                   className='relative z-[99999999] w-full grid grid-cols-3 mt-14 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
-                  <div onClick={() => setSelectType('dev')} className={`flex gap-6 ${selectType === 'dev' ? 'bg-[#ff69df11]' : ''} items-center cursor-pointer p-6`}>
-                    <BrowserIcon size={50} className={`${selectType === 'dev' ? 'text-[#f85c98]' : 'text-white'}`} />
+                  <div onClick={() =>{ setSelectType('apps'), setSelectAccordion(1)}} className={`flex gap-6 ${selectType === 'apps' ? 'bg-[#ff69df11]' : ''} items-center cursor-pointer p-6`}>
+                    <BrowserIcon size={50} className={`${selectType === 'apps' ? 'text-[#f85c98]' : 'text-white'}`} />
                     <div className='flex-1'>
-                      <h3 className={`${selectType === 'dev' ? 'text-[#f85c98]' : 'text-white'} font-medium`}>Web apps</h3>
+                      <h3 className={`${selectType === 'apps' ? 'text-[#f85c98]' : 'text-white'} font-medium`}>Web apps</h3>
                       <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>Building web apps that simplify tasks and boost productivity.</p>
                     </div>
                   </div>
-                  <div onClick={() => setSelectType('api')} className={`flex gap-6 ${selectType === 'api' ? 'bg-[#9e69ff11]' : ''} items-center cursor-pointer p-6 border-x-[0.5px] border-gray-700`}>
-                    <Link03Icon size={50} className={`${selectType === 'api' ? 'text-[#5E5CF8]' : 'text-white'}`} />
+                  <div onClick={() => {setSelectType('API'), setSelectAccordion(1)}} className={`flex gap-6 ${selectType === 'API' ? 'bg-[#9e69ff11]' : ''} items-center cursor-pointer p-6 border-x-[0.5px] border-gray-700`}>
+                    <Link03Icon size={50} className={`${selectType === 'API' ? 'text-[#5E5CF8]' : 'text-white'}`} />
                     <div className='flex-1'>
-                      <h3 className={`${selectType === 'api' ? 'text-[#5E5CF8]' : 'text-white'} font-medium`}>Integrate API</h3>
+                      <h3 className={`${selectType === 'API' ? 'text-[#5E5CF8]' : 'text-white'} font-medium`}>Integrate API</h3>
                       <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>Integrating APIs to ensure fast and seamless functionality.</p>
                     </div>
                   </div>
-                  <div onClick={() => setSelectType('slicing')} className={`flex gap-6 ${selectType === 'slicing' ? 'bg-[#69dcff11]' : ''} items-center cursor-pointer p-6`}>
+                  <div onClick={() => {setSelectType('slicing'), setSelectAccordion(1)}} className={`flex gap-6 ${selectType === 'slicing' ? 'bg-[#69dcff11]' : ''} items-center cursor-pointer p-6`}>
                     <PaintBrush04Icon size={50} className={`${selectType === 'slicing' ? 'text-[#5cc7f8]' : 'text-white'}`} />
                     <div className='flex-1'>
                       <h3 className={`${selectType === 'slicing' ? 'text-[#5cc7f8]' : 'text-white'} font-medium`}>Slicing</h3>
@@ -461,399 +468,83 @@ const Homepage: React.FC = () => {
                     </div>
                   </div>
                 </motion.div>
+                
+                {
+                  dataProducts
+                  ?.filter((data: any) => data?.category === selectType)
+                  ?.map((data: any, index: number) => (
+                    <div key={index} className='w-full flex z-40 py-8 relative left-[0px] mt-[40px] lg:mt-[60px] h-max before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
+                        <div className='relative w-[50%] z-[99999] py-6 min-h-[400px]'>
+                          <h2 className='text-[24px] font-medium text-white mb-2'>{index + 1}. {data?.title}</h2>
+                          <p className='text-slate-300 w-[85%] leading-loose tracking-tighter'>{data?.desc}</p>
+                          
+                          <Link to={data?.url} target="__blank">
+                            <p className='cursor-pointer mt-6 hover:brightness-[90%] active:scale-[0.99] text-[#00B4F5] relative flex items-center text-base'>{data?.title} in here <FaArrowRight className='ml-4 relative top-[0.8]' /> </p>
+                          </Link>
 
-                <div className='w-full flex z-40 py-8 relative left-[0px] mt-[40px] lg:mt-[60px] h-max before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
-                    <div className='relative w-[50%] z-[99999] py-6 min-h-[400px]'>
-                      <h2 className='text-[24px] font-medium text-white mb-2'>1. Flowtrush web</h2>
-                      <p className='text-slate-300 w-[85%] leading-loose tracking-tighter'>Flowtrush is created similar to Trello, to manage and organize task lists in a structured manner.</p>
-                      
-                      <Link to={'https://flowtrush.vercel.app/auth'}>
-                        <p className='cursor-pointer mt-6 hover:brightness-[90%] active:scale-[0.99] text-[#00B4F5] relative flex items-center text-base'>FlowTrush in here <FaArrowRight className='ml-4 relative top-[0.8]' /> </p>
-                      </Link>
-
-                      <div onClick={(() => setSelectAccordion(1))} className={`relative h-max mt-6 w-[85%] ${selectAccordion === 1 ? 'h-[140px]' : 'h-[80px]'} active:scale-[0.99] duration-200 ease-in-out py-3 border-y border-slate-700 overflow-hidden`}>
-                        <div className='cursor-pointer w-full flex items-baseline justify-between py-3'>
-                          <p className={`text-lg font-medium duration-200 ease-in ${selectAccordion === 1 ? 'text-white' : 'text-slate-300'}`}>Authentication system</p>
                           {
-                            selectAccordion === 1 ? (
-                              <></>
+                            data?.image2 ? (
+                              <div onClick={() => setSelectAccordion(2)} className={`relative h-max mt-6 w-[85%] ${selectAccordion === 2 ? 'h-[140px]' : 'h-[80px]'} active:scale-[0.99] duration-200 ease-in-out py-3 border-y border-slate-700 overflow-hidden`}>
+                                <div className='cursor-pointer w-full flex items-baseline justify-between py-3'>
+                                  <p className={`text-lg font-medium duration-200 ease-in ${selectAccordion === 2 ? 'text-white' : 'text-slate-300'}`}>Authentication system</p>
+                                  {
+                                    selectAccordion === 2 ? (
+                                      <></>
+                                    ):
+                                      <Add01Icon className='text-indigo-700 cursor-pointer' />
+                                  }
+                                </div>
+                                <p className={`w-full ${selectAccordion === 2 ? '' : 'hidden'} duratation-200 leading-loose tracking-tighter text-slate-300 text-sm`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, laborum.</p>
+                              </div>
                             ):
-                              <Add01Icon className='text-indigo-700 cursor-pointer' />
-                          }
-                        </div>
-
-                        <p className={`w-full ${selectAccordion === 1 ? '' : 'hidden'} duratation-200 leading-loose tracking-tighter text-slate-300 text-sm`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, laborum.</p>
-                      </div>
-                      <div onClick={() => setSelectAccordion(2)} className={`relative h-max mt-6 w-[85%] ${selectAccordion === 2 ? 'h-[140px]' : 'h-[80px]'} active:scale-[0.99] duration-200 ease-in-out py-3 border-y border-slate-700 overflow-hidden`}>
-                        <div className='cursor-pointer w-full flex items-baseline justify-between py-3'>
-                          <p className={`text-lg font-medium duration-200 ease-in ${selectAccordion === 2 ? 'text-white' : 'text-slate-300'}`}>About the website</p>
-                          {
-                            selectAccordion === 2 ? (
                               <></>
-                            ):
-                              <Add01Icon className='text-indigo-700 cursor-pointer' />
                           }
+
+                          <div onClick={(() => setSelectAccordion(1))} className={`relative h-max mt-6 w-[85%] ${selectAccordion === 1 ? 'h-[140px]' : 'h-[80px]'} active:scale-[0.99] duration-200 ease-in-out py-3 border-y border-slate-700 overflow-hidden`}>
+                            <div className='cursor-pointer w-full flex items-baseline justify-between py-3'>
+                              <p className={`text-lg font-medium duration-200 ease-in ${selectAccordion === 1 ? 'text-white' : 'text-slate-300'}`}>About the website</p>
+                              {
+                                selectAccordion === 1 ? (
+                                  <></>
+                                ):
+                                  <Add01Icon className='text-indigo-700 cursor-pointer' />
+                              }
+                            </div>
+
+                            <p className={`w-full ${selectAccordion === 1 ? '' : 'hidden'} duratation-200 leading-loose tracking-tighter text-slate-300 text-sm`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, laborum.</p>
+                          </div>
+                         
                         </div>
-                        <p className={`w-full ${selectAccordion === 2 ? '' : 'hidden'} duratation-200 leading-loose tracking-tighter text-slate-300 text-sm`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, laborum.</p>
-                      </div>
-                    </div>
-                    <div 
-                      className='relative w-[50%] min-h-[400px] rounded-[24px] z-[8888888888888] flex justify-center items-center p-10 bg-white/20 backdrop-blur-2xl'
-                    >
-
-                      <div className="absolute z-[-1] right-0 w-[100%] py-[30%] transform -translate-y-[70%] -rotate-45 
-                          bg-[radial-gradient(circle_at_left_bottom,#e6b7fe_10%,#5049c2_10%,rgba(87,78,255,0)_60%)] 
-                          blur-[40px]">
-                      </div>
-
-                      <motion.div
-                            key={selectAccordion} // Animasi berjalan setiap kali konten berubah
-                            className='relative flex shadow-[0_35px_30px_rgba(0,0,30,0.4)] justify-center items-center rounded-[24px] overflow-hidden bg-white/20 backdrop-blur-2xl p-2 w-full h-max mt-6'
-                            initial={{ opacity: 0, y: 40 }} // Muncul dari bawah
-                            animate={{ opacity: 1, y: 0 }} // Naik ke posisi normal
-                            exit={{ opacity: 0, y: -20 }} // Keluar ke atas (opsional)
-                            transition={{ duration: 0.5, ease: "easeOut" }} // Durasi & easing smooth
+                        <div 
+                          className='relative w-[50%] min-h-[400px] rounded-[24px] z-[8888888888888] flex justify-center items-center p-10 bg-white/20 backdrop-blur-2xl'
                         >
-                            <img
-                                src={selectAccordion === 1 ? AuthFlow : FlowTrush}
-                                alt="FlowTrush-project"
-                                className='h-full w-auto object-cover rounded-[20px]'
-                            />
-                        </motion.div>
 
+                          <div className="absolute z-[-1] right-0 w-[100%] py-[30%] transform -translate-y-[70%] -rotate-45 
+                              bg-[radial-gradient(circle_at_left_bottom,#e6b7fe_10%,#5049c2_10%,rgba(87,78,255,0)_60%)] 
+                              blur-[40px]">
+                          </div>
+
+                          <motion.div
+                                key={selectAccordion} // Animasi berjalan setiap kali konten berubah
+                                className='relative flex shadow-[0_35px_30px_rgba(0,0,30,0.4)] justify-center items-center rounded-[24px] overflow-hidden bg-white/20 backdrop-blur-2xl p-2 w-full h-[260px] mt-6'
+                                initial={{ opacity: 0, y: 40 }} // Muncul dari bawah
+                                animate={{ opacity: 1, y: 0 }} // Naik ke posisi normal
+                                exit={{ opacity: 0, y: -20 }} // Keluar ke atas (opsional)
+                                transition={{ duration: 0.5, ease: "easeOut" }} // Durasi & easing smooth
+                            >
+                                <img
+                                    src={`${selectAccordion === 1 ? data?.image1 : data?.image2}`}
+                                    alt="image-project"
+                                    className='h-full w-auto object-cover rounded-[20px]'
+                                />
+                            </motion.div>
+
+                        </div>
                     </div>
-                    {/* <div className='w-full lg:w-[45%] bg-white lg:mb-0 mb-8 h-max mr-8 pb-6 px-4 pt-6 lg:px-8 lg:pb-12 lg:pt-8 border border-slate-700 rounded-[14px] lg:rounded-[20px]'>
-                      <div className='w-full h-max relative flex flex-col justify-between text-[20px] leading-loose text-white'>
-                        <div className='w-full'>
-                          <div className='w-full pb-3 lg:flex items-center justify-between border-b mb-4 border-b-slate-300'>
-                            <h2 className='text-white font-bold text-[26px] lg:text-[28px]'>Unipay</h2>
-                            <div className='w-max text-[14px] lg:text-[16px] flex items-center'>
-                            <div className='w-max text-white flex items-center mr-3 lg:mr-4'>
-                              <img src={Reacts} alt="react-icon" className='w-[24px] lg:w-[26px] mr-2 lg:mr-3' />
-                              <p>React</p>
-                            </div>
-                            <div className='w-max text-white flex items-center mr-3 lg:mr-4'>
-                              <img src={Node} alt="react-icon" className='w-[22px] lg:w-[24px] mr-2 lg:mr-3' />
-                              <p>Node</p>
-                            </div>
-                            <div className='w-max text-white flex items-center'>
-                              <img src={Mongodb} alt="react-icon" className='w-[22px] lg:w-[24px] mr-2 lg:mr-3' />
-                              <p>MongoDB</p>
-                            </div>
-                          </div>
-                          </div>
-                          <h3 className='text-[13px] lg:text-[16px] text-white'>Unipay facilitates students and faculty members to digitally process ordering and payment of fees.</h3>
-                        </div>
-                        <Link to={'https://unipay-ikmi.vercel.app/auth'}>
-                          <h3 className='cursor-pointer mt-6 hover:brightness-[90%] active:scale-[0.99] text-blue-700 relative top-[-6px] flex items-center lg:text-[15px] text-[14px]'>Unipay in here <FaArrowRight className='ml-4 relative top-[0.8]' /> </h3>
-                        </Link>
-                      </div>
-                      <div className='w-[100%] h-max overflow-hidden rounded-[10px] mt-[20px] lg:mt-[40px] border p-2 border-slate-800'>
-                        <img src={Unipay} alt="unipay-project" className=' hover:grayscale-[100%] h-nax duration-300' />
-                      </div>
-                    </div>
-                    <div className='w-full lg:w-[45%] bg-white lg:mb-0 mb-8 h-max mr-8 pb-6 px-4 pt-6 lg:px-8 lg:pb-12 lg:pt-8 border border-slate-700 rounded-[14px] lg:rounded-[20px]'>
-                    <div className='w-full h-max relative flex flex-col justify-between text-[20px] leading-loose text-white'>
-                      <div className='w-full'>
-                        <div className='w-full pb-3 lg:flex items-center justify-between border-b mb-4 border-b-slate-300'>
-                          <h2 className='text-white font-bold text-[26px] lg:text-[28px]'>Swiftvel</h2>
-                          <div className='w-max text-[14px] lg:text-[16px] flex items-center'>
-                          <div className='w-max text-white flex items-center mr-3 lg:mr-4'>
-                            <img src={Reacts} alt="react-icon" className='w-[24px] lg:w-[26px] mr-2 lg:mr-3' />
-                            <p>React</p>
-                          </div>
-                          <div className='w-max text-white flex items-center mr-3 lg:mr-4'>
-                            <img src={Node} alt="react-icon" className='w-[22px] lg:w-[24px] mr-2 lg:mr-3' />
-                            <p>Node</p>
-                          </div>
-                          <div className='w-max text-white flex items-center'>
-                            <img src={Mongodb} alt="react-icon" className='w-[22px] lg:w-[24px] mr-2 lg:mr-3' />
-                            <p>Mongodb</p>
-                          </div>
-                        </div>
-                        </div>
-                          <h3 className='text-[13px] lg:text-[16px] text-white'>Swiftvel is a platform for building websites by easily assembling various components (click and add).</h3>
-                        </div>
-                        <h3 className='cursor-pointer mt-6 hover:brightness-[90%] active:scale-[0.99] text-blue-700 relative top-[-6px] flex items-center lg:text-[15px] text-[14px]'>Swiftvel in here <FaArrowRight className='ml-4 relative top-[0.8]' /> </h3>
-                      </div>
-                      <div className='w-[100%] h-max overflow-hidden rounded-[10px] mt-[20px] lg:mt-[40px] border p-2 border-slate-800'>
-                        <img src={Swiftvel} alt="Swiftvel-project" className=' hover:grayscale-[100%] h-nax duration-300' />
-                      </div>
-                    </div> */}
-                </div>
-              
-                <div className='w-full flex z-40 py-8 relative left-[0px] mt-[40px] lg:mt-[60px] h-max before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
-                    <div className='relative w-[50%] z-[99999] py-6 min-h-[400px]'>
-                      <h2 className='text-[24px] font-medium text-white mb-2'>1. Flowtrush web</h2>
-                      <p className='text-slate-300 w-[85%] leading-loose tracking-tighter'>Flowtrush is created similar to Trello, to manage and organize task lists in a structured manner.</p>
-                      
-                      <Link to={'https://flowtrush.vercel.app/auth'}>
-                        <p className='cursor-pointer mt-6 hover:brightness-[90%] active:scale-[0.99] text-[#00B4F5] relative flex items-center text-base'>FlowTrush in here <FaArrowRight className='ml-4 relative top-[0.8]' /> </p>
-                      </Link>
-
-                      <div onClick={(() => setSelectAccordion(1))} className={`relative h-max mt-6 w-[85%] ${selectAccordion === 1 ? 'h-[140px]' : 'h-[80px]'} active:scale-[0.99] duration-200 ease-in-out py-3 border-y border-slate-700 overflow-hidden`}>
-                        <div className='cursor-pointer w-full flex items-baseline justify-between py-3'>
-                          <p className={`text-lg font-medium duration-200 ease-in ${selectAccordion === 1 ? 'text-white' : 'text-slate-300'}`}>Authentication system</p>
-                          {
-                            selectAccordion === 1 ? (
-                              <></>
-                            ):
-                              <Add01Icon className='text-indigo-700 cursor-pointer' />
-                          }
-                        </div>
-
-                        <p className={`w-full ${selectAccordion === 1 ? '' : 'hidden'} duratation-200 leading-loose tracking-tighter text-slate-300 text-sm`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, laborum.</p>
-                      </div>
-                      <div onClick={() => setSelectAccordion(2)} className={`relative h-max mt-6 w-[85%] ${selectAccordion === 2 ? 'h-[140px]' : 'h-[80px]'} active:scale-[0.99] duration-200 ease-in-out py-3 border-y border-slate-700 overflow-hidden`}>
-                        <div className='cursor-pointer w-full flex items-baseline justify-between py-3'>
-                          <p className={`text-lg font-medium duration-200 ease-in ${selectAccordion === 2 ? 'text-white' : 'text-slate-300'}`}>About the website</p>
-                          {
-                            selectAccordion === 2 ? (
-                              <></>
-                            ):
-                              <Add01Icon className='text-indigo-700 cursor-pointer' />
-                          }
-                        </div>
-                        <p className={`w-full ${selectAccordion === 2 ? '' : 'hidden'} duratation-200 leading-loose tracking-tighter text-slate-300 text-sm`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, laborum.</p>
-                      </div>
-                    </div>
-                    <div 
-                      className='relative w-[50%] min-h-[400px] rounded-[24px] z-[8888888888888] flex justify-center items-center p-10 bg-white/20 backdrop-blur-2xl'
-                    >
-
-                      <div className="absolute z-[-1] right-0 w-[100%] py-[30%] transform -translate-y-[70%] -rotate-45 
-                          bg-[radial-gradient(circle_at_left_bottom,#e6b7fe_10%,#5049c2_10%,rgba(87,78,255,0)_60%)] 
-                          blur-[40px]">
-                      </div>
-
-                      <motion.div
-                            key={selectAccordion} // Animasi berjalan setiap kali konten berubah
-                            className='relative flex shadow-[0_35px_30px_rgba(0,0,30,0.4)] justify-center items-center rounded-[24px] overflow-hidden bg-white/20 backdrop-blur-2xl p-2 w-full h-max mt-6'
-                            initial={{ opacity: 0, y: 40 }} // Muncul dari bawah
-                            animate={{ opacity: 1, y: 0 }} // Naik ke posisi normal
-                            exit={{ opacity: 0, y: -20 }} // Keluar ke atas (opsional)
-                            transition={{ duration: 0.5, ease: "easeOut" }} // Durasi & easing smooth
-                        >
-                            <img
-                                src={selectAccordion === 1 ? AuthFlow : FlowTrush}
-                                alt="FlowTrush-project"
-                                className='h-full w-auto object-cover rounded-[20px]'
-                            />
-                        </motion.div>
-
-                    </div>
-                    {/* <div className='w-full lg:w-[45%] bg-white lg:mb-0 mb-8 h-max mr-8 pb-6 px-4 pt-6 lg:px-8 lg:pb-12 lg:pt-8 border border-slate-700 rounded-[14px] lg:rounded-[20px]'>
-                      <div className='w-full h-max relative flex flex-col justify-between text-[20px] leading-loose text-white'>
-                        <div className='w-full'>
-                          <div className='w-full pb-3 lg:flex items-center justify-between border-b mb-4 border-b-slate-300'>
-                            <h2 className='text-white font-bold text-[26px] lg:text-[28px]'>Unipay</h2>
-                            <div className='w-max text-[14px] lg:text-[16px] flex items-center'>
-                            <div className='w-max text-white flex items-center mr-3 lg:mr-4'>
-                              <img src={Reacts} alt="react-icon" className='w-[24px] lg:w-[26px] mr-2 lg:mr-3' />
-                              <p>React</p>
-                            </div>
-                            <div className='w-max text-white flex items-center mr-3 lg:mr-4'>
-                              <img src={Node} alt="react-icon" className='w-[22px] lg:w-[24px] mr-2 lg:mr-3' />
-                              <p>Node</p>
-                            </div>
-                            <div className='w-max text-white flex items-center'>
-                              <img src={Mongodb} alt="react-icon" className='w-[22px] lg:w-[24px] mr-2 lg:mr-3' />
-                              <p>MongoDB</p>
-                            </div>
-                          </div>
-                          </div>
-                          <h3 className='text-[13px] lg:text-[16px] text-white'>Unipay facilitates students and faculty members to digitally process ordering and payment of fees.</h3>
-                        </div>
-                        <Link to={'https://unipay-ikmi.vercel.app/auth'}>
-                          <h3 className='cursor-pointer mt-6 hover:brightness-[90%] active:scale-[0.99] text-blue-700 relative top-[-6px] flex items-center lg:text-[15px] text-[14px]'>Unipay in here <FaArrowRight className='ml-4 relative top-[0.8]' /> </h3>
-                        </Link>
-                      </div>
-                      <div className='w-[100%] h-max overflow-hidden rounded-[10px] mt-[20px] lg:mt-[40px] border p-2 border-slate-800'>
-                        <img src={Unipay} alt="unipay-project" className=' hover:grayscale-[100%] h-nax duration-300' />
-                      </div>
-                    </div>
-                    <div className='w-full lg:w-[45%] bg-white lg:mb-0 mb-8 h-max mr-8 pb-6 px-4 pt-6 lg:px-8 lg:pb-12 lg:pt-8 border border-slate-700 rounded-[14px] lg:rounded-[20px]'>
-                    <div className='w-full h-max relative flex flex-col justify-between text-[20px] leading-loose text-white'>
-                      <div className='w-full'>
-                        <div className='w-full pb-3 lg:flex items-center justify-between border-b mb-4 border-b-slate-300'>
-                          <h2 className='text-white font-bold text-[26px] lg:text-[28px]'>Swiftvel</h2>
-                          <div className='w-max text-[14px] lg:text-[16px] flex items-center'>
-                          <div className='w-max text-white flex items-center mr-3 lg:mr-4'>
-                            <img src={Reacts} alt="react-icon" className='w-[24px] lg:w-[26px] mr-2 lg:mr-3' />
-                            <p>React</p>
-                          </div>
-                          <div className='w-max text-white flex items-center mr-3 lg:mr-4'>
-                            <img src={Node} alt="react-icon" className='w-[22px] lg:w-[24px] mr-2 lg:mr-3' />
-                            <p>Node</p>
-                          </div>
-                          <div className='w-max text-white flex items-center'>
-                            <img src={Mongodb} alt="react-icon" className='w-[22px] lg:w-[24px] mr-2 lg:mr-3' />
-                            <p>Mongodb</p>
-                          </div>
-                        </div>
-                        </div>
-                          <h3 className='text-[13px] lg:text-[16px] text-white'>Swiftvel is a platform for building websites by easily assembling various components (click and add).</h3>
-                        </div>
-                        <h3 className='cursor-pointer mt-6 hover:brightness-[90%] active:scale-[0.99] text-blue-700 relative top-[-6px] flex items-center lg:text-[15px] text-[14px]'>Swiftvel in here <FaArrowRight className='ml-4 relative top-[0.8]' /> </h3>
-                      </div>
-                      <div className='w-[100%] h-max overflow-hidden rounded-[10px] mt-[20px] lg:mt-[40px] border p-2 border-slate-800'>
-                        <img src={Swiftvel} alt="Swiftvel-project" className=' hover:grayscale-[100%] h-nax duration-300' />
-                      </div>
-                    </div> */}
-                </div>
+                  ))
+                }
               
               </div>
-
-              {/* <div className='w-[90vw] lg:flex flex-col lg:flex-row z-40 flex relative left-[0px] mt-[0px] lg:mt-14 h-max'>
-                <div className='w-full lg:w-[45%] bg-white lg:mb-0 mb-8 h-[max] mr-8 pb-6 px-4 pt-6 lg:px-8 lg:pb-12 lg:pt-8 border border-slate-700 rounded-[14px] lg:rounded-[20px]'>
-                    <div className='w-full h-max relative flex flex-col justify-between text-[20px] leading-loose text-white'>
-                      <div className='w-full'>
-                        <div className='w-full pb-3 lg:flex items-center justify-between border-b mb-4 border-b-slate-300'>
-                          <h2 className='text-white font-bold text-[26px] lg:text-[28px]'>Valclass</h2>
-                          <div className='w-max text-[14px] lg:text-[16px] flex items-center'>
-                          <div className='w-max text-white flex items-center mr-3 lg:mr-4'>
-                            <img src={HTML} alt="react-icon" className='w-[24px] lg:w-[26px] mr-2 lg:mr-3' />
-                            <p>HTML</p>
-                          </div>
-                          <div className='w-max text-white flex items-center'>
-                            <img src={JS} alt="react-icon" className='w-[22px] lg:w-[24px] mr-2 lg:mr-3' />
-                            <p>JS</p>
-                          </div>
-                        </div>
-                        </div>
-                        <h3 className='text-[13px] lg:text-[16px] text-white'>Valclass is a CSS framework that operates similar to Tailwind CSS and also provides ready-to-use components.</h3>
-                      </div>
-                      <Link to={'https://valclassui-v1.vercel.app/'}>
-                        <h3 className='cursor-pointer mt-6 hover:brightness-[90%] active:scale-[0.99] text-blue-700 relative top-[-6px] flex items-center lg:text-[15px] text-[14px]'>Valclass in here <FaArrowRight className='ml-4 relative top-[0.8]' /> </h3>
-                      </Link>
-                    </div>
-                    <div className='w-[100%] h-max overflow-hidden rounded-[10px] mt-[20px] lg:mt-[40px] border p-2 border-slate-800'>
-                      <img src={Valclass} alt="valclass-project" className=' hover:grayscale-[100%] h-nax duration-300' />
-                    </div>
-                  </div>
-                  <div className='w-full lg:w-[45%] bg-white lg:mb-0 mb-8 h-[max] mr-8 pb-6 px-4 pt-6 lg:px-8 lg:pb-12 lg:pt-8 border border-slate-700 rounded-[14px] lg:rounded-[20px]'>
-                    <div className='w-full h-max relative lg:flex flex-col justify-between text-[20px] leading-loose text-white'>
-                      <div className='w-full'>
-                        <div className='w-full pb-3 lg:flex items-center justify-between border-b mb-4 border-b-slate-300'>
-                          <h2 className='text-white font-bold text-[26px] lg:text-[28px]'>Flowtrush</h2>
-                          <div className='w-max text-[14px] lg:text-[16px] flex items-center'>
-                          <div className='w-max text-white flex items-center mr-3 lg:mr-4'>
-                            <img src={Reacts} alt="react-icon" className='w-[24px] lg:w-[26px] mr-2 lg:mr-3' />
-                            <p>React</p>
-                          </div>
-                          <div className='w-max text-white flex items-center mr-3 lg:mr-4'>
-                            <img src={Node} alt="react-icon" className='w-[22px] lg:w-[24px] mr-2 lg:mr-3' />
-                            <p>Node</p>
-                          </div>
-                          <div className='w-max text-white flex items-center'>
-                            <img src={Mongodb} alt="react-icon" className='w-[22px] lg:w-[24px] mr-2 lg:mr-3' />
-                            <p>Mongodb</p>
-                          </div>
-                        </div>
-                        </div>
-                        <h3 className='text-[13px] lg:text-[16px] text-white'>Flowtrush is created similar to Trello, to manage and organize task lists in a structured manner.</h3>
-                      </div>
-                      <Link to={'https://flowtrush.vercel.app/auth'}>
-                        <h3 className='cursor-pointer mt-6 hover:brightness-[90%] active:scale-[0.99] text-blue-700 relative top-[-6px] flex items-center lg:text-[15px] text-[14px]'>FlowTrush in here <FaArrowRight className='ml-4 relative top-[0.8]' /> </h3>
-                      </Link>
-                    </div>
-                    <div className='w-[100%] h-max overflow-hidden rounded-[10px] mt-[20px] lg:mt-[40px] border p-2 border-slate-800'>
-                    <img src={FlowTrush} alt="FlowTrush-project" className=' hover:grayscale-[100%] h-nax duration-300' />
-                    </div>
-                  </div>
-              </div>
-
-              <div className='w-[90vw] lg:flex flex-col lg:flex-row z-40 flex relative left-[0px] mt-0 lg:mt-14 h-max'>
-                <div className='w-full lg:w-[45%] bg-white lg:mb-0 mb-8 h-max mr-8 pb-6 px-4 pt-6 lg:px-8 lg:pb-12 lg:pt-8 border border-slate-700 rounded-[14px] lg:rounded-[20px]'>
-                    <div className='w-full h-max relative lg:flex flex-col justify-between text-[20px] leading-loose text-white'>
-                      <div className='w-full'>
-                        <div className='w-full pb-3 lg:flex items-center justify-between border-b mb-4 border-b-slate-300'>
-                          <h2 className='text-white font-bold text-[26px] lg:text-[28px]'>OMDB</h2>
-                          <div className='w-max text-[14px] lg:text-[16px] flex items-center'>
-                          <div className='w-max text-white flex items-center mr-3 lg:mr-4'>
-                            <img src={Reacts} alt="react-icon" className='w-[24px] lg:w-[26px] mr-2 lg:mr-3' />
-                            <p>React</p>
-                          </div>
-                          <div className='w-max text-white flex items-center'>
-                            <img src={TW} alt="react-icon" className='w-[22px] lg:w-[24px] mr-2 lg:mr-3' />
-                            <p>Tailwind</p>
-                          </div>
-                        </div>
-                        </div>
-                        <h3 className='text-[13px] lg:text-[16px] text-white'>OMDB is a platform to obtain a list of movies, built using React and utilizing the OMDB API.</h3>
-                      </div>
-                      <Link to={'https://omdb-api-vite.vercel.app/'}>
-                        <h3 className='cursor-pointer mt-6 hover:brightness-[90%] active:scale-[0.99] text-blue-700 relative top-[-6px] flex items-center lg:text-[15px] text-[14px]'>Valclass in here <FaArrowRight className='ml-4 relative top-[0.8]' /> </h3>
-                      </Link>
-                    </div>
-                    <div className='w-[100%] h-max overflow-hidden rounded-[10px] mt-[20px] lg:mt-[40px] border p-2 border-slate-800'>
-                      <img src={OMDB} alt="OMDB-project" className=' hover:grayscale-[100%] h-nax duration-300' />
-                    </div>
-                  </div>
-                  <div className='w-full lg:w-[45%] bg-white lg:mb-0 mb-8 h-max mr-8 pb-6 px-4 pt-6 lg:px-8 lg:pb-12 lg:pt-8 border border-slate-700 rounded-[14px] lg:rounded-[20px]'>
-                    <div className='w-full h-max relative lg:flex flex-col justify-between text-[20px] leading-loose text-white'>
-                      <div className='w-full'>
-                        <div className='w-full pb-3 lg:flex items-center justify-between border-b mb-4 border-b-slate-300'>
-                          <h2 className='text-white font-bold text-[26px] lg:text-[28px]'>WeatherWeb</h2>
-                          <div className='w-max text-[14px] lg:text-[16px] flex items-center'>
-                          <div className='w-max text-white flex items-center mr-3 lg:mr-4'>
-                            <img src={Reacts} alt="react-icon" className='w-[24px] lg:w-[26px] mr-2 lg:mr-3' />
-                            <p>React</p>
-                          </div>
-                          <div className='w-max text-white flex items-center mr-3 lg:mr-4'>
-                            <img src={TW} alt="react-icon" className='w-[22px] lg:w-[24px] mr-2 lg:mr-3' />
-                            <p>Tailwind</p>
-                          </div>
-                        </div>
-                        </div>
-                        <h3 className='text-[13px] lg:text-[16px] text-white'>WeatherWeb is a platform for checking weather conditions in a city, leveraging the API from openweathermap.</h3>
-                      </div>
-                      <Link to={'https://weather-iota-gilt.vercel.app/'}>
-                        <h3 className='cursor-pointer mt-6 hover:brightness-[90%] active:scale-[0.99] text-blue-700 relative top-[-6px] flex items-center lg:text-[15px] text-[14px]'>WeatherWeb in here<FaArrowRight className='ml-4 relative top-[0.8]' /> </h3>
-                      </Link>
-                    </div>
-                    <div className='w-[100%] h-max overflow-hidden rounded-[10px] mt-[20px] lg:mt-[40px] border p-2 border-slate-800'>
-                    <img src={Weather} alt="weather-project" className=' hover:grayscale-[100%] h-nax duration-300' />
-                    </div>
-                  </div>
-              </div>
-
-              <div className='w-[90vw] lg:flex flex-col lg:flex-row z-40 flex relative left-[0px] mt-0 lg:mt-14 h-max'>
-                <div className='w-full lg:w-[45%] bg-white lg:mb-0 mb-8 h-max mr-8 pb-6 px-4 pt-6 lg:px-8 lg:pb-12 lg:pt-8 border border-slate-700 rounded-[14px] lg:rounded-[20px]'>
-                    <div className='w-full h-max relative lg:flex flex-col justify-between text-[20px] leading-loose text-white'>
-                      <div className='w-full'>
-                        <div className='w-full pb-3 lg:flex items-center justify-between border-b mb-4 border-b-slate-300'>
-                          <h2 className='text-white font-bold text-[26px] lg:text-[28px]'>Puitisy</h2>
-                          <div className='w-max text-[14px] lg:text-[16px] flex items-center'>
-                          <div className='w-max text-white flex items-center mr-3 lg:mr-4'>
-                            <img src={Reacts} alt="react-icon" className='w-[24px] lg:w-[26px] mr-2 lg:mr-3' />
-                            <p>React</p>
-                          </div>
-                          <div className='w-max text-white flex items-center mr-3 lg:mr-4'>
-                            <img src={Node} alt="react-icon" className='w-[22px] lg:w-[24px] mr-2 lg:mr-3' />
-                            <p>Node</p>
-                          </div>
-                          <div className='w-max text-white flex items-center'>
-                            <img src={Mongodb} alt="react-icon" className='w-[22px] lg:w-[24px] mr-2 lg:mr-3' />
-                            <p>Mongodb</p>
-                          </div>
-                        </div>
-                        </div>
-                        <h3 className='text-[13px] lg:text-[16px] text-white'>– A digital space where words and poetic art unite, offering a platform for writers and readers to connect.</h3>
-                      </div>
-                      <Link to={'https://puitisy.vercel.app/'}>
-                        <h3 className='cursor-pointer mt-6 hover:brightness-[90%] active:scale-[0.99] text-blue-700 relative top-[-6px] flex items-center lg:text-[15px] text-[14px]'>Puitisy in here <FaArrowRight className='ml-4 relative top-[0.8]' /> </h3>
-                      </Link>
-                    </div>
-                    <div className='w-[100%] h-max overflow-hidden rounded-[10px] mt-[20px] lg:mt-[40px] border p-2 border-slate-800'>
-                      <img src={OMDB} alt="OMDB-project" className=' hover:grayscale-[100%] h-nax duration-300' />
-                    </div>
-                  </div>
-
-                  <div className='w-full text-white flex items-center justify-center text-[20px] lg:w-[45%] bg-transparent border-dashed border-2 border-slate-100 lg:mb-0 mb-8 h-max mr-8 pb-6 px-4 pt-6 lg:p-8 rounded-[14px] lg:rounded-[20px]'>
-                    <p>Cooming soon ...</p>
-                  </div>
-              </div> */}
           </div>
 
           <div id='linkedin' className='select-none px-14 relative lg:flex flex-col hidden z-[444] pb-[30px] lg:pb-[80px] lg:pt-4 w-full h-max border-slate-100'>
@@ -919,43 +610,7 @@ const Homepage: React.FC = () => {
                   </div>
                 </div>
               </div>
-              {/* <div className='w-full h-full bg-white/20 backdrop-blur-sm p-2 rounded-[20px] overflow-hidden'>
-              </div> */}
             </motion.div>
-
-            {/* <div className='relative w-[100vw] lg:w-[92vw] mx-auto lg:mx-0 text-left p-4 lg:p-10 z-40 overflow-hidden lg:left-[-35px] flex flex-col bg-white mt-8 lg:mt-14 lg:rounded-[12px] border border-slate-200 h-max'>
-              <h3 className='text-white text-[15px] lg:text-[18px] lg:mb-4 w-full lg:w-[90%] leading-loose'>Your LinkedIn profile section showcases your professional background, skills, education, and achievements, providing a comprehensive view of your career and allowing you to connect with other professionals in your field.</h3>
-              
-              <div className='w-full border border-slate-300 p-4 bg-white mt-5'>
-                <div className='w-full border-b border-b-slate-300 pb-3 mb-5'>
-                  <h2>Recomendation</h2>
-                </div>
-                <Link to={'https://www.linkedin.com/in/yoshua-gombo/'}>
-                  <div className='w-full ;g:flex items-center justify-between mb-4'>
-                    <div className='lg:flex items-center'>
-                      <div className='w-[40px] h-[40px] lg:mb-0 mb-4 overflow-hidden mr-3'>
-                        <img src={PakYos} alt="foto" />
-                      </div>
-                      <p>Pak. Yoshua Gombo - <br className='flex lg:hidden' /> <span className='text-slate-300 text-[12px] lg:text-[14px]'>Co-Founder at Konstruksi.AI | Robotics & AI</span></p>
-                    </div>
-                    <p className='bg-blue-500 text-white text-[14px]  px-3 w-max mt-4 py-[6px]'>Konstruksi.AI</p>
-                  </div>
-                </Link>
-
-                <p className='w-full mt-3 leading-loose text-slate-500 text-[14px] lg:text-[15px]'>
-                To whom it may concern:
-
-                Huda worked with us at Konstruksi.AI developing the core main product as a Frontend developer. Although he was an intern, Huda contributed greatly to the team. Huda has an excellent skill related to Frontend development and always completed his tasks in timely manner. He can perform both individually and within a team as well. I recommend him as a Frontend developer and I believe he will be a great asset to any company.
-                </p>
-              </div>
-              
-              <Link to={'https://www.linkedin.com/in/muhammad-khoirulhuda-223659207'}>
-                <div className='w-max h-max text-white cursor-pointer hover:brightness-[90%] text-[12px] lg:text-[16px] active:scale-[0.98] mt-7 lg:mt-16 bg-slate-800 flex items-center justify-center px-6 lg:px-8 py-3'>
-                  Look at linkedin <FaArrowRight className='ml-3' />
-                </div>
-              </Link>
-              <img src={Linkedin} alt="linkedin" className='absolute right-4 lg:right-10 bottom-4 lg:bottom-9 w-[6%]' />
-            </div> */}
           </div>
 
           <div id='experience' className='select-none px-14 h-max experience relative lg:flex flex-col hidden z-[335] pb-[30px] lg:pb-[80px] lg:pt-4 w-full border-slate-100'>
