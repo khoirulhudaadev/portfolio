@@ -23,6 +23,7 @@ import Dsikom from './diskom.svg'
 import Geospasial from './geospasial.svg'
 import Unipay from './unipay.svg'
 import Swiftvel from './swiftvel.svg'
+import Swiftvel2 from './swiftvel2.png'
 import Weather from './weather.svg'
 import Valclass from './valclass.svg'
 import OMDB from './OMDB.svg'
@@ -57,8 +58,14 @@ import Logo3 from './logo3.png'
 import Team from './team.jpg'
 import Team2 from './team2.jpg'
 import Inovasi from './inovasi.jpg'
+import Electshop1 from './electshop1.png'
+import Electshop2 from './electshop2.png'
+import Luvlywed from './luvlywed.png'
 
 export {
+    Luvlywed,
+    Electshop1,
+    Electshop2,
     Inovasi,
     Team,
     Team2,
@@ -110,6 +117,7 @@ export {
     Geospasial,
     Unipay,
     Swiftvel,
+    Swiftvel2,
     Weather,
     Valclass,
     OMDB,
