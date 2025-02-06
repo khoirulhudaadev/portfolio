@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import { Add01Icon, ArrowRight02Icon, ArrowUp01Icon, BrowserIcon, Building02Icon, Calendar04Icon, Cancel01Icon, Github01Icon, InformationDiamondIcon, Link03Icon, Linkedin01Icon, LinkSquare01Icon, MapPinIcon, Mortarboard02Icon, PaintBrush04Icon, Search01Icon, ViewIcon } from 'hugeicons-react'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { FaArrowRight, FaTimes } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import { Build, Cirebon, Electshop1, Electshop2, Geospasial, Git1, Git2, Git3, Inovasi, Jakarta, JWD, KonstruksiLogo, Laravel, Luvlywed, Majalengka, Node, OMDB, Pacticles2, PakYos, Reacts, Redux, Swiftvel, Swiftvel2, Team, TS, Weather, Winner } from '../Assets'
@@ -21,6 +21,16 @@ const Homepage: React.FC = () => {
   const [activeSearch, setActiveSearch] = useState<boolean>(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isBackToTop, setIsBackToTop] = useState(false);
+
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      video.currentTime = 5; // Mulai dari detik ke-5
+      video.play(); // Pastikan video tetap berjalan
+    }
+  }, []);
 
   // Menambahkan event listener untuk ESC key
   useEffect(() => {
@@ -123,7 +133,17 @@ const Homepage: React.FC = () => {
     <>
       <FadeTransition />
 
-      <video className="fixed z-[-1] top-0 left-0 w-full h-auto select-none" disablePictureInPicture disableRemotePlayback autoPlay loop muted playsInline src="https://l4wlsi8vxy8hre4v.public.blob.vercel-storage.com/video/glass-animation-5-f0gPcjmKFIV3ot5MGOdNy2r4QHBoXt.mp4"></video>
+      <video 
+        ref={videoRef}
+        className="fixed z-[-1] top-0 left-0 w-full h-auto select-none"
+        disablePictureInPicture
+        disableRemotePlayback
+        autoPlay
+        loop
+        muted
+        playsInline
+        src="https://l4wlsi8vxy8hre4v.public.blob.vercel-storage.com/video/glass-animation-5-f0gPcjmKFIV3ot5MGOdNy2r4QHBoXt.mp4">
+      </video>
 
       {
         activeModalSearch ? (
