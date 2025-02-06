@@ -1,5 +1,6 @@
 import { CircleIcon, LinkSquare01Icon, Search01Icon } from "hugeicons-react";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 interface ModalState {
     onClose: () => void;
@@ -90,7 +91,12 @@ const internship = [
   );
 
   return (
-    <div className="w-screen h-screen fixed z-[99999999999999] bg-black/80 flex justify-center items-center">
+    <motion.div 
+        initial={{ opacity: 0, filter: 'blur(10px)' }}
+        whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
+        viewport={{ once: true, amount: 0.2 }} 
+        className="w-screen h-screen fixed z-[99999999999999] bg-black/80 flex justify-center items-center">
         <div className="relative left-[-16px] w-[60vw] h-[80vh] bg-white/20 backdrop-blur-2xl p-4 rounded-[24px]">
             <div className="relative w-[60vw] h-[80vh] overflow-hidden bg-white p-6 rounded-[20px]">
                 <div className='w-full flex items-center justify-between border-b border-b-slate-300 pb-3'>
@@ -200,7 +206,7 @@ const internship = [
                 </div>
             </div>
         </div>
-    </div>
+    </motion.div>
   )
 }
 
