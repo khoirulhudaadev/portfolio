@@ -412,16 +412,9 @@ const Homepage: React.FC = () => {
                             <MapPinIcon size={30} className="text-black relative top-[-3px]" />
                             <h2 className='text-black font-medium text-[26px] lg:text-[28px]'>SI GEO</h2>
                           </div>
-                          <div className='w-max text-[14px] lg:text-[16px] flex items-center'>
-                            <div className='w-max text-black flex items-center mr-3 lg:mr-4'>
-                              <p>React</p>
-                            </div>
-                            <div className='w-max text-black flex items-center mr-3 lg:mr-4'>
-                              <p>Node</p>
-                            </div>
-                            <div className='w-max text-black flex items-center'>
-                              <p>MongoDB</p>
-                            </div>
+                          <div className='text-slate-400 w-max text-[14px] px-4 py-1 flex items-center border border-slate-400 rounded-[8px] bg-slate-100 justify-center cursor-pointer active:scale-[0.99] hover:brightness-95'>
+                            <Link03Icon className="transform rotate-[45deg]" />
+                            <p className="ml-3 font-normal">Preview</p>
                           </div>
                         </div>
                         <p className='text-[14px] lg:w-[80%] mt-6 mb-10 text-slate-800'>Sigeo is an abbreviation for Geographic Information System (GIS), a technology used to gather, store, manipulate, analyze, and visualize location-based or geographic data in Cirebon Regency.</p>
