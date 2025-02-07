@@ -256,7 +256,7 @@ const Homepage: React.FC = () => {
                 </div>
               </div>
               <div className="w-max h-max">
-                <a href="https://github.com/khoirulhudaadev" className="ml-auto">
+                <a href="https://github.com/khoirulhudaadev" className="ml-auto" target="_blank" rel="noopener noreferrer" aria-label="My GitHub">
                   <Github01Icon size={30} className="animate-fadeIn delay-[1000ms]" />
                 </a>
               </div>
