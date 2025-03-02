@@ -297,9 +297,9 @@ const Homepage: React.FC = () => {
             <p className='w-full md:w-max text-slate-300 md:px-3 text-md md:text-lg md:tracking-tighter md:text-balance max-md:font-medium animate-fadeIn delay-[1000ms]'>Welcome to my homebase—where ideas, creativity, and experience come together in a digital portfolio</p>
           </div>
 
-          <div className='relative z-[99999] my-7 py-2 flex-col lg:flex items-center before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
+          <div className='relative z-[99999] my-7 py-2 flex-col md:flex-row md:flex items-center before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
             <button className='relative active:scale-[0.99] hover:brightness-[90%] z-[99999] outline-0 md:ml-4 md:mr-6 rounded-full bg-white px-4 py-3 w-max lg h-max text-center text-[14px] font-normal text-black animate-fadeIn delay-[1000ms]'>Download Resume</button>
-            <div onClick={() => setActiveModalSearch(true)} className="active:scale-[0.99] outline-0 grid md:mt-0 mt-4 w-full md:w-[100px] grid-cols-[auto_1fr_auto] items-center gap-1 rounded-full px-4 py-3 text-left text-sm/6 sm:w-80 bg-white/5 text-white/50 animate-fadeIn delay-[1000ms]">
+            <div onClick={() => setActiveModalSearch(true)} className="active:scale-[0.99] outline-0 grid md:mt-0 mt-4 w-full md:w-[480px] grid-cols-[auto_1fr_auto] items-center gap-1 rounded-full px-4 py-3 text-left text-sm/6 sm:w-80 bg-white/5 text-white/50 animate-fadeIn delay-[1000ms]">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" className="-ml-0.5 size-4 fill-gray-600 dark:fill-gray-500">
                 <path fill-rule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clip-rule="evenodd">
                 </path>
@@ -384,7 +384,7 @@ const Homepage: React.FC = () => {
             whileInView={{ opacity: 1, filter: 'blur(0px)' }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
-            className='w-full mt-4 mb-10 flex-col md:flex justify-between items-center '>
+            className='w-full mt-4 mb-10 flex-col md:flex-row md:flex justify-between items-center '>
             <h2 className='relative text-[32px] md:text-[40px] text-white font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>SIGEO - web app</h2>
             <div className='flex w-max'>
               <div className="relative flex items-center gap-6 md:p-6 md:mt-0 mt-4 text-white">
