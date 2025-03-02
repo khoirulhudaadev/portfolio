@@ -11,3 +11,56 @@
 ::-webkit-scrollbar {
     display: none;
 }
+
+/* InfiniteSlider.css */
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    position: relative;
+    z-index: 999;
+  }
+  
+  .slider-wrapper {
+    display: flex;
+    width: max-content;
+    animation: slide 12s linear infinite;
+  }
+  
+  .slider-content {
+    margin-top: 20px;
+    display: flex;
+    gap: 40px;
+    margin-left: 22px;
+    align-items: center;
+  }
+  
+  .slide-item {
+    width: 80px;
+    height: 60px;
+    filter: grayscale(100%);
+    object-fit: contain;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .slide-item {
+      width: 60px;
+      height: 60px;
+    }
+    
+    .slider-content {
+      gap: 20px;
+    }
+  }
