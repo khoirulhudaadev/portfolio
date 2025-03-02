@@ -61,8 +61,10 @@ import Inovasi from './inovasi.jpg'
 import Electshop1 from './electshop1.png'
 import Electshop2 from './electshop2.png'
 import Luvlywed from './luvlywed.png'
+import Unipay2 from './unipay2.png'
 
 export {
+    Unipay2,
     Luvlywed,
     Electshop1,
     Electshop2,
@@ -70,7 +72,7 @@ export {
     Team,
     Team2,
     Logo1,
-    Logo2, 
+    Logo2,
     Logo3,
     KonstruksiLogo,
     Build,
