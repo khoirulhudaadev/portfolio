@@ -137,7 +137,7 @@ const Homepage: React.FC = () => {
 
       <video
         ref={videoRef}
-        className="fixed z-[-1] top-0 left-0 w-auto lg:w-full h-screen lg:h-auto select-none"
+        className="fixed z-[-1] rotate-90 md:rotate-0 top-0 left-0 scale-[4] md:scale-[1] w-full h-screen lg:h-auto select-none"
         disablePictureInPicture
         disableRemotePlayback
         autoPlay
@@ -154,7 +154,7 @@ const Homepage: React.FC = () => {
           <></>
       }
 
-      <div className='relative md:w-[94vw] mx-auto min-h-screen overflow-x-hidden bg-black bg-opacity-[80%] md:bg-opacity-[90%]'>
+      <div className='relative md:w-[94vw] mx-auto min-h-screen overflow-x-hidden bg-black bg-opacity-[75%] md:bg-opacity-[90%]'>
 
         {/* Modal certification */}
         {
@@ -172,7 +172,7 @@ const Homepage: React.FC = () => {
         </div> */}
 
         {/* Nabar */}
-        <nav className={`fixed duration-300 top-0 left-0 w-full z-[999999999] flex items-center justify-between gap-10 h-max ${isScrolled ? 'bg-white/10 backdrop-blur-xl py-3 md:py-1 px-6 md:px-[44px]' : 'bg-transparent py-4 px-6 md:px-[90px]'}`}>
+        <nav className={`fixed duration-300 top-0 left-0 w-full z-[999999999] flex items-center justify-between gap-10 h-max ${isScrolled ? 'bg-white/10 backdrop-blur-xl py-3 md:py-1 px-4 md:px-[44px]' : 'bg-transparent py-4 px-4 md:px-[90px]'}`}>
           <div className="flex items-center w-max text-white gap-10">
             <p className="md:hidden flex">8.21.4.1</p>
 
@@ -268,7 +268,7 @@ const Homepage: React.FC = () => {
         {/* Akhir navbar */}
 
 
-        <div id='home' className='select-none relative z-[4449] md:px-10 px-6 mb-6 md:pb-10 mt-12 md:mt-[90px] w-[100%] h-max pt-16 border-slate-100'>
+        <div id='home' className='select-none relative z-[4449] md:px-10 px-4 mb-6 md:pb-10 mt-12 md:mt-[90px] w-[100%] h-max pt-16 border-slate-100'>
           <div className="absolute left-[25%] top-0 w-[20%] h-[40px] py-[30%] transform -translate-y-[90%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_20%,_#5049c2_23%,_rgba(87,78,255,0)_0%)] blur-[250px]"></div>
 
           <img src={Pacticles2} alt='particles' className='absolute right-[10%] top-[30%] w-[60%]' />
@@ -319,7 +319,7 @@ const Homepage: React.FC = () => {
 
         </div>
 
-        <div id='languages' className='select-none px-6 md:px-14 relative md:flex flex-col z-[444] pb-[30px] md:pb-[80px] pt-6 md:pt-4 w-full h-max border-slate-100'>
+        <div id='languages' className='select-none px-4 md:px-14 relative md:flex flex-col z-[444] pb-[30px] md:pb-[80px] pt-6 md:pt-4 w-full h-max border-slate-100'>
 
           <div className="absolute z-[33] left-[20%] w-[60%] h-[40px] py-[30%] transform -translate-y-[75%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[240px]"></div>
           <div className="absolute z-[33] left-[25%] w-[30%] h-[40px] py-[30%] transform -translate-y-[51%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[240px]"></div>
@@ -331,7 +331,7 @@ const Homepage: React.FC = () => {
               whileInView={{ opacity: 1, filter: 'blur(0px)' }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
               viewport={{ once: true, amount: 0.2 }}
-              className='relative text-[32px] md:text-[40px] text-white font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'
+              className='relative text-[30px] md:text-[40px] text-white font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'
             >
               Skill in languages
             </motion.h2>
@@ -372,7 +372,7 @@ const Homepage: React.FC = () => {
           </motion.div>
         </div>
 
-        <div id='products' className='select-none px-6 md:px-14 relative md:flex flex-col z-[4444] pb-[30px] md:pb-[80px] pt-6 md:pt-4 w-full h-max border-slate-100'>
+        <div id='products' className='select-none px-4 md:px-14 relative md:flex flex-col z-[4444] pb-[30px] md:pb-[80px] pt-6 md:pt-4 w-full h-max border-slate-100'>
 
           <div className="absolute z-[33] left-[20%] w-[60%] h-[40px] py-[30%] transform -translate-y-[45%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[140px]"></div>
           <div className="absolute z-[33] left-[15%] w-[100%] h-[40px] py-[30%] transform -translate-y-[51%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[70px]"></div>
@@ -385,7 +385,7 @@ const Homepage: React.FC = () => {
             transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
             className='w-full mt-4 mb-10 flex-col md:flex-row md:flex justify-between items-center '>
-            <h2 className='relative text-[32px] md:text-[40px] text-white font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>SIGEO - web app</h2>
+            <h2 className='relative text-[30px] md:text-[40px] text-white font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>SIGEO - web app</h2>
             <div className='flex w-max'>
               <div className="relative flex items-center gap-6 md:p-6 md:mt-0 mt-4 text-white">
                 <p>Go to website</p>
@@ -417,12 +417,12 @@ const Homepage: React.FC = () => {
                       <MapPinIcon size={30} className="text-black relative top-[-3px]" />
                       <h2 className='text-black font-medium text-[26px] md:text-[28px]'>SI GEO</h2>
                     </div>
-                    <div className='text-slate-400 w-max text-[14px] px-4 py-1 flex items-center border border-slate-400 rounded-[8px] bg-slate-100 justify-center cursor-pointer active:scale-[0.99] hover:brightness-95'>
+                    <div className='text-slate-400 w-max text-[14px] px-4 py-1 hidden md:flex items-center border border-slate-400 rounded-[8px] bg-slate-100 justify-center cursor-pointer active:scale-[0.99] hover:brightness-95'>
                       <Link03Icon className="transform rotate-[45deg]" />
                       <p className="ml-3 font-normal">Preview</p>
                     </div>
                   </div>
-                  <p className='text-[14px] md:w-[80%] mt-6 mb-10 text-slate-800'>Sigeo is an abbreviation for Geographic Information System (GIS), a technology used to gather, store, manipulate, analyze, and visualize location-based or geographic data in Cirebon Regency.</p>
+                  <p className='text-[14px] md:w-[80%] mt-4 md:mt-6 mb-10 text-slate-800'>Sigeo is an abbreviation for Geographic Information System (GIS), a technology used to gather, store, manipulate, analyze, and visualize location-based or geographic data in Cirebon Regency.</p>
                 </div>
 
                 <div className='w-full relative h-max md:h-full md:rounded-[24px] border border-gray-700 md:p-6'>
@@ -430,12 +430,16 @@ const Homepage: React.FC = () => {
                     <img src={Geospasial} alt="geospasial-project" />
                   </div>
                 </div>
+                <div className='text-slate-500 w-full text-[14px] px-4 py-2 flex md:hidden mt-4 items-center border border-slate-400 rounded-[8px] bg-slate-100 justify-center cursor-pointer active:scale-[0.99] hover:brightness-95'>
+                  <Link03Icon className="transform rotate-[45deg]" />
+                  <p className="ml-3 font-normal">Preview</p>
+                </div>
               </div>
             </motion.div>
 
           </div>
 
-          <div className='mt-12 md:mt-20'>
+          <div className='mt-16 md:mt-20'>
             <motion.small
               initial={{ opacity: 0, filter: 'blur(10px)' }}
               whileInView={{ opacity: 1, filter: 'blur(0px)' }}
@@ -448,7 +452,7 @@ const Homepage: React.FC = () => {
               transition={{ duration: 0.5, ease: 'easeOut' }}
               viewport={{ once: true, amount: 0.2 }}
               className='w-full mt-4 mb-10 flex-col md:flex justify-between items-center '>
-              <h2 className='relative w-full text-[32px] md:text-[40px] text-white font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
+              <h2 className='relative w-full text-[30px] md:text-[40px] text-white font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
                 Our web products
               </h2>
               <div className='hidden md:flex w-max'>
@@ -465,22 +469,22 @@ const Homepage: React.FC = () => {
               whileInView={{ opacity: 1, filter: 'blur(0px)' }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
               viewport={{ once: true, amount: 0.2 }}
-              className='relative z-[99999999] w-full grid grid-cols-1 md:grid-cols-3 mt-14 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
-              <div onClick={() => { setSelectType('apps'), setSelectAccordion(1) }} className={`flex gap-6 ${selectType === 'apps' ? 'bg-[#ff69df11]' : ''} items-center cursor-pointer px-0 py-4 md:px-0 md:py-6`}>
+              className='relative z-[99999999] w-full grid grid-cols-1 md:grid-cols-3 mt-8 md:mt-14 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
+              <div onClick={() => { setSelectType('apps'), setSelectAccordion(1) }} className={`flex gap-6 ${selectType === 'apps' ? 'bg-[#ff69df11]' : ''} items-center cursor-pointer px-0 py-4 md:px-6 md:py-6`}>
                 <BrowserIcon size={46} className={`${selectType === 'apps' ? 'text-[#f85c98]' : 'text-white'}`} />
                 <div className='flex-1'>
                   <h3 className={`${selectType === 'apps' ? 'text-[#f85c98]' : 'text-white'} font-medium`}>Web apps</h3>
                   <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>Building web apps that simplify tasks and boost productivity.</p>
                 </div>
               </div>
-              <div onClick={() => { setSelectType('API'), setSelectAccordion(1) }} className={`flex gap-6 ${selectType === 'API' ? 'bg-[#9e69ff11]' : ''} items-center cursor-pointer px-0 py-4 md:px-0 md:py-6 border-x-[0.5px] border-gray-700`}>
+              <div onClick={() => { setSelectType('API'), setSelectAccordion(1) }} className={`flex gap-6 ${selectType === 'API' ? 'bg-[#9e69ff11]' : ''} items-center cursor-pointer px-0 py-4 md:px-6 md:py-6 md:border-x-[0.5px] border-gray-700`}>
                 <Link03Icon size={45} className={`${selectType === 'API' ? 'text-[#5E5CF8]' : 'text-white'}`} />
                 <div className='flex-1'>
                   <h3 className={`${selectType === 'API' ? 'text-[#5E5CF8]' : 'text-white'} font-medium`}>Integrate API</h3>
                   <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>Integrating APIs to ensure fast and seamless functionality.</p>
                 </div>
               </div>
-              <div onClick={() => { setSelectType('slicing'), setSelectAccordion(1) }} className={`flex gap-6 ${selectType === 'slicing' ? 'bg-[#69dcff11]' : ''} items-center cursor-pointer px-0 py-4 md:px-0 md:py-6`}>
+              <div onClick={() => { setSelectType('slicing'), setSelectAccordion(1) }} className={`flex gap-6 ${selectType === 'slicing' ? 'bg-[#69dcff11]' : ''} items-center cursor-pointer px-0 py-4 md:px-6 md:py-6`}>
                 <PaintBrush04Icon size={46} className={`${selectType === 'slicing' ? 'text-[#5cc7f8]' : 'text-white'}`} />
                 <div className='flex-1'>
                   <h3 className={`${selectType === 'slicing' ? 'text-[#5cc7f8]' : 'text-white'} font-medium`}>Slicing</h3>
@@ -546,7 +550,7 @@ const Homepage: React.FC = () => {
 
                       <motion.div
                         key={selectAccordion} // Animasi berjal an setiap kali konten berubah
-                        className='relative flex shadow-[0_35px_30px_rgba(0,0,30,0.4)] justify-center items-center md:rounded-[24px] overflow-hidden bg-white/20 backdrop-blur-2xl p-2 w-full h-[260px] md:mt-6'
+                        className='relative flex shadow-[0_35px_30px_rgba(0,0,30,0.4)] justify-center items-center md:rounded-[24px] overflow-hidden bg-white/20 backdrop-blur-2xl md:p-2 w-full h-[260px] md:mt-6'
                         initial={{ opacity: 0, y: 40 }} // Muncul dari bawah
                         animate={{ opacity: 1, y: 0 }} // Naik ke posisi normal
                         exit={{ opacity: 0, y: -20 }} // Keluar ke atas (opsional)
@@ -567,7 +571,7 @@ const Homepage: React.FC = () => {
           </div>
         </div>
 
-        <div id='linkedin' className='select-none px-6 md:px-14 relative md:flex flex-col z-[444] pb-[30px] md:pb-[80px] pt-6 md:pt-4 w-full h-max border-slate-100'>
+        <div id='linkedin' className='select-none px-4 md:px-14 relative md:flex flex-col z-[444] pb-[30px] md:pb-[80px] pt-6 md:pt-4 w-full h-max border-slate-100'>
           <motion.small
             initial={{ opacity: 0, filter: 'blur(10px)' }}
             whileInView={{ opacity: 1, filter: 'blur(0px)' }}
@@ -580,7 +584,7 @@ const Homepage: React.FC = () => {
             transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
             className='w-full mt-4 mb-10 md:flex justify-between items-center '>
-            <h2 className='relative text-[32px] md:text-[40px] text-white font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Profile - linkedin</h2>
+            <h2 className='relative text-[30px] md:text-[40px] text-white font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Recommend - in</h2>
             <div className='flex w-max'>
               <div className="relative flex items-center gap-6 md:mt-0 mt-4 md:p-6 text-white after:absolute after:right-0 after:w-px after:h-[30vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[120px]">
                 <p>Go to linkedin</p>
@@ -633,7 +637,7 @@ const Homepage: React.FC = () => {
           </motion.div>
         </div>
 
-        <div id='experience' className='select-none px-6 md:px-14 h-max experience relative md:flex flex-col z-[335] pb-[30px] md:pb-[80px] mt-6 md:pt-4 w-full border-slate-100'>
+        <div id='experience' className='select-none px-4 md:px-14 h-max experience relative md:flex flex-col z-[335] pb-[30px] md:pb-[80px] pt-6 md:pt-4 w-full border-slate-100'>
           <motion.small
             initial={{ opacity: 0, filter: 'blur(10px)' }}
             whileInView={{ opacity: 1, filter: 'blur(0px)' }}
@@ -646,7 +650,7 @@ const Homepage: React.FC = () => {
             transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
             className='w-full mt-4 mb-10 mf:flex justify-between items-center '>
-            <h2 className='relative text-[30px] md:text-[40px] text-white font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Experience - Internship</h2>
+            <h2 className='relative flex items-center w-max text-[30px] md:text-[40px] text-white font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'><span className='md:flex hidden'>Experience - </span>Internship</h2>
             <div className='flex w-max'>
               <div className="relative flex items-center gap-6 md:mt-0 mt-4 md:p-6 text-white after:absolute after:right-0 after:w-px after:h-[200vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[100vh]">
                 <p>konstruksi web</p>
@@ -707,7 +711,7 @@ const Homepage: React.FC = () => {
           </motion.div>
         </div>
 
-        <div id='education' className='select-none px-6 md:px-14 relative md:flex flex-col z-[33333] pb-[30px] md:pb-[80px] md:pt-4 w-full h-max border-slate-100'>
+        <div id='education' className='select-none px-4 md:px-14 relative md:flex flex-col z-[33333] pb-[30px] md:pb-[80px] pt-6 md:pt-4 w-full h-max border-slate-100'>
 
           <img src={Pacticles2} alt='particles' className='absolute left-[10%] top-[-20%] w-[60%] rotate-[-30deg] opacity-[70%]' />
 
@@ -723,7 +727,7 @@ const Homepage: React.FC = () => {
             transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
             className='w-full mt-4 mb-10 md:flex justify-between items-center '>
-            <h2 className='relative text-[32px] md:text-[40px] text-white font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
+            <h2 className='relative text-[30px] md:text-[40px] text-white font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
               <a href='https://github.com/khorulhudaa' className='flex items-center gap-4'>
                 Last education <LinkSquare01Icon className='text-[#00B4F5]' />
               </a>
@@ -777,7 +781,7 @@ const Homepage: React.FC = () => {
 
         </div>
 
-        <div id='teamwork' className='select-none px-6 md:px-14 relative md:flex flex-col z-[3333] pb-[30px] md:pb-[80px] md:pt-4 w-full h-max border-slate-100'>
+        <div id='teamwork' className='select-none px-4 md:px-14 relative md:flex flex-col z-[3333] pb-[30px] md:pb-[80px] md:pt-4 w-full h-max border-slate-100'>
 
           <div className="absolute z-40 left-[20%] w-[60%] h-[40px] py-[30%] transform -translate-y-[45%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[140px]"></div>
           <div className="absolute md:flex hidden z-40 left-[15%] w-[100%] h-[40px] py-[30%] transform -translate-y-[65%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[25px]"></div>
@@ -795,7 +799,7 @@ const Homepage: React.FC = () => {
             transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
             className='w-full mt-4 mb-10 md:flex justify-between items-center '>
-            <h2 className='relative text-[32px] md:text-[40px] text-white font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
+            <h2 className='relative text-[30px] md:text-[40px] text-white font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
               <a href='https://github.com/khorulhudaa' className='flex items-center gap-4'>
                 Worked in a team <LinkSquare01Icon className='text-[#00B4F5]' />
               </a>
@@ -824,12 +828,9 @@ const Homepage: React.FC = () => {
             >
               <div className='w-full h-max md:h-full md:rounded-[20px] bg-white'>
                 <div className='w-full relative flex h-full md:rounded-[16px] overflow-hidden border border-gray-700'>
-                  <div className='relative w-full h-full overflow-hidden md:mt-6 md:mt-0'>
+                  <div className='relative w-full h-full overflow-hidden md:mt-6 mt-0'>
                     <img src={Team} alt="team-konstruksi" className="h-auto md:h-auto object-cover w-full relative md:bottom-[65%] grayscale-[100%]" />
                   </div>
-                  {/* <div className='relative w-1/2 h-full overflow-hidden lg mt-6 md:mt-0'>
-                          <img src={Team2} alt="geospasial-project" className="h-full object-cover w-full bg-bottom" />
-                        </div> */}
                 </div>
               </div>
             </motion.div>
@@ -837,7 +838,7 @@ const Homepage: React.FC = () => {
 
         </div>
 
-        <div id='github' className='select-none px-6 md:px-14 relative md:flex flex-col z-[3333] pb-[30px] md:pb-[80px] md:pt-4 w-full h-max border-slate-100'>
+        <div id='github' className='select-none px-4 md:px-14 relative md:flex flex-col z-[3333] pb-[30px] md:pb-[80px] pt-6 md:pt-4 w-full h-max border-slate-100'>
           <motion.small
             initial={{ opacity: 0, filter: 'blur(10px)' }}
             whileInView={{ opacity: 1, filter: 'blur(0px)' }}
@@ -850,7 +851,7 @@ const Homepage: React.FC = () => {
             transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
             className='w-full mt-4 mb-10 md:flex justify-between items-center '>
-            <h2 className='relative text-[32px] md:text-[40px] text-white font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
+            <h2 className='relative text-[30px] md:text-[40px] text-white font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
               <a href='https://github.com/khorulhudaa' className='flex items-center gap-4'>
                 Github account <LinkSquare01Icon className='text-[#00B4F5]' />
               </a>
@@ -869,14 +870,14 @@ const Homepage: React.FC = () => {
             viewport={{ once: true, amount: 0.2 }}
             className='relative text-base text-slate-300 w-full md:w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</motion.p>
 
-          <div className="w-[86vw] md:h-max h-[300px] mt-12 mx-auto bg-white/20 backdrop-blur-2xl p-4 md:rounded-[20px]">
+          <div className="md:w-[86vw] h-max mt-12 mx-auto bg-white/20 backdrop-blur-2xl md:p-4 md:rounded-[20px]">
             <motion.div
               initial={{ opacity: 0, filter: 'blur(10px)' }}
               whileInView={{ opacity: 1, filter: 'blur(0px)' }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
               viewport={{ once: true, amount: 0.2 }}
               id='calendar'
-              className="select-none relative md:flex flex-col hidden z-[3333] w-full h-max border-slate-100"
+              className="select-none relative md:flex flex-col z-[3333] w-full h-max border-slate-100"
             >
               <FilteredGitHubCalendar username="khoirulhudaa" />
             </motion.div>
@@ -918,7 +919,7 @@ const Homepage: React.FC = () => {
           </motion.div>
         </div>
 
-        <div id='certifications' className='select-none relative px-6 md:px-14 md:flex flex-col z-[233] pb-[30px] md:pb-[80px] md:pt-4 w-full h-max border-slate-100'>
+        <div id='certifications' className='select-none relative px-4 md:px-14 md:flex flex-col z-[233] pb-[30px] md:pb-[80px] md:pt-4 w-full h-max border-slate-100'>
           <motion.small
             initial={{ opacity: 0, filter: 'blur(10px)' }}
             whileInView={{ opacity: 1, filter: 'blur(0px)' }}
@@ -931,7 +932,7 @@ const Homepage: React.FC = () => {
             transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
             className='w-full mt-4 mb-10 md:flex justify-between items-center '>
-            <h2 className='relative text-[32px] md:text-[40px] text-white mt-4 mb-10 font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Web competition awards</h2>
+            <h2 className='relative text-[30px] md:text-[40px] text-white mt-4 mb-10 font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Web competition awards</h2>
             <div className='hidden md:flex w-max'>
               <div className="relative text-transparent flex items-center gap-6 md:mt-0 mt-4 md:p-6 after:absolute after:right-0 after:w-px after:h-[100vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[50vh]">
                 <p>konstruksi web</p>
@@ -958,7 +959,7 @@ const Homepage: React.FC = () => {
             className="w-full bg-white/20 backdrop-blur-2xl md:p-4 mt-12 md:rounded-[20px]">
 
             <div className='relative w-full bg-white md:rounded-tl-[16px] md:rounded-tr-[16px] md:grid grid-cols-2'>
-              <div className={`relative flex gap-6 items-center cursor-pointer px-6 py-16`}>
+              <div className={`relative flex gap-6 items-center cursor-pointer px-4 md:px-6 py-16`}>
                 <img src={Winner} alt="git" className="w-12" />
                 <div className='flex-1'>
                   <div className='w-max flex items-center gap-2' onClick={() => {
@@ -971,7 +972,7 @@ const Homepage: React.FC = () => {
                   <p className='text-[14px] mt-2 text-slate-500 leading-loose tracking-tighter'>National-level Web Development Competition,</p>
                 </div>
               </div>
-              <div className={`relative flex gap-6 items-center cursor-pointer px-6 py-16 border-l border-slate-300`}>
+              <div className={`relative flex gap-6 items-center cursor-pointer px-4 md:px-6 py-16 border-l border-slate-300`}>
                 <img src={Winner} alt="git" className="w-12" />
                 <div className='flex-1'>
                   <div className='w-max flex items-center gap-2' onClick={() => {
@@ -987,7 +988,7 @@ const Homepage: React.FC = () => {
             </div>
 
             <div className='relative w-full bg-white grid grid-cols-1'>
-              <div className={`flex gap-6 ${selectTypeGit === 'git3' ? 'bg-[#69dcff11]' : ''} items-center cursor-pointer px-6 py-16 border-t border-slate-300 w-full`}>
+              <div className={`flex gap-6 ${selectTypeGit === 'git3' ? 'bg-[#69dcff11]' : ''} items-center cursor-pointer px-4 md:px-6 py-16 border-t border-slate-300 w-full`}>
                 <img src={Winner} alt="git" className="w-12" />
                 <div className='flex-1'>
                   <div className='w-max flex items-center gap-2' onClick={() => {
@@ -1003,7 +1004,7 @@ const Homepage: React.FC = () => {
             </div>
 
             <div className='relative w-full bg-white md:rounded-bl-[16px] md:rounded-br-[16px] grid md:grid-cols-2 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
-              <div className={`relative flex gap-6 items-center cursor-pointer px-6 py-16 border-t border-slate-300 w-full`}>
+              <div className={`relative flex gap-6 items-center cursor-pointer px-4 md:px-6 py-16 border-t border-slate-300 w-full`}>
                 <img src={Winner} alt="git" className="w-12" />
                 <div className='flex-1'>
                   <div className='w-max flex items-center gap-2' onClick={() => {
@@ -1016,7 +1017,7 @@ const Homepage: React.FC = () => {
                   <p className='text-[14px] mt-2 text-slate-500 leading-loose tracking-tighter'>Inter-College Landing Page Web Competition exclusively.</p>
                 </div>
               </div>
-              <div className={`relative flex gap-6 items-center cursor-pointer px-6 py-16 border-t border-x border-slate-300`}>
+              <div className={`relative flex gap-6 items-center cursor-pointer px-4 md:px-6 py-16 border-t border-x border-slate-300`}>
                 <img src={Winner} alt="git" className="w-12" />
                 <div className='flex-1'>
                   <div className='w-max flex items-center gap-2' onClick={() => {
