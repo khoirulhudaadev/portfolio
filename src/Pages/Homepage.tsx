@@ -102,7 +102,7 @@ const Homepage: React.FC = () => {
       desc: "This project trains API integration skills by displaying the weather conditions of a specific area.",
       image1: Unipay,
       image2: Unipay2,
-      url: "https://swiftvel.vercel.app",
+      url: "https://unipay-app.vercel.app/",
       category: "apps"
     },
     {
@@ -110,15 +110,7 @@ const Homepage: React.FC = () => {
       desc: "This project trains API integration skills by displaying text and audio of each chapter in the holy book of the Quran.",
       image1: Jannah,
       image2: "",
-      url: "",
-      category: "API"
-    },
-    {
-      title: "OMDB API",
-      desc: "This is a popular movie listing website sourced from the OMDB API endpoint.",
-      image1: OMDB,
-      image2: "",
-      url: "",
+      url: "https://alquran-jannah-v1.vercel.app/",
       category: "API"
     },
     {
@@ -126,7 +118,15 @@ const Homepage: React.FC = () => {
       desc: "This project trains API integration skills by displaying the weather conditions of a specific area.",
       image1: Weather,
       image2: "",
-      url: "",
+      url: "https://weather-huda.vercel.app/",
+      category: "API"
+    },
+    {
+      title: "OMDB API",
+      desc: "This is a popular movie listing website sourced from the OMDB API endpoint.",
+      image1: OMDB,
+      image2: "",
+      url: "https://omdb-api-vite.vercel.app/",
       category: "API"
     },
     {
