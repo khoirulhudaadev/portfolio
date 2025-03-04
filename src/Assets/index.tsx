@@ -62,8 +62,10 @@ import Electshop1 from './electshop1.png'
 import Electshop2 from './electshop2.png'
 import Luvlywed from './luvlywed.png'
 import Unipay2 from './unipay2.png'
+import Jannah from './jannah.png'
 
 export {
+    Jannah,
     Unipay2,
     Luvlywed,
     Electshop1,

@@ -3,7 +3,7 @@ import { Add01Icon, ArrowRight02Icon, ArrowUp01Icon, BrowserIcon, Building02Icon
 import React, { useEffect, useRef, useState } from 'react'
 import { FaArrowRight, FaTimes } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import { Build, Cirebon, Electshop1, Electshop2, Geospasial, Git1, Git2, Git3, Inovasi, Jakarta, JWD, KonstruksiLogo, Laravel, Luvlywed, Majalengka, Node, OMDB, Pacticles2, PakYos, Reacts, Redux, Team, TS, Unipay, Unipay2, Weather, Winner } from '../Assets'
+import { Build, Cirebon, Electshop1, Electshop2, Geospasial, Git1, Git2, Git3, Inovasi, Jakarta, Jannah, JWD, KonstruksiLogo, Laravel, Luvlywed, Majalengka, Node, OMDB, Pacticles2, PakYos, Reacts, Redux, Team, TS, Unipay, Unipay2, Weather, Winner } from '../Assets'
 import FilteredGitHubCalendar from "../Components/GithubCalendar"
 import InfiniteSlider from "../Components/InfiniteSlider"
 import ModalSearch from "../Components/Modal"
@@ -104,6 +104,14 @@ const Homepage: React.FC = () => {
       image2: Unipay2,
       url: "https://swiftvel.vercel.app",
       category: "apps"
+    },
+    {
+      title: "Al-quran Jannah",
+      desc: "This project trains API integration skills by displaying text and audio of each chapter in the holy book of the Quran.",
+      image1: Jannah,
+      image2: "",
+      url: "",
+      category: "API"
     },
     {
       title: "OMDB API",
@@ -404,7 +412,7 @@ const Homepage: React.FC = () => {
               className="relative opacity-100 w-[100%] mx-auto md:rounded-[24px] bg-white/20 backdrop-blur-2xl md:p-4 z-40 items-center justify-between mt-12"
             >
               <div className='w-full h-full md:rounded-[20px] bg-white p-4 md:p-6'>
-                <div className='w-full h-full relative flex-col md:flex justify-between text-[20px] leading-loose text-white'>
+                <div className='w-full h-full relative flex-col md:flex-row md:flex justify-between text-[20px] leading-loose text-white'>
                   <div className='w-full md:flex items-center'>
                     <div className='w-full flex items-center justify-start gap-2 md:gap-6'>
                       <MapPinIcon size={30} className="text-black relative top-[-3px]" />
@@ -444,7 +452,7 @@ const Homepage: React.FC = () => {
               whileInView={{ opacity: 1, filter: 'blur(0px)' }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
               viewport={{ once: true, amount: 0.2 }}
-              className='w-full mt-4 mb-10 flex-col md:flex justify-between items-center '>
+              className='w-full mt-4 mb-10 flex-col md:flex-row md:flex justify-between items-center '>
               <h2 className='relative w-full text-[29px] md:text-[40px] text-white font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
                 Our web products
               </h2>
@@ -466,21 +474,21 @@ const Homepage: React.FC = () => {
               <div onClick={() => { setSelectType('apps'), setSelectAccordion(1) }} className={`flex gap-6 ${selectType === 'apps' ? 'bg-[#ff69df11]' : ''} items-center cursor-pointer px-4 py-4 md:px-6 md:py-6`}>
                 <BrowserIcon size={46} className={`${selectType === 'apps' ? 'text-[#f85c98]' : 'text-white'}`} />
                 <div className='flex-1'>
-                  <h3 className={`${selectType === 'apps' ? 'text-[#f85c98]' : 'text-white'} font-medium`}>Web apps</h3>
+                  <h3 className={`${selectType === 'apps' ? 'text-[#f85c98]' : 'text-white'} font-medium`}>Web apps ({dataProducts?.filter((d: any) => d.category === 'apps')?.length})</h3>
                   <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>Building web apps that simplify tasks and boost productivity.</p>
                 </div>
               </div>
               <div onClick={() => { setSelectType('API'), setSelectAccordion(1) }} className={`flex gap-6 ${selectType === 'API' ? 'bg-[#9e69ff11]' : ''} items-center cursor-pointer px-4 py-4 md:px-6 md:py-6 md:border-x-[0.5px] border-gray-700`}>
                 <Link03Icon size={45} className={`${selectType === 'API' ? 'text-[#5E5CF8]' : 'text-white'}`} />
                 <div className='flex-1'>
-                  <h3 className={`${selectType === 'API' ? 'text-[#5E5CF8]' : 'text-white'} font-medium`}>Integrate API</h3>
+                  <h3 className={`${selectType === 'API' ? 'text-[#5E5CF8]' : 'text-white'} font-medium`}>Integrate API ({dataProducts?.filter((d: any) => d.category === 'API')?.length})</h3>
                   <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>Integrating APIs to ensure fast and seamless functionality.</p>
                 </div>
               </div>
               <div onClick={() => { setSelectType('slicing'), setSelectAccordion(1) }} className={`flex gap-6 ${selectType === 'slicing' ? 'bg-[#69dcff11]' : ''} items-center cursor-pointer px-4 py-4 md:px-6 md:py-6`}>
                 <PaintBrush04Icon size={46} className={`${selectType === 'slicing' ? 'text-[#5cc7f8]' : 'text-white'}`} />
                 <div className='flex-1'>
-                  <h3 className={`${selectType === 'slicing' ? 'text-[#5cc7f8]' : 'text-white'} font-medium`}>Slicing</h3>
+                  <h3 className={`${selectType === 'slicing' ? 'text-[#5cc7f8]' : 'text-white'} font-medium`}>Slicing ({dataProducts?.filter((d: any) => d.category === 'slicing')?.length})</h3>
                   <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>Transforming designs into clean, and efficient interfaces.</p>
                 </div>
               </div>
@@ -511,7 +519,7 @@ const Homepage: React.FC = () => {
                                   <Add01Icon className='text-indigo-700 cursor-pointer' />
                               }
                             </div>
-                            <p className={`w-full ${selectAccordion === 2 ? '' : 'hidden'} duratation-200 leading-loose tracking-tighter text-slate-300 text-sm`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, laborum.</p>
+                            <p className={`w-full ${selectAccordion === 2 ? '' : 'hidden'} duratation-200 leading-loose tracking-tighter text-slate-300 text-sm`}>A quick overview of how this website authentication looks</p>
                           </div>
                         ) :
                           <></>
@@ -528,7 +536,7 @@ const Homepage: React.FC = () => {
                           }
                         </div>
 
-                        <p className={`w-full ${selectAccordion === 1 ? '' : 'hidden'} duratation-200 leading-loose tracking-tighter text-slate-300 text-sm`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, laborum.</p>
+                        <p className={`w-full ${selectAccordion === 1 ? '' : 'hidden'} duratation-200 leading-loose tracking-tighter text-slate-300 text-sm`}>A quick overview of the appearance of this website</p>
                       </div>
 
                     </div>
@@ -543,7 +551,7 @@ const Homepage: React.FC = () => {
 
                       <motion.div
                         key={selectAccordion} // Animasi berjal an setiap kali konten berubah
-                        className='relative flex shadow-[0_35px_30px_rgba(0,0,30,0.4)] justify-center items-center md:rounded-[24px] overflow-hidden bg-white/20 backdrop-blur-2xl md:p-2 w-full h-[260px] md:mt-6'
+                        className='relative flex shadow-[0_35px_30px_rgba(0,0,30,0.4)] justify-center items-center md:rounded-[24px] overflow-hidden bg-white/20 backdrop-blur-2xl md:p-2 w-full h-[300px] md:mt-6'
                         initial={{ opacity: 0, y: 40 }} // Muncul dari bawah
                         animate={{ opacity: 1, y: 0 }} // Naik ke posisi normal
                         exit={{ opacity: 0, y: -20 }} // Keluar ke atas (opsional)
@@ -642,7 +650,7 @@ const Homepage: React.FC = () => {
             whileInView={{ opacity: 1, filter: 'blur(0px)' }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
-            className='w-full mt-4 mb-10 mf:flex justify-between items-center '>
+            className='w-full mt-4 mb-10 flex-col md:flex-row md:flex justify-between items-center '>
             <h2 className='relative flex items-center w-max text-[30px] md:text-[40px] text-white font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'><span className='md:flex hidden'>Experience - </span>Internship</h2>
             <div className='flex w-max'>
               <div className="relative flex items-center gap-6 md:mt-0 mt-4 md:p-6 text-white after:absolute after:right-0 after:w-px after:h-[200vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[100vh]">
@@ -924,8 +932,8 @@ const Homepage: React.FC = () => {
             whileInView={{ opacity: 1, filter: 'blur(0px)' }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
-            className='w-full mt-4 mb-10 md:flex justify-between items-center '>
-            <h2 className='relative text-[30px] md:flex hidden md:text-[40px] text-white mt-4 mb-10 font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Web competition awards</h2>
+            className='w-full mt-4 mb-10 flex-col md:flex-row md:flex justify-between items-center '>
+            <h2 className='relative text-[30px] md:flex hidden md:text-[40px] text-white mt-4 md:mb-0 mb-10 font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Web competition awards</h2>
             <h2 className='relative text-[30px] md:hidden flex md:text-[40px] text-white mt-4 mb-10 font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Web competition</h2>
             <div className='hidden md:flex w-max'>
               <div className="relative text-transparent flex items-center gap-6 md:mt-0 mt-4 md:p-6 after:absolute after:right-0 after:w-px after:h-[100vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[50vh]">
