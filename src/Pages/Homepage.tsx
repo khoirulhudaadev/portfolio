@@ -164,13 +164,6 @@ const Homepage: React.FC = () => {
             null
         }
 
-        {/* Humberger */}
-        {/* <div onClick={() => setSidebar(true)} className='absolute z-[99999] top-6 right-7 md:hidden shadow-md w-[38px] h-[38px]  cursor-pointer active:scale-[0.98] hover:brightness-[90%] duration-100 flex flex-col items-center justify-center border border-slate-300'>
-          <div className='w-[80%] h-[2px] bg-slate-200 my-1'></div>
-          <div className='w-[80%] h-[2px] bg-slate-200 my-1'></div>
-          <div className='w-[80%] h-[2px] bg-slate-200 my-1'></div>
-        </div> */}
-
         {/* Nabar */}
         <nav className={`fixed duration-300 top-0 left-0 w-full z-[999999999] flex items-center justify-between gap-10 h-max ${isScrolled ? 'bg-white/10 backdrop-blur-xl py-3 md:py-1 px-4 md:px-[44px]' : 'bg-transparent py-4 px-4 md:px-[90px]'}`}>
           <div className="flex items-center w-max text-white gap-10">
@@ -932,7 +925,8 @@ const Homepage: React.FC = () => {
             transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
             className='w-full mt-4 mb-10 md:flex justify-between items-center '>
-            <h2 className='relative text-[30px] md:text-[40px] text-white mt-4 mb-10 font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Web competition awards</h2>
+            <h2 className='relative text-[30px] md:flex hidden md:text-[40px] text-white mt-4 mb-10 font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Web competition awards</h2>
+            <h2 className='relative text-[30px] md:hidden flex md:text-[40px] text-white mt-4 mb-10 font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Web competition</h2>
             <div className='hidden md:flex w-max'>
               <div className="relative text-transparent flex items-center gap-6 md:mt-0 mt-4 md:p-6 after:absolute after:right-0 after:w-px after:h-[100vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[50vh]">
                 <p>konstruksi web</p>
