@@ -385,7 +385,7 @@ const Homepage: React.FC = () => {
             transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
             className='w-full mt-4 mb-10 flex-col md:flex-row md:flex justify-between items-center '>
-            <h2 className='relative text-[30px] md:text-[40px] text-white font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>SIGEO - web app</h2>
+            <h2 className='relative text-[28px] md:text-[40px] text-white font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>SIGEO - web app</h2>
             <div className='flex w-max'>
               <div className="relative flex items-center gap-6 md:p-6 md:mt-0 mt-4 text-white">
                 <p>Go to website</p>
@@ -410,12 +410,12 @@ const Homepage: React.FC = () => {
               viewport={{ once: true, amount: 0.2 }}
               className="relative opacity-100 w-[100%] mx-auto md:rounded-[24px] bg-white/20 backdrop-blur-2xl md:p-4 z-40 items-center justify-between mt-12"
             >
-              <div className='w-full h-full md:rounded-[20px] bg-white p-6'>
+              <div className='w-full h-full md:rounded-[20px] bg-white p-4 md:p-6'>
                 <div className='w-full h-full relative flex-col md:flex justify-between text-[20px] leading-loose text-white'>
                   <div className='w-full md:flex items-center'>
-                    <div className='w-full flex items-center justify-start gap-6'>
+                    <div className='w-full flex items-center justify-start gap-2 md:gap-6'>
                       <MapPinIcon size={30} className="text-black relative top-[-3px]" />
-                      <h2 className='text-black font-medium text-[26px] md:text-[28px]'>SI GEO</h2>
+                      <h2 className='text-black font-medium text-[22px] md:text-[28px]'>SI GEO</h2>
                     </div>
                     <div className='text-slate-400 w-max text-[14px] px-4 py-1 hidden md:flex items-center border border-slate-400 rounded-[8px] bg-slate-100 justify-center cursor-pointer active:scale-[0.99] hover:brightness-95'>
                       <Link03Icon className="transform rotate-[45deg]" />
@@ -452,7 +452,7 @@ const Homepage: React.FC = () => {
               transition={{ duration: 0.5, ease: 'easeOut' }}
               viewport={{ once: true, amount: 0.2 }}
               className='w-full mt-4 mb-10 flex-col md:flex justify-between items-center '>
-              <h2 className='relative w-full text-[30px] md:text-[40px] text-white font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
+              <h2 className='relative w-full text-[29px] md:text-[40px] text-white font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
                 Our web products
               </h2>
               <div className='hidden md:flex w-max'>
@@ -470,21 +470,21 @@ const Homepage: React.FC = () => {
               transition={{ duration: 0.5, ease: 'easeOut' }}
               viewport={{ once: true, amount: 0.2 }}
               className='relative z-[99999999] w-full grid grid-cols-1 md:grid-cols-3 mt-8 md:mt-14 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
-              <div onClick={() => { setSelectType('apps'), setSelectAccordion(1) }} className={`flex gap-6 ${selectType === 'apps' ? 'bg-[#ff69df11]' : ''} items-center cursor-pointer px-0 py-4 md:px-6 md:py-6`}>
+              <div onClick={() => { setSelectType('apps'), setSelectAccordion(1) }} className={`flex gap-6 ${selectType === 'apps' ? 'bg-[#ff69df11]' : ''} items-center cursor-pointer px-4 py-4 md:px-6 md:py-6`}>
                 <BrowserIcon size={46} className={`${selectType === 'apps' ? 'text-[#f85c98]' : 'text-white'}`} />
                 <div className='flex-1'>
                   <h3 className={`${selectType === 'apps' ? 'text-[#f85c98]' : 'text-white'} font-medium`}>Web apps</h3>
                   <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>Building web apps that simplify tasks and boost productivity.</p>
                 </div>
               </div>
-              <div onClick={() => { setSelectType('API'), setSelectAccordion(1) }} className={`flex gap-6 ${selectType === 'API' ? 'bg-[#9e69ff11]' : ''} items-center cursor-pointer px-0 py-4 md:px-6 md:py-6 md:border-x-[0.5px] border-gray-700`}>
+              <div onClick={() => { setSelectType('API'), setSelectAccordion(1) }} className={`flex gap-6 ${selectType === 'API' ? 'bg-[#9e69ff11]' : ''} items-center cursor-pointer px-4 py-4 md:px-6 md:py-6 md:border-x-[0.5px] border-gray-700`}>
                 <Link03Icon size={45} className={`${selectType === 'API' ? 'text-[#5E5CF8]' : 'text-white'}`} />
                 <div className='flex-1'>
                   <h3 className={`${selectType === 'API' ? 'text-[#5E5CF8]' : 'text-white'} font-medium`}>Integrate API</h3>
                   <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>Integrating APIs to ensure fast and seamless functionality.</p>
                 </div>
               </div>
-              <div onClick={() => { setSelectType('slicing'), setSelectAccordion(1) }} className={`flex gap-6 ${selectType === 'slicing' ? 'bg-[#69dcff11]' : ''} items-center cursor-pointer px-0 py-4 md:px-6 md:py-6`}>
+              <div onClick={() => { setSelectType('slicing'), setSelectAccordion(1) }} className={`flex gap-6 ${selectType === 'slicing' ? 'bg-[#69dcff11]' : ''} items-center cursor-pointer px-4 py-4 md:px-6 md:py-6`}>
                 <PaintBrush04Icon size={46} className={`${selectType === 'slicing' ? 'text-[#5cc7f8]' : 'text-white'}`} />
                 <div className='flex-1'>
                   <h3 className={`${selectType === 'slicing' ? 'text-[#5cc7f8]' : 'text-white'} font-medium`}>Slicing</h3>
@@ -752,14 +752,14 @@ const Homepage: React.FC = () => {
             transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
             className='relative z-[99999999] w-full py-4 grid grid-cols-1 md:grid-cols-2 md:mt-14 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
-            <div className={`flex-1 flex gap-6 items-center cursor-pointer pt-10 pb-6 md:py-10`}>
+            <div className={`flex-1 flex gap-6 items-center cursor-pointer py-6 md:py-10`}>
               <Mortarboard02Icon size={50} className={`text-white md:flex hidden`} />
               <div className='flex-1'>
                 <h3 className={`text-white font-medium`}>B.Sc. in Computer Science</h3>
                 <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>Programming, and problem-solving skills.</p>
               </div>
             </div>
-            <div className="relative flex-1 h-full md:rounded-[24px] md:bg-white/20 backdrop-blur-2xl md:p-4 ">
+            <div className="relative md:block hidden flex-1 h-full md:rounded-[24px] md:bg-white/20 backdrop-blur-2xl md:p-4 ">
               <div className='w-full h-full md:bg-white md:rounded-[20px]'>
                 <div className={`flex gap-6 items-center cursor-pointer md:px-8 py-6 md:py-10 `}>
                   <Calendar04Icon size={50} className={`text-black md:flex hidden`} />
@@ -888,9 +888,9 @@ const Homepage: React.FC = () => {
             whileInView={{ opacity: 1, filter: 'blur(0px)' }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
-            className='relative w-full grid grid-cols-1 md:grid-cols-3 mt-14 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
+            className='relative w-full grid grid-cols-1 md:grid-cols-3 mt-8 mmd:t-14 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
             <a href='https://github.com/khoirulhudaa?achievement=pull-shark&tab=achievements' target='__blank'>
-              <div onClick={() => setSelectTypeGit('git1')} className={`flex gap-6 ${selectTypeGit === 'git1' ? 'bg-[#ff69df11]' : ''} items-center cursor-pointer px-0 py-6 md:px-6`}>
+              <div onClick={() => setSelectTypeGit('git1')} className={`flex gap-6 ${selectTypeGit === 'git1' ? 'bg-[#ff69df11]' : ''} items-center cursor-pointer px-4 py-6 md:px-6`}>
                 <img src={Git1} alt="git" className="w-12" />
                 <div className='flex-1'>
                   <h3 className={`${selectTypeGit === 'git1' ? 'text-[#f85c98]' : 'text-white'} font-medium`}>Pull Shark - 2x</h3>
@@ -899,7 +899,7 @@ const Homepage: React.FC = () => {
               </div>
             </a>
             <a href='https://github.com/khoirulhudaa?tab=achievements&achievement=quickdraw' target='__blank'>
-              <div onClick={() => setSelectTypeGit('git2')} className={`flex gap-6 ${selectTypeGit === 'git2' ? 'bg-[#9e69ff11]' : ''} items-center cursor-pointer px-0 py-6 md:px-6 border-x-[0.5px] border-gray-700`}>
+              <div onClick={() => setSelectTypeGit('git2')} className={`flex gap-6 ${selectTypeGit === 'git2' ? 'bg-[#9e69ff11]' : ''} items-center cursor-pointer px-4 py-6 md:px-6 border-x-[0.5px] border-gray-700`}>
                 <img src={Git2} alt="git" className="w-12" />
                 <div className='flex-1'>
                   <h3 className={`${selectTypeGit === 'git2' ? 'text-[#5E5CF8]' : 'text-white'} font-medium`}>Quickdraw</h3>
@@ -908,7 +908,7 @@ const Homepage: React.FC = () => {
               </div>
             </a>
             <a href='https://github.com/khoirulhudaa?tab=achievements&achievement=starstruck' target='__blank'>
-              <div onClick={() => setSelectTypeGit('git3')} className={`flex gap-6 ${selectTypeGit === 'git3' ? 'bg-[#69dcff11]' : ''} items-center cursor-pointer px-0 py-6 md:px-6`}>
+              <div onClick={() => setSelectTypeGit('git3')} className={`flex gap-6 ${selectTypeGit === 'git3' ? 'bg-[#69dcff11]' : ''} items-center cursor-pointer px-4 py-6 md:px-6`}>
                 <img src={Git3} alt="git" className="w-12" />
                 <div className='flex-1'>
                   <h3 className={`${selectType === 'git3' ? 'text-[#5cc7f8]' : 'text-white'} font-medium`}>Starstruck</h3>
@@ -919,7 +919,7 @@ const Homepage: React.FC = () => {
           </motion.div>
         </div>
 
-        <div id='certifications' className='select-none relative px-4 md:px-14 md:flex flex-col z-[233] pb-[30px] md:pb-[80px] md:pt-4 w-full h-max border-slate-100'>
+        <div id='certifications' className='select-none relative px-4 md:px-14 md:flex flex-col z-[233] pb-[30px] md:pb-[80px] pt-6 md:pt-4 w-full h-max border-slate-100'>
           <motion.small
             initial={{ opacity: 0, filter: 'blur(10px)' }}
             whileInView={{ opacity: 1, filter: 'blur(0px)' }}
