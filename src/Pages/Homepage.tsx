@@ -385,7 +385,7 @@ const Homepage: React.FC = () => {
             whileInView={{ opacity: 1, filter: 'blur(0px)' }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
-            className='relative text-base text-slate-300 w-[96%] md:w-[66%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'
+            className='relative text-base text-slate-300 w-[96%] md:w-[66%] leading-loose md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'
           >
             As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.
           </motion.p>
@@ -436,7 +436,7 @@ const Homepage: React.FC = () => {
             whileInView={{ opacity: 1, filter: 'blur(0px)' }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
-            className='relative text-base text-slate-300 w-[97%] md:w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
+            className='relative text-base text-slate-300 w-[97%] md:w-[70%] leading-loose md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
             As a Fullstack Devedloper, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.
           </motion.p>
           <div className="relative md:mb-4 mt-10 gap-4">
@@ -455,7 +455,7 @@ const Homepage: React.FC = () => {
                     </div>
                   </div>
                   <div className='w-full mt-6'>
-                    <p className="text-base text-slate-300 tracking-tighter leading-loose">SSH (Secure Shell) is a secure protocol for remote server access, file transfer, and authentication with encryption, ensuring privacy.</p>
+                    <p className="text-base text-slate-300 md:tracking-tighter leading-loose">SSH (Secure Shell) is a secure protocol for remote server access, file transfer, and authentication with encryption, ensuring privacy.</p>
                   </div>
                   <div className='border border-white md:border-black mt-4 md:mt-10 mb-12 md:mb-3 md:bg-white text-white md:text-black md:rounded-full md:w-[50px] h-[50px] hidden md:flex items-center justify-center cursor-pointer active:scale-[0.99] hover:brightness-95 duration-100 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw] relative'>
                     <ArrowRight02Icon />
@@ -472,7 +472,7 @@ const Homepage: React.FC = () => {
                     <img src={DockerBlue} alt="logo-docker" className="relative bottom-[2px] w-[36%] md:w-[45%]" />
                   </div>
                   <div className="w-full mt-6">
-                    <p className="text-base text-slate-300 tracking-tighter leading-loose">
+                    <p className="text-base text-slate-300 md:tracking-tighter leading-loose">
                       Open-source platform that packages apps and dependencies into lightweight containers for consistent, portable, and efficient deployment.
                     </p>
                   </div>
@@ -485,7 +485,7 @@ const Homepage: React.FC = () => {
                     <img src={Clickup} alt="logo-clickup" className="w-[32%] md:w-[38%]" />
                   </div>
                   <div className='w-full mt-6'>
-                    <p className="text-base text-slate-300 tracking-tighter leading-loose">ClickUp is a cloud-based project management tool that integrates tasks, docs, and automation to streamline team workflows.</p>
+                    <p className="text-base text-slate-300 md:tracking-tighter leading-loose">ClickUp is a cloud-based project management tool that integrates tasks, docs, and automation to streamline team workflows.</p>
                   </div>
                   <div className='border border-white md:border-black mt-4 md:mt-10 mb-12 md:mb-3 md:bg-white text-white md:text-black md:rounded-full md:w-[50px] h-[50px] hidden md:flex items-center justify-center cursor-pointer active:scale-[0.99] hover:brightness-95 duration-100 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw] relative'>
                     <ArrowRight02Icon />
@@ -524,7 +524,7 @@ const Homepage: React.FC = () => {
               whileInView={{ opacity: 1, filter: 'blur(0px)' }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
               viewport={{ once: true, amount: 0.2 }}
-              className='relative text-base text-slate-300 w-[98%] md:w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</motion.p>
+              className='relative text-base text-slate-300 w-[98%] md:w-[70%] leading-loose md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</motion.p>
 
             <div className="absolute left-[20%] w-[60%] h-[40px] py-[30%] transform -translate-y-[45%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[140px]"></div>
             <div className="absolute left-[15%] w-[100%] h-[40px] py-[30%] transform -translate-y-[63%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[25px]"></div>
@@ -566,7 +566,7 @@ const Homepage: React.FC = () => {
                 </div>
               </div>
             </motion.div>
-            <p className='relative text-base text-slate-300 w-[98%] md:w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
+            <p className='relative text-base text-slate-300 w-[98%] md:w-[70%] leading-loose md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
 
             <motion.div
               initial={{ opacity: 0, filter: 'blur(10px)' }}
@@ -578,21 +578,21 @@ const Homepage: React.FC = () => {
                 <BrowserIcon size={46} className={`${selectType === 'apps' ? 'text-[#f85c98]' : 'text-white'}`} />
                 <div className='flex-1'>
                   <h3 className={`${selectType === 'apps' ? 'text-[#f85c98]' : 'text-white'} font-medium`}>Web apps ({dataProducts?.filter((d: any) => d.category === 'apps')?.length})</h3>
-                  <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>Building web apps that simplify tasks and boost productivity.</p>
+                  <p className='text-[14px] mt-2 text-slate-300 leading-loose md:tracking-tighter'>Building web apps that simplify tasks and boost productivity.</p>
                 </div>
               </div>
               <div onClick={() => { setSelectType('API'), setSelectAccordion(1) }} className={`flex gap-6 ${selectType === 'API' ? 'bg-[#9e69ff11]' : ''} items-center cursor-pointer px-4 py-4 md:px-6 md:py-6 md:border-x-[0.5px] border-gray-700`}>
                 <Link03Icon size={45} className={`${selectType === 'API' ? 'text-[#5E5CF8]' : 'text-white'}`} />
                 <div className='flex-1'>
                   <h3 className={`${selectType === 'API' ? 'text-[#5E5CF8]' : 'text-white'} font-medium`}>Integrate API ({dataProducts?.filter((d: any) => d.category === 'API')?.length})</h3>
-                  <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>Integrating APIs to ensure fast and seamless functionality.</p>
+                  <p className='text-[14px] mt-2 text-slate-300 leading-loose md:tracking-tighter'>Integrating APIs to ensure fast and seamless functionality.</p>
                 </div>
               </div>
               <div onClick={() => { setSelectType('slicing'), setSelectAccordion(1) }} className={`flex gap-6 ${selectType === 'slicing' ? 'bg-[#69dcff11]' : ''} items-center cursor-pointer px-4 py-4 md:px-6 md:py-6`}>
                 <PaintBrush04Icon size={46} className={`${selectType === 'slicing' ? 'text-[#5cc7f8]' : 'text-white'}`} />
                 <div className='flex-1'>
                   <h3 className={`${selectType === 'slicing' ? 'text-[#5cc7f8]' : 'text-white'} font-medium`}>Slicing ({dataProducts?.filter((d: any) => d.category === 'slicing')?.length})</h3>
-                  <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>Transforming designs into clean, and efficient interfaces.</p>
+                  <p className='text-[14px] mt-2 text-slate-300 leading-loose md:tracking-tighter'>Transforming designs into clean, and efficient interfaces.</p>
                 </div>
               </div>
             </motion.div>
@@ -604,7 +604,7 @@ const Homepage: React.FC = () => {
                   <div key={index} className='w-full md:flex z-40 py-8 relative left-[0px] md:mt-[60px] h-max before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
                     <div className='relative w-full md:w-[50%] z-[99999] py-6 min-h-[400px]'>
                       <h2 className='relative text-[24px] font-medium text-white mb-2 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>{index + 1}. {data?.title}</h2>
-                      <p className='relative text-slate-300 w-full md:w-[85%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>{data?.desc}</p>
+                      <p className='relative text-slate-300 w-full md:w-[85%] leading-loose md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>{data?.desc}</p>
 
                       <Link to={data?.url} target="__blank">
                         <p className='cursor-pointer mt-6 hover:brightness-[90%] active:scale-[0.99] text-[#00B4F5] relative flex items-center text-base before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>{data?.title} in here <FaArrowRight className='ml-4 relative top-[0.8]' /> </p>
@@ -702,7 +702,7 @@ const Homepage: React.FC = () => {
             whileInView={{ opacity: 1, filter: 'blur(0px)' }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
-            className='relative text-base text-slate-300 w-[98%] md:w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</motion.p>
+            className='relative text-base text-slate-300 w-[98%] md:w-[70%] leading-loose md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</motion.p>
 
           <div className="absolute left-[20%] w-[60%] h-[40px] py-[30%] transform -translate-y-[45%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[140px]"></div>
           <div className="absolute left-[15%] w-[100%] h-[40px] py-[30%] transform -translate-y-[63%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[25px]"></div>
@@ -727,7 +727,7 @@ const Homepage: React.FC = () => {
                   </div>
                 </Link>
 
-                <p className='text-[15px] w-full md:w-[94%] md:text-justify leading-loose tracking-tighter mt-6 mb-10 text-slate-600'>
+                <p className='text-[15px] w-full md:w-[94%] md:text-justify leading-loose md:tracking-tighter mt-6 mb-10 text-slate-600'>
                   To whom it may concern:
                   <br />
                   <br />
@@ -769,7 +769,7 @@ const Homepage: React.FC = () => {
             whileInView={{ opacity: 1, filter: 'blur(0px)' }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
-            className='relative text-base text-slate-300 w-full md:w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</motion.p>
+            className='relative text-base text-slate-300 w-full md:w-[70%] leading-loose md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</motion.p>
 
           <motion.div
             initial={{ opacity: 0, filter: 'blur(10px)' }}
@@ -790,17 +790,17 @@ const Homepage: React.FC = () => {
                 <section className='mt-12'>
                   <div className="relative mb-8 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]">
                     <p className="relative text-base mb-6 font-semibold text-white before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]">Web Application Development</p>
-                    <p className='text-sm text-justify w-[98%] md:w-[80%] mb-2 leading-loose tracking-tighter'>Build and develop a web application using <strong>React</strong>, <strong>Vite</strong>, and <strong>Tailwind CSS</strong> to create responsive and efficient user interfaces and Integrate and display architectural project data.</p>
+                    <p className='text-sm text-justify w-[98%] md:w-[80%] mb-2 leading-loose md:tracking-tighter'>Build and develop a web application using <strong>React</strong>, <strong>Vite</strong>, and <strong>Tailwind CSS</strong> to create responsive and efficient user interfaces and Integrate and display architectural project data.</p>
                   </div>
 
                   <div className="relative mb-8 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]">
                     <p className="relative text-base mb-6 font-semibold text-white before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]">Web Features Testing and Debugging</p>
-                    <p className='text-sm text-justify w-[98%] md:w-[80%] mb-2 leading-loose tracking-tighter'>Identify and analyze technical issues, and collaborate with the development team to find effective solutions.</p>
+                    <p className='text-sm text-justify w-[98%] md:w-[80%] mb-2 leading-loose md:tracking-tighter'>Identify and analyze technical issues, and collaborate with the development team to find effective solutions.</p>
                   </div>
 
                   <div className="relative mb-8 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]">
                     <p className="relative text-base mb-6 font-semibold text-white before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]">Team Collaboration</p>
-                    <p className='text-sm text-justify w-[98%] md:w-[80%] mb-2 leading-loose tracking-tighter'>Collaborate with backend developers, UI/UX designers, and project managers to ensure the web application development aligns with project specifications and business goals.</p>
+                    <p className='text-sm text-justify w-[98%] md:w-[80%] mb-2 leading-loose md:tracking-tighter'>Collaborate with backend developers, UI/UX designers, and project managers to ensure the web application development aligns with project specifications and business goals.</p>
                   </div>
                 </section>
               </div>
@@ -850,7 +850,7 @@ const Homepage: React.FC = () => {
             whileInView={{ opacity: 1, filter: 'blur(0px)' }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
-            className='relative text-base text-slate-300 w-full md:w-[68%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>I pursued a four-year bachelor's degree in Informatics Engineering at a private university in Cirebon, STMIK IKMI Cirebon, located in Majasem.</motion.p>
+            className='relative text-base text-slate-300 w-full md:w-[68%] leading-loose md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>I pursued a four-year bachelor's degree in Informatics Engineering at a private university in Cirebon, STMIK IKMI Cirebon, located in Majasem.</motion.p>
 
           <motion.div
             initial={{ opacity: 0, filter: 'blur(10px)' }}
@@ -862,7 +862,7 @@ const Homepage: React.FC = () => {
               <Mortarboard02Icon size={50} className={`text-white md:flex hidden`} />
               <div className='flex-1'>
                 <h3 className={`text-white font-medium`}>B.Sc. in Computer Science</h3>
-                <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>Programming, and problem-solving skills.</p>
+                <p className='text-[14px] mt-2 text-slate-300 leading-loose md:tracking-tighter'>Programming, and problem-solving skills.</p>
               </div>
             </div>
             <div className="relative md:block hidden flex-1 h-full md:rounded-[24px] md:bg-white/20 backdrop-blur-2xl md:p-4 ">
@@ -871,14 +871,14 @@ const Homepage: React.FC = () => {
                   <Calendar04Icon size={50} className={`text-black md:flex hidden`} />
                   <div className='flex-1'>
                     <h3 className={`text-white md:text-black font-medium`}>Graduation year</h3>
-                    <p className='text-[14px] mt-2 text-slate-300 md:text-slate-600 leading-loose tracking-tighter'>I received a graduation certificate in May.</p>
+                    <p className='text-[14px] mt-2 text-slate-300 md:text-slate-600 leading-loose md:tracking-tighter'>I received a graduation certificate in May.</p>
                   </div>
                 </div>
                 <div className={`relative flex gap-6 items-center cursor-pointer md:px-8 py-6 md:py-10 before:absolute before:top-0 before:h-px before:w-full before:bg-slate-900/20 dark:before:bg-slate-900/30 before:-left-[0px]`}>
                   <InformationDiamondIcon size={50} className={` md:flex hidden ${selectType === 'slicing' ? 'text-[#5cc7f8]' : 'text-black'}`} />
                   <div className='flex-1'>
                     <h3 className={`${selectType === 'slicing' ? 'text-[#5cc7f8]' : 'text-white md:text-black'} font-medium`}>GPA / IPK</h3>
-                    <p className='text-[14px] mt-2 text-slate-300 md:text-slate-600 leading-loose tracking-tighter'>I achieved a GPA of 3.30 at the end of my studies.</p>
+                    <p className='text-[14px] mt-2 text-slate-300 md:text-slate-600 leading-loose md:tracking-tighter'>I achieved a GPA of 3.30 at the end of my studies.</p>
                   </div>
                 </div>
               </div>
@@ -922,7 +922,7 @@ const Homepage: React.FC = () => {
             whileInView={{ opacity: 1, filter: 'blur(0px)' }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
-            className='relative text-base text-slate-300 w-full md:w-[68%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>I pursued a four-year bachelor's degree in Informatics Engineering at a private university in Cirebon, STMIK IKMI Cirebon, located in Majasem.</motion.p>
+            className='relative text-base text-slate-300 w-full md:w-[68%] leading-loose md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>I pursued a four-year bachelor's degree in Informatics Engineering at a private university in Cirebon, STMIK IKMI Cirebon, located in Majasem.</motion.p>
 
           <div className="relative z-[999999999] flex items-center justify-center mt-12">
             <motion.div
@@ -974,7 +974,7 @@ const Homepage: React.FC = () => {
             whileInView={{ opacity: 1, filter: 'blur(0px)' }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
-            className='relative text-base text-slate-300 w-full md:w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</motion.p>
+            className='relative text-base text-slate-300 w-full md:w-[70%] leading-loose md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</motion.p>
 
           <div className="md:w-[86vw] h-max mt-12 mx-auto bg-white/20 backdrop-blur-2xl md:p-4 md:rounded-[20px]">
             <motion.div
@@ -1000,7 +1000,7 @@ const Homepage: React.FC = () => {
                 <img src={Git1} alt="git" className="w-12" />
                 <div className='flex-1'>
                   <h3 className={`${selectTypeGit === 'git1' ? 'text-[#f85c98]' : 'text-white'} font-medium`}>Pull Shark - 2x</h3>
-                  <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>@khoirulhudaa opened pull requests that have been merged.</p>
+                  <p className='text-[14px] mt-2 text-slate-300 leading-loose md:tracking-tighter'>@khoirulhudaa opened pull requests that have been merged.</p>
                 </div>
               </div>
             </a>
@@ -1009,7 +1009,7 @@ const Homepage: React.FC = () => {
                 <img src={Git2} alt="git" className="w-12" />
                 <div className='flex-1'>
                   <h3 className={`${selectTypeGit === 'git2' ? 'text-[#5E5CF8]' : 'text-white'} font-medium`}>Quickdraw</h3>
-                  <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>Closing issues or pull requests within 5 minutes after they are opened.</p>
+                  <p className='text-[14px] mt-2 text-slate-300 leading-loose md:tracking-tighter'>Closing issues or pull requests within 5 minutes after they are opened.</p>
                 </div>
               </div>
             </a>
@@ -1018,7 +1018,7 @@ const Homepage: React.FC = () => {
                 <img src={Git3} alt="git" className="w-12" />
                 <div className='flex-1'>
                   <h3 className={`${selectType === 'git3' ? 'text-[#5cc7f8]' : 'text-white'} font-medium`}>Starstruck</h3>
-                  <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>Starstruck: Having a repository with high popularity, starts.</p>
+                  <p className='text-[14px] mt-2 text-slate-300 leading-loose md:tracking-tighter'>Starstruck: Having a repository with high popularity, starts.</p>
                 </div>
               </div>
             </a>
@@ -1052,7 +1052,7 @@ const Homepage: React.FC = () => {
             whileInView={{ opacity: 1, filter: 'blur(0px)' }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
-            className='relative text-base text-slate-300 w-full md:w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</motion.p>
+            className='relative text-base text-slate-300 w-full md:w-[70%] leading-loose md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</motion.p>
 
           <div className="absolute left-[20%] w-[60%] h-[40px] py-[30%] transform -translate-y-[50%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[140px]"></div>
           <div className="absolute left-[15%] w-[100%] h-[40px] py-[30%] transform -translate-y-[72%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[25px]"></div>
@@ -1076,7 +1076,7 @@ const Homepage: React.FC = () => {
                     <h3 className={`$text-black font-medium`}>2nd - national</h3>
                     <ViewIcon className='z-[9999] text-slate-600 active:scale-[0.98] cursor-pointer' />
                   </div>
-                  <p className='text-[14px] mt-2 text-slate-500 leading-loose tracking-tighter'>National-level Web Development Competition,</p>
+                  <p className='text-[14px] mt-2 text-slate-500 leading-loose md:tracking-tighter'>National-level Web Development Competition,</p>
                 </div>
               </div>
               <div className={`relative flex gap-6 items-center cursor-pointer px-4 md:px-6 py-16 border-l border-slate-300`}>
@@ -1089,7 +1089,7 @@ const Homepage: React.FC = () => {
                     <h3 className={`text-black font-medium`}>2nd - public</h3>
                     <ViewIcon className='z-[9999] text-slate-600 active:scale-[0.98] cursor-pointer' />
                   </div>
-                  <p className='text-[14px] mt-2 text-slate-500 leading-loose tracking-tighter'>National-level Web Design Competition for Students.</p>
+                  <p className='text-[14px] mt-2 text-slate-500 leading-loose md:tracking-tighter'>National-level Web Design Competition for Students.</p>
                 </div>
               </div>
             </div>
@@ -1105,7 +1105,7 @@ const Homepage: React.FC = () => {
                     <h3 className={`${selectTypeGit === 'git1' ? 'text-[#f85c98]' : 'text-black'} font-medium`}>1st - district</h3>
                     <ViewIcon className='z-[9999] text-slate-600 active:scale-[0.98] cursor-pointer' />
                   </div>
-                  <p className='text-[14px] mt-2 text-slate-500 leading-loose tracking-tighter'>Innovation competition in the technology category at the district level organized by the Bappelitbangda Office in 2024.</p>
+                  <p className='text-[14px] mt-2 text-slate-500 leading-loose md:tracking-tighter'>Innovation competition in the technology category the district.</p>
                 </div>
               </div>
             </div>
@@ -1121,7 +1121,7 @@ const Homepage: React.FC = () => {
                     <h3 className={`${selectTypeGit === 'git1' ? 'text-[#f85c98]' : 'text-black'} font-medium`}>1st - intramural</h3>
                     <ViewIcon className='z-[9999] text-slate-600 active:scale-[0.98] cursor-pointer' />
                   </div>
-                  <p className='text-[14px] mt-2 text-slate-500 leading-loose tracking-tighter'>Inter-College Landing Page Web Competition exclusively.</p>
+                  <p className='text-[14px] mt-2 text-slate-500 leading-loose md:tracking-tighter'>Inter-College Landing Page Web Competition exclusively.</p>
                 </div>
               </div>
               <div className={`relative flex gap-6 items-center cursor-pointer px-4 md:px-6 py-16 border-t border-x border-slate-300`}>
@@ -1134,7 +1134,7 @@ const Homepage: React.FC = () => {
                     <h3 className={`text-black font-medium`}>BNSP - JWD</h3>
                     <ViewIcon className='z-[9999] text-slate-600 active:scale-[0.98] cursor-pointer' />
                   </div>
-                  <p className='text-[14px] mt-2 text-slate-500 leading-loose tracking-tighter'>It's a certifications training program for Junior Web Developers.</p>
+                  <p className='text-[14px] mt-2 text-slate-500 leading-loose md:tracking-tighter'>It's a certifications training program for Junior Web Developers.</p>
                 </div>
               </div>
             </div>
