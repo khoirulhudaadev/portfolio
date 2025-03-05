@@ -451,11 +451,11 @@ const Homepage: React.FC = () => {
                   <div className='relative flex gap-2 h-[50px] items-center before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
                     <img src={ssh} alt="logo-ssh" className="relative z-[44] w-[10%]" />
                     <div className='flex-1'>
-                      <h3 className={`text-white font-bold md:text-[24px]`}>Secure shell</h3>
+                      <h3 className={`text-white font-bold text-[22px] md:text-[24px]`}>Secure shell</h3>
                     </div>
                   </div>
                   <div className='w-full mt-6'>
-                    <p className="text-[14px] text-white leading-loose">SSH (Secure Shell) is a secure protocol for remote server access, file transfer, and authentication with encryption, ensuring privacy.</p>
+                    <p className="text-base text-slate-300 tracking-tighter leading-loose">SSH (Secure Shell) is a secure protocol for remote server access, file transfer, and authentication with encryption, ensuring privacy.</p>
                   </div>
                   <div className='border border-white md:border-black mt-4 md:mt-10 mb-12 md:mb-3 md:bg-white text-white md:text-black md:rounded-full md:w-[50px] h-[50px] hidden md:flex items-center justify-center cursor-pointer active:scale-[0.99] hover:brightness-95 duration-100 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw] relative'>
                     <ArrowRight02Icon />
@@ -469,10 +469,10 @@ const Homepage: React.FC = () => {
                   <div className="md:after:absolute md:after:top-0 md:after:right-0 after:h-full md:after:w-px md:after:bg-slate-900/80 dark:after:bg-white/10"></div>
 
                   <div className="relative flex gap-6 h-[50px] items-center before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]">
-                    <img src={DockerBlue} alt="logo-docker" className="relative bottom-[2px] w-[39%] md:w-[45%]" />
+                    <img src={DockerBlue} alt="logo-docker" className="relative bottom-[2px] w-[36%] md:w-[45%]" />
                   </div>
                   <div className="w-full mt-6">
-                    <p className="text-[14px] text-white leading-loose">
+                    <p className="text-base text-slate-300 tracking-tighter leading-loose">
                       Open-source platform that packages apps and dependencies into lightweight containers for consistent, portable, and efficient deployment.
                     </p>
                   </div>
@@ -482,10 +482,10 @@ const Homepage: React.FC = () => {
                 </div>
                 <div className={`md:px-6 md:py-10 md:mb-0 mb-8`}>
                   <div className='relative flex gap-6 h-[50px] items-center before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
-                    <img src={Clickup} alt="logo-clickup" className="w-[34%] md:w-[38%]" />
+                    <img src={Clickup} alt="logo-clickup" className="w-[32%] md:w-[38%]" />
                   </div>
                   <div className='w-full mt-6'>
-                    <p className="text-[14px] text-white leading-loose">ClickUp is a cloud-based project management tool that integrates tasks, docs, and automation to streamline team workflows.</p>
+                    <p className="text-base text-slate-300 tracking-tighter leading-loose">ClickUp is a cloud-based project management tool that integrates tasks, docs, and automation to streamline team workflows.</p>
                   </div>
                   <div className='border border-white md:border-black mt-4 md:mt-10 mb-12 md:mb-3 md:bg-white text-white md:text-black md:rounded-full md:w-[50px] h-[50px] hidden md:flex items-center justify-center cursor-pointer active:scale-[0.99] hover:brightness-95 duration-100 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw] relative'>
                     <ArrowRight02Icon />
@@ -611,33 +611,33 @@ const Homepage: React.FC = () => {
                       </Link>
 
                       <div className='w-full text-white mt-6 md:pr-12 grid-cols-1 grid md:grid-cols-2 gap-4'>
-                        <div className='relative py-3 flex border-y border-white/20 px-4 items-center flex-1 justify-between'>
-                          <p className="text-white h-full px-2 rounded-[4px] w-1/2">{data?.paymentGateway}</p>
+                        <div className='relative py-3 flex border-y border-white/20 items-center flex-1 justify-between'>
+                          <p className="text-white h-full rounded-[4px] w-1/2">{data?.paymentGateway}</p>
                           <ArrowRight02Icon className="w-[18px] mx-2" />
                           <p className=" h-full pl-3 w-[40%] text-right">Payment</p>
                         </div>
-                        <div className='relative py-3 flex border-y border-white/20 px-4 items-center flex-1 justify-between'>
-                          <p className="text-white h-full px-2 rounded-[4px] w-1/2">{data?.fe}</p>
+                        <div className='relative py-3 flex border-y border-white/20 items-center flex-1 justify-between'>
+                          <p className="text-white h-full rounded-[4px] w-1/2">{data?.fe}</p>
                           <ArrowRight02Icon className="w-[18px] mx-2" />
                           <p className="h-full pl-3 w-[40%] text-right">Frontend</p>
                         </div>
-                        <div className='relative py-3 hidden md:flex border-y border-white/20 px-4 items-center flex-1 justify-between'>
-                          <p className="text-white h-full px-2 rounded-[4px] w-1/2">{data?.stateManagement}</p>
+                        <div className='relative py-3 hidden md:flex border-y border-white/20 items-center flex-1 justify-between'>
+                          <p className="text-white h-full rounded-[4px] w-1/2">{data?.stateManagement}</p>
                           <ArrowRight02Icon className="w-[18px] mx-2" />
                           <p className="h-full pl-3 w-[40%] text-right">Stateeee</p>
                         </div>
-                        <div className='relative py-3 flex border-y border-white/20 px-4 items-center flex-1 justify-between'>
-                          <p className="text-white h-full px-2 rounded-[4px] w-1/2">{data?.be}</p>
+                        <div className='relative py-3 flex border-y border-white/20 items-center flex-1 justify-between'>
+                          <p className="text-white h-full rounded-[4px] w-1/2">{data?.be}</p>
                           <ArrowRight02Icon className="w-[18px] mx-2" />
                           <p className="h-full pl-3 w-[40%] text-right">Backend</p>
                         </div>
-                        <div className='relative py-3 hidden md:flex border-y border-white/20 px-4 items-center flex-1 justify-between'>
-                          <p className="text-white h-full px-2 rounded-[4px] w-1/2">{data?.db}</p>
+                        <div className='relative py-3 hidden md:flex border-y border-white/20 items-center flex-1 justify-between'>
+                          <p className="text-white h-full rounded-[4px] w-1/2">{data?.db}</p>
                           <ArrowRight02Icon className="w-[18px] mx-2" />
                           <p className="h-full pl-3 w-[40%] text-right">Database</p>
                         </div>
-                        <div className='relative py-3 hidden md:flex border-y border-white/20 px-4 items-center flex-1 justify-between'>
-                          <p className="text-white h-full px-2 rounded-[4px] w-1/2">{data?.style}</p>
+                        <div className='relative py-3 hidden md:flex border-y border-white/20 items-center flex-1 justify-between'>
+                          <p className="text-white h-full rounded-[4px] w-1/2">{data?.style}</p>
                           <ArrowRight02Icon className="w-[18px] mx-2" />
                           <p className="h-full pl-3 w-[40%] text-right">Styleeee</p>
                         </div>
@@ -1141,7 +1141,7 @@ const Homepage: React.FC = () => {
           </motion.div>
         </div>
 
-        <footer className='bg-white/10 backdrop-blur-md relative w-full overflow-hidden px-2 md:px-6 md:mt-10 md:pb-0 pb-5 z-[8888] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
+        <footer className='bg-white/10 backdrop-blur-md relative w-full overflow-hidden px-2 md:px-6 mt-10 md:pb-0 pb-5 z-[8888] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
           <img src={Footer} alt='particles' className='absolute z-[-2] right-[0%] bottom-[-34%] w-full opacity-[60%]' />
           <div className="relative w-full md:ml-8 grid md:grid-cols-4 z-[999]">
             <div className="relative w-full md:flex hidden flex-col h-max md:min-h-[340px] md:py-10 md:px-6">
