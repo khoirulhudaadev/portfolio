@@ -97,7 +97,7 @@ const ModalSearch = ({ onClose }: ModalState) => {
             transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
             className="w-screen h-screen fixed z-[99999999999999] bg-black/80 flex justify-center items-center">
-            <div className="relative md:left-[-16px] w-full md:w-[60vw] h-[80vh] bg-white/20 backdrop-blur-2xl p-4 md:rounded-[24px]">
+            <div className="relative md:left-[-16px] md:top-0 top-[-20px] w-full md:w-[60vw] h-[80vh] bg-white/20 backdrop-blur-2xl p-4 md:rounded-[24px]">
                 <div className="relative w-full md:w-[60vw] h-[80vh] overflow-hidden bg-white p-4 md:p-6 md:rounded-[20px]">
                     <div className='w-full md:flex items-center justify-between border-b border-b-slate-300 pb-3'>
                         <div className="flex flex-1 md:mr-4 items-center gap-2">
