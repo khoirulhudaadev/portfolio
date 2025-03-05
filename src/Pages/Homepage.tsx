@@ -1005,7 +1005,7 @@ const Homepage: React.FC = () => {
               </div>
             </a>
             <a href='https://github.com/khoirulhudaa?tab=achievements&achievement=quickdraw' target='__blank'>
-              <div onClick={() => setSelectTypeGit('git2')} className={`flex gap-6 ${selectTypeGit === 'git2' ? 'bg-[#9e69ff11]' : ''} items-center cursor-pointer px-4 py-6 md:px-6 border-x-[0.5px] border-gray-700`}>
+              <div onClick={() => setSelectTypeGit('git2')} className={`flex gap-6 ${selectTypeGit === 'git2' ? 'bg-[#9e69ff11]' : ''} items-center cursor-pointer px-4 py-6 md:px-6 md:border-x-[0.5px] border-gray-700`}>
                 <img src={Git2} alt="git" className="w-12" />
                 <div className='flex-1'>
                   <h3 className={`${selectTypeGit === 'git2' ? 'text-[#5E5CF8]' : 'text-white'} font-medium`}>Quickdraw</h3>
