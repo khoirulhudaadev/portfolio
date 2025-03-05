@@ -463,13 +463,13 @@ const Homepage: React.FC = () => {
                 </div>
                 <div className="md:px-6 md:py-6 md:mb-0 mb-12 relative">
                   {/* Left border */}
-                  <div className="md:before:absolute md:before:top-0 bmd:efore:left-0 before:h-full md:before:w-px md:before:bg-slate-900/80 dark:before:bg-white/10"></div>
+                  <div className="md:before:absolute md:before:top-0 md:before:left-0 before:h-full md:before:w-px md:before:bg-slate-900/80 dark:before:bg-white/10"></div>
 
                   {/* Right border */}
                   <div className="md:after:absolute md:after:top-0 md:after:right-0 after:h-full md:after:w-px md:after:bg-slate-900/80 dark:after:bg-white/10"></div>
 
                   <div className="flex gap-6 h-[50px] items-center">
-                    <img src={DockerBlue} alt="logo-docker" className="w-[43%] md:w-[45%]" />
+                    <img src={DockerBlue} alt="logo-docker" className="w-[39%] md:w-[45%]" />
                   </div>
                   <div className="w-full mt-6">
                     <p className="text-[14px] text-white leading-loose">
@@ -482,7 +482,7 @@ const Homepage: React.FC = () => {
                 </div>
                 <div className={`md:px-6 md:py-6 md:mb-0 mb-8`}>
                   <div className='flex gap-6 h-[50px] items-center'>
-                    <img src={Clickup} alt="logo-clickup" className="w-[37%] md:w-[38%]" />
+                    <img src={Clickup} alt="logo-clickup" className="w-[34%] md:w-[38%]" />
                   </div>
                   <div className='w-full mt-6'>
                     <p className="text-[14px] text-white leading-loose">ClickUp is a cloud-based project management tool that integrates tasks, docs, and automation to streamline team workflows.</p>
@@ -564,35 +564,35 @@ const Homepage: React.FC = () => {
                       </Link>
 
                       <div className='w-full text-white mt-6 md:pr-12 grid-cols-1 grid md:grid-cols-2 gap-4'>
-                        <div className='relative py-3 flex border border-white/20 px-4 rounded-[6px] items-center flex-1 justify-between'>
+                        <div className='relative py-3 flex border-y border-white/20 px-4 items-center flex-1 justify-between'>
                           <p className="text-white h-full px-2 rounded-[4px] w-1/2">{data?.paymentGateway}</p>
-                          {/* <ArrowRight02Icon className="w-[18px] mx-2" /> */}
-                          <p className="border-l border-l-slate-600 h-full pl-3 w-[40%] text-right">Payment</p>
+                          <ArrowRight02Icon className="w-[18px] mx-2" />
+                          <p className=" h-full pl-3 w-[40%] text-right">Payment</p>
                         </div>
-                        <div className='relative py-3 flex border border-white/20 px-4 rounded-[6px] items-center flex-1 justify-between'>
+                        <div className='relative py-3 flex border-y border-white/20 px-4 items-center flex-1 justify-between'>
                           <p className="text-white h-full px-2 rounded-[4px] w-1/2">{data?.fe}</p>
-                          {/* <ArrowRight02Icon className="w-[18px] mx-2" /> */}
-                          <p className="border-l border-l-slate-600 h-full pl-3 w-[40%] text-right">Frontend</p>
+                          <ArrowRight02Icon className="w-[18px] mx-2" />
+                          <p className="h-full pl-3 w-[40%] text-right">Frontend</p>
                         </div>
-                        <div className='relative py-3 hidden md:flex border border-white/20 px-4 rounded-[6px] items-center flex-1 justify-between'>
+                        <div className='relative py-3 hidden md:flex border-y border-white/20 px-4 items-center flex-1 justify-between'>
                           <p className="text-white h-full px-2 rounded-[4px] w-1/2">{data?.stateManagement}</p>
-                          {/* <ArrowRight02Icon className="w-[18px] mx-2" /> */}
-                          <p className="border-l border-l-slate-600 h-full pl-3 w-[40%] text-right">Stateeee</p>
+                          <ArrowRight02Icon className="w-[18px] mx-2" />
+                          <p className="h-full pl-3 w-[40%] text-right">Stateeee</p>
                         </div>
-                        <div className='relative py-3 flex border border-white/20 px-4 rounded-[6px] items-center flex-1 justify-between'>
+                        <div className='relative py-3 flex border-y border-white/20 px-4 items-center flex-1 justify-between'>
                           <p className="text-white h-full px-2 rounded-[4px] w-1/2">{data?.be}</p>
-                          {/* <ArrowRight02Icon className="w-[18px] mx-2" /> */}
-                          <p className="border-l border-l-slate-600 h-full pl-3 w-[40%] text-right">Backend</p>
+                          <ArrowRight02Icon className="w-[18px] mx-2" />
+                          <p className="h-full pl-3 w-[40%] text-right">Backend</p>
                         </div>
-                        <div className='relative py-3 hidden md:flex border border-white/20 px-4 rounded-[6px] items-center flex-1 justify-between'>
+                        <div className='relative py-3 hidden md:flex border-y border-white/20 px-4 items-center flex-1 justify-between'>
                           <p className="text-white h-full px-2 rounded-[4px] w-1/2">{data?.db}</p>
-                          {/* <ArrowRight02Icon className="w-[18px] mx-2" /> */}
-                          <p className="border-l border-l-slate-600 h-full pl-3 w-[40%] text-right">Database</p>
+                          <ArrowRight02Icon className="w-[18px] mx-2" />
+                          <p className="h-full pl-3 w-[40%] text-right">Database</p>
                         </div>
-                        <div className='relative py-3 hidden md:flex border border-white/20 px-4 rounded-[6px] items-center flex-1 justify-between'>
+                        <div className='relative py-3 hidden md:flex border-y border-white/20 px-4 items-center flex-1 justify-between'>
                           <p className="text-white h-full px-2 rounded-[4px] w-1/2">{data?.style}</p>
-                          {/* <ArrowRight02Icon className="w-[18px] mx-2" /> */}
-                          <p className="border-l border-l-slate-600 h-full pl-3 w-[40%] text-right">Styleeee</p>
+                          <ArrowRight02Icon className="w-[18px] mx-2" />
+                          <p className="h-full pl-3 w-[40%] text-right">Styleeee</p>
                         </div>
                       </div>
 
@@ -708,7 +708,7 @@ const Homepage: React.FC = () => {
             transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
             className='w-full mt-4 mb-10 flex-col md:flex-row md:flex justify-between items-center '>
-            <h2 className='relative flex items-center w-max text-[30px] md:text-[40px] text-white font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'><span className='md:flex hidden'>Experience - </span>Internship</h2>
+            <h2 className='relative flex items-center w-max text-[30px] md:text-[40px] text-white font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'><span className='md:flex hidden'>Experience - </span>Internship <span>- FE</span></h2>
             <div className='flex w-max'>
               <div className="relative flex items-center gap-6 md:mt-0 mt-4 md:p-6 text-white after:absolute after:right-0 after:w-px after:h-[200vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[100vh]">
                 <p>konstruksi web</p>
