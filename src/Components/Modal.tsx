@@ -99,14 +99,14 @@ const ModalSearch = ({ onClose }: ModalState) => {
             className="w-screen h-screen fixed z-[99999999999999] bg-black/80 flex justify-center items-center">
             <div className="relative md:left-[-16px] md:top-0 top-[-20px] w-full md:w-[60vw] h-[80vh] bg-white/20 backdrop-blur-2xl p-4 md:rounded-[24px]">
                 <div className="relative w-full md:w-[60vw] h-[80vh] overflow-hidden bg-white p-4 md:p-6 md:rounded-[20px]">
-                    <div className='w-full md:flex items-center justify-between border-b border-b-slate-300 pb-3'>
-                        <div className="flex flex-1 md:mr-4 items-center gap-2">
+                    <div className='w-full flex items-center justify-between border-b border-b-slate-300 pb-3'>
+                        <div className="flex md:flex-1 md:mr-4 items-center gap-2">
                             <Search01Icon className="w-5 h-5" />
                             <input type="text" onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearch(e.target.value)} className="text-[13px] w-full outline-0 border-0 p-2" placeholder="Search information" />
                         </div>
-                        <div className="w-full md:mt-0 mt-3 md:w-max flex items-center gap-2">
+                        <div className="mt-0 md:w-max flex items-center gap-2">
                             <p className="text-[12px] text-slate-400">for close</p>
-                            <div onClick={() => onClose()} className="border border-slate-400 rounded-[6px] px-3 py-1 text-slate-600 font-normal text-[10px]">
+                            <div onClick={() => onClose()} className="border border-slate-400 rounded-[6px] px-3 py-1 text-slate-600 font-normal text-[12px] md:text-[10px]">
                                 <p>esc</p>
                             </div>
                         </div>
