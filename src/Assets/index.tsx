@@ -63,8 +63,20 @@ import Electshop2 from './electshop2.png'
 import Luvlywed from './luvlywed.png'
 import Unipay2 from './unipay2.png'
 import Jannah from './jannah.png'
+import DockerBlue from './docker-logo-blue.png'
+import DockerWhite from './docker-logo-white.png'
+import DockerBlueText from './docker-mark-blue.png'
+import Clickup from './clickup.svg'
+import Githubb from './githubb.png'
+import ssh from './ssh.png'
 
 export {
+    Clickup,
+    Githubb,
+    ssh,
+    DockerBlue,
+    DockerWhite,
+    DockerBlueText,
     Jannah,
     Unipay2,
     Luvlywed,

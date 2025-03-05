@@ -1,9 +1,9 @@
 import { motion } from "framer-motion"
-import { Add01Icon, ArrowRight02Icon, ArrowUp01Icon, BrowserIcon, Building02Icon, Calendar04Icon, Cancel01Icon, Github01Icon, InformationDiamondIcon, Link03Icon, Linkedin01Icon, LinkSquare01Icon, MapPinIcon, Mortarboard02Icon, PaintBrush04Icon, Search01Icon, ViewIcon } from 'hugeicons-react'
+import { ArrowRight02Icon, ArrowUp01Icon, BrowserIcon, Building02Icon, Calendar04Icon, Cancel01Icon, Github01Icon, InformationDiamondIcon, Link03Icon, Linkedin01Icon, LinkSquare01Icon, Mortarboard02Icon, PaintBrush04Icon, Search01Icon, ViewIcon } from 'hugeicons-react'
 import React, { useEffect, useRef, useState } from 'react'
 import { FaArrowRight, FaTimes } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import { Build, Cirebon, Electshop1, Electshop2, Geospasial, Git1, Git2, Git3, Inovasi, Jakarta, Jannah, JWD, KonstruksiLogo, Laravel, Luvlywed, Majalengka, Node, OMDB, Pacticles2, PakYos, Reacts, Redux, Team, TS, Unipay, Unipay2, Weather, Winner } from '../Assets'
+import { Build, Cirebon, Clickup, DockerBlue, Electshop1, Electshop2, Git1, Git2, Git3, Inovasi, Jakarta, Jannah, JWD, KonstruksiLogo, Laravel, Luvlywed, Majalengka, Node, OMDB, Pacticles2, PakYos, Reacts, Redux, ssh, Team, TS, Unipay, Unipay2, Weather, Winner } from '../Assets'
 import FilteredGitHubCalendar from "../Components/GithubCalendar"
 import InfiniteSlider from "../Components/InfiniteSlider"
 import ModalSearch from "../Components/Modal"
@@ -95,7 +95,13 @@ const Homepage: React.FC = () => {
       image1: Electshop1,
       image2: Electshop2,
       url: "https://elect-shop.vercel.app",
-      category: "apps"
+      category: "apps",
+      fe: "reactjs",
+      be: "express",
+      paymentGateway: "midtrans",
+      stateManagement: "redux",
+      db: "mongodb",
+      style: "tailwind",
     },
     {
       title: "Unipay",
@@ -103,7 +109,13 @@ const Homepage: React.FC = () => {
       image1: Unipay,
       image2: Unipay2,
       url: "https://unipay-app.vercel.app/",
-      category: "apps"
+      category: "apps",
+      fe: "nextjs",
+      be: "express",
+      paymentGateway: "xendit",
+      stateManagement: "redux",
+      db: "mongodb",
+      style: "tailwind",
     },
     {
       title: "Al-quran Jannah",
@@ -111,7 +123,13 @@ const Homepage: React.FC = () => {
       image1: Jannah,
       image2: "",
       url: "https://alquran-jannah-v1.vercel.app/",
-      category: "API"
+      category: "API",
+      fe: "nextjs",
+      be: "no used",
+      paymentGateway: "none",
+      stateManagement: "none",
+      db: "API",
+      style: "tailwind",
     },
     {
       title: "WeatherApp",
@@ -119,7 +137,13 @@ const Homepage: React.FC = () => {
       image1: Weather,
       image2: "",
       url: "https://weather-huda.vercel.app/",
-      category: "API"
+      category: "API",
+      fe: "react",
+      be: "no used",
+      paymentGateway: "none",
+      stateManagement: "none",
+      db: "API",
+      style: "tailwind",
     },
     {
       title: "OMDB API",
@@ -127,7 +151,13 @@ const Homepage: React.FC = () => {
       image1: OMDB,
       image2: "",
       url: "https://omdb-api-vite.vercel.app/",
-      category: "API"
+      category: "API",
+      fe: "react",
+      be: "no used",
+      paymentGateway: "none",
+      stateManagement: "none",
+      db: "API",
+      style: "tailwind",
     },
     {
       title: "Luvlywed",
@@ -135,7 +165,14 @@ const Homepage: React.FC = () => {
       image1: Luvlywed,
       image2: "",
       url: "https://luvlywed.vercel.app/",
-      category: "slicing"
+      category: "slicing",
+      fe: "reactjs",
+      be: "no used",
+      package: "threejs",
+      paymentGateway: "none",
+      stateManagement: "none",
+      db: "none",
+      style: "tailwind",
     },
   ]
 
@@ -183,8 +220,8 @@ const Homepage: React.FC = () => {
                 <a href="#languages">
                   <li className='mr-10 animate-fadeIn hover:text-white border-b hover:border-slate-400 border-transparent'>Languages</li>
                 </a>
-                <a href="#products">
-                  <li className='mr-10 animate-fadeIn hover:text-white border-b hover:border-slate-400 border-transparent'>Products</li>
+                <a href="#technologies">
+                  <li className='mr-10 animate-fadeIn hover:text-white border-b hover:border-slate-400 border-transparent'>Technologies</li>
                 </a>
                 <a href="#linkedin">
                   <li className='mr-10 animate-fadeIn hover:text-white border-b hover:border-slate-400 border-transparent'>Linkedin</li>
@@ -213,8 +250,8 @@ const Homepage: React.FC = () => {
               <a href="#home" className='w-full mb-4 border-b border-b-slate-200'>
                 <li className='py-4' onClick={() => setSidebar(false)}>Home</li>
               </a>
-              <a href="#products" className='w-full mb-4 border-b border-b-slate-200'>
-                <li className='py-4' onClick={() => setSidebar(false)}>Products</li>
+              <a href="#technologies" className='w-full mb-4 border-b border-b-slate-200'>
+                <li className='py-4' onClick={() => setSidebar(false)}>Technologies</li>
               </a>
               <a href="#linkedin" className='w-full mb-4 border-b border-b-slate-200'>
                 <li className='py-4' onClick={() => setSidebar(false)}>Linkedin</li>
@@ -299,10 +336,10 @@ const Homepage: React.FC = () => {
           </div>
 
           <div className='relative z-[99999] my-7 py-2 flex-col md:flex-row md:flex items-center before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
-            <button className='relative active:scale-[0.99] hover:brightness-[90%] z-[99999] outline-0 md:ml-4 md:mr-6 rounded-full bg-white px-4 py-3 w-max lg h-max text-center text-[14px] font-normal text-black animate-fadeIn delay-[1000ms]'>Download Resume</button>
+            <button className='relative active:scale-[0.99] bg-white flex hover:brightness-[90%] z-[99999] outline-0 md:ml-4 md:mr-6 rounded-full px-4 py-3 w-max lg h-max text-center text-[14px] font-normal text-black animate-fadeIn delay-[1000ms]'>Download Resume</button>
             <div onClick={() => setActiveModalSearch(true)} className="active:scale-[0.99] outline-0 grid md:mt-0 mt-4 w-full md:w-[480px] grid-cols-[auto_1fr_auto] items-center gap-1 rounded-full px-4 py-3 text-left text-sm/6 sm:w-80 bg-white/5 text-white/50 animate-fadeIn delay-[1000ms]">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" className="-ml-0.5 size-4 fill-gray-600 dark:fill-gray-500">
-                <path fill-rule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clip-rule="evenodd">
+                <path fillRule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clipRule="evenodd">
                 </path>
               </svg>
               Quick search
@@ -367,16 +404,16 @@ const Homepage: React.FC = () => {
               <img loading='lazy' src={Reacts} alt='iconLanguage' className='w-[34px] md:w-[80px] md:mb-0 mb-5 md:mr-14 z-[99999999999] grayscale-[100%]' />
               <img loading='lazy' src={Node} alt='iconLanguage' className='w-[34px] md:w-[80px] md:mb-0 mb-5 md:mr-14 z-[99999999999] grayscale-[100%]' />
               <img loading='lazy' src={Redux} alt='iconLanguage' className='w-[34px] md:w-[80px] md:mb-0 mb-5 md:mr-14 z-[99999999999] grayscale-[100%]' />
-              <img loading='lazy' src={TS} alt='iconLanguage' className='w-[34px] md:w-[80px] md:mb-0 mb-5 md:mr-14 z-[99999999999] grayscale-[100%]' />
+              <img loading='lazy' src={TS} alt='iconLanguage' className='w-[34px] md:w-[80px] md:flex hidden md:mb-0 mb-5 md:mr-14 z-[99999999999] grayscale-[100%]' />
               <img loading='lazy' src={Laravel} alt='iconLanguage' className='w-[34px] md:w-[80px] md:mb-0 mb-5 md:mr-14 z-[99999999999] grayscale-[100%]' />
             </div>
           </motion.div>
         </div>
 
-        <div id='products' className='select-none px-4 md:px-14 relative md:flex flex-col z-[4444] pb-[30px] md:pb-[80px] pt-6 md:pt-4 w-full h-max border-slate-100'>
+        <div id='technologies' className='select-none px-4 md:px-14 relative md:flex flex-col z-[4444] pb-[30px] md:pb-[80px] pt-6 md:pt-4 w-full h-max border-slate-100'>
 
-          <div className="absolute z-[33] left-[20%] w-[60%] h-[40px] py-[30%] transform -translate-y-[45%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[140px]"></div>
-          <div className="absolute z-[33] left-[15%] w-[100%] h-[40px] py-[30%] transform -translate-y-[51%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[70px]"></div>
+          <div className="absolute z-[33] left-[20%] w-[60%] h-[40px] py-[30%] transform -translate-y-[25%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[200px]"></div>
+          {/* <div className="absolute z-[33] left-[15%] w-[100%] h-[40px] py-[30%] transform -translate-y-[51%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[70px]"></div> */}
           <img src={Pacticles2} alt='particles' className='absolute z-[33] left-[25%] top-[-10%] w-[60%]' />
 
           <small className='relative text-[#00B4F5] mb-4 text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Frontend + Backend.</small>
@@ -386,7 +423,7 @@ const Homepage: React.FC = () => {
             transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
             className='w-full mt-4 mb-10 flex-col md:flex-row md:flex justify-between items-center '>
-            <h2 className='relative text-[28px] md:text-[40px] text-white font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>SIGEO - web app</h2>
+            <h2 className='relative text-[28px] md:text-[40px] text-white font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Our Technologies</h2>
             <div className='flex w-max'>
               <div className="relative flex items-center gap-6 md:p-6 md:mt-0 mt-4 text-white">
                 <p>Go to website</p>
@@ -402,51 +439,70 @@ const Homepage: React.FC = () => {
             className='relative text-base text-slate-300 w-[97%] md:w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
             As a Fullstack Devedloper, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.
           </motion.p>
-
-          <div className="relative mb-10 flex items-center justify-center">
+          <div className="relative md:mb-4 mt-10 gap-4">
             <motion.div
               initial={{ opacity: 0, filter: 'blur(10px)' }}
               whileInView={{ opacity: 1, filter: 'blur(0px)' }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
               viewport={{ once: true, amount: 0.2 }}
-              className="relative opacity-100 w-[100%] mx-auto md:rounded-[24px] bg-white/20 backdrop-blur-2xl md:p-4 z-40 items-center justify-between mt-12"
-            >
-              <div className='w-full h-full md:rounded-[20px] bg-white p-4 md:p-6'>
-                <div className='w-full h-full relative flex-col md:flex-row md:flex justify-between text-[20px] leading-loose text-white'>
-                  <div className='w-full md:flex items-center'>
-                    <div className='w-full flex items-center justify-start gap-2 md:gap-6'>
-                      <MapPinIcon size={30} className="text-black relative top-[-3px]" />
-                      <h2 className='text-black font-medium text-[22px] md:text-[28px]'>SI GEO</h2>
-                    </div>
-                    <div className='text-slate-400 w-max text-[14px] px-4 py-1 hidden md:flex items-center border border-slate-400 rounded-[8px] bg-slate-100 justify-center cursor-pointer active:scale-[0.99] hover:brightness-95'>
-                      <Link03Icon className="transform rotate-[45deg]" />
-                      <p className="ml-3 font-normal">Preview</p>
+              className='relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw] w-full rounded-[24px] md:p-4 grid grid-cols-1 items-center justify-between z-[999] mt-12'>
+              <div className='md:rounded-[18px] w-full grid grid-cols-1 md:grid-cols-3 h-max overflow-hidden'>
+                <div className={`md:px-6 md:py-6 md:mb-0 mb-12`}>
+                  <div className='flex gap-6 h-[50px] items-center'>
+                    <img src={ssh} alt="logo-ssh" className="relative z-[44] w-[10%]" />
+                    <div className='flex-1'>
+                      <h3 className={`text-white font-bold text-[24px]`}>Secure shell</h3>
                     </div>
                   </div>
-                  <p className='text-[14px] md:w-[80%] mt-4 md:mt-6 mb-10 text-slate-800'>Sigeo is an abbreviation for Geographic Information System (GIS), a technology used to gather, store, manipulate, analyze, and visualize location-based or geographic data in Cirebon Regency.</p>
+                  <div className='w-full mt-6'>
+                    <p className="text-[14px] text-white leading-loose">SSH (Secure Shell) is a secure protocol for remote server access, file transfer, and authentication with encryption, ensuring privacy.</p>
+                  </div>
+                  <div className='border border-white md:border-black mt-4 md:mt-10 mb-12 md:mb-3 md:bg-white text-white md:text-black md:rounded-full md:w-[50px] h-[50px] hidden md:flex items-center justify-center cursor-pointer active:scale-[0.99] hover:brightness-95 duration-100'>
+                    <ArrowRight02Icon />
+                  </div>
                 </div>
+                <div className="md:px-6 md:py-6 md:mb-0 mb-12 relative">
+                  {/* Left border */}
+                  <div className="md:before:absolute md:before:top-0 bmd:efore:left-0 before:h-full md:before:w-px md:before:bg-slate-900/80 dark:before:bg-white/10"></div>
 
-                <div className='w-full relative h-max md:h-full md:rounded-[24px] border border-gray-700 md:p-6'>
-                  <div className='relative left-0 w-full h-[100%] md:rounded-[20px] overflow-hidden border border-slate-800 lg'>
-                    <img src={Geospasial} alt="geospasial-project" />
+                  {/* Right border */}
+                  <div className="md:after:absolute md:after:top-0 md:after:right-0 after:h-full md:after:w-px md:after:bg-slate-900/80 dark:after:bg-white/10"></div>
+
+                  <div className="flex gap-6 h-[50px] items-center">
+                    <img src={DockerBlue} alt="logo-docker" className="w-[43%] md:w-[45%]" />
+                  </div>
+                  <div className="w-full mt-6">
+                    <p className="text-[14px] text-white leading-loose">
+                      Open-source platform that packages apps and dependencies into lightweight containers for consistent, portable, and efficient deployment.
+                    </p>
+                  </div>
+                  <div className="border border-white md:border-black mt-4 md:mt-10 mb-12 md:mb-3 md:bg-white text-white md:text-black md:rounded-full md:w-[50px] h-[50px] hidden md:flex items-center justify-center cursor-pointer active:scale-[0.99] hover:brightness-95 duration-100">
+                    <ArrowRight02Icon />
                   </div>
                 </div>
-                <div className='text-slate-500 w-full text-[14px] px-4 py-2 flex md:hidden mt-4 items-center border border-slate-400 rounded-[8px] bg-slate-100 justify-center cursor-pointer active:scale-[0.99] hover:brightness-95'>
-                  <Link03Icon className="transform rotate-[45deg]" />
-                  <p className="ml-3 font-normal">Preview</p>
+                <div className={`md:px-6 md:py-6 md:mb-0 mb-8`}>
+                  <div className='flex gap-6 h-[50px] items-center'>
+                    <img src={Clickup} alt="logo-clickup" className="w-[37%] md:w-[38%]" />
+                  </div>
+                  <div className='w-full mt-6'>
+                    <p className="text-[14px] text-white leading-loose">ClickUp is a cloud-based project management tool that integrates tasks, docs, and automation to streamline team workflows.</p>
+                  </div>
+                  <div className='border border-white md:border-black mt-4 md:mt-10 mb-12 md:mb-3 md:bg-white text-white md:text-black md:rounded-full md:w-[50px] h-[50px] hidden md:flex items-center justify-center cursor-pointer active:scale-[0.99] hover:brightness-95 duration-100'>
+                    <ArrowRight02Icon />
+                  </div>
                 </div>
               </div>
             </motion.div>
-
           </div>
 
-          <div className='mt-16 md:mt-20'>
+          <div className='mt-9 md:mt-20'>
             <motion.small
               initial={{ opacity: 0, filter: 'blur(10px)' }}
               whileInView={{ opacity: 1, filter: 'blur(0px)' }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
               viewport={{ once: true, amount: 0.2 }}
-              className='relative text-[#00B4F5] text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Web development and landing page.</motion.small>
+              className='relative text-[#00B4F5] text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Web development and landing page.
+            </motion.small>
             <motion.div
               initial={{ opacity: 0, filter: 'blur(10px)' }}
               whileInView={{ opacity: 1, filter: 'blur(0px)' }}
@@ -457,8 +513,8 @@ const Homepage: React.FC = () => {
                 Our web products
               </h2>
               <div className='hidden md:flex w-max'>
-                <div className="relative text-transparent flex items-center gap-6 md:mt-0 mt-4 md:p-6 after:absolute after:right-0 after:w-px after:h-[200vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[100vh]">
-                  <p>konstruksi web</p>
+                <div className="relative w-max text-transparent flex items-center gap-6 md:mt-0 mt-4 md:p-6 after:absolute after:right-0 after:w-px after:h-[200vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[100vh]">
+                  <p>3 types </p>
                   <Link03Icon className='w-6 h-6' />
                 </div>
               </div>
@@ -500,48 +556,49 @@ const Homepage: React.FC = () => {
                 ?.map((data: any, index: number) => (
                   <div key={index} className='w-full md:flex z-40 py-8 relative left-[0px] md:mt-[60px] h-max before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
                     <div className='relative w-full md:w-[50%] z-[99999] py-6 min-h-[400px]'>
-                      <h2 className='text-[24px] font-medium text-white mb-2'>{index + 1}. {data?.title}</h2>
-                      <p className='text-slate-300 w-full md:w-[85%] leading-loose tracking-tighter'>{data?.desc}</p>
+                      <h2 className='relative text-[24px] font-medium text-white mb-2 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>{index + 1}. {data?.title}</h2>
+                      <p className='relative text-slate-300 w-full md:w-[85%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>{data?.desc}</p>
 
                       <Link to={data?.url} target="__blank">
-                        <p className='cursor-pointer mt-6 hover:brightness-[90%] active:scale-[0.99] text-[#00B4F5] relative flex items-center text-base'>{data?.title} in here <FaArrowRight className='ml-4 relative top-[0.8]' /> </p>
+                        <p className='cursor-pointer mt-6 hover:brightness-[90%] active:scale-[0.99] text-[#00B4F5] relative flex items-center text-base before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>{data?.title} in here <FaArrowRight className='ml-4 relative top-[0.8]' /> </p>
                       </Link>
 
-                      {
-                        data?.image2 ? (
-                          <div onClick={() => setSelectAccordion(2)} className={`relative h-max mt-6 w-full md:w-[85%] ${selectAccordion === 2 ? 'h-[140px]' : 'h-[80px]'} active:scale-[0.99] duration-200 ease-in-out py-3 border-y border-slate-700 overflow-hidden`}>
-                            <div className='cursor-pointer w-full flex items-baseline justify-between py-3'>
-                              <p className={`text-lg font-medium duration-200 ease-in ${selectAccordion === 2 ? 'text-white' : 'text-slate-300'}`}>Authentication system</p>
-                              {
-                                selectAccordion === 2 ? (
-                                  <></>
-                                ) :
-                                  <Add01Icon className='text-indigo-700 cursor-pointer' />
-                              }
-                            </div>
-                            <p className={`w-full ${selectAccordion === 2 ? '' : 'hidden'} duratation-200 leading-loose tracking-tighter text-slate-300 text-sm`}>A quick overview of how this website authentication looks</p>
-                          </div>
-                        ) :
-                          <></>
-                      }
-
-                      <div onClick={(() => setSelectAccordion(1))} className={`relative h-max mt-6 w-full md:w-[85%] ${selectAccordion === 1 ? 'h-[140px]' : 'h-[80px]'} active:scale-[0.99] duration-200 ease-in-out py-3 border-y border-slate-700 overflow-hidden`}>
-                        <div className='cursor-pointer w-full flex items-baseline justify-between py-3'>
-                          <p className={`text-lg font-medium duration-200 ease-in ${selectAccordion === 1 ? 'text-white' : 'text-slate-300'}`}>About the website</p>
-                          {
-                            selectAccordion === 1 ? (
-                              <></>
-                            ) :
-                              <Add01Icon className='text-indigo-700 cursor-pointer' />
-                          }
+                      <div className='w-full text-white mt-6 md:pr-12 grid-cols-1 grid md:grid-cols-2 gap-4'>
+                        <div className='relative py-3 flex border border-white/20 px-4 rounded-[6px] items-center flex-1 justify-between'>
+                          <p className="text-white h-full px-2 rounded-[4px] w-1/2">{data?.paymentGateway}</p>
+                          {/* <ArrowRight02Icon className="w-[18px] mx-2" /> */}
+                          <p className="border-l border-l-slate-600 h-full pl-3 w-[40%] text-right">Payment</p>
                         </div>
-
-                        <p className={`w-full ${selectAccordion === 1 ? '' : 'hidden'} duratation-200 leading-loose tracking-tighter text-slate-300 text-sm`}>A quick overview of the appearance of this website</p>
+                        <div className='relative py-3 flex border border-white/20 px-4 rounded-[6px] items-center flex-1 justify-between'>
+                          <p className="text-white h-full px-2 rounded-[4px] w-1/2">{data?.fe}</p>
+                          {/* <ArrowRight02Icon className="w-[18px] mx-2" /> */}
+                          <p className="border-l border-l-slate-600 h-full pl-3 w-[40%] text-right">Frontend</p>
+                        </div>
+                        <div className='relative py-3 hidden md:flex border border-white/20 px-4 rounded-[6px] items-center flex-1 justify-between'>
+                          <p className="text-white h-full px-2 rounded-[4px] w-1/2">{data?.stateManagement}</p>
+                          {/* <ArrowRight02Icon className="w-[18px] mx-2" /> */}
+                          <p className="border-l border-l-slate-600 h-full pl-3 w-[40%] text-right">Stateeee</p>
+                        </div>
+                        <div className='relative py-3 flex border border-white/20 px-4 rounded-[6px] items-center flex-1 justify-between'>
+                          <p className="text-white h-full px-2 rounded-[4px] w-1/2">{data?.be}</p>
+                          {/* <ArrowRight02Icon className="w-[18px] mx-2" /> */}
+                          <p className="border-l border-l-slate-600 h-full pl-3 w-[40%] text-right">Backend</p>
+                        </div>
+                        <div className='relative py-3 hidden md:flex border border-white/20 px-4 rounded-[6px] items-center flex-1 justify-between'>
+                          <p className="text-white h-full px-2 rounded-[4px] w-1/2">{data?.db}</p>
+                          {/* <ArrowRight02Icon className="w-[18px] mx-2" /> */}
+                          <p className="border-l border-l-slate-600 h-full pl-3 w-[40%] text-right">Database</p>
+                        </div>
+                        <div className='relative py-3 hidden md:flex border border-white/20 px-4 rounded-[6px] items-center flex-1 justify-between'>
+                          <p className="text-white h-full px-2 rounded-[4px] w-1/2">{data?.style}</p>
+                          {/* <ArrowRight02Icon className="w-[18px] mx-2" /> */}
+                          <p className="border-l border-l-slate-600 h-full pl-3 w-[40%] text-right">Styleeee</p>
+                        </div>
                       </div>
 
                     </div>
                     <div
-                      className='relative w-full md:w-[50%] md:min-h-[400px] md:rounded-[24px] z-[8888888888888] flex justify-center items-center md:p-10 bg-white/20 backdrop-blur-2xl'
+                      className='relative w-full md:w-[50%] md:min-h-[400px] md:rounded-[24px] z-[8888888888888] flex justify-center items-center md:p-0 bg-white/20 backdrop-blur-2xl'
                     >
 
                       <div className="absolute z-[-1] right-0 w-[100%] md:py-[30%] transform md:-translate-y-[70%] -rotate-45 
@@ -551,7 +608,7 @@ const Homepage: React.FC = () => {
 
                       <motion.div
                         key={selectAccordion} // Animasi berjal an setiap kali konten berubah
-                        className='relative flex shadow-[0_35px_30px_rgba(0,0,30,0.4)] justify-center items-center md:rounded-[24px] overflow-hidden bg-white/20 backdrop-blur-2xl md:p-2 w-full h-[300px] md:mt-6'
+                        className='relative flex shadow-[0_35px_30px_rgba(0,0,30,0.4)] justify-center items-center md:rounded-[24px] overflow-hidden bg-white/20 backdrop-blur-2xl md:p-2 w-full h-full'
                         initial={{ opacity: 0, y: 40 }} // Muncul dari bawah
                         animate={{ opacity: 1, y: 0 }} // Naik ke posisi normal
                         exit={{ opacity: 0, y: -20 }} // Keluar ke atas (opsional)
@@ -572,7 +629,7 @@ const Homepage: React.FC = () => {
           </div>
         </div>
 
-        <div id='linkedin' className='select-none px-4 md:px-14 relative md:flex flex-col z-[444] pb-[30px] md:pb-[80px] pt-6 md:pt-4 w-full h-max border-slate-100'>
+        <div id='linkedin' className='select-none px-4 md:px-14 relative md:flex flex-col z-[444] pb-[30px] md:pb-[80px] md:pt-4 w-full h-max border-slate-100'>
           <motion.small
             initial={{ opacity: 0, filter: 'blur(10px)' }}
             whileInView={{ opacity: 1, filter: 'blur(0px)' }}
@@ -610,7 +667,7 @@ const Homepage: React.FC = () => {
             transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
             className='relative w-full bg-white/20 backdrop-blur-sm md:rounded-[28px] border border-slate-300 md:p-4 z-40 items-center justify-between mt-12 md:mt-24'>
-            <div className='w-full h-full bg-[#ffffff] p-4 md:p-10 md:rounded-[24px]'>
+            <div className='w-full h-full bg-[#ffffff] px-5 py-7 md:px-10 md:py-10 md:rounded-[24px]'>
               <div className='w-full'>
                 <Link to={'https://www.linkedin.com/in/yoshua-gombo/'}>
                   <div className='w-full md:flex items-center justify-between mb-4'>
@@ -1078,7 +1135,7 @@ const Homepage: React.FC = () => {
           </div>
         </footer>
 
-      </div>
+      </div >
     </>
   )
 }
