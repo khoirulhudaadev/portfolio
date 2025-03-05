@@ -451,7 +451,7 @@ const Homepage: React.FC = () => {
                   <div className='relative flex gap-2 h-[50px] items-center before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
                     <img src={ssh} alt="logo-ssh" className="relative z-[44] w-[10%]" />
                     <div className='flex-1'>
-                      <h3 className={`text-white font-bold text-[25px] md:text-[24px]`}>Secure shell</h3>
+                      <h3 className={`text-white font-bold md:text-[24px]`}>Secure shell</h3>
                     </div>
                   </div>
                   <div className='w-full mt-6'>
