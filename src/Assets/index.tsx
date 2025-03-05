@@ -69,8 +69,10 @@ import DockerBlueText from './docker-mark-blue.png'
 import Clickup from './clickup.svg'
 import Githubb from './githubb.png'
 import ssh from './ssh.png'
+import Laravel1 from './laravel1.png'
 
 export {
+    Laravel1,
     Clickup,
     Githubb,
     ssh,
