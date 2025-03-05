@@ -3,7 +3,7 @@ import { ArrowRight02Icon, ArrowUp01Icon, BrowserIcon, Building02Icon, Calendar0
 import React, { useEffect, useRef, useState } from 'react'
 import { FaArrowRight, FaTimes } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import { Build, Cirebon, Clickup, DockerBlue, Electshop1, Electshop2, Git1, Git2, Git3, Inovasi, Jakarta, Jannah, JWD, KonstruksiLogo, Laravel, Laravel1, Luvlywed, Majalengka, Node, OMDB, Pacticles2, PakYos, Reacts, Redux, ssh, Team, TS, Unipay, Unipay2, Weather, Winner } from '../Assets'
+import { Build, Cirebon, Clickup, DockerBlue, Electshop1, Electshop2, Footer, Git1, Git2, Git3, Inovasi, Jakarta, Jannah, JWD, KonstruksiLogo, Laravel, Laravel1, Luvlywed, Majalengka, Node, OMDB, Pacticles2, PakYos, Reacts, Redux, ssh, Team, TS, Unipay, Unipay2, Weather, Winner } from '../Assets'
 import FilteredGitHubCalendar from "../Components/GithubCalendar"
 import InfiniteSlider from "../Components/InfiniteSlider"
 import ModalSearch from "../Components/Modal"
@@ -448,10 +448,10 @@ const Homepage: React.FC = () => {
               className='relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw] w-full rounded-[24px] md:py-0 mx:px-4 grid grid-cols-1 items-center justify-between mt-12'>
               <div className='md:rounded-[18px] w-full grid grid-cols-1 md:grid-cols-3 h-max overflow-hidden'>
                 <div className={`md:px-6 md:py-10 md:mb-0 mb-12`}>
-                  <div className='relative flex gap-6 h-[50px] items-center before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
+                  <div className='relative flex gap-2 h-[50px] items-center before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
                     <img src={ssh} alt="logo-ssh" className="relative z-[44] w-[10%]" />
                     <div className='flex-1'>
-                      <h3 className={`text-white font-bold text-[24px]`}>Secure shell</h3>
+                      <h3 className={`text-white font-bold text-[25px] md:text-[24px]`}>Secure shell</h3>
                     </div>
                   </div>
                   <div className='w-full mt-6'>
@@ -496,6 +496,7 @@ const Homepage: React.FC = () => {
           </div>
 
           <div id='laravel' className='select-none relative md:flex flex-col z-[444] md:pt-4 w-full h-max border-slate-100'>
+
             <motion.small
               initial={{ opacity: 0, filter: 'blur(10px)' }}
               whileInView={{ opacity: 1, filter: 'blur(0px)' }}
@@ -755,7 +756,7 @@ const Homepage: React.FC = () => {
             transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
             className='w-full mt-4 mb-10 flex-col md:flex-row md:flex justify-between items-center '>
-            <h2 className='relative flex items-center w-max text-[30px] md:text-[40px] text-white font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'><span className='md:flex hidden'>Experience - </span>Internship <span>- FE</span></h2>
+            <h2 className='relative flex items-center w-max text-[30px] md:text-[40px] text-white font-medium md:text-balance md:tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'><span className='md:flex hidden mr-1'>Experience - </span> Internship <span className="md:hidden flex">- FE</span></h2>
             <div className='flex w-max'>
               <div className="relative flex items-center gap-6 md:mt-0 mt-4 md:p-6 text-white after:absolute after:right-0 after:w-px after:h-[200vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[100vh]">
                 <p>konstruksi web</p>
@@ -929,11 +930,11 @@ const Homepage: React.FC = () => {
               whileInView={{ opacity: 1, filter: 'blur(0px)' }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
               viewport={{ once: true, amount: 0.2 }}
-              className="relative opacity-100 w-[100%] mx-auto md:rounded-[24px] md:h-[600px] bg-white/20 backdrop-blur-2xl md:p-4 z-40 items-center justify-between md:mt-12"
+              className="relative opacity-100 w-[100%] mx-auto md:rounded-[24px] md:h-[600px] 2xl:h-[900px] bg-white/20 backdrop-blur-2xl md:p-4 z-40 items-center justify-between md:mt-12"
             >
               <div className='w-full h-max md:h-full md:rounded-[20px] bg-white'>
                 <div className='w-full relative flex h-full md:rounded-[16px] overflow-hidden border border-gray-700'>
-                  <div className='relative w-full h-full overflow-hidden md:mt-6 mt-0'>
+                  <div className='relative w-full h-full overflow-hidden mt-0'>
                     <img src={Team} alt="team-konstruksi" className="h-auto md:h-auto object-cover w-full relative md:bottom-[65%] grayscale-[100%]" />
                   </div>
                 </div>
@@ -1024,7 +1025,7 @@ const Homepage: React.FC = () => {
           </motion.div>
         </div>
 
-        <div id='certifications' className='select-none relative px-4 md:px-14 md:flex flex-col z-[233] pb-[30px] md:pb-[80px] pt-6 md:pt-4 w-full h-max border-slate-100'>
+        <div id='certifications' className='select-none relative px-4 md:px-14 md:flex flex-col z-[233] pb-[30px] md:pb-[70px] pt-6 md:pt-4 w-full h-max border-slate-100'>
           <motion.small
             initial={{ opacity: 0, filter: 'blur(10px)' }}
             whileInView={{ opacity: 1, filter: 'blur(0px)' }}
@@ -1140,10 +1141,8 @@ const Homepage: React.FC = () => {
           </motion.div>
         </div>
 
-        <footer className='relative w-full overflow-hidden px-2 md:px-6 md:mt-10 md:pb-0 pb-5 z-[8888] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
-
-          <img src={Pacticles2} alt='particles' className='absolute z-[-2] right-[0%] top-[-25%] w-[50%]' />
-
+        <footer className='bg-white/10 backdrop-blur-md relative w-full overflow-hidden px-2 md:px-6 md:mt-10 md:pb-0 pb-5 z-[8888] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
+          <img src={Footer} alt='particles' className='absolute z-[-2] right-[0%] bottom-[-34%] w-full opacity-[60%]' />
           <div className="relative w-full md:ml-8 grid md:grid-cols-4 z-[999]">
             <div className="relative w-full md:flex hidden flex-col h-max md:min-h-[340px] md:py-10 md:px-6">
               <ul className="list-none h-full ml-4 flex flex-col justify-between text-white text-[14px] font-normal before:absolute before:left-0 before:w-px before:h-full before:bg-slate-900/80 dark:before:bg-slate-100/10 before:-top-[0px]">
