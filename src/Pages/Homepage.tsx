@@ -1,13 +1,14 @@
 import { motion } from "framer-motion"
-import { ArrowRight02Icon, ArrowUp01Icon, BrowserIcon, Building02Icon, Calendar04Icon, Cancel01Icon, Github01Icon, InformationDiamondIcon, Link03Icon, Linkedin01Icon, LinkSquare01Icon, Mortarboard02Icon, PaintBrush04Icon, Search01Icon, ViewIcon } from 'hugeicons-react'
+import { ArrowRight02Icon, ArrowUp01Icon, BrowserIcon, Building02Icon, Calendar04Icon, Cancel01Icon, Github01Icon, InformationDiamondIcon, LinkSquare01Icon, LinkSquare02Icon, Mortarboard02Icon, PaintBrush04Icon, Search01Icon, ViewIcon } from 'hugeicons-react'
 import React, { useEffect, useRef, useState } from 'react'
 import { FaArrowRight, FaTimes } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import { Build, Cirebon, Clickup, DockerBlue, Electshop1, Electshop2, Footer, Git1, Git2, Git3, Inovasi, Jakarta, Jannah, JWD, KonstruksiLogo, Laravel, Laravel1, Luvlywed, Majalengka, Node, OMDB, Pacticles2, PakYos, Reacts, Redux, ssh, Team, TS, Unipay, Unipay2, Weather, Winner } from '../Assets'
+import { Build, Cirebon, Clickup, DockerBlue, Electshop1, Electshop2, Firebase2, Footer, Git1, Git2, Git3, Inovasi, Jakarta, Jannah, JWD, KonstruksiLogo, Laravel, Laravel1, Luvlywed, Majalengka, Node, OMDB, Pacticles2, PakYos, Reacts, Redux, Socket, Figma, Team, TS, Turborepo, Unipay, Unipay2, Valclass, Weather, Winner } from '../Assets'
 import FilteredGitHubCalendar from "../Components/GithubCalendar"
 import InfiniteSlider from "../Components/InfiniteSlider"
 import ModalSearch from "../Components/Modal"
 import ModalCertification from '../Components/ModalCertification'
+import ModalDetail from "../Components/ModalDetail"
 import FadeTransition from "../Components/PageTransition"
 import '../index.css'
 
@@ -15,6 +16,7 @@ const Homepage: React.FC = () => {
 
   const [selectimage, setSelectImage] = useState<string>('');
   const [isModal, setIsModal] = useState<boolean>(false);
+  const [detailModal, setDetailModal] = useState<boolean>(false);
   const [sidebar, setSidebar] = useState<boolean>(false);
   const [selectType, setSelectType] = useState<string>('apps');
   const [selectTypeGit, setSelectTypeGit] = useState<string>('git3');
@@ -176,6 +178,33 @@ const Homepage: React.FC = () => {
     },
   ]
 
+  const features = [
+    "Authentication",
+    "Forgot password",
+    "Send email message",
+    "CRUD Basic",
+    "Relation table",
+    "CRUD - inventory data",
+    "CRUD - product type data",
+    "CRUD - product unit data",
+    "CRUD - user data",
+    "CRUD - Outgoing items",
+  ]
+
+  const implement = [
+    "Queue/jobs with redis",
+    "Middleware/Throttle",
+    "Validation data",
+    "Create ERD (draw.io)",
+    "Repository (struktur foler)",
+    "Laravel horizon",
+    "JSON Web Tken",
+    "Traits",
+    "Model, View, Controller",
+  ]
+
+  const textEnglish = "Gudangku Admin Dashboard is a system for managing warehouse data in a structured and easy way. It features login security, ensuring that not everyone can access it. Key features include managing product data, types, units, and user data management."
+
   return (
     <>
       <FadeTransition />
@@ -195,6 +224,13 @@ const Homepage: React.FC = () => {
       {
         activeModalSearch ? (
           <ModalSearch onClose={() => { setActiveModalSearch(false); setActiveSearch(false) }} />
+        ) :
+          <></>
+      }
+
+      {
+        detailModal ? (
+          <ModalDetail onClose={() => setDetailModal(false)} textEnglish={textEnglish} title="GudangKu" features={features} implement={implement} />
         ) :
           <></>
       }
@@ -376,7 +412,7 @@ const Homepage: React.FC = () => {
             <div className='hidden md:flex w-max'>
               <div className="relative flex items-center gap-6 p-6 text-transparent after:absolute after:right-0 after:w-px after:h-[300vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[100vh]">
                 <p>konstruksi web</p>
-                <Link03Icon className='w-6 h-6' />
+                <LinkSquare02Icon className='w-6 h-6' />
               </div>
             </div>
           </div>
@@ -439,28 +475,14 @@ const Homepage: React.FC = () => {
             className='relative text-base text-slate-300 w-[97%] md:w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
             As a Fullstack Devedloper, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.
           </motion.p>
-          <div className="relative md:mb-4 mt-10 gap-4">
+          <div className="relative mt-10 gap-4">
             <motion.div
               initial={{ opacity: 0, filter: 'blur(10px)' }}
               whileInView={{ opacity: 1, filter: 'blur(0px)' }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
               viewport={{ once: true, amount: 0.2 }}
-              className='relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw] w-full rounded-[24px] md:py-0 mx:px-4 grid grid-cols-1 items-center justify-between mt-12'>
+              className='relative z-[44444] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw] w-full rounded-[24px] md:py-0 mx:px-4 grid grid-cols-1 items-center justify-between mt-12'>
               <div className='md:rounded-[18px] w-full grid grid-cols-1 md:grid-cols-3 h-max overflow-hidden'>
-                <div className={`md:px-6 md:py-10 md:mb-0 mb-12`}>
-                  <div className='relative flex gap-2 h-[50px] items-center before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
-                    <img src={ssh} alt="logo-ssh" className="relative z-[44] w-[10%]" />
-                    <div className='flex-1'>
-                      <h3 className={`text-white font-bold text-[22px] md:text-[24px]`}>Secure shell</h3>
-                    </div>
-                  </div>
-                  <div className='w-full mt-6'>
-                    <p className="text-base text-slate-300 tracking-tighter leading-loose">SSH (Secure Shell) is a secure protocol for remote server access, file transfer, and authentication with encryption, ensuring privacy.</p>
-                  </div>
-                  <div className='border border-white md:border-black mt-4 md:mt-10 mb-12 md:mb-3 md:bg-white text-white md:text-black md:rounded-full md:w-[50px] h-[50px] hidden md:flex items-center justify-center cursor-pointer active:scale-[0.99] hover:brightness-95 duration-100 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw] relative'>
-                    <ArrowRight02Icon />
-                  </div>
-                </div>
                 <div className="md:px-6 md:py-10 md:mb-0 mb-12 relative">
                   {/* Left border */}
                   <div className="md:before:absolute md:before:top-0 md:before:left-0 before:h-full md:before:w-px md:before:bg-slate-900/80 dark:before:bg-white/10"></div>
@@ -476,9 +498,27 @@ const Homepage: React.FC = () => {
                       Open-source platform that packages apps and dependencies into lightweight containers for consistent, portable, and efficient deployment.
                     </p>
                   </div>
-                  <div className="border border-white md:border-black mt-4 md:mt-10 mb-12 md:mb-3 md:bg-white text-white md:text-black md:rounded-full md:w-[50px] h-[50px] hidden md:flex items-center justify-center cursor-pointer active:scale-[0.99] hover:brightness-95 duration-100 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw] relative">
-                    <ArrowRight02Icon />
+                  <Link to={'https://www.docker.com/'} target="__blank">
+                    <div className="border border-white md:border-black mt-4 md:mt-10 mb-12 md:mb-3 md:bg-white text-white md:text-black md:rounded-full md:w-[50px] h-[50px] hidden md:flex items-center justify-center cursor-pointer active:scale-[0.99] hover:brightness-95 duration-100 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw] relative">
+                      <ArrowRight02Icon />
+                    </div>
+                  </Link>
+                </div>
+                <div className={`md:px-6 md:py-10 md:mb-0 mb-12`}>
+                  <div className='relative flex gap-2 h-[50px] items-center before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
+                    <img src={Figma} alt="logo-ssh" className="relative z-[44] w-[7%]" />
+                    <div className='flex-1'>
+                      <h3 className={`text-white font-bold text-[22px] md:text-[26px]`}>Figma</h3>
+                    </div>
                   </div>
+                  <div className='w-full mt-6'>
+                    <p className="text-base text-slate-300 tracking-tighter leading-loose">Skicing with Figma, A cloud-based design tool that enables real-time team collaboration for creating user interfaces.</p>
+                  </div>
+                  <Link to={'https://www.figma.com/'} target="__blank">
+                    <div className='border border-white md:border-black mt-4 md:mt-10 mb-12 md:mb-3 md:bg-white text-white md:text-black md:rounded-full md:w-[50px] h-[50px] hidden md:flex items-center justify-center cursor-pointer active:scale-[0.99] hover:brightness-95 duration-100 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw] relative'>
+                      <ArrowRight02Icon />
+                    </div>
+                  </Link>
                 </div>
                 <div className={`md:px-6 md:py-10 md:mb-0 mb-8`}>
                   <div className='relative flex gap-6 h-[50px] items-center before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
@@ -487,15 +527,82 @@ const Homepage: React.FC = () => {
                   <div className='w-full mt-6'>
                     <p className="text-base text-slate-300 tracking-tighter leading-loose">ClickUp is a cloud-based project management tool that integrates tasks, docs, and automation to streamline team workflows.</p>
                   </div>
-                  <div className='border border-white md:border-black mt-4 md:mt-10 mb-12 md:mb-3 md:bg-white text-white md:text-black md:rounded-full md:w-[50px] h-[50px] hidden md:flex items-center justify-center cursor-pointer active:scale-[0.99] hover:brightness-95 duration-100 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw] relative'>
-                    <ArrowRight02Icon />
-                  </div>
+                  <Link to={'https://clickup.com/'} target="__blank">
+                    <div className='border border-white md:border-black mt-4 md:mt-10 mb-12 md:mb-3 md:bg-white text-white md:text-black md:rounded-full md:w-[50px] h-[50px] hidden md:flex items-center justify-center cursor-pointer active:scale-[0.99] hover:brightness-95 duration-100 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw] relative'>
+                      <ArrowRight02Icon />
+                    </div>
+                  </Link>
                 </div>
               </div>
             </motion.div>
           </div>
 
-          <div id='laravel' className='select-none relative md:flex flex-col z-[444] pt-6 md:pt-4 w-full h-max border-slate-100'>
+          <div className="relative md:mb-4 gap-4">
+            <motion.div
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+              className='relative z-[44444] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw] w-full rounded-[24px] md:py-0 mx:px-4 grid grid-cols-1 items-center justify-between mt-12'>
+              <div className='md:rounded-[18px] w-full grid grid-cols-1 md:grid-cols-3 h-max overflow-hidden'>
+                <div className={`md:px-6 md:py-10 md:mb-0 mb-12`}>
+                  <div className='relative flex gap-2 h-[50px] items-center before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
+                    <img src={Socket} alt="logo-ssh" className="relative z-[44] w-[10%]" />
+                    <div className='flex-1'>
+                      <h3 className={`text-white font-bold text-[22px] md:text-[26px]`}>Web-socket</h3>
+                    </div>
+                  </div>
+                  <div className='w-full mt-6'>
+                    <p className="text-base text-slate-300 tracking-tighter leading-loose">Socket, A fast two-way communication protocol enabling stable real-time connection between client and server.</p>
+                  </div>
+                  <Link to={'https://socket.io/'} target="__blank">
+                    <div className='border border-white md:border-black mt-4 md:mt-10 mb-12 md:mb-3 md:bg-white text-white md:text-black md:rounded-full md:w-[50px] h-[50px] hidden md:flex items-center justify-center cursor-pointer active:scale-[0.99] hover:brightness-95 duration-100 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw] relative'>
+                      <ArrowRight02Icon />
+                    </div>
+                  </Link>
+                </div>
+                <div className="md:px-6 md:py-10 md:mb-0 mb-12 relative">
+                  {/* Left border */}
+                  <div className="md:before:absolute md:before:top-0 md:before:left-0 before:h-full md:before:w-px md:before:bg-slate-900/80 dark:before:bg-white/10"></div>
+
+                  {/* Right border */}
+                  <div className="md:after:absolute md:after:top-0 md:after:right-0 after:h-full md:after:w-px md:after:bg-slate-900/80 dark:after:bg-white/10"></div>
+
+                  <div className='relative flex gap-2 h-[50px] items-center before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
+                    <img src={Turborepo} alt="logo-ssh" className="relative z-[44] w-[8%] md:w-[10%]" />
+                    <div className='flex-1'>
+                      <h3 className={`text-white font-bold text-[22px] md:text-[24px]`}>Turborepo</h3>
+                    </div>
+                  </div>
+                  <div className="w-full mt-6">
+                    <p className="text-base text-slate-300 tracking-tighter leading-loose">
+                      A smart build system tool for managing and speeding up complex monorepo project development.
+                    </p>
+                  </div>
+                  <Link to={'https://turbo.build/'} target="__blank">
+                    <div className="border border-white md:border-black mt-4 md:mt-10 mb-12 md:mb-3 md:bg-white text-white md:text-black md:rounded-full md:w-[50px] h-[50px] hidden md:flex items-center justify-center cursor-pointer active:scale-[0.99] hover:brightness-95 duration-100 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw] relative">
+                      <ArrowRight02Icon />
+                    </div>
+                  </Link>
+                </div>
+                <div className={`md:px-6 md:py-10 md:mb-0 mb-8`}>
+                  <div className='relative flex gap-6 h-[50px] items-center before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
+                    <img src={Firebase2} alt="logo-clickup" className="w-[34%] md:w-[38%]" />
+                  </div>
+                  <div className='w-full mt-6'>
+                    <p className="text-base text-slate-300 tracking-tighter leading-loose">An advanced cloud-based database that synchronizes data in real-time across all actively connected clients.</p>
+                  </div>
+                  <Link to={'https://firebase.google.com/'} target="__blank">
+                    <div className='border border-white md:border-black mt-4 md:mt-10 mb-12 md:mb-3 md:bg-white text-white md:text-black md:rounded-full md:w-[50px] h-[50px] hidden md:flex items-center justify-center cursor-pointer active:scale-[0.99] hover:brightness-95 duration-100 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw] relative'>
+                      <ArrowRight02Icon />
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          <div id='laravel' className='select-none relative md:flex flex-col z-[444] pt-6 md:pt-4 mt-2 w-full h-max border-slate-100'>
 
             <motion.small
               initial={{ opacity: 0, filter: 'blur(10px)' }}
@@ -508,15 +615,13 @@ const Homepage: React.FC = () => {
               whileInView={{ opacity: 1, filter: 'blur(0px)' }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
               viewport={{ once: true, amount: 0.2 }}
-              className='w-full mt-4 mb-10 md:flex justify-between items-center '>
+              className='w-full mt-4 mb-10 md:flex justify-between items-center z-[9999]'>
               <h2 className='relative text-[30px] md:text-[40px] text-white font-medium md:text-balance md:tracking-normal tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Laravel web apps</h2>
-              <div className='flex w-max'>
-                <Link to={'/'} target="__blank">
-                  <div className="relative flex items-center gap-6 md:mt-0 mt-4 md:p-6 text-white after:absolute after:right-0 after:w-px after:h-[30vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[120px]">
-                    <p>Go to website</p>
-                    <Linkedin01Icon className='w-8 h-8' />
-                  </div>
-                </Link>
+              <div className='frelative z-[888] lex w-max'>
+                <div onClick={() => setDetailModal(true)} className="relative flex items-center gap-6 md:mt-0 mt-4 md:p-6 text-white after:absolute after:right-0 after:w-px after:h-[30vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[120px]">
+                  <p>Detail website</p>
+                  <LinkSquare02Icon className='w-6 h-6' />
+                </div>
               </div>
             </motion.div>
             <motion.p
@@ -542,6 +647,51 @@ const Homepage: React.FC = () => {
             </motion.div>
           </div>
 
+          <div id='valclass' className='select-none relative md:flex flex-col z-[444] mt-16 md:mt-20 w-full h-max border-slate-100'>
+
+            <motion.small
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+              className='relative text-[#00B4F5] text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Web development and landing page.</motion.small>
+            <motion.div
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+              className='w-full mt-4 mb-10 md:flex justify-between items-center z-[9999]'>
+              <h2 className='relative text-[30px] md:text-[40px] text-white font-medium md:text-balance md:tracking-normal tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Framework CSS</h2>
+              <div className='frelative z-[888] lex w-max'>
+                <div onClick={() => setDetailModal(true)} className="relative flex items-center gap-6 md:mt-0 mt-4 md:p-6 text-white after:absolute after:right-0 after:w-px after:h-[30vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[120px]">
+                  <p>Detail website</p>
+                  <LinkSquare02Icon className='w-6 h-6' />
+                </div>
+              </div>
+            </motion.div>
+            <motion.p
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+              className='relative text-base text-slate-300 w-[98%] md:w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</motion.p>
+
+            <div className="absolute left-[20%] w-[60%] h-[40px] py-[30%] transform -translate-y-[45%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[140px]"></div>
+            <div className="absolute left-[15%] w-[100%] h-[40px] py-[30%] transform -translate-y-[63%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[25px]"></div>
+            <img src={Pacticles2} alt='particles' className='absolute left-[28%] top-[-28%] w-[60%]' />
+
+            <motion.div
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+              className='relative w-full bg-white/20 backdrop-blur-sm md:rounded-[28px] border border-slate-300 md:p-4 z-40 items-center justify-between mt-12 md:mt-24'>
+              <div className='w-full h-full bg-[#ffffff] px-5 py-7 md:px-10 md:py-10 md:rounded-[24px]'>
+                <img src={Valclass} alt="warehouse-management" />
+              </div>
+            </motion.div>
+          </div>
+
           <div className='mt-16 md:mt-20'>
             <motion.small
               initial={{ opacity: 0, filter: 'blur(10px)' }}
@@ -562,7 +712,7 @@ const Homepage: React.FC = () => {
               <div className='hidden md:flex w-max'>
                 <div className="relative w-max text-transparent flex items-center gap-6 md:mt-0 mt-4 md:p-6 after:absolute after:right-0 after:w-px after:h-[200vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[100vh]">
                   <p>3 types </p>
-                  <Link03Icon className='w-6 h-6' />
+                  <LinkSquare02Icon className='w-6 h-6' />
                 </div>
               </div>
             </motion.div>
@@ -582,7 +732,7 @@ const Homepage: React.FC = () => {
                 </div>
               </div>
               <div onClick={() => { setSelectType('API'), setSelectAccordion(1) }} className={`flex gap-6 ${selectType === 'API' ? 'bg-[#9e69ff11]' : ''} items-center cursor-pointer px-4 py-4 md:px-6 md:py-6 md:border-x-[0.5px] border-gray-700`}>
-                <Link03Icon size={45} className={`${selectType === 'API' ? 'text-[#5E5CF8]' : 'text-white'}`} />
+                <LinkSquare02Icon size={45} className={`${selectType === 'API' ? 'text-[#5E5CF8]' : 'text-white'}`} />
                 <div className='flex-1'>
                   <h3 className={`${selectType === 'API' ? 'text-[#5E5CF8]' : 'text-white'} font-medium`}>Integrate API ({dataProducts?.filter((d: any) => d.category === 'API')?.length})</h3>
                   <p className='text-[14px] mt-2 text-slate-300 leading-loose tracking-tighter'>Integrating APIs to ensure fast and seamless functionality.</p>
@@ -693,7 +843,7 @@ const Homepage: React.FC = () => {
             <div className='flex w-max'>
               <div className="relative flex items-center gap-6 md:mt-0 mt-4 md:p-6 text-white after:absolute after:right-0 after:w-px after:h-[30vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[120px]">
                 <p>Go to linkedin</p>
-                <Linkedin01Icon className='w-8 h-8' />
+                <LinkSquare02Icon className='w-6 h-6' />
               </div>
             </div>
           </motion.div>
@@ -760,7 +910,7 @@ const Homepage: React.FC = () => {
             <div className='flex w-max'>
               <div className="relative flex items-center gap-6 md:mt-0 mt-4 md:p-6 text-white after:absolute after:right-0 after:w-px after:h-[200vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[100vh]">
                 <p>konstruksi web</p>
-                <Link03Icon className='w-6 h-6' />
+                <LinkSquare02Icon className='w-6 h-6' />
               </div>
             </div>
           </motion.div>
@@ -1043,7 +1193,7 @@ const Homepage: React.FC = () => {
             <div className='hidden md:flex w-max'>
               <div className="relative text-transparent flex items-center gap-6 md:mt-0 mt-4 md:p-6 after:absolute after:right-0 after:w-px after:h-[100vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[50vh]">
                 <p>konstruksi web</p>
-                <Link03Icon className='w-6 h-6' />
+                <LinkSquare02Icon className='w-6 h-6' />
               </div>
             </div>
           </motion.div>

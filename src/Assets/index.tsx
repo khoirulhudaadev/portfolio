@@ -53,7 +53,7 @@ import SIGEo from './SIGEO.png'
 import Square from './square.svg'
 import Square3 from './square3.svg'
 import SquareLine from './squareLine.svg'
-import ssh from './ssh.png'
+import Figma from './figma.png'
 import Winner from './streak.png'
 import Swiftvel from './swiftvel.svg'
 import Swiftvel2 from './swiftvel2.png'
@@ -63,19 +63,27 @@ import TS from './ts.png'
 import TW from './tw.png'
 import Unipay from './unipay.svg'
 import Unipay2 from './unipay2.png'
-import Valclass from './valclass.svg'
+import Valclass from './valclass.png'
 import WDC from './wdcikmi.svg'
 import Weather from './weather.svg'
 import Peserta from './winner.png'
+import Socket from './socket.png'
+import Turborepo from './turborepo.png'
+import Firebase from './firebase.png'
+import Firebase2 from './firebase2.png'
 
 export {
+    Socket,
+    Turborepo,
+    Firebase,
+    Firebase2,
     Askeba, AuthFlow, Bali, BS, Build, Circle, Circles, Cirebon, Clickup, CSS, Cursor, DockerBlue, DockerBlueText, DockerWhite, Dsikom, Electshop1,
     Electshop2, ExternalLink, FlowTrush, Footer, Geospasial, Git1,
     Git2,
     Git3,
     Git4, Github, Githubb, Inovasi, Jakarta, Jannah, JS, JWD, KonstruksiLogo, Laravel, Laravel1, LifeDesign, Linkedin, Logo1,
     Logo2,
-    Logo3, Luvlywed, Majalengka, Mongodb, MTS, Node, OMDB, Pacticles2, PakYos, Peserta, Puitisy, Reacts, Redux, SIGEo, Square, Square3, SquareLine, ssh, Swiftvel,
+    Logo3, Luvlywed, Majalengka, Mongodb, MTS, Node, OMDB, Pacticles2, PakYos, Peserta, Puitisy, Reacts, Redux, SIGEo, Square, Square3, SquareLine, Figma, Swiftvel,
     Swiftvel2, Team,
     Team2, TS, TW, Unipay, Unipay2, Valclass, WDC, Weather, Winner
 }
