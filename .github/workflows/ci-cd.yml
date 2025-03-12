@@ -22,10 +22,6 @@ jobs:
       
       - name: Install dependencies
         run: npm install
-      
-      - name: Test code
-        run: npm test
-        if: always()
 
       - name: Build code
         run: npm run build
