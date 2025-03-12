@@ -17,60 +17,41 @@ const ModalSearch = ({ onClose }: ModalState) => {
         },
         {
             title: "Email account",
-            value: "/"
+            value: "muhammadkhoirulhuda111@gmail.com"
         },
         {
             title: "Linkedin account",
-            value: "/"
+            value: "https://www.linkedin.com/in/muhammadkhoirulhuda"
         },
         {
             title: "Github account 1",
-            value: "/"
+            value: "https://github.com/khoirulhudaa"
         },
         {
             title: "Github account 2",
-            value: "/"
-        },
-        {
-            title: "Framework Valclass",
-            value: "/"
+            value: "https://github.com/khoirulhudaadev"
         },
         {
             title: "SIGEO web",
-            value: "/"
+            value: "https://sigeo-user.vercel.app/"
         },
     ]
 
     const internship = [
         {
             title: "Konstruksi.AI",
-            value: "/"
-        },
-    ]
-
-    const certifications = [
-        {
-            title: "Certification (National)",
-            value: "/"
-        },
-        {
-            title: "Certification (District)",
-            value: "/"
-        },
-        {
-            title: "Certification (Public)",
-            value: "/"
+            value: "https://konstruksi.ai/"
         },
     ]
 
     const educations = [
         {
             title: "STMIK IKMI CIREBON",
-            value: "/"
+            value: "https://ikmi.ac.id/"
         },
         {
             title: "SMKN 1 CIREBON",
-            value: "/"
+            value: "https://smkn1-cirebon.sch.id/"
         },
     ]
 
@@ -79,10 +60,6 @@ const ModalSearch = ({ onClose }: ModalState) => {
     );
 
     const filteredEducations = educations.filter((data) =>
-        search ? data.title.toLowerCase().includes(search.toLowerCase()) : true
-    );
-
-    const filteredCertifications = certifications.filter((data) =>
         search ? data.title.toLowerCase().includes(search.toLowerCase()) : true
     );
 
@@ -116,7 +93,6 @@ const ModalSearch = ({ onClose }: ModalState) => {
                         {/* Cek jika semua kategori kosong */}
                         {filteredInternships.length === 0 &&
                             filteredEducations.length === 0 &&
-                            filteredCertifications.length === 0 &&
                             filteredAccounts.length === 0 ? (
                             <>
                                 <div className="w-full h-full flex items-center justify-center">
@@ -143,50 +119,32 @@ const ModalSearch = ({ onClose }: ModalState) => {
                                     </div>
                                 )}
 
-                                {/* Education Section */}
-                                {filteredEducations.length > 0 && (
-                                    <div className="border-b border-slate-300">
-                                        <h2 className="text-base font-medium ml-1 my-4 flex items-center gap-2">
-                                            <CircleIcon className="w-4 h-4" />
-                                            Education
-                                        </h2>
-                                        {filteredEducations.map((data, index) => (
-                                            <a key={index} href={data?.value} target="__blank">
-                                                <div className="w-full flex items-center justify-between rounded-[10px] mb-4 cursor-pointer active:scale-[0.99] duration-100 text-[14px] px-4 py-4 bg-slate-200 text-slate-600 hover:bg-black/90 hover:text-white">
-                                                    {data?.title}
-                                                    <LinkSquare01Icon className="w-4 h-4" />
-                                                </div>
-                                            </a>
-                                        ))}
-                                    </div>
-                                )}
-
-                                {/* Certifications Section */}
-                                {filteredCertifications.length > 0 && (
-                                    <div className="border-b border-slate-300">
-                                        <h2 className="text-base font-medium ml-1 my-4 flex items-center gap-2">
-                                            <CircleIcon className="w-4 h-4" />
-                                            Certifications
-                                        </h2>
-                                        {filteredCertifications.map((data, index) => (
-                                            <a key={index} href={data?.value} target="__blank">
-                                                <div className="w-full flex items-center justify-between rounded-[10px] mb-4 cursor-pointer active:scale-[0.99] duration-100 text-[14px] px-4 py-4 bg-slate-200 text-slate-600 hover:bg-black/90 hover:text-white">
-                                                    {data?.title}
-                                                    <LinkSquare01Icon className="w-4 h-4" />
-                                                </div>
-                                            </a>
-                                        ))}
-                                    </div>
-                                )}
-
                                 {/* Accounts Section */}
                                 {filteredAccounts.length > 0 && (
-                                    <div>
+                                    <div className="border-b border-slate-300">
                                         <h2 className="text-base font-medium ml-1 my-4 flex items-center gap-2">
                                             <CircleIcon className="w-4 h-4" />
                                             Accounts
                                         </h2>
                                         {filteredAccounts.map((data, index) => (
+                                            <a key={index} href={data?.value} target="__blank">
+                                                <div className="w-full flex items-center justify-between rounded-[10px] mb-4 cursor-pointer active:scale-[0.99] duration-100 text-[14px] px-4 py-4 bg-slate-200 text-slate-600 hover:bg-black/90 hover:text-white">
+                                                    {data?.title}
+                                                    <LinkSquare01Icon className="w-4 h-4" />
+                                                </div>
+                                            </a>
+                                        ))}
+                                    </div>
+                                )}
+
+                                {/* Education Section */}
+                                {filteredEducations.length > 0 && (
+                                    <div>
+                                        <h2 className="text-base font-medium ml-1 my-4 flex items-center gap-2">
+                                            <CircleIcon className="w-4 h-4" />
+                                            Education
+                                        </h2>
+                                        {filteredEducations.map((data, index) => (
                                             <a key={index} href={data?.value} target="__blank">
                                                 <div className="w-full flex items-center justify-between rounded-[10px] mb-4 cursor-pointer active:scale-[0.99] duration-100 text-[14px] px-4 py-4 bg-slate-200 text-slate-600 hover:bg-black/90 hover:text-white">
                                                     {data?.title}

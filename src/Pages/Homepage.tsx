@@ -3,7 +3,7 @@ import { ArrowRight02Icon, ArrowUp01Icon, BrowserIcon, Building02Icon, Calendar0
 import React, { useEffect, useRef, useState } from 'react'
 import { FaArrowRight, FaTimes } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import { Build, Cirebon, Clickup, DockerBlue, Electshop1, Electshop2, Firebase2, Footer, Git1, Git2, Git3, Inovasi, Jakarta, Jannah, JWD, KonstruksiLogo, Laravel, Laravel1, Luvlywed, Majalengka, Node, OMDB, Pacticles2, PakYos, Reacts, Redux, Socket, Figma, Team, TS, Turborepo, Unipay, Unipay2, Valclass, Weather, Winner } from '../Assets'
+import { Build, Chater1, Chater2, Cirebon, Clickup, DockerBlue, Figma, Firebase, Firebase2, Git1, Git2, Git3, Google, Inovasi, Jakarta, Jannah, JWD, KonstruksiLogo, Laravel, Laravel1, Luvlywed, Majalengka, Node, OMDB, Pacticles2, PakYos, Reacts, Redux, Socket, Team, TS, Turborepo, Unipay, Unipay2, Weather, Winner, Xendit } from '../Assets'
 import FilteredGitHubCalendar from "../Components/GithubCalendar"
 import InfiniteSlider from "../Components/InfiniteSlider"
 import ModalSearch from "../Components/Modal"
@@ -11,6 +11,7 @@ import ModalCertification from '../Components/ModalCertification'
 import ModalDetail from "../Components/ModalDetail"
 import FadeTransition from "../Components/PageTransition"
 import '../index.css'
+import FooterComp from "../Components/Footer"
 
 const Homepage: React.FC = () => {
 
@@ -92,20 +93,6 @@ const Homepage: React.FC = () => {
 
   const dataProducts = [
     {
-      title: "ElectShop",
-      desc: "ElectShop is an ecommerce website integrated with the Xednit payment gateway, built using React and Express.",
-      image1: Electshop1,
-      image2: Electshop2,
-      url: "https://elect-shop.vercel.app",
-      category: "apps",
-      fe: "reactjs",
-      be: "express",
-      paymentGateway: "midtrans",
-      stateManagement: "redux",
-      db: "mongodb",
-      style: "tailwind",
-    },
-    {
       title: "Unipay",
       desc: "This project trains API integration skills by displaying the weather conditions of a specific area.",
       image1: Unipay,
@@ -117,6 +104,21 @@ const Homepage: React.FC = () => {
       paymentGateway: "xendit",
       stateManagement: "redux",
       db: "mongodb",
+      style: "tailwind",
+    },
+    {
+      title: "Chater - web chat",
+      desc: "Web application for conducting discussions through chat within a group. You can add new groups and create new messages.",
+      image1: Chater1,
+      image2: Chater2,
+      url: "https://chater-firebase.vercel.app/auth/login",
+      category: "apps",
+      fe: "reactjs",
+      be: "express",
+      Auth: "google auth",
+      paymentGateway: "none",
+      stateManagement: "none",
+      db: "Firebase",
       style: "tailwind",
     },
     {
@@ -647,51 +649,6 @@ const Homepage: React.FC = () => {
             </motion.div>
           </div>
 
-          <div id='valclass' className='select-none relative md:flex flex-col z-[444] mt-16 md:mt-20 w-full h-max border-slate-100'>
-
-            <motion.small
-              initial={{ opacity: 0, filter: 'blur(10px)' }}
-              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
-              transition={{ duration: 0.5, ease: 'easeOut' }}
-              viewport={{ once: true, amount: 0.2 }}
-              className='relative text-[#00B4F5] text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Web development and landing page.</motion.small>
-            <motion.div
-              initial={{ opacity: 0, filter: 'blur(10px)' }}
-              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
-              transition={{ duration: 0.5, ease: 'easeOut' }}
-              viewport={{ once: true, amount: 0.2 }}
-              className='w-full mt-4 mb-10 md:flex justify-between items-center z-[9999]'>
-              <h2 className='relative text-[30px] md:text-[40px] text-white font-medium md:text-balance md:tracking-normal tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Framework CSS</h2>
-              <div className='frelative z-[888] lex w-max'>
-                <div onClick={() => setDetailModal(true)} className="relative flex items-center gap-6 md:mt-0 mt-4 md:p-6 text-white after:absolute after:right-0 after:w-px after:h-[30vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[120px]">
-                  <p>Detail website</p>
-                  <LinkSquare02Icon className='w-6 h-6' />
-                </div>
-              </div>
-            </motion.div>
-            <motion.p
-              initial={{ opacity: 0, filter: 'blur(10px)' }}
-              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
-              transition={{ duration: 0.5, ease: 'easeOut' }}
-              viewport={{ once: true, amount: 0.2 }}
-              className='relative text-base text-slate-300 w-[98%] md:w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</motion.p>
-
-            <div className="absolute left-[20%] w-[60%] h-[40px] py-[30%] transform -translate-y-[45%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[140px]"></div>
-            <div className="absolute left-[15%] w-[100%] h-[40px] py-[30%] transform -translate-y-[63%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[25px]"></div>
-            <img src={Pacticles2} alt='particles' className='absolute left-[28%] top-[-28%] w-[60%]' />
-
-            <motion.div
-              initial={{ opacity: 0, filter: 'blur(10px)' }}
-              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
-              transition={{ duration: 0.5, ease: 'easeOut' }}
-              viewport={{ once: true, amount: 0.2 }}
-              className='relative w-full bg-white/20 backdrop-blur-sm md:rounded-[28px] border border-slate-300 md:p-4 z-40 items-center justify-between mt-12 md:mt-24'>
-              <div className='w-full h-full bg-[#ffffff] px-5 py-7 md:px-10 md:py-10 md:rounded-[24px]'>
-                <img src={Valclass} alt="warehouse-management" />
-              </div>
-            </motion.div>
-          </div>
-
           <div className='mt-16 md:mt-20'>
             <motion.small
               initial={{ opacity: 0, filter: 'blur(10px)' }}
@@ -753,7 +710,29 @@ const Homepage: React.FC = () => {
                 ?.map((data: any, index: number) => (
                   <div key={index} className='w-full z-40 py-8 relative left-[0px] md:mt-[0px] h-max before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
                     <div className='relative w-full z-[99999] py-6 h-max mb-6'>
-                      <h2 className='relative text-[24px] font-medium text-white mb-2 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>{index + 1}. {data?.title}</h2>
+                      <h2 className='relative md:flex items-center text-[24px] font-medium text-white mb-2 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>{index + 1}. {data?.title}
+                        {
+                          data.title === 'Chater - web chat' ?
+                            <div className='flex items-center md:mt-0 mt-3'>
+                              <div className='bg-white md:ml-4 md:rounded-full px-2 py-1 flex items-center justify-between gap-2'>
+                                <img src={Google} alt="google-logo" className='w-[20px] h-[20px]' />
+                                <p className='text-[12px] text-black'>Google auth</p>
+                              </div>
+                              <div className='bg-white ml-4 md:rounded-full px-2 py-1 flex items-center justify-between gap-2'>
+                                <img src={Firebase} alt="google-logo" className='w-[20px] h-[20px]' />
+                                <p className='text-[12px] text-black'>Real-time DB Firebase</p>
+                              </div>
+                            </div>
+                            : data.title === 'Unipay' ? (
+                              <div className='flex items-center md:mt-0 mt-3'>
+                                <div className='bg-white md:ml-4 md:rounded-full px-2 py-1 flex items-center justify-between gap-2'>
+                                  <img src={Xendit} alt="google-logo" className='w-auto h-[20px]' />
+                                  <p className='text-[12px] text-black'>Xendit - payment gateway</p>
+                                </div>
+                              </div>
+                            ) : <></>
+                        }
+                      </h2>
                       <p className='relative text-slate-300 w-full md:w-[85%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>{data?.desc}</p>
 
                       <Link to={data?.url} target="__blank">
@@ -1291,45 +1270,7 @@ const Homepage: React.FC = () => {
           </motion.div>
         </div>
 
-        <footer className='bg-white/10 backdrop-blur-md relative w-full overflow-hidden px-2 md:px-6 mt-10 md:pb-0 pb-5 z-[8888] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
-          <img src={Footer} alt='particles' className='absolute z-[-2] right-[0%] bottom-[-34%] w-full opacity-[60%]' />
-          <div className="relative w-full md:ml-8 grid md:grid-cols-4 z-[999]">
-            <div className="relative w-full md:flex hidden flex-col h-max md:min-h-[340px] md:py-10 md:px-6">
-              <ul className="list-none h-full ml-4 flex flex-col justify-between text-white text-[14px] font-normal before:absolute before:left-0 before:w-px before:h-full before:bg-slate-900/80 dark:before:bg-slate-100/10 before:-top-[0px]">
-                <li className="overflow-hidden hover:text-indigo-500 md:mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6">Github account 1</li>
-                <li className='overflow-hidden hover:text-indigo-500 md:mb-4 relative py-6'>Homepage</li>
-                <li className="overflow-hidden hover:text-indigo-500 md:mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6">Linkedin</li>
-              </ul>
-            </div>
-            <div className="relative w-full md:flex hidden flex-col h-max md:min-h-[340px] md:py-10 md:px-6">
-              <div className="absolute top-0 left-0 w-[10%] h-full before:absolute before:left-0 before:w-px before:h-full before:bg-slate-900/80 dark:before:bg-slate-100/5 before:-top-[0px]">
-              </div>
-              <ul className="list-none h-full ml-4 md:ml-[10%] flex flex-col justify-between text-white text-[14px] font-normal">
-                <li className='overflow-hidden hover:text-indigo-500 md:mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6'>Skill & languages</li>
-                <li className='overflow-hidden hover:text-indigo-500 md:mb-4 relative py-6'>Coresponden</li>
-                <li className='overflow-hidden hover:text-indigo-500 md:mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6'>Experience</li>
-              </ul>
-            </div>
-            <div className="relative w-full h-max md:min-h-[340px] md:py-10 md:px-6">
-              <div className="absolute top-0 left-0 w-[10%] h-full before:absolute before:left-0 before:w-px before:h-full before:bg-slate-900/80 dark:before:bg-slate-100/5 before:-top-[0px]">
-              </div>
-              <ul className="list-none h-full ml-4 md:ml-[10%] flex flex-col justify-between text-white text-[14px] font-normal">
-                <li className="overflow-hidden hover:text-indigo-500 md:mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6">Github Account 2</li>
-                <li className='overflow-hidden hover:text-indigo-500 md:mb-4 relative py-6 md:flex hidden'>Certifications</li>
-                <li className="overflow-hidden hover:text-indigo-500 md:mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6">Whatsapp</li>
-              </ul>
-            </div>
-            <div className="relative w-full h-max md:min-h-[340px] md:py-10 md:px-6">
-              <div className="absolute top-0 left-0 w-[10%] h-full before:absolute before:left-0 before:w-px before:h-full before:bg-slate-900/80 dark:before:bg-slate-100/5 before:-top-[0px]">
-              </div>
-              <ul className="list-none h-full ml-4 md:ml-[10%] flex flex-col justify-between text-white text-[14px] font-normal">
-                <li className="overflow-hidden hover:text-indigo-500 md:mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6">STMIK IKMI Cirebon</li>
-                <li className='overflow-hidden hover:text-indigo-500 md:mb-4 relative py-6'>SMKN 1 Cirebon</li>
-                <li className="overflow-hidden hover:text-indigo-500 md:mb-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-slate-100/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-slate-100/5 after:-left-[100vw] py-6">Search feature</li>
-              </ul>
-            </div>
-          </div>
-        </footer>
+        <FooterComp />
 
       </div >
     </>

@@ -71,8 +71,16 @@ import Socket from './socket.png'
 import Turborepo from './turborepo.png'
 import Firebase from './firebase.png'
 import Firebase2 from './firebase2.png'
+import Chater1 from './chater1.png'
+import Chater2 from './chater2.png'
+import Google from './google.png'
+import Xendit from './xendit.png'
 
 export {
+    Xendit,
+    Google,
+    Chater1,
+    Chater2,
     Socket,
     Turborepo,
     Firebase,
