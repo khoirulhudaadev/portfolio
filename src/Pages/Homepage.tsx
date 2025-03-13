@@ -3,7 +3,7 @@ import { ArrowRight02Icon, ArrowUp01Icon, BrowserIcon, Building02Icon, Calendar0
 import React, { useEffect, useRef, useState } from 'react'
 import { FaArrowRight, FaTimes } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import { Build, Chater1, Chater2, Cirebon, Clickup, DockerBlue, Figma, Firebase, Firebase2, Git1, Git2, Git3, Google, Inovasi, Jakarta, Jannah, JWD, KonstruksiLogo, Laravel, Laravel1, Luvlywed, Majalengka, Node, OMDB, Pacticles2, PakYos, Reacts, Redux, Socket, Team, TS, Turborepo, Unipay, Unipay2, Weather, Winner, Xendit } from '../Assets'
+import { Build, Chater1, Chater2, Cirebon, Clickup, DockerBlue, Figma, Firebase, Firebase2, Git1, Git2, Git3, Google, Inovasi, Jakarta, Jannah, JWD, KonstruksiLogo, Laravel, Laravel1, Luvlywed, Majalengka, Node, OMDB, Pacticles2, PakYos, Reacts, Redux, Socket, Survey, Team, TS, Turborepo, Unipay, Unipay2, Weather, Winner, Xendit } from '../Assets'
 import FilteredGitHubCalendar from "../Components/GithubCalendar"
 import InfiniteSlider from "../Components/InfiniteSlider"
 import ModalSearch from "../Components/Modal"
@@ -122,6 +122,21 @@ const Homepage: React.FC = () => {
       style: "tailwind",
     },
     {
+      title: "Survey online",
+      desc: "Web application is designed to simplify online survey completion for your thesis research needs in a practical and effective way.",
+      image1: Survey,
+      image2: "",
+      url: "https://survey-sigeo.vercel.app/",
+      category: "apps",
+      fe: "reactjs",
+      be: "express",
+      Auth: "none",
+      paymentGateway: "none",
+      stateManagement: "none",
+      db: "Mongodb",
+      style: "Vanilla CSS",
+    },
+    {
       title: "Al-quran Jannah",
       desc: "This project trains API integration skills by displaying text and audio of each chapter in the holy book of the Quran.",
       image1: Jannah,
@@ -207,6 +222,21 @@ const Homepage: React.FC = () => {
 
   const textEnglish = "Gudangku Admin Dashboard is a system for managing warehouse data in a structured and easy way. It features login security, ensuring that not everyone can access it. Key features include managing product data, types, units, and user data management."
 
+  const resumeUrl = 'https://github.com/khoirulhudaa/resume/raw/main/Resume-Muhammad_Khoirul_Huda-2025.pdf';
+
+  const handleDownload = () => {
+
+    // Membuat elemen anchor sementara untuk trigger download
+    const link = document.createElement('a');
+    link.href = resumeUrl;
+
+    // Nama file saat diunduh
+    link.download = 'Resume-Muhammad_khoirul_Huda.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <>
       <FadeTransition />
@@ -261,14 +291,14 @@ const Homepage: React.FC = () => {
                 <a href="#technologies">
                   <li className='mr-10 animate-fadeIn hover:text-white border-b hover:border-slate-400 border-transparent'>Technologies</li>
                 </a>
+                <a href="#products">
+                  <li className='mr-10 animate-fadeIn hover:text-white border-b hover:border-slate-400 border-transparent'>Products</li>
+                </a>
                 <a href="#linkedin">
                   <li className='mr-10 animate-fadeIn hover:text-white border-b hover:border-slate-400 border-transparent'>Linkedin</li>
                 </a>
                 <a href="#experience">
                   <li className='mr-10 animate-fadeIn hover:text-white border-b hover:border-slate-400 border-transparent'>Experiences</li>
-                </a>
-                <a href="#github">
-                  <li className='mr-10 animate-fadeIn hover:text-white border-b hover:border-slate-400 border-transparent'>Github</li>
                 </a>
                 <a href="#certifications">
                   <li className='mr-10 animate-fadeIn hover:text-white border-b hover:border-slate-400 border-transparent'>Certifications</li>
@@ -291,14 +321,14 @@ const Homepage: React.FC = () => {
               <a href="#technologies" className='w-full mb-4 border-b border-b-slate-200'>
                 <li className='py-4' onClick={() => setSidebar(false)}>Technologies</li>
               </a>
+              <a href="#products" className='w-full mb-4 border-b border-b-slate-200'>
+                <li className='py-4' onClick={() => setSidebar(false)}>Products</li>
+              </a>
               <a href="#linkedin" className='w-full mb-4 border-b border-b-slate-200'>
                 <li className='py-4' onClick={() => setSidebar(false)}>Linkedin</li>
               </a>
               <a href="#experience" className='w-full mb-4 border-b border-b-slate-200'>
                 <li className='py-4' onClick={() => setSidebar(false)}>Experiences</li>
-              </a>
-              <a href="#github" className='w-full mb-4 border-b border-b-slate-200'>
-                <li className='py-4' onClick={() => setSidebar(false)}>Github</li>
               </a>
               <a href="#certifications" className='w-full mb-4 border-b border-b-slate-200'>
                 <li className='py-4' onClick={() => setSidebar(false)}>Certifications</li>
@@ -374,7 +404,7 @@ const Homepage: React.FC = () => {
           </div>
 
           <div className='relative z-[99999] my-7 py-2 flex-col md:flex-row md:flex items-center before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
-            <button className='relative active:scale-[0.99] bg-white flex hover:brightness-[90%] z-[99999] outline-0 md:ml-4 md:mr-6 rounded-full px-4 py-3 w-max lg h-max text-center text-[14px] font-normal text-black animate-fadeIn delay-[1000ms]'>Download Resume</button>
+            <div onClick={() => handleDownload()} className='relative active:scale-[0.98] cursor-pointer bg-white flex hover:brightness-[90%] z-[99999] outline-0 md:ml-4 md:mr-6 rounded-full px-4 py-3 w-max lg h-max text-center text-[14px] font-normal text-black'>Download Resume</div>
             <div onClick={() => setActiveModalSearch(true)} className="active:scale-[0.99] outline-0 grid md:mt-0 mt-4 w-full md:w-[480px] grid-cols-[auto_1fr_auto] items-center gap-1 rounded-full px-4 py-3 text-left text-sm/6 sm:w-80 bg-white/5 text-white/50 animate-fadeIn delay-[1000ms]">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" className="-ml-0.5 size-4 fill-gray-600 dark:fill-gray-500">
                 <path fillRule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clipRule="evenodd">
@@ -604,52 +634,7 @@ const Homepage: React.FC = () => {
             </motion.div>
           </div>
 
-          <div id='laravel' className='select-none relative md:flex flex-col z-[444] pt-6 md:pt-4 mt-2 w-full h-max border-slate-100'>
-
-            <motion.small
-              initial={{ opacity: 0, filter: 'blur(10px)' }}
-              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
-              transition={{ duration: 0.5, ease: 'easeOut' }}
-              viewport={{ once: true, amount: 0.2 }}
-              className='relative text-[#00B4F5] text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Web development and landing page.</motion.small>
-            <motion.div
-              initial={{ opacity: 0, filter: 'blur(10px)' }}
-              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
-              transition={{ duration: 0.5, ease: 'easeOut' }}
-              viewport={{ once: true, amount: 0.2 }}
-              className='w-full mt-4 mb-10 md:flex justify-between items-center z-[9999]'>
-              <h2 className='relative text-[30px] md:text-[40px] text-white font-medium md:text-balance md:tracking-normal tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Laravel web apps</h2>
-              <div className='frelative z-[888] lex w-max'>
-                <div onClick={() => setDetailModal(true)} className="relative flex items-center gap-6 md:mt-0 mt-4 md:p-6 text-white after:absolute after:right-0 after:w-px after:h-[30vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[120px]">
-                  <p>Detail website</p>
-                  <LinkSquare02Icon className='w-6 h-6' />
-                </div>
-              </div>
-            </motion.div>
-            <motion.p
-              initial={{ opacity: 0, filter: 'blur(10px)' }}
-              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
-              transition={{ duration: 0.5, ease: 'easeOut' }}
-              viewport={{ once: true, amount: 0.2 }}
-              className='relative text-base text-slate-300 w-[98%] md:w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</motion.p>
-
-            <div className="absolute left-[20%] w-[60%] h-[40px] py-[30%] transform -translate-y-[45%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[140px]"></div>
-            <div className="absolute left-[15%] w-[100%] h-[40px] py-[30%] transform -translate-y-[63%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[25px]"></div>
-            <img src={Pacticles2} alt='particles' className='absolute left-[28%] top-[-28%] w-[60%]' />
-
-            <motion.div
-              initial={{ opacity: 0, filter: 'blur(10px)' }}
-              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
-              transition={{ duration: 0.5, ease: 'easeOut' }}
-              viewport={{ once: true, amount: 0.2 }}
-              className='relative w-full bg-white/20 backdrop-blur-sm md:rounded-[28px] border border-slate-300 md:p-4 z-40 items-center justify-between mt-12 md:mt-24'>
-              <div className='w-full h-full bg-[#ffffff] px-5 py-7 md:px-10 md:py-10 md:rounded-[24px]'>
-                <img src={Laravel1} alt="warehouse-management" />
-              </div>
-            </motion.div>
-          </div>
-
-          <div className='mt-16 md:mt-20'>
+          <div id="products" className='mt-2'>
             <motion.small
               initial={{ opacity: 0, filter: 'blur(10px)' }}
               whileInView={{ opacity: 1, filter: 'blur(0px)' }}
@@ -708,7 +693,7 @@ const Homepage: React.FC = () => {
               dataProducts
                 ?.filter((data: any) => data?.category === selectType)
                 ?.map((data: any, index: number) => (
-                  <div key={index} className='w-full z-40 py-8 relative left-[0px] md:mt-[0px] h-max before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
+                  <div key={index} className='w-full z-40 py-5 md:py-8 relative left-[0px] md:mt-[0px] h-max before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
                     <div className='relative w-full z-[99999] py-6 h-max mb-6'>
                       <h2 className='relative md:flex items-center text-[24px] font-medium text-white mb-2 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>{index + 1}. {data?.title}
                         {
@@ -802,6 +787,50 @@ const Homepage: React.FC = () => {
                 ))
             }
 
+          </div>
+
+          <div id='laravel' className='select-none relative md:flex flex-col z-[444] pt-6 md:pt-4 md:mt-10 mb-5 w-full h-max border-slate-100'>
+            <motion.small
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+              className='relative text-[#00B4F5] text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Web development and landing page.</motion.small>
+            <motion.div
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+              className='w-full mt-4 mb-10 md:flex justify-between items-center z-[9999]'>
+              <h2 className='relative text-[30px] md:text-[40px] text-white font-medium md:text-balance md:tracking-normal tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Laravel web apps</h2>
+              <div className='frelative z-[888] lex w-max'>
+                <div onClick={() => setDetailModal(true)} className="relative flex items-center gap-6 md:mt-0 mt-4 md:p-6 text-white after:absolute after:right-0 after:w-px after:h-[30vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[120px]">
+                  <p>Detail website</p>
+                  <LinkSquare02Icon className='w-6 h-6' />
+                </div>
+              </div>
+            </motion.div>
+            <motion.p
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+              className='relative text-base text-slate-300 w-[98%] md:w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</motion.p>
+
+            <div className="absolute left-[20%] w-[60%] h-[40px] py-[30%] transform -translate-y-[45%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[140px]"></div>
+            <div className="absolute left-[15%] w-[100%] h-[40px] py-[30%] transform -translate-y-[63%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[25px]"></div>
+            <img src={Pacticles2} alt='particles' className='absolute left-[28%] top-[-28%] w-[60%]' />
+
+            <motion.div
+              initial={{ opacity: 0, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+              className='relative w-full bg-white/20 backdrop-blur-sm md:rounded-[28px] border border-slate-300 md:p-4 z-40 items-center justify-between mt-12 md:mt-24'>
+              <div className='w-full h-full bg-[#ffffff] px-5 py-7 md:px-10 md:py-10 md:rounded-[24px]'>
+                <img src={Laravel1} alt="warehouse-management" />
+              </div>
+            </motion.div>
           </div>
         </div>
 

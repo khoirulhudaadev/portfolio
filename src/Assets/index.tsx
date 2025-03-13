@@ -75,8 +75,10 @@ import Chater1 from './chater1.png'
 import Chater2 from './chater2.png'
 import Google from './google.png'
 import Xendit from './xendit.png'
+import Survey from './survey.png'
 
 export {
+    Survey,
     Xendit,
     Google,
     Chater1,
