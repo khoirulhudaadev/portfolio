@@ -76,8 +76,14 @@ import Chater2 from './chater2.png'
 import Google from './google.png'
 import Xendit from './xendit.png'
 import Survey from './survey.png'
+import Sigeo1 from './sigeo1.png'
+import Sigeo2 from './sigeo2.png'
+import Leaflet from './leaflet.png'
 
 export {
+    Leaflet,
+    Sigeo1,
+    Sigeo2,
     Survey,
     Xendit,
     Google,

@@ -3,7 +3,7 @@ import { ArrowRight02Icon, ArrowUp01Icon, BrowserIcon, Building02Icon, Calendar0
 import React, { useEffect, useRef, useState } from 'react'
 import { FaArrowRight, FaTimes } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import { Build, Chater1, Chater2, Cirebon, Clickup, DockerBlue, Figma, Firebase, Firebase2, Git1, Git2, Git3, Google, Inovasi, Jakarta, Jannah, JWD, KonstruksiLogo, Laravel, Laravel1, Luvlywed, Majalengka, Node, OMDB, Pacticles2, PakYos, Reacts, Redux, Socket, Survey, Team, TS, Turborepo, Unipay, Unipay2, Weather, Winner, Xendit } from '../Assets'
+import { Build, Chater1, Chater2, Cirebon, Clickup, DockerBlue, Figma, Firebase, Firebase2, Git1, Git2, Git3, Google, Inovasi, Jakarta, Jannah, JWD, KonstruksiLogo, Laravel, Laravel1, Leaflet, Luvlywed, Majalengka, Node, OMDB, Pacticles2, PakYos, Reacts, Redux, SIGEo, Sigeo1, Sigeo2, Socket, Survey, Team, TS, Turborepo, Unipay, Unipay2, Weather, Winner, Xendit } from '../Assets'
 import FilteredGitHubCalendar from "../Components/GithubCalendar"
 import InfiniteSlider from "../Components/InfiniteSlider"
 import ModalSearch from "../Components/Modal"
@@ -102,6 +102,20 @@ const Homepage: React.FC = () => {
       fe: "nextjs",
       be: "express",
       paymentGateway: "xendit",
+      stateManagement: "redux",
+      db: "mongodb",
+      style: "tailwind",
+    },
+    {
+      title: "WebGIS",
+      desc: "An interactive platform to visualize geographic, coordiinates, data and weather for specific areas",
+      image1: Sigeo1,
+      image2: Sigeo2,
+      url: "https://sigeo-user.vercel.app/",
+      category: "apps",
+      fe: "react",
+      be: "express",
+      paymentGateway: "none",
       stateManagement: "redux",
       db: "mongodb",
       style: "tailwind",
@@ -713,6 +727,13 @@ const Homepage: React.FC = () => {
                                 <div className='bg-white md:ml-4 md:rounded-full px-2 py-1 flex items-center justify-between gap-2'>
                                   <img src={Xendit} alt="google-logo" className='w-auto h-[20px]' />
                                   <p className='text-[12px] text-black'>Xendit - payment gateway</p>
+                                </div>
+                              </div>
+                            ) : data.title === 'WebGIS' ? (
+                              <div className='flex items-center md:mt-0 mt-3'>
+                                <div className='bg-white md:ml-4 md:rounded-full px-2 py-1 flex items-center justify-between gap-2'>
+                                  <img src={Leaflet} alt="leaflet-logo" className='w-auto h-[20px]' />
+                                  <p className='text-[12px] text-black'>React-leaflet</p>
                                 </div>
                               </div>
                             ) : <></>
