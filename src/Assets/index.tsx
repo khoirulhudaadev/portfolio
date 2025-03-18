@@ -79,8 +79,14 @@ import Survey from './survey.png'
 import Sigeo1 from './sigeo1.png'
 import Sigeo2 from './sigeo2.png'
 import Leaflet from './leaflet.png'
+import Diskominfo from './diskominfo.png'
+import Diskominfo2 from './diskominfo2.jpeg'
+import Diskominfo3 from './diskominfo3.jpeg'
 
 export {
+    Diskominfo,
+    Diskominfo2,
+    Diskominfo3,
     Leaflet,
     Sigeo1,
     Sigeo2,

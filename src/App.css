@@ -42,7 +42,16 @@
     filter: grayscale(100%);
     object-fit: contain;
   }
-  
+
+  /* .title-stroke {
+    -webkit-text-stroke: 0.02em white;
+    font-stretch: 0%;
+    font-size: 80px;
+    -webkit-text-stroke: 0.04em white;
+    paint-order: stroke fill;
+    font-style: italic;
+  }
+   */
   /* Media Queries */
   @media (max-width: 768px) {
     .slide-item {

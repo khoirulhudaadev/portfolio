@@ -3,7 +3,7 @@ import { ArrowRight02Icon, ArrowUp01Icon, BrowserIcon, Building02Icon, Calendar0
 import React, { useEffect, useRef, useState } from 'react'
 import { FaArrowRight, FaTimes } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import { Build, Chater1, Chater2, Cirebon, Clickup, DockerBlue, Figma, Firebase, Firebase2, Git1, Git2, Git3, Google, Inovasi, Jakarta, Jannah, JWD, KonstruksiLogo, Laravel, Laravel1, Leaflet, Luvlywed, Majalengka, Node, OMDB, Pacticles2, PakYos, Reacts, Redux, Sigeo1, Sigeo2, Socket, Survey, Team, TS, Turborepo, Unipay, Unipay2, Weather, Winner, Xendit } from '../Assets'
+import { Build, Chater1, Chater2, Cirebon, Clickup, Diskominfo, Diskominfo2, Diskominfo3, DockerBlue, Figma, Firebase, Firebase2, Git1, Git2, Git3, Google, Inovasi, Jakarta, Jannah, JWD, KonstruksiLogo, Laravel, Laravel1, Leaflet, Luvlywed, Majalengka, Node, OMDB, Pacticles2, PakYos, Reacts, Redux, Sigeo1, Sigeo2, Socket, Survey, Team, TS, Turborepo, Unipay, Unipay2, Weather, Winner, Xendit } from '../Assets'
 import FooterComp from "../Components/Footer"
 import FilteredGitHubCalendar from "../Components/GithubCalendar"
 import InfiniteSlider from "../Components/InfiniteSlider"
@@ -406,11 +406,11 @@ const Homepage: React.FC = () => {
 
 
           <div className='relative mb-6 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
-            <p className='text-center md:px-3 py-2 w-max text-white flex items-center animate-fadeIn delay-[1000ms]'>Fullstack Developer - <span className="text-gray-500 ml-1">MERN&Laravel</span></p>
+            <p className='text-center md:px-3 py-2 w-max text-white flex items-center animate-fadeIn delay-[1000ms]'>Frontend Developer - <span className="text-gray-500 ml-1">MERN&Laravel</span></p>
           </div>
 
           <div className='relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
-            <h1 className='relative text-white z-40 text-3xl md:text-4xl md:tracking-normal tracking-tighter max-md:font-medium md:px-4 xl:text-8xl animate-fadeIn delay-[1000ms]'>Fullstack Developer, <br /> Building <span className="text-gray-500">MERN & Laravel</span></h1>
+            <h1 className='relative text-white z-40 text-3xl md:text-4xl md:tracking-normal tracking-tighter max-md:font-medium md:px-4 xl:text-8xl animate-fadeIn delay-[1000ms]'>Frontend Deveveloper, <br /> With <span className="text-gray-500">MERN & Laravel</span></h1>
           </div>
 
           <div className='relative mt-6 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
@@ -518,8 +518,8 @@ const Homepage: React.FC = () => {
             whileInView={{ opacity: 1, filter: 'blur(0px)' }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
-            className='relative text-base text-slate-300 w-[97%] md:w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
-            As a Fullstack Devedloper, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.
+            className='relative text-base text-slate-300 w-[97%] md:w-[58%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
+            Various third-party packages and platforms I have used in my experience developing web applications with React and Express.
           </motion.p>
           <div className="relative mt-10 gap-4">
             <motion.div
@@ -672,7 +672,7 @@ const Homepage: React.FC = () => {
                 </div>
               </div>
             </motion.div>
-            <p className='relative text-base text-slate-300 w-[98%] md:w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</p>
+            <p className='relative text-base text-slate-300 w-[98%] md:w-[58%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Built various web applications using React and Next.js, serving as a full-stack developer, independently configuring APIs and third-party integrations.</p>
 
             <motion.div
               initial={{ opacity: 0, filter: 'blur(10px)' }}
@@ -836,7 +836,7 @@ const Homepage: React.FC = () => {
               whileInView={{ opacity: 1, filter: 'blur(0px)' }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
               viewport={{ once: true, amount: 0.2 }}
-              className='relative text-base text-slate-300 w-[98%] md:w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</motion.p>
+              className='relative text-base text-slate-300 w-[98%] md:w-[55%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>A web application to manage items, units, and types of goods in a warehouse online. Built with Laravel as the server and React as the client.</motion.p>
 
             <div className="absolute left-[20%] w-[60%] h-[40px] py-[30%] transform -translate-y-[45%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[140px]"></div>
             <div className="absolute left-[15%] w-[100%] h-[40px] py-[30%] transform -translate-y-[63%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[25px]"></div>
@@ -881,7 +881,7 @@ const Homepage: React.FC = () => {
             whileInView={{ opacity: 1, filter: 'blur(0px)' }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
-            className='relative text-base text-slate-300 w-[98%] md:w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</motion.p>
+            className='relative text-base text-slate-300 w-[98%] md:w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>A direct recommendation from the co-founder of the company where I interned (Konstruksi.AI), who provided positive feedback on my performance during the internship as a frontend developer.</motion.p>
 
           <div className="absolute left-[20%] w-[60%] h-[40px] py-[30%] transform -translate-y-[45%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[140px]"></div>
           <div className="absolute left-[15%] w-[100%] h-[40px] py-[30%] transform -translate-y-[63%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[25px]"></div>
@@ -935,7 +935,7 @@ const Homepage: React.FC = () => {
             transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
             className='w-full mt-4 mb-10 flex-col md:flex-row md:flex justify-between items-center '>
-            <h2 className='relative flex items-center w-max text-[30px] md:text-[40px] text-white font-medium md:text-balance md:tracking-normal tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'><span className='md:flex hidden mr-1'>Experience - </span> Internship <span className="md:hidden flex">- FE</span></h2>
+            <h2 className='relative flex items-center w-max text-[30px] md:text-[40px] text-white font-medium md:text-balance md:tracking-normal tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'><span className='md:flex hidden mr-1'>Internship - </span> Frontend <span className="md:hidden flex">- FE</span></h2>
             <div className='flex w-max'>
               <div className="relative flex items-center gap-6 md:mt-0 mt-4 md:p-6 text-white after:absolute after:right-0 after:w-px after:h-[200vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[100vh]">
                 <p>konstruksi web</p>
@@ -948,7 +948,7 @@ const Homepage: React.FC = () => {
             whileInView={{ opacity: 1, filter: 'blur(0px)' }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
-            className='relative text-base text-slate-300 w-full md:w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</motion.p>
+            className='relative text-base text-slate-300 w-full md:w-[55%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Interned as a Frontend Web Developer at Konstruksi.AI (South Jakarta) remotely for 1 year. Assisted in building web applications and coordinated with the team.</motion.p>
 
           <motion.div
             initial={{ opacity: 0, filter: 'blur(10px)' }}
@@ -969,7 +969,7 @@ const Homepage: React.FC = () => {
                 <section className='mt-12'>
                   <div className="relative mb-8 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]">
                     <p className="relative text-base mb-6 font-semibold text-white before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]">Web Application Development</p>
-                    <p className='text-sm text-justify w-[98%] md:w-[80%] mb-2 leading-loose tracking-tighter'>Build and develop a web application using <strong>React</strong>, <strong>Vite</strong>, and <strong>Tailwind CSS</strong> to create responsive and efficient user interfaces and Integrate and display architectural project data.</p>
+                    <p className='text-sm text-justify w-[98%] md:w-[80%] mb-2 leading-loose tracking-tighter'>Build and develop a web application using <strong>React</strong>, <strong>Vite</strong>, <strong>Redux</strong> and <strong>Tailwind CSS</strong> to create responsive and efficient user interfaces and Integrate and display architectural project data.</p>
                   </div>
 
                   <div className="relative mb-8 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]">
@@ -991,6 +991,83 @@ const Homepage: React.FC = () => {
             <div className='relative w-full md:w-[45%] md:rounded-[24px] flex bg-white/20 backdrop-blur-2xl md:p-4 border border-slate-300 items-center h-full overflow-hidden justify-center cursor-pointer border-x z-[8888]'>
               <div className='w-full h-full overflow-hidden md:rounded-[20px]'>
                 <img src={Build} alt="wisma-bumiputera" className='w-full h-auto grayscale-[100%] md:rounded-[20px]' />
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Diskominfo */}
+        <div className='select-none px-4 md:px-14 h-max experience relative md:flex flex-col z-[335] pb-[30px] md:pb-[80px] pt-6 md:pt-4 w-full border-slate-100'>
+          <motion.small
+            initial={{ opacity: 0, filter: 'blur(10px)' }}
+            whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+            viewport={{ once: true, amount: 0.2 }}
+            className='relative text-[#00B4F5] text-[14px] before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Experience in industry</motion.small>
+          <motion.div
+            initial={{ opacity: 0, filter: 'blur(10px)' }}
+            whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+            viewport={{ once: true, amount: 0.2 }}
+            className='w-full mt-4 mb-10 flex-col md:flex-row md:flex justify-between items-center '>
+            <h2 className='relative flex items-center w-max text-[30px] md:text-[40px] text-white font-medium md:text-balance md:tracking-normal tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'><span className='md:flex hidden mr-1'>Diskominfo - </span> Web Dev <span className="md:hidden flex">- FE</span></h2>
+            <div className='flex w-max'>
+              <div className="relative flex items-center gap-6 md:mt-0 mt-4 md:p-6 text-white after:absolute after:right-0 after:w-px after:h-[200vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[100vh]">
+                <p>Cerification</p>
+                <LinkSquare02Icon className='w-6 h-6' />
+              </div>
+            </div>
+          </motion.div>
+          <motion.p
+            initial={{ opacity: 0, filter: 'blur(10px)' }}
+            whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+            viewport={{ once: true, amount: 0.2 }}
+            className='relative text-base text-slate-300 w-full md:w-[55%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>Interned at the Communication Department of Cirebon Regency for 3 months, in the role of Data Analyst and Web Developer as a secondary responsibility.</motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, filter: 'blur(10px)' }}
+            whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+            viewport={{ once: true, amount: 0.2 }}
+            className='relative py-2 w-full h-max md:h-[600px] md:flex mt-14 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
+            <div className='w-full md:w-[55%] h-max'>
+              <a href="https://cirebonkab.go.id/ova_dep/dinas-komunikasi-dan-informatika/" target="__blank">
+                <div className='relative flex gap-4 mb-6 items-center cursor-pointer before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
+                  <img src={Diskominfo} alt="logo-konstruksi.ai" className="w-32" />
+                </div>
+              </a>
+              <div className="w-full h-full mx-auto text-slate-300">
+                <section className='mt-12'>
+                  <div className="relative mb-8 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]">
+                    <p className="relative text-base mb-6 font-semibold text-white before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]">Web Application Development</p>
+                    <p className='text-sm text-justify w-[98%] md:w-[80%] mb-2 leading-loose tracking-tighter'>Developing and launching a web geoportal application to display the distribution of locations and administrative boundaries of Cirebon Regency, acting as the Frotnend and Backend.</p>
+                  </div>
+
+                  <div className="relative mb-8 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]">
+                    <p className="relative text-base mb-6 font-semibold text-white before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]">API Integration</p>
+                    <p className='text-sm text-justify w-[98%] md:w-[80%] mb-2 leading-loose tracking-tighter'>Integrating the API from Express into React, using MongoDB Atlas for efficient data storage.</p>
+                  </div>
+
+                  <div className="relative mb-8 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]">
+                    <p className="relative text-base mb-6 font-semibold text-white before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]">Make Scalability</p>
+                    <p className='text-sm text-justify w-[98%] md:w-[80%] mb-2 leading-loose tracking-tighter'>Here’s the translation of your text into English:Implementing CMV for Express.js to ensure scalability and ease of future development.</p>
+                  </div>
+                </section>
+              </div>
+            </div>
+
+            <div className="absolute right-[25%] w-[60%] h-[40px] py-[30%] transform -translate-y-[10%] -rotate-45 bg-[radial-gradient(circle_at_right_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[250px]"></div>
+            <img src={Pacticles2} alt='particles' className='absolute left-[30%] top-[-18%] w-[50%]' />
+
+            <div className='relative w-full md:w-[45%] md:rounded-[24px] flex bg-white/20 backdrop-blur-2xl md:p-4 border border-slate-300 items-center h-full overflow-hidden justify-center cursor-pointer border-x z-[8888]'>
+              <div className='w-full h-full overflow-hidden md:rounded-[20px]'>
+                <div className='relative overflow-hidden w-full h-1/2'>
+                  <img src={Diskominfo2} alt="wisma-bumiputera" className='w-full h-auto grayscale-[100%] md:-rt-rounded-[20px]' />
+                </div>
+                <div className='relative overflow-hidden w-full h-1/2'>
+                  <img src={Diskominfo3} alt="dskominfo-kabupaten-cirebon" className='relative top-[-35%] w-full h-auto grayscale-[100%] md:-rb-rounded-[20px]' />
+                </div>
               </div>
             </div>
           </motion.div>
@@ -1018,7 +1095,7 @@ const Homepage: React.FC = () => {
               </a>
             </h2>
             <div className='flex w-max'>
-              <div className="relative text-white flex items-center gap-6 md:mt-0 mt-4 md:p-6 after:absolute after:right-0 after:w-px after:h-[100vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[50vh]">
+              <div className="relative text-transparent flex items-center gap-6 md:mt-0 mt-4 md:p-6 after:absolute after:right-0 after:w-px after:h-[100vh] after:bg-slate-900/80 dark:after:bg-white/10 after:-top-[50vh]">
                 <p>Go to campus</p>
                 <Building02Icon className='w-6 h-6' />
               </div>
@@ -1029,7 +1106,7 @@ const Homepage: React.FC = () => {
             whileInView={{ opacity: 1, filter: 'blur(0px)' }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
-            className='relative text-base text-slate-300 w-full md:w-[68%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>I pursued a four-year bachelor's degree in Informatics Engineering at a private university in Cirebon, STMIK IKMI Cirebon, located in Majasem.</motion.p>
+            className='relative text-base text-slate-300 w-full md:w-[55%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>I pursued a four-year bachelor's degree in Informatics Engineering at a private university in Cirebon, STMIK IKMI Cirebon, located in Majasem.</motion.p>
 
           <motion.div
             initial={{ opacity: 0, filter: 'blur(10px)' }}
@@ -1101,7 +1178,7 @@ const Homepage: React.FC = () => {
             whileInView={{ opacity: 1, filter: 'blur(0px)' }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
-            className='relative text-base text-slate-300 w-full md:w-[68%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>I pursued a four-year bachelor's degree in Informatics Engineering at a private university in Cirebon, STMIK IKMI Cirebon, located in Majasem.</motion.p>
+            className='relative text-base text-slate-300 w-full md:w-[68%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>I worked remotely but still performed tasks and coordinated with the development team professionally.</motion.p>
 
           <div className="relative z-[999999999] flex items-center justify-center mt-12">
             <motion.div
@@ -1153,7 +1230,7 @@ const Homepage: React.FC = () => {
             whileInView={{ opacity: 1, filter: 'blur(0px)' }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
-            className='relative text-base text-slate-300 w-full md:w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</motion.p>
+            className='relative text-base text-slate-300 w-full md:w-[55%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>My performance related to my activities on GitHub shows that I have been quite active in deploying both old and new projects throughout 2024.</motion.p>
 
           <div className="md:w-[86vw] h-max mt-12 mx-auto bg-white/20 backdrop-blur-2xl md:p-4 md:rounded-[20px]">
             <motion.div
@@ -1231,7 +1308,7 @@ const Homepage: React.FC = () => {
             whileInView={{ opacity: 1, filter: 'blur(0px)' }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
-            className='relative text-base text-slate-300 w-full md:w-[70%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>As a Fullstack Developer, I specialize in modern technologies, leveraging frameworks like MERN and Laravel while implementing best practices in web development to create efficient.</motion.p>
+            className='relative text-base text-slate-300 w-full md:w-[55%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>I have received awards in website development competitions, ranging from inter-student level at IKMI, to district level, and even national level.</motion.p>
 
           <div className="absolute left-[20%] w-[60%] h-[40px] py-[30%] transform -translate-y-[50%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_60%)] blur-[140px]"></div>
           <div className="absolute left-[15%] w-[100%] h-[40px] py-[30%] transform -translate-y-[72%] -rotate-45 bg-[radial-gradient(circle_at_left_bottom,_#e6b7fe_10%,_#5049c2_20%,_rgba(87,78,255,0)_0%)] blur-[25px]"></div>
