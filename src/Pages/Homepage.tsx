@@ -709,36 +709,38 @@ const Homepage: React.FC = () => {
                 ?.map((data: any, index: number) => (
                   <div key={index} className='w-full z-40 py-5 md:py-8 relative left-[0px] md:mt-[0px] h-max before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
                     <div className='relative w-full z-[99999] py-6 h-max mb-6'>
-                      <h2 className='relative md:flex items-center text-[24px] font-medium text-white mb-2 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>{index + 1}. {data?.title}
-                        {
-                          data.title === 'Chater - web chat' ?
-                            <div className='flex items-center md:mt-0 mt-3'>
-                              <div className='bg-white md:ml-4 md:rounded-full px-2 py-1 flex items-center justify-between gap-2'>
-                                <img src={Google} alt="google-logo" className='w-[20px] h-[20px]' />
-                                <p className='text-[12px] text-black'>Google auth</p>
-                              </div>
-                              <div className='bg-white ml-4 md:rounded-full px-2 py-1 flex items-center justify-between gap-2'>
-                                <img src={Firebase} alt="google-logo" className='w-[20px] h-[20px]' />
-                                <p className='text-[12px] text-black'>Real-time DB Firebase</p>
-                              </div>
-                            </div>
-                            : data.title === 'Unipay' ? (
+                      <Link to={data?.url} target='__blank'>
+                        <h2 className='relative md:flex items-center text-[24px] font-medium text-white underline cursor-pointer mb-2 before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>{index + 1}. {data?.title}
+                          {
+                            data.title === 'Chater - web chat' ?
                               <div className='flex items-center md:mt-0 mt-3'>
                                 <div className='bg-white md:ml-4 md:rounded-full px-2 py-1 flex items-center justify-between gap-2'>
-                                  <img src={Xendit} alt="google-logo" className='w-auto h-[20px]' />
-                                  <p className='text-[12px] text-black'>Xendit - payment gateway</p>
+                                  <img src={Google} alt="google-logo" className='w-[20px] h-[20px]' />
+                                  <p className='text-[12px] text-black'>Google auth</p>
+                                </div>
+                                <div className='bg-white ml-4 md:rounded-full px-2 py-1 flex items-center justify-between gap-2'>
+                                  <img src={Firebase} alt="google-logo" className='w-[20px] h-[20px]' />
+                                  <p className='text-[12px] text-black'>Real-time DB Firebase</p>
                                 </div>
                               </div>
-                            ) : data.title === 'WebGIS' ? (
-                              <div className='flex items-center md:mt-0 mt-3'>
-                                <div className='bg-white md:ml-4 md:rounded-full px-2 py-1 flex items-center justify-between gap-2'>
-                                  <img src={Leaflet} alt="leaflet-logo" className='w-auto h-[20px]' />
-                                  <p className='text-[12px] text-black'>React-leaflet</p>
+                              : data.title === 'Unipay' ? (
+                                <div className='flex items-center md:mt-0 mt-3'>
+                                  <div className='bg-white md:ml-4 md:rounded-full px-2 py-1 flex items-center justify-between gap-2'>
+                                    <img src={Xendit} alt="google-logo" className='w-auto h-[20px]' />
+                                    <p className='text-[12px] text-black'>Xendit - payment gateway</p>
+                                  </div>
                                 </div>
-                              </div>
-                            ) : <></>
-                        }
-                      </h2>
+                              ) : data.title === 'WebGIS' ? (
+                                <div className='flex items-center md:mt-0 mt-3'>
+                                  <div className='bg-white md:ml-4 md:rounded-full px-2 py-1 flex items-center justify-between gap-2'>
+                                    <img src={Leaflet} alt="leaflet-logo" className='w-auto h-[20px]' />
+                                    <p className='text-[12px] text-black'>React-leaflet</p>
+                                  </div>
+                                </div>
+                              ) : <></>
+                          }
+                        </h2>
+                      </Link>
                       <p className='relative text-slate-300 w-full md:w-[85%] leading-loose tracking-tighter before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>{data?.desc}</p>
 
                       <Link to={data?.url} target="__blank">
