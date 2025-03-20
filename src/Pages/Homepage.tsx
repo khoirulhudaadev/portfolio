@@ -3,7 +3,7 @@ import { ArrowRight02Icon, ArrowUp01Icon, BrowserIcon, Building02Icon, Calendar0
 import React, { useEffect, useRef, useState } from 'react'
 import { FaArrowRight, FaTimes } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import { Build, Chater1, Chater2, Cirebon, Clickup, Diskominfo, Diskominfo2, Diskominfo3, DockerBlue, Figma, Firebase, Firebase2, Git1, Git2, Git3, Google, Inovasi, Jakarta, Jannah, JWD, KonstruksiLogo, Laravel, Laravel1, Leaflet, Luvlywed, Majalengka, Node, OMDB, Pacticles2, PakYos, Reacts, Redux, Sigeo1, Sigeo2, Socket, Survey, Team, TS, Turborepo, Unipay, Unipay2, Weather, Winner, Xendit } from '../Assets'
+import { Build, Chater1, Chater2, Cirebon, Clickup, Diskominfo, Diskominfo2, Diskominfo3, DockerBlue, Figma, Firebase, Firebase2, Git1, Git2, Git3, Google, Inovasi, Jakarta, Jannah, Jest, JWD, KonstruksiLogo, Laravel, Laravel1, Leaflet, Luvlywed, Majalengka, Node, OMDB, Pacticles2, PakYos, Reacts, Redux, Sigeo1, Sigeo2, Socket, Survey, Team, TS, Turborepo, Unipay, Unipay2, Weather, Winner, Xendit } from '../Assets'
 import FooterComp from "../Components/Footer"
 import FilteredGitHubCalendar from "../Components/GithubCalendar"
 import InfiniteSlider from "../Components/InfiniteSlider"
@@ -537,7 +537,7 @@ const Homepage: React.FC = () => {
                   <div className="md:after:absolute md:after:top-0 md:after:right-0 after:h-full md:after:w-px md:after:bg-slate-900/80 dark:after:bg-white/10"></div>
 
                   <div className="relative flex gap-6 h-[50px] items-center before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]">
-                    <img src={DockerBlue} alt="logo-docker" className="relative bottom-[2px] w-[36%] md:w-[45%]" />
+                    <img src={DockerBlue} alt="logo-docker" className="relative bottom-[2px] w-[36%] md:w-[43%]" />
                   </div>
                   <div className="w-full mt-6">
                     <p className="text-base text-slate-300 tracking-tighter leading-loose">
@@ -552,9 +552,9 @@ const Homepage: React.FC = () => {
                 </div>
                 <div className={`md:px-6 md:py-10 md:mb-0 mb-12`}>
                   <div className='relative flex gap-2 h-[50px] items-center before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-slate-900/80 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-slate-900/80 dark:after:bg-white/10 after:-left-[100vw]'>
-                    <img src={Figma} alt="logo-ssh" className="relative z-[44] w-[7%]" />
+                    <img src={Jest} alt="logo-ssh" className="relative z-[44] w-[11%]" />
                     <div className='flex-1'>
-                      <h3 className={`text-white font-bold text-[22px] md:text-[26px]`}>Figma</h3>
+                      <h3 className={`text-white font-bold text-[22px] md:text-[26px]`}>Jest</h3>
                     </div>
                   </div>
                   <div className='w-full mt-6'>

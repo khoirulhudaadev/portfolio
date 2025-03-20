@@ -82,8 +82,10 @@ import Leaflet from './leaflet.png'
 import Diskominfo from './diskominfo.png'
 import Diskominfo2 from './diskominfo2.jpeg'
 import Diskominfo3 from './diskominfo3.jpeg'
+import Jest from './jest.png'
 
 export {
+    Jest,
     Diskominfo,
     Diskominfo2,
     Diskominfo3,
