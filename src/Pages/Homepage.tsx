@@ -3,7 +3,7 @@ import { ArrowRight02Icon, ArrowUp01Icon, BrowserIcon, Building02Icon, Calendar0
 import React, { useEffect, useRef, useState } from 'react'
 import { FaArrowRight, FaTimes } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import { Build, Chater1, Chater2, Cirebon, Clickup, Diskominfo, Diskominfo2, Diskominfo3, DockerBlue, Figma, Firebase, Firebase2, Git1, Git2, Git3, Google, Inovasi, Jakarta, Jannah, Jest, JWD, KonstruksiLogo, Laravel, Laravel1, Leaflet, Luvlywed, Majalengka, Node, OMDB, Pacticles2, PakYos, Reacts, Redux, Sigeo1, Sigeo2, Socket, Survey, Team, TS, Turborepo, Unipay, Unipay2, Weather, Winner, Xendit } from '../Assets'
+import { Build, Chater1, Chater2, Cirebon, Clickup, Diskominfo, Diskominfo2, Diskominfo3, DockerBlue, Firebase, Firebase2, Git1, Git2, Git3, Google, Inovasi, Jakarta, Jannah, Jest, JWD, KonstruksiLogo, Laravel, Laravel1, Leaflet, Luvlywed, Majalengka, Node, OMDB, Pacticles2, PakYos, Reacts, Redux, Sigeo1, Sigeo2, Socket, Survey, Team, TS, Turborepo, Unipay, Unipay2, Weather, Winner, Xendit } from '../Assets'
 import FooterComp from "../Components/Footer"
 import FilteredGitHubCalendar from "../Components/GithubCalendar"
 import InfiniteSlider from "../Components/InfiniteSlider"
